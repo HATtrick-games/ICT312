@@ -1,0 +1,91 @@
+Assignment Milestone 1
+
+Objectives:
+- Act as a major milestone for the Assignment.
+- Acquire presentation skills and experience reviewing presentations to 
+  determine quality work.
+
+Present milestone 1 during the lecture in week 8.
+
+
+Nature of milestone 1:
+
+Visually realistic first person tour of the area that will be part of the final
+milestone due at the end of semester. Select and area in consultation with your
+tutor. It is be on campus. See demo.
+
+Aim for visual realism.
+
+Physics, AI/NPC behaviour, emotions, moods, the affordance system,
+interactions are assessed in Assignment 2/project and *not* in this
+assignment but if you are in the process of building the project
+components, you can keep the project components in.
+
+
+After the presentaion, please submit everything in LMS. This is to 
+make sure that what you presented during the lecture is actually correct.
+The program builds and runs and what you presented has not been mocked up
+or faked. If what you presented turns out be faked, there will be no marks
+for the first milestone.
+
+Please submit the following.
+
+- A properly completed unit cover sheet. There is a penalty indicated on
+the cover sheet for not doing this properly. Please see the back of the
+unit outline for the cover sheet.
+
+- Group declaration sheet (Work breakdown sheet). See last page of unit guide.
+
+- Updated team charter document signed by all team members.
+
+- A completed tasks breakdown list which shows each task, estimated time
+taken and actual time taken and the names of people involved with each
+task. See "Individual accouting.xls"
+
+- All source code in a directory called source. Anyone should be able to
+create an executable within a couple of minutes from your source, so
+simple instructions on how to build should be provided.
+
+- A directory called executable which contains only the files needed to
+run your program. There is a 30% penalty, if the program doesn't
+run as provided. All that should be needed to run is to unzip and run
+the executable. No installers should install anything in the windows or
+other system areas.
+
+- When quitting your program, display a screen which shows your photos
+(of your faces) and your names under the photo as captions. To actually
+quit, the user will have to left mouse click on this splash screen.
+
+- A directory called html which contains the doxygen output. Make sure
+all options are selected so that even undocumented features are output.
+*Doxgen output must show authorship of all code.*
+
+- A user manual.
+
+- Design document: How the program was designed design document,
+including storyboards, details of the plans and measurements used.
+Actual CAD or other layout files must be submitted on disk. If models
+were loaded from external files, and explanation of the model file
+formats and the loading methods should be provided.
+
+- Testing plan and testing details with results of testing.
+
+- A file called Evaluation.txt which lists what works and what
+doesn't work. This should be presented as dot points.
+
+- A video showcasing your work. You can use fraps or Camstudio from
+http://camstudio.org/ or any suitable screen capture software. Make sure
+that special codecs are not required to view the video.
+
+- Material/code/ideas used from elsewhere must be cited and there should
+be no copyright or IP violations . You must also make it easy to tell
+which code is yours and what is not. Doxygen output should show this
+clearly and so should your design document. Your work may be exhibited
+publicly and the code may be demonstrated. *No* situation should arise
+where anyone can say that your work (or parts of your work) belongs to
+someone else and has been used without permission. Just citing is not
+enough to say that you have not plagiarised, violated copyright or IP.
+If you are unsure, please see the section on University Policy in the
+unit outline and talk to your tutor.
+
+Assessment: (See Assessment component in the unit guide).
