@@ -81,13 +81,10 @@
     <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AABB.h" />
-    <ClInclude Include="CollisionManager.h" />
     <ClInclude Include="FrameListener.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="IObject.h" />
     <ClInclude Include="IScene.h" />
-    <ClInclude Include="OBB.h" />
     <ClInclude Include="OgreGraphics.h" />
     <ClInclude Include="SceneManager.h" />
     <ClInclude Include="stdafx.h" />
@@ -97,7 +94,6 @@
     <ClInclude Include="Vector3.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CollisionManager.cpp" />
     <ClCompile Include="FrameListener.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="IObject.cpp" />
