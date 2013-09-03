@@ -7,7 +7,7 @@ TestObject::TestObject(void)
 {
 	m_position = Ogre::Vector3( 0, 0, 0 );
 	m_entity = "sinbad";
-	m_filename = "models/mesh/testComputer.mesh";
+	m_filename = "boxmesh.mesh";
 }
 
 
