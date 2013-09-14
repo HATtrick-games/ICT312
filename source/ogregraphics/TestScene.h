@@ -2,6 +2,7 @@
 
 #include "IScene.h"
 #include "TestObject.h"
+#include "GenericObject.h"
 
 enum CameraType
 {

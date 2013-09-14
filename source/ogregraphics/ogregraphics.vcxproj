@@ -84,6 +84,7 @@
     <ClInclude Include="Constants.h" />
     <ClInclude Include="FrameListener.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="GenericObject.h" />
     <ClInclude Include="IObject.h" />
     <ClInclude Include="IScene.h" />
     <ClInclude Include="LinearMotion.h" />
@@ -100,6 +101,7 @@
   <ItemGroup>
     <ClCompile Include="FrameListener.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GenericObject.cpp" />
     <ClCompile Include="IObject.cpp" />
     <ClCompile Include="IScene.cpp" />
     <ClCompile Include="LinearMotion.cpp" />
