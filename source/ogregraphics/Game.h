@@ -3,6 +3,7 @@
 #include "OgreGraphics.h"
 #include "SceneManager.h"
 #include "TestScene.h"
+#include "ITBuildingScene.h"
 
 namespace Core
 {
