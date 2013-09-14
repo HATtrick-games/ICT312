@@ -3,15 +3,7 @@
 
 using namespace Objects;
 
-IObject::IObject()
-{
-	m_position = Ogre::Vector3();
-	m_rotation = Ogre::Quaternion();
-}
-
-IObject::~IObject()
-{
-}
+int IObject::m_objCount = 0;
 
 void IObject::update( float deltaTime )
 {
@@ -52,4 +44,10 @@ void IObject::setYaw( float angle )
 void IObject::setPitch( float angle )
 {
 	Core::Game::getGraphics()->setEntityPitch( m_entity, angle );
+}
+
+void IObject::setID()
+{
+	m_id = m_objCount;
+	m_objCount++;
 }

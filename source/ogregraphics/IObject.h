@@ -7,9 +7,6 @@ namespace Objects
 	class IObject
 	{
 	public:
-		IObject(void);
-		~IObject(void);
-
 		virtual void		initialise() = 0;
 		virtual void		update( float deltaTime );
 
@@ -29,8 +26,12 @@ namespace Objects
 		Ogre::Vector3 m_position;
 		Ogre::Quaternion m_rotation;
 
-		
-		std::string m_entity;
 		std::string m_filename;
+		std::string m_entity;
+
+		void setID();
+	private:
+		int m_id;
+		static int m_objCount;
 	};
 }
