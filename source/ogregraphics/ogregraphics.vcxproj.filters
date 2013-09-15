@@ -99,6 +99,12 @@
     <ClInclude Include="Game.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="CollisionObject.h">
+      <Filter>Header Files\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionWorldSingleton.h">
+      <Filter>Header Files\Collision</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -139,6 +145,12 @@
     </ClCompile>
     <ClCompile Include="RigidBodyObject.cpp">
       <Filter>Source Files\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionObject.cpp">
+      <Filter>Source Files\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionWorldSingleton.cpp">
+      <Filter>Source Files\Collision</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

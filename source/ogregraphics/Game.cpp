@@ -1,5 +1,7 @@
 #include "StdAfx.h"
 #include "Game.h"
+#include "CollisionObject.h"
+#include "CollisionWorldSingleton.h"
 
 using namespace Core;
 
@@ -10,6 +12,9 @@ Scenes::SceneManager* Game::m_sceneManager = NULL;
 OIS::InputManager* Game::m_inputManager = NULL;
 OIS::Keyboard* Game::m_keyboard = NULL;
 OIS::Mouse* Game::m_mouse = NULL;
+CollisionObject* col1;
+CollisionObject* col2;
+CollisionObject* col[10];
 
 Game::~Game(void)
 {
@@ -47,6 +52,18 @@ int Game::initialise()
 
 	// initialise scene manager
 	m_sceneManager = new Scenes::SceneManager( new Scenes::TestScene() );
+	 col1 = new CollisionObject();
+	 col2 = new CollisionObject();
+	 col1->AddBoxShape(1,1,1);
+	 col2->AddBoxShape(1,1,1);
+	 col1->SetPosition(1,1,1);
+	 col2->SetPosition(1,1,1);
+	for(int i = 0; i<10; i++)
+	{
+		col[i] = new CollisionObject();
+		col[i]->AddBoxShape(1,1,1);
+		col[i]->SetPosition(1,1,1);
+	}
 
 	return 0;
 }
@@ -55,6 +72,7 @@ void Game::gameLoop()
 {
 	while( m_running )
 	{
+		CollisionWorldSingleton::Instance()->CheckCollision();
 		m_keyboard->capture();
 		m_mouse->capture();
 

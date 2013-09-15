@@ -40,7 +40,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <ExecutablePath>$(SolutionDir)thirdparty\bin\debug;$(VCInstallDir)bin;$(WindowsSdkDir)bin\NETFX 4.0 Tools;$(WindowsSdkDir)bin;$(VSInstallDir)Common7\Tools\bin;$(VSInstallDir)Common7\tools;$(VSInstallDir)Common7\ide;$(ProgramFiles)\HTML Help Workshop;$(FrameworkSDKDir)\bin;$(MSBuildToolsPath32);$(VSInstallDir);$(SystemRoot)\SysWow64;$(FxCopDir);$(PATH);</ExecutablePath>
-    <IncludePath>$(SolutionDir)thirdparty\include;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;</IncludePath>
+    <IncludePath>$(SolutionDir)thirdparty\include;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;$(SolutionDir)thirdparty\include\Ogre</IncludePath>
     <ReferencePath>$(SolutionDir)thirdparty\lib\debug;$(VCInstallDir)atlmfc\lib;$(VCInstallDir)lib</ReferencePath>
     <LibraryPath>$(SolutionDir)thirdparty\lib\debug;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(FrameworkSDKDir)\lib</LibraryPath>
   </PropertyGroup>
@@ -54,11 +54,12 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalOptions>-Zm140 %(AdditionalOptions)</AdditionalOptions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>OgreMain_d.lib;OIS_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>OgreMain_d.lib;OIS_d.lib;OgreBulletDynamics_d.lib;OgreBulletCollisions_d.lib;BulletCollision_vs2010_Debug.lib;BulletDynamics_vs2010_Debug.lib;LinearMath_vs2010_Debug.lib;ConvexDecomposition_Debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -81,6 +82,8 @@
     <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CollisionObject.h" />
+    <ClInclude Include="CollisionWorldSingleton.h" />
     <ClInclude Include="Constants.h" />
     <ClInclude Include="FrameListener.h" />
     <ClInclude Include="Game.h" />
@@ -98,6 +101,8 @@
     <ClInclude Include="Vector3.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CollisionObject.cpp" />
+    <ClCompile Include="CollisionWorldSingleton.cpp" />
     <ClCompile Include="FrameListener.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="IObject.cpp" />
