@@ -66,6 +66,11 @@ namespace Scenes
 		 * \param	deltaTime	Time between frames.
 		 */
 		void updateScene( float deltaTime );
+
+		Scenes::IScene* GetScene()
+		{
+			return m_currentScene;
+		}
 	private:
 		Scenes::IScene*			m_currentScene;
 		Scenes::IScene*			m_previousScene;

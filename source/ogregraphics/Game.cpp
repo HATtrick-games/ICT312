@@ -2,6 +2,7 @@
 #include "Game.h"
 #include "CollisionObject.h"
 #include "CollisionWorldSingleton.h"
+#include "TemporaryPlayerObject.h"
 
 using namespace Core;
 
@@ -14,7 +15,10 @@ OIS::Keyboard* Game::m_keyboard = NULL;
 OIS::Mouse* Game::m_mouse = NULL;
 CollisionObject* col1;
 CollisionObject* col2;
+CollisionObject* PlayerSphere;
 CollisionObject* col[10];
+TemporaryPlayerObject* Player;
+
 
 Game::~Game(void)
 {
@@ -52,18 +56,26 @@ int Game::initialise()
 
 	// initialise scene manager
 	m_sceneManager = new Scenes::SceneManager( new Scenes::TestScene() );
+
+
+	 Player = new TemporaryPlayerObject();
 	 col1 = new CollisionObject();
 	 col2 = new CollisionObject();
 	 col1->AddBoxShape(1,1,1);
 	 col2->AddBoxShape(1,1,1);
-	 col1->SetPosition(1,1,1);
-	 col2->SetPosition(1,1,1);
-	for(int i = 0; i<10; i++)
+	 col1->SetPosition(0,0,-50);
+	 col2->SetPosition(10,0,0);
+	 PlayerSphere = new CollisionObject();
+	 PlayerSphere->AddSphereShape(1);
+	 PlayerSphere->SetPosition(0,0,0);
+	 PlayerSphere->SetUserPointer(Player);
+	
+/*	for(int i = 0; i<10; i++)
 	{
 		col[i] = new CollisionObject();
 		col[i]->AddBoxShape(1,1,1);
 		col[i]->SetPosition(1,1,1);
-	}
+	}*/
 
 	return 0;
 }
@@ -73,14 +85,19 @@ void Game::gameLoop()
 	while( m_running )
 	{
 		CollisionWorldSingleton::Instance()->CheckCollision();
+		
+		Player->SetLastPos(m_sceneManager->GetScene()->getObject("Player")->getPosition().x,m_sceneManager->GetScene()->getObject("Player")->getPosition().y,m_sceneManager->GetScene()->getObject("Player")->getPosition().z);
 		m_keyboard->capture();
 		m_mouse->capture();
-
+		
+		
 		m_graphics->renderOneFrame();
 
 		if( m_sceneManager )
 		{
 			m_sceneManager->updateScene( m_graphics->getDeltaTime() );
 		}
+		std::cout<<m_sceneManager->GetScene()->getObject("Player")->getPosition().z;
+		PlayerSphere->SetPosition(m_sceneManager->GetScene()->getObject("Player")->getPosition().x,m_sceneManager->GetScene()->getObject("Player")->getPosition().y,m_sceneManager->GetScene()->getObject("Player")->getPosition().z);
 	}
 }

@@ -105,6 +105,9 @@
     <ClInclude Include="CollisionWorldSingleton.h">
       <Filter>Header Files\Collision</Filter>
     </ClInclude>
+    <ClInclude Include="TemporaryPlayerObject.h">
+      <Filter>Header Files\Objects</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -151,6 +154,9 @@
     </ClCompile>
     <ClCompile Include="CollisionWorldSingleton.cpp">
       <Filter>Source Files\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="TemporaryPlayerObject.cpp">
+      <Filter>Source Files\Objects</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

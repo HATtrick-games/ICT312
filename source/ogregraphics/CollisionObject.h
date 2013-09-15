@@ -12,7 +12,7 @@ public:
 	void SetPosition(Math::Vector3 vecpos);//sets position by vector
 	void MoveObject(Math::Vector3 vec);//moves position by passed vector
 	void SetObjectOrientation(Math::Vector3 axis, float Degrees);
-	void SetUserPointer(Objects::IObject* obj);
+	void SetUserPointer(void* obj);
 	Math::Vector3 GetObjectPosition();
 	
 protected:

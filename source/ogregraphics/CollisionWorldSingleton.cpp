@@ -1,5 +1,7 @@
 #include "stdafx.h"
 #include "CollisionWorldSingleton.h"
+#include "CollisionObject.h"
+#include "TemporaryPlayerObject.h"
 
 
 CollisionWorldSingleton* CollisionWorldSingleton::Instance()
@@ -30,7 +32,19 @@ void CollisionWorldSingleton::CheckCollision()
 	//	std::cout<<obA->getWorldTransform().getOrigin().x()<<"\n";
 //		std::cout<<obB->getWorldTransform().getOrigin().x()<<"\n";
 		
-		
+		if(obA->getUserPointer())
+		{
+			TemporaryPlayerObject* obj = (TemporaryPlayerObject*)obB->getUserPointer();
+			std::cout<<"THIS IS THE SPEHRE";
+			Core::Game::getSceneManager()->GetScene()->getObject("Player")->setPosition(Ogre::Vector3(obj->lastposition.x,obj->lastposition.y,obj->lastposition.z));
+
+		}
+		if(obB->getUserPointer())
+		{
+			TemporaryPlayerObject* obj = (TemporaryPlayerObject*)obB->getUserPointer();
+			Core::Game::getSceneManager()->GetScene()->getObject("Player")->setPosition(Ogre::Vector3(obj->lastposition.x,obj->lastposition.y,obj->lastposition.z));
+			std::cout<<"THIS IS THE SPEHRE";
+		}
 	
 		
 		
@@ -48,7 +62,7 @@ void CollisionWorldSingleton::CheckCollision()
 				const btVector3& ptB = pt.getPositionWorldOnB();
 				const btVector3& normalOnB = pt.m_normalWorldOnB;
 		//		std::cout<< ptA.x();
-			//	std::cout<<numContacts<<"COLLIDE \n";
+				std::cout<<numContacts<<"COLLIDE \n";
 		//		//Sleep(1000);
 			}
 					

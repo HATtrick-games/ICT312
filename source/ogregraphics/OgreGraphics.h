@@ -27,6 +27,10 @@ namespace Graphics
 	class OgreGraphics
 	{
 	public:
+		Ogre::Vector3 GetPosition()
+		{
+			return m_camera->getPosition();
+		}
 
 		/**
 		 * \fn	OgreGraphics::OgreGraphics(void);

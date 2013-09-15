@@ -9,7 +9,7 @@ BulletCollisionObject = new btCollisionObject();
 
 }
 
-void CollisionObject::SetUserPointer(Objects::IObject* obj)
+void CollisionObject::SetUserPointer(void* obj)
 {
 	BulletCollisionObject->setUserPointer(obj);
 }
