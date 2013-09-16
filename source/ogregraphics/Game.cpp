@@ -61,12 +61,12 @@ int Game::initialise()
 	 Player = new TemporaryPlayerObject();
 	 col1 = new CollisionObject();
 	 col2 = new CollisionObject();
-	 col1->AddBoxShape(1,1,1);
+	 col1->AddBoxShape(12,12,12);
 	 col2->AddBoxShape(1,1,1);
 	 col1->SetPosition(0,0,-50);
 	 col2->SetPosition(10,0,0);
 	 PlayerSphere = new CollisionObject();
-	 PlayerSphere->AddSphereShape(1);
+	 PlayerSphere->AddSphereShape(0.1);
 	 PlayerSphere->SetPosition(0,0,0);
 	 PlayerSphere->SetUserPointer(Player);
 	
