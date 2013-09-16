@@ -13,12 +13,26 @@ Scenes::SceneManager* Game::m_sceneManager = NULL;
 OIS::InputManager* Game::m_inputManager = NULL;
 OIS::Keyboard* Game::m_keyboard = NULL;
 OIS::Mouse* Game::m_mouse = NULL;
-CollisionObject* col1;
-CollisionObject* col2;
+//CollisionObject* col1;
+//CollisionObject* col2;
 CollisionObject* PlayerSphere;
-CollisionObject* col[10];
+//CollisionObject* col[10];
 TemporaryPlayerObject* Player;
 
+
+void Game::BuildCollisionRoom()
+{
+	/* col1 = new CollisionObject();
+	 col2 = new CollisionObject();
+	 col1->AddBoxShape(12,12,12);
+	 col2->AddBoxShape(1,1,1);
+	 col1->SetPosition(0,0,-50);
+	 col2->SetPosition(10,0,0);*/
+
+	//Front Left Side
+	
+
+}
 
 Game::~Game(void)
 {
@@ -59,23 +73,20 @@ int Game::initialise()
 
 
 	 Player = new TemporaryPlayerObject();
-	 col1 = new CollisionObject();
-	 col2 = new CollisionObject();
-	 col1->AddBoxShape(12,12,12);
-	 col2->AddBoxShape(1,1,1);
-	 col1->SetPosition(0,0,-50);
-	 col2->SetPosition(10,0,0);
 	 PlayerSphere = new CollisionObject();
 	 PlayerSphere->AddSphereShape(0.1);
 	 PlayerSphere->SetPosition(0,0,0);
 	 PlayerSphere->SetUserPointer(Player);
 	
-/*	for(int i = 0; i<10; i++)
-	{
-		col[i] = new CollisionObject();
-		col[i]->AddBoxShape(1,1,1);
-		col[i]->SetPosition(1,1,1);
-	}*/
+	 /***Collision GOES HERE****************************/
+	CollisionObject* WallSection1 = new CollisionObject();
+//	WallSection1->AddBoxShape(51.535,1000,2);
+//	WallSection1->SetPosition(-693.3385,0,17.939);
+
+
+
+	/*********************ENDS HERE*********??????????????/////////////*/
+
 
 	return 0;
 }
