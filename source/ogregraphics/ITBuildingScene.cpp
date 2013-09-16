@@ -33,7 +33,7 @@ void ITBuildingScene::update( float deltaTime )
 
 	freeCamera( deltaTime );
 
-	moveObject("WallSection57", deltaTime);
+	moveObject("SmallWall2", deltaTime);
 
 	IScene::update( deltaTime ); // must always be last
 }
@@ -99,6 +99,10 @@ void ITBuildingScene::createScene()
 		Ogre::Vector3(0, 3.14159, 0), "models/DoorClosed.mesh" ) );
 	addObject( "WallSection20", new Objects::GenericObject( Ogre::Vector3(61.7906, 0, 191.18), 
 		Ogre::Vector3(0, -1.570795, 0), "models/WallSection.mesh" ) );
+	addObject( "SmallWall1", new Objects::GenericObject( Ogre::Vector3(26.16, 0, 105.486), 
+		Ogre::Vector3(0, 3.14159, 0), "models/SmallWall.mesh" ) );
+	addObject( "SmallWall2", new Objects::GenericObject( Ogre::Vector3(27.05, 0, 105.486), 
+		Ogre::Vector3(0, 3.14159, 0), "models/SmallWall.mesh" ) );
 
 	// common room
 	addObject( "WallSection19", new Objects::GenericObject( Ogre::Vector3(115.24, 0, 186.53), 
@@ -186,6 +190,41 @@ void ITBuildingScene::createScene()
 		Ogre::Vector3(0, 0, 0), "models/WallSection.mesh" ) );
 	addObject( "WallSection57", new Objects::GenericObject( Ogre::Vector3(-159.54, 0, -410.20), 
 		Ogre::Vector3(0, 0, 0), "models/WallSection.mesh" ) );
+	addObject( "WallSection58", new Objects::GenericObject( Ogre::Vector3(-277.84, 0, -410.18), 
+		Ogre::Vector3(0, 0, 0), "models/WallSection.mesh" ) );
+	addObject( "WallSection59", new Objects::GenericObject( Ogre::Vector3(-395.981, 0, -410.20), 
+		Ogre::Vector3(0, 0, 0), "models/WallSection.mesh" ) );
+
+	// front wall
+	addObject( "WallSection60", new Objects::GenericObject( Ogre::Vector3(-402.871, 0, -373.961), 
+		Ogre::Vector3(0, 1.570795, 0), "models/WallSection.mesh" ) );
+	addObject( "WallSection61", new Objects::GenericObject( Ogre::Vector3(-402.869, 0, -255.64), 
+		Ogre::Vector3(0, 1.570795, 0), "models/WallSection.mesh" ) );
+	addObject( "WallSection62", new Objects::GenericObject( Ogre::Vector3(-402.871, 0, -138.97), 
+		Ogre::Vector3(0, 1.570795, 0), "models/WallSection.mesh" ) );
+	addObject( "WallSection63", new Objects::GenericObject( Ogre::Vector3(-402.872, 0, -71.154), 
+		Ogre::Vector3(0, 1.570795, 0), "models/WallSection.mesh" ) );
+
+	// front left wall
+	addObject( "WallSection64", new Objects::GenericObject( Ogre::Vector3(-184.456, 0, -32.3849), 
+		Ogre::Vector3(0, 3.14159, 0), "models/WallSection.mesh" ) );
+	addObject( "WallSection65", new Objects::GenericObject( Ogre::Vector3(-302.774, 0, -32.3851), 
+		Ogre::Vector3(0, 3.14159, 0), "models/WallSection.mesh" ) );
+	addObject( "WallSection66", new Objects::GenericObject( Ogre::Vector3(-371.613, 0, -32.3849), 
+		Ogre::Vector3(0, 3.14159, 0), "models/WallSection.mesh" ) );
+
+	// corridor inset
+	addObject( "WallSection67", new Objects::GenericObject( Ogre::Vector3(-456.016, 0, -65.224), 
+		Ogre::Vector3(0, -1.570795, 0), "models/WallSection.mesh" ) );
+	addObject( "WallSection68", new Objects::GenericObject( Ogre::Vector3(-456.018, 0, -183.644), 
+		Ogre::Vector3(0, -1.570795, 0), "models/WallSection.mesh" ) );
+	addObject( "DoorClosed2", new Objects::GenericObject( Ogre::Vector3(-536.559, 0, -57.5508), 
+		Ogre::Vector3(0, 1.570795, 0), "models/DoorClosed.mesh" ) );
+	addObject( "WallSection69", new Objects::GenericObject( Ogre::Vector3(-536.22, 0, -188.902), 
+		Ogre::Vector3(0, 1.570795, 0), "models/WallSection.mesh" ) );
+	addObject( "DoorClosed3", new Objects::GenericObject( Ogre::Vector3(-536.559, 0, -57.5508), 
+		Ogre::Vector3(0, 0, 0), "models/DoorClosed.mesh" ) );
+	
 }
 
 void ITBuildingScene::freeCamera( float deltaTime )
