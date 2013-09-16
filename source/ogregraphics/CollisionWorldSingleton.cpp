@@ -33,13 +33,13 @@ void CollisionWorldSingleton::CheckCollision()
 		if(obA->getUserPointer())
 		{
 			TemporaryPlayerObject* obj = (TemporaryPlayerObject*)obB->getUserPointer();
-			Core::Game::getSceneManager()->GetScene()->getObject("Player")->setPosition(Ogre::Vector3(obj->lastposition.x,obj->lastposition.y,obj->lastposition.z));
+			Core::Game::getSceneManager()->GetScene()->getObject("Camera")->setPosition(Ogre::Vector3(obj->lastposition.x,obj->lastposition.y,obj->lastposition.z));
 
 		}
 		if(obB->getUserPointer())
 		{
 			TemporaryPlayerObject* obj = (TemporaryPlayerObject*)obB->getUserPointer();
-			Core::Game::getSceneManager()->GetScene()->getObject("Player")->setPosition(Ogre::Vector3(obj->lastposition.x,obj->lastposition.y,obj->lastposition.z));
+			Core::Game::getSceneManager()->GetScene()->getObject("Camera")->setPosition(Ogre::Vector3(obj->lastposition.x,obj->lastposition.y,obj->lastposition.z));
 		}
 	
 		
@@ -57,7 +57,7 @@ void CollisionWorldSingleton::CheckCollision()
 				const btVector3& ptA = pt.getPositionWorldOnA();
 				const btVector3& ptB = pt.getPositionWorldOnB();
 				const btVector3& normalOnB = pt.m_normalWorldOnB;
-				std::cout<<numContacts<<"COLLIDE \n";
+				std::cout<<numContacts<<"COLLIDE \n\n\n\n\n";
 			}
 					
 		}
