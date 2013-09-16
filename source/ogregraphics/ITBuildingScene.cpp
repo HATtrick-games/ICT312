@@ -8,7 +8,7 @@ void ITBuildingScene::initialise()
 	m_cameraType = CAM_FIRSTPERSON;
 	cameraSpeed = 100.0f;
 
-	Core::Game::getGraphics()->cameraSetPosition( -718, 145, 80 );
+	Core::Game::getGraphics()->cameraSetPosition( 0, 0, 50 );
 	Core::Game::getGraphics()->cameraSetLookAt( 0, 0, 0 );
 
 	if( Core::Game::getGraphics()->getWindowHeight() > 0 )
@@ -18,9 +18,12 @@ void ITBuildingScene::initialise()
 
 	Core::Game::getGraphics()->createDirectionalLight( "Light1", 0, 0, 0, 1, -1, 0 );
 
-	Core::Game::getGraphics()->cameraMoveRelative( Ogre::Vector3(0, 180, 0) );
+	Core::Game::getGraphics()->cameraMoveRelative( Ogre::Vector3(0, 120, 0) );
 
-	addObject( "Player", new Objects::GenericObject( Ogre::Vector3(-718, 145, 80), 
+	addObject( "Player", new Objects::GenericObject( Ogre::Vector3(0, 120, 0), 
+		Ogre::Vector3(0, 0, 0), "models/boxmesh.mesh" ) );
+
+	addObject( "Camera", new Objects::GenericObject( Ogre::Vector3(100.0f, 100.0f, 100.0f), 
 		Ogre::Vector3(0, 0, 0), "models/boxmesh.mesh" ) );
 
 	createScene();
@@ -54,7 +57,7 @@ void ITBuildingScene::update( float deltaTime )
 		break;
 	}
 
-	//moveObject("SmallWall2", deltaTime);
+	//moveObject("Camera", deltaTime);
 
 	IScene::update( deltaTime ); // must always be last
 }
@@ -291,6 +294,7 @@ void ITBuildingScene::freeCamera( float deltaTime )
 void ITBuildingScene::firstPersonCamera( float deltaTime )
 {
 	Ogre::Vector3 translate( 0, 0, 0 );
+
 	if( Core::Game::getKeyboard()->isKeyDown( OIS::KC_W ) )
 	{
 		translate += Ogre::Vector3( 0, 0, -1 );
@@ -316,19 +320,22 @@ void ITBuildingScene::firstPersonCamera( float deltaTime )
 		translate += Ogre::Vector3( 0, 1, 0 );
 	}
 
+
+	Core::Game::getGraphics()->cameraMoveRelative( translate * deltaTime * cameraSpeed );
+
 	float rotX = Core::Game::getMouse()->getMouseState().X.rel * deltaTime * -0.3;
 	float rotY = Core::Game::getMouse()->getMouseState().Y.rel * deltaTime * -0.3;
 	Core::Game::getGraphics()->cameraYaw( Ogre::Radian( rotX ) );
 	Core::Game::getGraphics()->cameraPitch( Ogre::Radian( rotY ) );
 
-	getObject( "Player" )->setYaw( rotX );
+	getObject( "Camera" )->setYaw( rotX );
 
-	Core::Game::getGraphics()->cameraSetPosition( getObject( "Player" )->getPosition().x, 
-		getObject( "Player" )->getPosition().y, getObject( "Player" )->getPosition().z );
+	Core::Game::getGraphics()->cameraSetPosition( getObject( "Camera" )->getPosition().x, 
+		getObject( "Camera" )->getPosition().y, getObject( "Camera" )->getPosition().z );
 	translate = translate * deltaTime * cameraSpeed;
 
-	std::cout << getObject( "Player" )->getPosition() << std::endl;
-	getObject( "Player" )->changePosition( getObject( "Player" )->getOrientation() * translate );
+	std::cout << getObject( "Camera" )->getPosition() << std::endl;
+	getObject( "Camera" )->changePosition( getObject( "Camera" )->getOrientation() * translate );
 }
 
 void ITBuildingScene::moveObject( std::string objectName, float deltaTime )
