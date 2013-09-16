@@ -80,8 +80,8 @@ int Game::initialise()
 	
 	 /***Collision GOES HERE****************************/
 	CollisionObject* WallSection1 = new CollisionObject();
-//	WallSection1->AddBoxShape(51.535,1000,2);
-//	WallSection1->SetPosition(-693.3385,0,17.939);
+	WallSection1->AddBoxShape(51.535,1000,5);
+	WallSection1->SetPosition(-693.3385,0,17.939);
 
 
 
@@ -97,7 +97,7 @@ void Game::gameLoop()
 	{
 		CollisionWorldSingleton::Instance()->CheckCollision();
 		
-		Player->SetLastPos(m_sceneManager->GetScene()->getObject("Player")->getPosition().x,m_sceneManager->GetScene()->getObject("Player")->getPosition().y,m_sceneManager->GetScene()->getObject("Player")->getPosition().z);
+		Player->SetLastPos(m_sceneManager->GetScene()->getObject("Camera")->getPosition().x,m_sceneManager->GetScene()->getObject("Camera")->getPosition().y,m_sceneManager->GetScene()->getObject("Player")->getPosition().z);
 		m_keyboard->capture();
 		m_mouse->capture();
 		
@@ -109,6 +109,6 @@ void Game::gameLoop()
 			m_sceneManager->updateScene( m_graphics->getDeltaTime() );
 		}
 		//std::cout<<m_sceneManager->GetScene()->getObject("Player")->getPosition().z;
-		PlayerSphere->SetPosition(m_sceneManager->GetScene()->getObject("Player")->getPosition().x,m_sceneManager->GetScene()->getObject("Player")->getPosition().y,m_sceneManager->GetScene()->getObject("Player")->getPosition().z);
+		PlayerSphere->SetPosition(m_sceneManager->GetScene()->getObject("Camera")->getPosition().x,m_sceneManager->GetScene()->getObject("Camera")->getPosition().y,m_sceneManager->GetScene()->getObject("Camera")->getPosition().z);
 	}
 }
