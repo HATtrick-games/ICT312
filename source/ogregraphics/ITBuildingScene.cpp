@@ -5,9 +5,10 @@ using namespace Scenes;
 
 void ITBuildingScene::initialise()
 {
+	m_cameraType = CAM_FIRSTPERSON;
 	cameraSpeed = 100.0f;
 
-	Core::Game::getGraphics()->cameraSetPosition( 0, 0, 50 );
+	Core::Game::getGraphics()->cameraSetPosition( -718, 145, 80 );
 	Core::Game::getGraphics()->cameraSetLookAt( 0, 0, 0 );
 
 	if( Core::Game::getGraphics()->getWindowHeight() > 0 )
@@ -18,6 +19,9 @@ void ITBuildingScene::initialise()
 	Core::Game::getGraphics()->createDirectionalLight( "Light1", 0, 0, 0, 1, -1, 0 );
 
 	Core::Game::getGraphics()->cameraMoveRelative( Ogre::Vector3(0, 180, 0) );
+
+	addObject( "Player", new Objects::GenericObject( Ogre::Vector3(-718, 145, 80), 
+		Ogre::Vector3(0, 0, 0), "models/boxmesh.mesh" ) );
 
 	createScene();
 }
@@ -31,9 +35,26 @@ void ITBuildingScene::update( float deltaTime )
 		Core::Game::setRunning( false );
 	}
 
-	freeCamera( deltaTime );
+	if( Core::Game::getKeyboard()->isKeyDown( OIS::KC_1 ) )
+	{
+		m_cameraType = CAM_FREE;
+	}
+	if( Core::Game::getKeyboard()->isKeyDown( OIS::KC_2 ) )
+	{
+		m_cameraType = CAM_FIRSTPERSON;
+	}
 
-	moveObject("SmallWall2", deltaTime);
+	switch( m_cameraType )
+	{
+	case CAM_FREE:
+		freeCamera( deltaTime );
+		break;
+	case CAM_FIRSTPERSON:
+		firstPersonCamera( deltaTime );
+		break;
+	}
+
+	//moveObject("SmallWall2", deltaTime);
 
 	IScene::update( deltaTime ); // must always be last
 }
@@ -263,6 +284,51 @@ void ITBuildingScene::freeCamera( float deltaTime )
 	float rotY = Core::Game::getMouse()->getMouseState().Y.rel * deltaTime * -0.3;
 	Core::Game::getGraphics()->cameraYaw( Ogre::Radian( rotX ) );
 	Core::Game::getGraphics()->cameraPitch( Ogre::Radian( rotY ) );
+
+	getObject( "Player" )->setYaw( rotX );
+}
+
+void ITBuildingScene::firstPersonCamera( float deltaTime )
+{
+	Ogre::Vector3 translate( 0, 0, 0 );
+	if( Core::Game::getKeyboard()->isKeyDown( OIS::KC_W ) )
+	{
+		translate += Ogre::Vector3( 0, 0, -1 );
+	}
+	if( Core::Game::getKeyboard()->isKeyDown( OIS::KC_S ) )
+	{
+		translate += Ogre::Vector3( 0, 0, 1 );
+	}
+	if( Core::Game::getKeyboard()->isKeyDown( OIS::KC_A ) )
+	{
+		translate += Ogre::Vector3( -1, 0, 0 );
+	}
+	if( Core::Game::getKeyboard()->isKeyDown( OIS::KC_D ) )
+	{
+		translate += Ogre::Vector3( 1, 0, 0 );
+	}
+	if( Core::Game::getKeyboard()->isKeyDown( OIS::KC_Q ) )
+	{
+		translate += Ogre::Vector3( 0, -1, 0 );
+	}
+	if( Core::Game::getKeyboard()->isKeyDown( OIS::KC_E ) )
+	{
+		translate += Ogre::Vector3( 0, 1, 0 );
+	}
+
+	float rotX = Core::Game::getMouse()->getMouseState().X.rel * deltaTime * -0.3;
+	float rotY = Core::Game::getMouse()->getMouseState().Y.rel * deltaTime * -0.3;
+	Core::Game::getGraphics()->cameraYaw( Ogre::Radian( rotX ) );
+	Core::Game::getGraphics()->cameraPitch( Ogre::Radian( rotY ) );
+
+	getObject( "Player" )->setYaw( rotX );
+
+	Core::Game::getGraphics()->cameraSetPosition( getObject( "Player" )->getPosition().x, 
+		getObject( "Player" )->getPosition().y, getObject( "Player" )->getPosition().z );
+	translate = translate * deltaTime * cameraSpeed;
+
+	std::cout << getObject( "Player" )->getPosition() << std::endl;
+	getObject( "Player" )->changePosition( getObject( "Player" )->getOrientation() * translate );
 }
 
 void ITBuildingScene::moveObject( std::string objectName, float deltaTime )

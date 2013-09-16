@@ -17,6 +17,7 @@ TestObject::~TestObject(void)
 
 void TestObject::initialise()
 {
+	m_position = Ogre::Vector3(-718, 145, 80);
 	loadMesh();
 }
 
