@@ -15,7 +15,7 @@ namespace Scenes
 	private:
 		CameraType		m_cameraType;
 		float cameraSpeed;
-
+	
 		void createScene();
 		void freeCamera( float deltaTime );
 		void firstPersonCamera( float deltaTime );
