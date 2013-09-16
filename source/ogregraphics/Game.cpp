@@ -97,7 +97,7 @@ void Game::gameLoop()
 		{
 			m_sceneManager->updateScene( m_graphics->getDeltaTime() );
 		}
-		std::cout<<m_sceneManager->GetScene()->getObject("Player")->getPosition().z;
+		//std::cout<<m_sceneManager->GetScene()->getObject("Player")->getPosition().z;
 		PlayerSphere->SetPosition(m_sceneManager->GetScene()->getObject("Player")->getPosition().x,m_sceneManager->GetScene()->getObject("Player")->getPosition().y,m_sceneManager->GetScene()->getObject("Player")->getPosition().z);
 	}
 }

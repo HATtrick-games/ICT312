@@ -29,13 +29,10 @@ void CollisionWorldSingleton::CheckCollision()
 		btPersistentManifold* contactManifold =  collisionWorld->getDispatcher()->getManifoldByIndexInternal(i);
 		btCollisionObject* obA = (btCollisionObject*)(contactManifold->getBody0());
 		btCollisionObject* obB = (btCollisionObject*)(contactManifold->getBody1());
-	//	std::cout<<obA->getWorldTransform().getOrigin().x()<<"\n";
-//		std::cout<<obB->getWorldTransform().getOrigin().x()<<"\n";
 		
 		if(obA->getUserPointer())
 		{
 			TemporaryPlayerObject* obj = (TemporaryPlayerObject*)obB->getUserPointer();
-			std::cout<<"THIS IS THE SPEHRE";
 			Core::Game::getSceneManager()->GetScene()->getObject("Player")->setPosition(Ogre::Vector3(obj->lastposition.x,obj->lastposition.y,obj->lastposition.z));
 
 		}
@@ -43,7 +40,6 @@ void CollisionWorldSingleton::CheckCollision()
 		{
 			TemporaryPlayerObject* obj = (TemporaryPlayerObject*)obB->getUserPointer();
 			Core::Game::getSceneManager()->GetScene()->getObject("Player")->setPosition(Ogre::Vector3(obj->lastposition.x,obj->lastposition.y,obj->lastposition.z));
-			std::cout<<"THIS IS THE SPEHRE";
 		}
 	
 		
@@ -61,9 +57,7 @@ void CollisionWorldSingleton::CheckCollision()
 				const btVector3& ptA = pt.getPositionWorldOnA();
 				const btVector3& ptB = pt.getPositionWorldOnB();
 				const btVector3& normalOnB = pt.m_normalWorldOnB;
-		//		std::cout<< ptA.x();
 				std::cout<<numContacts<<"COLLIDE \n";
-		//		//Sleep(1000);
 			}
 					
 		}
