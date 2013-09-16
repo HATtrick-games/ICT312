@@ -55,7 +55,7 @@ int Game::initialise()
 	m_mouse = static_cast< OIS::Mouse* >( m_inputManager->createInputObject( OIS::OISMouse, false ) );
 
 	// initialise scene manager
-	m_sceneManager = new Scenes::SceneManager( new Scenes::TestScene() );
+	m_sceneManager = new Scenes::SceneManager( new Scenes::ITBuildingScene() );
 
 
 	 Player = new TemporaryPlayerObject();

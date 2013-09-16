@@ -5,9 +5,9 @@ using namespace Objects;
 
 TestObject::TestObject(void)
 {
-	m_position = Ogre::Vector3( 0, 0, 0 );
-	m_entity = "sinbad";
-	m_filename = "boxmesh.mesh";
+	m_position = Ogre::Vector3( 0, 200, 0 );
+	m_filename = "models/boxmesh.mesh";
+	setID();
 }
 
 

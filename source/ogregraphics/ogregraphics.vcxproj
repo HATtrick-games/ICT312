@@ -87,8 +87,10 @@
     <ClInclude Include="Constants.h" />
     <ClInclude Include="FrameListener.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="GenericObject.h" />
     <ClInclude Include="IObject.h" />
     <ClInclude Include="IScene.h" />
+    <ClInclude Include="ITBuildingScene.h" />
     <ClInclude Include="LinearMotion.h" />
     <ClInclude Include="OgreGraphics.h" />
     <ClInclude Include="RigidBodyObject.h" />
@@ -106,8 +108,10 @@
     <ClCompile Include="CollisionWorldSingleton.cpp" />
     <ClCompile Include="FrameListener.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GenericObject.cpp" />
     <ClCompile Include="IObject.cpp" />
     <ClCompile Include="IScene.cpp" />
+    <ClCompile Include="ITBuildingScene.cpp" />
     <ClCompile Include="LinearMotion.cpp" />
     <ClCompile Include="OgreGraphics.cpp" />
     <ClCompile Include="RigidBodyObject.cpp" />

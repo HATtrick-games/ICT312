@@ -20,6 +20,16 @@ void TestScene::initialise()
 	Core::Game::getGraphics()->createDirectionalLight( "Light1", 0, 0, 0, 1, -1, 0 );
 
 	addObject( "Player", new Objects::TestObject() );
+	//addObject( "WallSection", new Objects::GenericObject( Ogre::Vector3(100, 0, 0), Ogre::Vector3(0, 0, 0), "models/WallSection.mesh" ) );
+	//addObject( "Cabinet", new Objects::GenericObject( Ogre::Vector3(200, 0, 0), Ogre::Vector3(0, 0, 0), "models/Cabinet.mesh" ) );
+	//addObject( "ComputerTable", new Objects::GenericObject( Ogre::Vector3(300, 0, 0), Ogre::Vector3(0, 0, 0), "models/ComputerTable.mesh" ) );
+	//addObject( "DoorClosed", new Objects::GenericObject( Ogre::Vector3(400, 0, 0), Ogre::Vector3(0, 0, 0), "models/DoorClosed.mesh" ) );
+	//addObject( "DoorOpen", new Objects::GenericObject( Ogre::Vector3(500, 0, 0), Ogre::Vector3(0, 0, 0), "models/DoorOpen.mesh" ) );
+	//addObject( "FloorCarpet1", new Objects::GenericObject( Ogre::Vector3(600, 0, 0), Ogre::Vector3(0, 0, 0), "models/FloorCarpet1.mesh" ) );
+	//addObject( "FloorCarpet2", new Objects::GenericObject( Ogre::Vector3(700, 0, 0), Ogre::Vector3(0, 0, 0), "models/FloorCarpet2.mesh" ) );
+	addObject( "Stool", new Objects::GenericObject( Ogre::Vector3(800, 0, 0), Ogre::Vector3(0, 0, 0), "models/Stool.mesh" ) );
+	addObject( "Floor", new Objects::GenericObject( Ogre::Vector3(0, 20, 0), Ogre::Vector3(0, 0, 0), "models/FloorPlan.mesh" ) );
+	//addObject( "TableMesh", new Objects::GenericObject( Ogre::Vector3(900, 0, 0), Ogre::Vector3(0, 0, 0), "models/TableMesh.mesh" ) );
 }
 
 void TestScene::update( float deltaTime )
@@ -58,7 +68,7 @@ void TestScene::onExit()
 
 void TestScene::freeCamera( float deltaTime )
 {
-	float movementSpeed = 50.0f;	
+	float movementSpeed = 1000.0f;	
 
 	Ogre::Vector3 translate( 0, 0, 0 );
 	if( Core::Game::getKeyboard()->isKeyDown( OIS::KC_W ) )
@@ -90,7 +100,7 @@ void TestScene::freeCamera( float deltaTime )
 
 void TestScene::firstPersonCamera( float deltaTime )
 {
-	float movementSpeed = 50.0f;	
+	float movementSpeed = 1000.0f;	
 
 	Ogre::Vector3 translate( 0, 0, 0 );
 	if( Core::Game::getKeyboard()->isKeyDown( OIS::KC_W ) )

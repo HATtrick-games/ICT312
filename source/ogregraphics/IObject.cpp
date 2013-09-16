@@ -46,8 +46,23 @@ void IObject::setPitch( float angle )
 	Core::Game::getGraphics()->setEntityPitch( m_entity, angle );
 }
 
+void IObject::setRoll( float angle )
+{
+	Core::Game::getGraphics()->setEntityRoll( m_entity, angle );
+}
+
 void IObject::setID()
 {
 	m_id = m_objCount;
 	m_objCount++;
+
+	std::ostringstream idString;
+	idString << m_id;
+	
+	m_entity = "entity" + idString.str();
+}
+
+std::string IObject::getEntity()
+{
+	return m_entity;
 }

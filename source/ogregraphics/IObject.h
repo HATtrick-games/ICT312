@@ -27,10 +27,12 @@ namespace Objects
 		Ogre::Quaternion m_rotation;
 
 		std::string m_filename;
-		std::string m_entity;
 
 		void setID();
+		std::string getEntity();
 	private:
+		std::string m_entity;
+
 		int m_id;
 		static int m_objCount;
 	};
