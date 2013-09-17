@@ -193,6 +193,20 @@ int Game::initialise()
 	Door2->AddBoxShape(25,1000,120);
 	Door2->SetPosition(260,100,-50);
 
+	//left couch
+	CollisionObject* Couch1 = new CollisionObject();
+	Couch1->AddBoxShape(110,1000,120);
+	Couch1->SetPosition(500,100,200);
+
+	//right couch
+	CollisionObject* Couch2 = new CollisionObject();
+	Couch2->AddBoxShape(200,1000,120);
+	Couch2->SetPosition(200,100,200);
+
+	CollisionObject* Couch3 = new CollisionObject();
+	Couch3->AddBoxShape(50,1000,85);
+	Couch3->SetPosition(125,100,302);
+
 //	CollisionObject* random1 = new CollisionObject();
 //	CollisionObject* random2 = new CollisionObject();
 //	random1->AddBoxShape(100,100,100);
