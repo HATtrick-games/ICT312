@@ -57,7 +57,7 @@ void ITBuildingScene::update( float deltaTime )
 		break;
 	}
 
-	//moveObject("Camera", deltaTime);
+	//moveObject("ComputerChair1", deltaTime);
 
 	IScene::update( deltaTime ); // must always be last
 }
@@ -72,7 +72,7 @@ void ITBuildingScene::createScene()
 	addObject( "FloorPlan", new Objects::GenericObject( Ogre::Vector3(-1.88, 10, 82.5697),
 		Ogre::Vector3(0, 0, 0), "models/FloorPlan.mesh" ) );
 
-	// front left side
+	// front left sidesa
 	addObject( "WallSection1", new Objects::GenericObject( Ogre::Vector3(-667.662, 0, 17.939), 
 		Ogre::Vector3(0, 0, 0), "models/WallSection.mesh" ) ); 
 	addObject( "WallSection2", new Objects::GenericObject( Ogre::Vector3(-616.127, 0, 17.950), 
@@ -123,10 +123,8 @@ void ITBuildingScene::createScene()
 		Ogre::Vector3(0, 3.14159, 0), "models/DoorClosed.mesh" ) );
 	addObject( "WallSection20", new Objects::GenericObject( Ogre::Vector3(61.7906, 0, 191.18), 
 		Ogre::Vector3(0, -1.570795, 0), "models/WallSection.mesh" ) );
-	addObject( "SmallWall1", new Objects::GenericObject( Ogre::Vector3(26.16, 0, 105.486), 
-		Ogre::Vector3(0, 3.14159, 0), "models/SmallWall.mesh" ) );
-	addObject( "SmallWall2", new Objects::GenericObject( Ogre::Vector3(27.05, 0, 105.486), 
-		Ogre::Vector3(0, 3.14159, 0), "models/SmallWall.mesh" ) );
+	addObject( "SmallWall1", new Objects::GenericObject( Ogre::Vector3(85.9401, 0, 103.276), 
+		Ogre::Vector3(0, 3.14159, 0), "models/WallSection2.mesh" ) );
 
 	// common room
 	addObject( "WallSection19", new Objects::GenericObject( Ogre::Vector3(115.24, 0, 186.53), 
@@ -242,13 +240,48 @@ void ITBuildingScene::createScene()
 		Ogre::Vector3(0, -1.570795, 0), "models/WallSection.mesh" ) );
 	addObject( "WallSection68", new Objects::GenericObject( Ogre::Vector3(-456.018, 0, -183.644), 
 		Ogre::Vector3(0, -1.570795, 0), "models/WallSection.mesh" ) );
-	addObject( "DoorClosed2", new Objects::GenericObject( Ogre::Vector3(-536.559, 0, -57.5508), 
+	addObject( "DoorClosed2", new Objects::GenericObject( Ogre::Vector3(-535.849, 0, -50.9507), 
 		Ogre::Vector3(0, 1.570795, 0), "models/DoorClosed.mesh" ) );
-	addObject( "WallSection69", new Objects::GenericObject( Ogre::Vector3(-536.22, 0, -188.902), 
+	addObject( "WallSection69", new Objects::GenericObject( Ogre::Vector3(-535.849, 0, -183.132), 
 		Ogre::Vector3(0, 1.570795, 0), "models/WallSection.mesh" ) );
-	addObject( "DoorClosed3", new Objects::GenericObject( Ogre::Vector3(-536.559, 0, -57.5508), 
+	addObject( "DoorClosed3", new Objects::GenericObject( Ogre::Vector3(-516.911, 0, -121.39), 
 		Ogre::Vector3(0, 0, 0), "models/DoorClosed.mesh" ) );
-	
+	addObject( "SmallWall2", new Objects::GenericObject( Ogre::Vector3(-434.094, 0, -122.93), 
+		Ogre::Vector3(0, 0, 0), "models/WallSection2.mesh" ) );
+	addObject( "SmallWall3", new Objects::GenericObject( Ogre::Vector3(-442.983, 0, -122.93), 
+		Ogre::Vector3(0, 0, 0), "models/WallSection2.mesh" ) );
+	addObject( "SmallWall4", new Objects::GenericObject( Ogre::Vector3(-533.081, 0, -12.5402), 
+		Ogre::Vector3(0, 1.570795, 0), "models/WallSection2.mesh" ) );
+	addObject( "SmallWall5", new Objects::GenericObject( Ogre::Vector3(-533.081, 0, -21.4702), 
+		Ogre::Vector3(0, 1.570795, 0), "models/WallSection2.mesh" ) );
+	addObject( "WallSection70", new Objects::GenericObject( Ogre::Vector3(-602.45, 0, -121.122), 
+		Ogre::Vector3(0, 0, 0), "models/WallSection.mesh" ) );
+
+	// cabinets
+	addObject( "Cabinet1", new Objects::GenericObject( Ogre::Vector3(420.479, 0, 471.098), 
+		Ogre::Vector3(0, 0, 0), "models/Cabinet.mesh" ) );
+
+	// computer tables
+	addObject( "ComputerTable1", new Objects::GenericObject( Ogre::Vector3(-217.116, 0, -271.38), 
+		Ogre::Vector3(0, 0, 0), "models/ComputerTable.mesh" ) );
+	addObject( "ComputerTable2", new Objects::GenericObject( Ogre::Vector3(-32.539, 0, -271.38), 
+		Ogre::Vector3(0, 0, 0), "models/ComputerTable.mesh" ) );
+	addObject( "ComputerTable3", new Objects::GenericObject( Ogre::Vector3(152.038, 0, -271.38), 
+		Ogre::Vector3(0, 0, 0), "models/ComputerTable.mesh" ) );
+	addObject( "ComputerTable4", new Objects::GenericObject( Ogre::Vector3(336.615, 0, -271.38), 
+		Ogre::Vector3(0, 0, 0), "models/ComputerTable.mesh" ) );
+	addObject( "ComputerTable5", new Objects::GenericObject( Ogre::Vector3(521.192, 0, -271.38), 
+		Ogre::Vector3(0, 0, 0), "models/ComputerTable.mesh" ) );
+
+	// computer chairs
+	/*addObject( "ComputerChair1", new Objects::GenericObject( Ogre::Vector3(521.192, 0, -271.38), 
+		Ogre::Vector3(0, 0, 0), "models/ComputerChair.mesh" ) );*/
+
+	// corridor tables
+	addObject( "Table1", new Objects::GenericObject( Ogre::Vector3(-406.622, 0, 179.278), 
+		Ogre::Vector3(0, 1.570795, 0), "models/TableMesh.mesh" ) );
+	addObject( "Table2", new Objects::GenericObject( Ogre::Vector3(-179.185, 0, 179.278), 
+		Ogre::Vector3(0, 1.570795, 0), "models/TableMesh.mesh" ) );
 }
 
 void ITBuildingScene::freeCamera( float deltaTime )
@@ -288,7 +321,7 @@ void ITBuildingScene::freeCamera( float deltaTime )
 	Core::Game::getGraphics()->cameraYaw( Ogre::Radian( rotX ) );
 	Core::Game::getGraphics()->cameraPitch( Ogre::Radian( rotY ) );
 
-	getObject( "Player" )->setYaw( rotX );
+	getObject( "Camera" )->setYaw( rotX );
 }
 
 void ITBuildingScene::firstPersonCamera( float deltaTime )
@@ -334,7 +367,7 @@ void ITBuildingScene::firstPersonCamera( float deltaTime )
 		getObject( "Camera" )->getPosition().y, getObject( "Camera" )->getPosition().z );
 	translate = translate * deltaTime * cameraSpeed;
 
-	std::cout << getObject( "Camera" )->getPosition() << std::endl;
+	//std::cout << getObject( "Camera" )->getPosition() << std::endl;
 	getObject( "Camera" )->changePosition( getObject( "Camera" )->getOrientation() * translate );
 }
 
@@ -342,19 +375,19 @@ void ITBuildingScene::moveObject( std::string objectName, float deltaTime )
 {
 	if( Core::Game::getKeyboard()->isKeyDown( OIS::KC_UP ) )
 	{
-		getObject( objectName )->changePosition( Ogre::Vector3(10 * deltaTime, 0, 0) );
+		getObject( objectName )->changePosition( Ogre::Vector3(20 * deltaTime, 0, 0) );
 	}
 	if( Core::Game::getKeyboard()->isKeyDown( OIS::KC_DOWN ) )
 	{
-		getObject( objectName )->changePosition( Ogre::Vector3(-10 * deltaTime, 0, 0) );
+		getObject( objectName )->changePosition( Ogre::Vector3(-20 * deltaTime, 0, 0) );
 	}
 	if( Core::Game::getKeyboard()->isKeyDown( OIS::KC_LEFT ) )
 	{
-		getObject( objectName )->changePosition( Ogre::Vector3(0, 0, 10 * deltaTime) );
+		getObject( objectName )->changePosition( Ogre::Vector3(0, 0, 20 * deltaTime) );
 	}
 	if( Core::Game::getKeyboard()->isKeyDown( OIS::KC_RIGHT ) )
 	{
-		getObject( objectName )->changePosition( Ogre::Vector3(0, 0, -10 * deltaTime) );
+		getObject( objectName )->changePosition( Ogre::Vector3(0, 0, -20 * deltaTime) );
 	}
 
 	std::cout << "Position: " << getObject( objectName )->getPosition() << std::endl;

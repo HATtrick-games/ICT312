@@ -95,9 +95,7 @@ void Game::gameLoop()
 {
 	while( m_running )
 	{
-		CollisionWorldSingleton::Instance()->CheckCollision();
 		
-		Player->SetLastPos(m_sceneManager->GetScene()->getObject("Camera")->getPosition().x,m_sceneManager->GetScene()->getObject("Camera")->getPosition().y,m_sceneManager->GetScene()->getObject("Player")->getPosition().z);
 		m_keyboard->capture();
 		m_mouse->capture();
 		
@@ -109,6 +107,11 @@ void Game::gameLoop()
 			m_sceneManager->updateScene( m_graphics->getDeltaTime() );
 		}
 		//std::cout<<m_sceneManager->GetScene()->getObject("Player")->getPosition().z;
+		
+		CollisionWorldSingleton::Instance()->CheckCollision();
+
+		Player->SetLastPos(m_sceneManager->GetScene()->getObject("Camera")->getPosition().x,m_sceneManager->GetScene()->getObject("Camera")->getPosition().y,m_sceneManager->GetScene()->getObject("Player")->getPosition().z);
+
 		PlayerSphere->SetPosition(m_sceneManager->GetScene()->getObject("Camera")->getPosition().x,m_sceneManager->GetScene()->getObject("Camera")->getPosition().y,m_sceneManager->GetScene()->getObject("Camera")->getPosition().z);
 	}
 }
