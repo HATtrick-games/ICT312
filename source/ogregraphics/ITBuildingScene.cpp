@@ -57,7 +57,7 @@ void ITBuildingScene::update( float deltaTime )
 		break;
 	}
 
-	//moveObject("ComputerChair1", deltaTime);
+	moveObject("Sofa8", deltaTime);
 
 	IScene::update( deltaTime ); // must always be last
 }
@@ -72,7 +72,10 @@ void ITBuildingScene::createScene()
 	addObject( "FloorPlan", new Objects::GenericObject( Ogre::Vector3(-1.88, 10, 82.5697),
 		Ogre::Vector3(0, 0, 0), "models/FloorPlan.mesh" ) );
 
-	// front left sidesa
+	addObject( "GlassDoor", new Objects::GenericObject( Ogre::Vector3(-742.279, 10, 122.35),
+		Ogre::Vector3(0, 1.570795, 0), "models/GlassDoor.mesh" ) );
+
+	// front left side
 	addObject( "WallSection1", new Objects::GenericObject( Ogre::Vector3(-667.662, 0, 17.939), 
 		Ogre::Vector3(0, 0, 0), "models/WallSection.mesh" ) ); 
 	addObject( "WallSection2", new Objects::GenericObject( Ogre::Vector3(-616.127, 0, 17.950), 
@@ -157,6 +160,14 @@ void ITBuildingScene::createScene()
 		Ogre::Vector3(0, 3.14159, 0), "models/WallSection.mesh" ) );
 	addObject( "WallSection34", new Objects::GenericObject( Ogre::Vector3(278.241, 0, 389.365), 
 		Ogre::Vector3(0, 3.14159, 0), "models/WallSection.mesh" ) );
+	addObject( "WallSection71", new Objects::GenericObject( Ogre::Vector3(589.228, 0, 573.251), 
+		Ogre::Vector3(0, 3.14159, 0), "models/WallSection.mesh" ) );
+	addObject( "WallSection72", new Objects::GenericObject( Ogre::Vector3(471.074, 0, 573.241), 
+		Ogre::Vector3(0, 3.14159, 0), "models/WallSection.mesh" ) );
+	addObject( "WallSection73", new Objects::GenericObject( Ogre::Vector3(451.194, 0, 573.231), 
+		Ogre::Vector3(0, 3.14159, 0), "models/WallSection.mesh" ) );
+	addObject( "SideWindow", new Objects::GenericObject( Ogre::Vector3(566.066, 10, 555.124),
+		Ogre::Vector3(0, 0, 0), "models/Window.mesh" ) );
 
 	// back wall
 	addObject( "WallSection35", new Objects::GenericObject( Ogre::Vector3(628.624, 0, 537.346), 
@@ -274,14 +285,92 @@ void ITBuildingScene::createScene()
 		Ogre::Vector3(0, 0, 0), "models/ComputerTable.mesh" ) );
 
 	// computer chairs
-	/*addObject( "ComputerChair1", new Objects::GenericObject( Ogre::Vector3(521.192, 0, -271.38), 
-		Ogre::Vector3(0, 0, 0), "models/ComputerChair.mesh" ) );*/
+	addObject( "ComputerChair1", new Objects::GenericObject( Ogre::Vector3(541.49, 0, -383.822), 
+		Ogre::Vector3(0, 0, 0), "models/ComputerChair.mesh" ) );
+	addObject( "ComputerChair2", new Objects::GenericObject( Ogre::Vector3(359.192, 0, -383.822), 
+		Ogre::Vector3(0, 0, 0), "models/ComputerChair.mesh" ) );
+	addObject( "ComputerChair3", new Objects::GenericObject( Ogre::Vector3(175.192, 0, -383.822), 
+		Ogre::Vector3(0, 0, 0), "models/ComputerChair.mesh" ) );
+	addObject( "ComputerChair4", new Objects::GenericObject( Ogre::Vector3(-8.192, 0, -383.822), 
+		Ogre::Vector3(0, 0, 0), "models/ComputerChair.mesh" ) );
+	addObject( "ComputerChair5", new Objects::GenericObject( Ogre::Vector3(-192.192, 0, -383.822), 
+		Ogre::Vector3(0, 0, 0), "models/ComputerChair.mesh" ) );
+	addObject( "ComputerChair6", new Objects::GenericObject( Ogre::Vector3(359.192, 0, -304.761), 
+		Ogre::Vector3(0, 0, 0), "models/ComputerChair.mesh" ) );
+	addObject( "ComputerChair7", new Objects::GenericObject( Ogre::Vector3(175.192, 0, -304.761), 
+		Ogre::Vector3(0, 0, 0), "models/ComputerChair.mesh" ) );
+	addObject( "ComputerChair8", new Objects::GenericObject( Ogre::Vector3(-8.192, 0, -304.761), 
+		Ogre::Vector3(0, 0, 0), "models/ComputerChair.mesh" ) );
+	addObject( "ComputerChair9", new Objects::GenericObject( Ogre::Vector3(-192.192, 0, -304.761), 
+		Ogre::Vector3(0, 0, 0), "models/ComputerChair.mesh" ) );
+	addObject( "ComputerChair10", new Objects::GenericObject( Ogre::Vector3(541.49, 0, -304.761), 
+		Ogre::Vector3(0, 0, 0), "models/ComputerChair.mesh" ) );
+	addObject( "ComputerChair11", new Objects::GenericObject( Ogre::Vector3(359.192, 0, -225.621), 
+		Ogre::Vector3(0, 0, 0), "models/ComputerChair.mesh" ) );
+	addObject( "ComputerChair12", new Objects::GenericObject( Ogre::Vector3(175.192, 0, -225.621), 
+		Ogre::Vector3(0, 0, 0), "models/ComputerChair.mesh" ) );
+	addObject( "ComputerChair13", new Objects::GenericObject( Ogre::Vector3(-8.192, 0, -225.621), 
+		Ogre::Vector3(0, 0, 0), "models/ComputerChair.mesh" ) );
+	addObject( "ComputerChair14", new Objects::GenericObject( Ogre::Vector3(-192.192, 0, -225.621), 
+		Ogre::Vector3(0, 0, 0), "models/ComputerChair.mesh" ) );
+	addObject( "ComputerChair15", new Objects::GenericObject( Ogre::Vector3(541.49, 0, -225.621), 
+		Ogre::Vector3(0, 0, 0), "models/ComputerChair.mesh" ) );
+
+	// computers
+	addObject( "Computer1", new Objects::GenericObject( Ogre::Vector3(547.31, 0, -429.145), 
+		Ogre::Vector3(0, 3.14159, 0), "models/Computer.mesh" ) );
+	addObject( "Computer2", new Objects::GenericObject( Ogre::Vector3(363.31, 0, -429.145), 
+		Ogre::Vector3(0, 3.14159, 0), "models/Computer.mesh" ) );
+	addObject( "Computer3", new Objects::GenericObject( Ogre::Vector3(179.31, 0, -429.145), 
+		Ogre::Vector3(0, 3.14159, 0), "models/Computer.mesh" ) );
+	addObject( "Computer4", new Objects::GenericObject( Ogre::Vector3(-5.31, 0, -429.145), 
+		Ogre::Vector3(0, 3.14159, 0), "models/Computer.mesh" ) );
+	addObject( "Computer5", new Objects::GenericObject( Ogre::Vector3(-189.31, 0, -429.145), 
+		Ogre::Vector3(0, 3.14159, 0), "models/Computer.mesh" ) );
+	addObject( "Computer6", new Objects::GenericObject( Ogre::Vector3(547.31, 0, -351.163), 
+		Ogre::Vector3(0, 3.14159, 0), "models/Computer.mesh" ) );
+	addObject( "Computer7", new Objects::GenericObject( Ogre::Vector3(363.31, 0, -351.163), 
+		Ogre::Vector3(0, 3.14159, 0), "models/Computer.mesh" ) );
+	addObject( "Computer8", new Objects::GenericObject( Ogre::Vector3(179.31, 0, -351.163), 
+		Ogre::Vector3(0, 3.14159, 0), "models/Computer.mesh" ) );
+	addObject( "Computer9", new Objects::GenericObject( Ogre::Vector3(-5.31, 0, -351.163), 
+		Ogre::Vector3(0, 3.14159, 0), "models/Computer.mesh" ) );
+	addObject( "Computer10", new Objects::GenericObject( Ogre::Vector3(-189.31, 0, -351.163), 
+		Ogre::Vector3(0, 3.14159, 0), "models/Computer.mesh" ) );
+	addObject( "Computer11", new Objects::GenericObject( Ogre::Vector3(547.31, 0, -270.559), 
+		Ogre::Vector3(0, 3.14159, 0), "models/Computer.mesh" ) );
+	addObject( "Computer12", new Objects::GenericObject( Ogre::Vector3(363.31, 0, -270.559), 
+		Ogre::Vector3(0, 3.14159, 0), "models/Computer.mesh" ) );
+	addObject( "Computer13", new Objects::GenericObject( Ogre::Vector3(179.31, 0, -270.559), 
+		Ogre::Vector3(0, 3.14159, 0), "models/Computer.mesh" ) );
+	addObject( "Computer14", new Objects::GenericObject( Ogre::Vector3(-5.31, 0, -270.559), 
+		Ogre::Vector3(0, 3.14159, 0), "models/Computer.mesh" ) );
+	addObject( "Computer15", new Objects::GenericObject( Ogre::Vector3(-189.31, 0, -270.559), 
+		Ogre::Vector3(0, 3.14159, 0), "models/Computer.mesh" ) );
 
 	// corridor tables
 	addObject( "Table1", new Objects::GenericObject( Ogre::Vector3(-406.622, 0, 179.278), 
 		Ogre::Vector3(0, 1.570795, 0), "models/TableMesh.mesh" ) );
 	addObject( "Table2", new Objects::GenericObject( Ogre::Vector3(-179.185, 0, 179.278), 
 		Ogre::Vector3(0, 1.570795, 0), "models/TableMesh.mesh" ) );
+
+	// sofas
+	addObject( "Sofa1", new Objects::GenericObject( Ogre::Vector3(185.733, -10, 163.758), 
+		Ogre::Vector3(0, -2.3561925, 0), "models/CurvedSofa.mesh" ) );
+	addObject( "Sofa2", new Objects::GenericObject( Ogre::Vector3(261.193, -10, 212.678), 
+		Ogre::Vector3(0, 2.3561925, 0), "models/CurvedSofa.mesh" ) );
+	addObject( "Sofa3", new Objects::GenericObject( Ogre::Vector3(531.294, -10, 177.918), 
+		Ogre::Vector3(0, -2.3561925, 0), "models/CurvedSofa.mesh" ) );
+	addObject( "Sofa4", new Objects::GenericObject( Ogre::Vector3(605.806, -10, 225.838), 
+		Ogre::Vector3(0, 2.3561925, 0), "models/CurvedSofa.mesh" ) );
+	addObject( "Sofa5", new Objects::GenericObject( Ogre::Vector3(606.126, -10, 333.177), 
+		Ogre::Vector3(0, 1.570795, 0), "models/StraightSofa.mesh" ) );
+	addObject( "Sofa6", new Objects::GenericObject( Ogre::Vector3(606.466, -10, 442.879), 
+		Ogre::Vector3(0, 1.570795, 0), "models/StraightSofa.mesh" ) );
+	addObject( "Sofa7", new Objects::GenericObject( Ogre::Vector3(136.563, -10, 244.154), 
+		Ogre::Vector3(0, -1.570795, 0), "models/StraightSofa.mesh" ) );
+	addObject( "Sofa8", new Objects::GenericObject( Ogre::Vector3(606.466, -10, 551.723), 
+		Ogre::Vector3(0, 1.570795, 0), "models/StraightSofa.mesh" ) );
 }
 
 void ITBuildingScene::freeCamera( float deltaTime )
@@ -390,5 +479,5 @@ void ITBuildingScene::moveObject( std::string objectName, float deltaTime )
 		getObject( objectName )->changePosition( Ogre::Vector3(0, 0, -20 * deltaTime) );
 	}
 
-	//std::cout << "Position: " << getObject( objectName )->getPosition() << std::endl;
+	std::cout << "Position: " << getObject( objectName )->getPosition() << std::endl;
 }
