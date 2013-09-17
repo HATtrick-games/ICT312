@@ -86,7 +86,7 @@ int Game::initialise()
 	//door at back of indent
 	CollisionObject* DoorAtBackOfIndent = new CollisionObject();
 	DoorAtBackOfIndent->AddBoxShape(100,1000,2);
-	DoorAtBackOfIndent->SetPosition(-490,100,-65);
+	DoorAtBackOfIndent->SetPosition(-490,100,-90);
 
 	//Wall From indent to IT room door
 	CollisionObject* Wall1 = new CollisionObject();
@@ -95,12 +95,12 @@ int Game::initialise()
 
 	//wall from first door to second door
 	CollisionObject* Wall2 = new CollisionObject();
-	Wall2->AddBoxShape(300,1000,16);
+	Wall2->AddBoxShape(320,1000,16);
 	Wall2->SetPosition(120,100,-5);
 
 	//Last wall on left side
 	CollisionObject* Wall3 = new CollisionObject();
-	Wall3->AddBoxShape(406,100,16);
+	Wall3->AddBoxShape(426,100,16);
 	Wall3->SetPosition(545,100,-5);
 
 	//LEft side wall of LAb
@@ -123,9 +123,75 @@ int Game::initialise()
 	Common1->AddBoxShape(60,1000,440);
 	Common1->SetPosition(625,100,380);
 
+	//Common room tables
+	CollisionObject* Table1 = new CollisionObject();
+	Table1->AddBoxShape(100,1000,240);
+	Table1->SetPosition(-215,100,-300);
+
+	CollisionObject* Table2 = new CollisionObject();
+	Table2->AddBoxShape(100,1000,240);
+	Table2->SetPosition(-31,100,-300);
+
+	CollisionObject* Table3 = new CollisionObject();
+	Table3->AddBoxShape(100,1000,240);
+	Table3->SetPosition(150,100,-300);
+
+	CollisionObject* Table4 = new CollisionObject();
+	Table4->AddBoxShape(100,1000,240);
+	Table4->SetPosition(339,100,-300);
+
+	CollisionObject* Table5 = new CollisionObject();
+	Table5->AddBoxShape(100,1000,240);
+	Table5->SetPosition(523,100,-300);
+
+	//Hallway table
+	CollisionObject* HallTable = new CollisionObject();
+	HallTable->AddBoxShape(480,1000,55);
+	HallTable->SetPosition(-380,100,172);
+	
+	//Cabinet and bench common room
+	CollisionObject* Bench = new CollisionObject();
+	Bench->AddBoxShape(80,1000,200);
+	Bench->SetPosition(410,100,500);
+
 	//Back window wall
+	CollisionObject* Common2 = new CollisionObject();
+	Common2->AddBoxShape(140,1000,20);
+	Common2->SetPosition(515,100,570);
 
+	//front wall of kitchen
+	CollisionObject* Kitchen1 = new CollisionObject();
+	Kitchen1->AddBoxShape(180,1000,20);
+	Kitchen1->SetPosition(305,100,415);
 
+	//Kitchen Sink
+	CollisionObject* Sink = new CollisionObject();
+	Sink->AddBoxShape(250,1000,10);
+	Sink->SetPosition(245,100,540);
+
+	//Kitchen Right wall
+	CollisionObject* Kitchen2 = new CollisionObject();
+	Kitchen2->AddBoxShape(20,1000,460);
+	Kitchen2->SetPosition(90,100,335);
+
+	//end of all block
+	CollisionObject* EndBlock = new CollisionObject();
+	EndBlock->AddBoxShape(20,1000,155);
+	EndBlock->SetPosition(640,100,72.5);
+
+	// Entrance block
+	CollisionObject* Entrance = new CollisionObject();
+	Entrance->AddBoxShape(20,1000,204);
+	Entrance->SetPosition(-725,100,105);
+
+	//OPen door 1
+	CollisionObject* Door1 = new CollisionObject();
+	Door1->AddBoxShape(25,1000,120);
+	Door1->SetPosition(-115,100,-50);
+
+	CollisionObject* Door2 = new CollisionObject();
+	Door2->AddBoxShape(25,1000,120);
+	Door2->SetPosition(260,100,-50);
 
 //	CollisionObject* random1 = new CollisionObject();
 //	CollisionObject* random2 = new CollisionObject();
@@ -136,8 +202,8 @@ int Game::initialise()
 
 	/*********************ENDS HERE*********??????????????/////////////*/
 
-	Core::Game::getSceneManager()->GetScene()->getObject("Camera")->setPosition(Ogre::Vector3(100,100,100));
-	Player->SetLastPos(100,100,100);
+	Core::Game::getSceneManager()->GetScene()->getObject("Camera")->setPosition(Ogre::Vector3(100,125,100));
+	Player->SetLastPos(100,125,100);
 	return 0;
 }
 
