@@ -20,7 +20,7 @@ void ITBuildingScene::initialise()
 
 	Core::Game::getGraphics()->cameraMoveRelative( Ogre::Vector3(0, 120, 0) );
 
-	addObject( "Player", new Objects::GenericObject( Ogre::Vector3(0, 120, 0), 
+	addObject( "Player", new Objects::GenericObject( Ogre::Vector3(0, -120, 0), 
 		Ogre::Vector3(0, 0, 0), "models/boxmesh.mesh" ) );
 
 	addObject( "Camera", new Objects::GenericObject( Ogre::Vector3(100.0f, 100.0f, 100.0f), 
@@ -57,7 +57,7 @@ void ITBuildingScene::update( float deltaTime )
 		break;
 	}
 
-	moveObject("Sofa8", deltaTime);
+	moveObject("Mouse11", deltaTime);
 
 	IScene::update( deltaTime ); // must always be last
 }
@@ -168,6 +168,8 @@ void ITBuildingScene::createScene()
 		Ogre::Vector3(0, 3.14159, 0), "models/WallSection.mesh" ) );
 	addObject( "SideWindow", new Objects::GenericObject( Ogre::Vector3(566.066, 10, 555.124),
 		Ogre::Vector3(0, 0, 0), "models/Window.mesh" ) );
+	addObject( "SmallWall6", new Objects::GenericObject( Ogre::Vector3(195.491, 0, 418.59), 
+		Ogre::Vector3(0, -1.570795, 0), "models/WallSection2.mesh" ) );
 
 	// back wall
 	addObject( "WallSection35", new Objects::GenericObject( Ogre::Vector3(628.624, 0, 537.346), 
@@ -371,6 +373,150 @@ void ITBuildingScene::createScene()
 		Ogre::Vector3(0, -1.570795, 0), "models/StraightSofa.mesh" ) );
 	addObject( "Sofa8", new Objects::GenericObject( Ogre::Vector3(606.466, -10, 551.723), 
 		Ogre::Vector3(0, 1.570795, 0), "models/StraightSofa.mesh" ) );
+	addObject( "Sofa9", new Objects::GenericObject( Ogre::Vector3(204.58, 0, 233.3), 
+		Ogre::Vector3(0, 1.570795, 0), "models/SofaStool.mesh" ) );
+	addObject( "Sofa10", new Objects::GenericObject( Ogre::Vector3(547.535, 0, 245.3), 
+		Ogre::Vector3(0, 1.570795, 0), "models/SofaStool.mesh" ) );
+
+	// corkboards
+	addObject( "Corkboard1", new Objects::GenericObject( Ogre::Vector3(656.538, 80, -19.9978), 
+		Ogre::Vector3(0, 0, 0), "models/Corkboard.mesh" ) );
+	addObject( "Corkboard2", new Objects::GenericObject( Ogre::Vector3(465.737, 80, -19.9978), 
+		Ogre::Vector3(0, 0, 0), "models/Corkboard.mesh" ) );
+	addObject( "Corkboard3", new Objects::GenericObject( Ogre::Vector3(116.575, 80, -19.9978), 
+		Ogre::Vector3(0, 0, 0), "models/Corkboard.mesh" ) );
+	addObject( "Corkboard4", new Objects::GenericObject( Ogre::Vector3(-257.901, 80, -19.9978), 
+		Ogre::Vector3(0, 0, 0), "models/Corkboard.mesh" ) );
+
+	// corner tables
+	addObject( "CornerTable1", new Objects::GenericObject( Ogre::Vector3(-306.801, 0, -46.0579), 
+		Ogre::Vector3(0, 1.570795, 0), "models/CornerTable.mesh" ) );
+	addObject( "CornerTable2", new Objects::GenericObject( Ogre::Vector3(618.439, 0, -46.0579), 
+		Ogre::Vector3(0, 1.570795, 0), "models/CornerTable.mesh" ) );
+
+	// monitors
+	addObject( "Monitor1", new Objects::GenericObject( Ogre::Vector3(511.236, 60, -385.436), 
+		Ogre::Vector3(0, -1.570795, 0), "models/Monitors.mesh" ) );
+	addObject( "Monitor2", new Objects::GenericObject( Ogre::Vector3(327.236, 60, -385.436), 
+		Ogre::Vector3(0, -1.570795, 0), "models/Monitors.mesh" ) );
+	addObject( "Monitor3", new Objects::GenericObject( Ogre::Vector3(143.236, 60, -385.436), 
+		Ogre::Vector3(0, -1.570795, 0), "models/Monitors.mesh" ) );
+	addObject( "Monitor4", new Objects::GenericObject( Ogre::Vector3(-41.236, 60, -385.436), 
+		Ogre::Vector3(0, -1.570795, 0), "models/Monitors.mesh" ) );
+	addObject( "Monitor5", new Objects::GenericObject( Ogre::Vector3(-225.236, 60, -385.436), 
+		Ogre::Vector3(0, -1.570795, 0), "models/Monitors.mesh" ) );
+	addObject( "Monitor6", new Objects::GenericObject( Ogre::Vector3(-225.236, 60, -298.397), 
+		Ogre::Vector3(0, -1.570795, 0), "models/Monitors.mesh" ) );
+	addObject( "Monitor7", new Objects::GenericObject( Ogre::Vector3(511.236, 60, -298.397), 
+		Ogre::Vector3(0, -1.570795, 0), "models/Monitors.mesh" ) );
+	addObject( "Monitor8", new Objects::GenericObject( Ogre::Vector3(327.236, 60, -298.397), 
+		Ogre::Vector3(0, -1.570795, 0), "models/Monitors.mesh" ) );
+	addObject( "Monitor9", new Objects::GenericObject( Ogre::Vector3(143.236, 60, -298.397), 
+		Ogre::Vector3(0, -1.570795, 0), "models/Monitors.mesh" ) );
+	addObject( "Monitor10", new Objects::GenericObject( Ogre::Vector3(-41.236, 60, -298.397), 
+		Ogre::Vector3(0, -1.570795, 0), "models/Monitors.mesh" ) );
+	addObject( "Monitor11", new Objects::GenericObject( Ogre::Vector3(511.236, 60, -210.076), 
+		Ogre::Vector3(0, -1.570795, 0), "models/Monitors.mesh" ) );
+	addObject( "Monitor12", new Objects::GenericObject( Ogre::Vector3(327.236, 60, -210.076), 
+		Ogre::Vector3(0, -1.570795, 0), "models/Monitors.mesh" ) );
+	addObject( "Monitor13", new Objects::GenericObject( Ogre::Vector3(143.236, 60, -210.076), 
+		Ogre::Vector3(0, -1.570795, 0), "models/Monitors.mesh" ) );
+	addObject( "Monitor14", new Objects::GenericObject( Ogre::Vector3(-41.236, 60, -210.076), 
+		Ogre::Vector3(0, -1.570795, 0), "models/Monitors.mesh" ) );
+	addObject( "Monitor15", new Objects::GenericObject( Ogre::Vector3(-225.236, 60, -210.076), 
+		Ogre::Vector3(0, -1.570795, 0), "models/Monitors.mesh" ) );
+
+	// kitchen cabinets
+	addObject( "KitchenCabinet1", new Objects::GenericObject( Ogre::Vector3(355.444, 10, 546.322), 
+		Ogre::Vector3(0, 1.570795, 0), "models/KitchenCabinet.mesh" ) );
+	addObject( "KitchenCabinet2", new Objects::GenericObject( Ogre::Vector3(277.284, 10, 546.322), 
+		Ogre::Vector3(0, 1.570795, 0), "models/KitchenCabinet.mesh" ) );
+	addObject( "KitchenCabinet3", new Objects::GenericObject( Ogre::Vector3(199.362, 10, 546.322), 
+		Ogre::Vector3(0, 1.570795, 0), "models/KitchenCabinet.mesh" ) );
+	addObject( "KitchenCabinet4", new Objects::GenericObject( Ogre::Vector3(130.982, 10, 546.322), 
+		Ogre::Vector3(0, 1.570795, 0), "models/KitchenCabinet.mesh" ) );
+
+	// stools
+	addObject( "Stool1", new Objects::GenericObject( Ogre::Vector3(-183, 10, 152.66), 
+		Ogre::Vector3(0, 1.570795, 0), "models/Stool.mesh" ) );
+	addObject( "Stool2", new Objects::GenericObject( Ogre::Vector3(-255.76, 10, 152.66), 
+		Ogre::Vector3(0, 1.570795, 0), "models/Stool.mesh" ) );
+	addObject( "Stool3", new Objects::GenericObject( Ogre::Vector3(-326.281, 10, 152.66), 
+		Ogre::Vector3(0, 1.570795, 0), "models/Stool.mesh" ) );
+	addObject( "Stool4", new Objects::GenericObject( Ogre::Vector3(-414.561, 10, 152.66), 
+		Ogre::Vector3(0, 1.570795, 0), "models/Stool.mesh" ) );
+	addObject( "Stool5", new Objects::GenericObject( Ogre::Vector3(-486.656, 10, 152.66), 
+		Ogre::Vector3(0, 1.570795, 0), "models/Stool.mesh" ) );
+	addObject( "Stool6", new Objects::GenericObject( Ogre::Vector3(-557.897, 10, 152.66), 
+		Ogre::Vector3(0, 1.570795, 0), "models/Stool.mesh" ) );
+
+	// keyboards
+	addObject( "Keyboard1", new Objects::GenericObject( Ogre::Vector3(-213.076, 60, -203.616), 
+		Ogre::Vector3(0, 3.14159, 0), "models/Keyboard.mesh" ) );
+	addObject( "Keyboard2", new Objects::GenericObject( Ogre::Vector3(-29.076, 60, -203.616), 
+		Ogre::Vector3(0, 3.14159, 0), "models/Keyboard.mesh" ) );
+	addObject( "Keyboard3", new Objects::GenericObject( Ogre::Vector3(155.076, 60, -203.616), 
+		Ogre::Vector3(0, 3.14159, 0), "models/Keyboard.mesh" ) );
+	addObject( "Keyboard4", new Objects::GenericObject( Ogre::Vector3(339.076, 60, -203.616), 
+		Ogre::Vector3(0, 3.14159, 0), "models/Keyboard.mesh" ) );
+	addObject( "Keyboard5", new Objects::GenericObject( Ogre::Vector3(523.076, 60, -203.616), 
+		Ogre::Vector3(0, 3.14159, 0), "models/Keyboard.mesh" ) );
+
+	addObject( "Keyboard6", new Objects::GenericObject( Ogre::Vector3(-213.076, 60, -286.497), 
+		Ogre::Vector3(0, 3.14159, 0), "models/Keyboard.mesh" ) );
+	addObject( "Keyboard7", new Objects::GenericObject( Ogre::Vector3(-29.076, 60, -286.497), 
+		Ogre::Vector3(0, 3.14159, 0), "models/Keyboard.mesh" ) );
+	addObject( "Keyboard8", new Objects::GenericObject( Ogre::Vector3(155.076, 60, -286.497), 
+		Ogre::Vector3(0, 3.14159, 0), "models/Keyboard.mesh" ) );
+	addObject( "Keyboard9", new Objects::GenericObject( Ogre::Vector3(339.076, 60, -286.497), 
+		Ogre::Vector3(0, 3.14159, 0), "models/Keyboard.mesh" ) );
+	addObject( "Keyboard10", new Objects::GenericObject( Ogre::Vector3(523.076, 60, -286.497), 
+		Ogre::Vector3(0, 3.14159, 0), "models/Keyboard.mesh" ) );
+
+	addObject( "Keyboard11", new Objects::GenericObject( Ogre::Vector3(-213.076, 60, -372.196), 
+		Ogre::Vector3(0, 3.14159, 0), "models/Keyboard.mesh" ) );
+	addObject( "Keyboard12", new Objects::GenericObject( Ogre::Vector3(-29.076, 60, -372.196), 
+		Ogre::Vector3(0, 3.14159, 0), "models/Keyboard.mesh" ) );
+	addObject( "Keyboard13", new Objects::GenericObject( Ogre::Vector3(155.076, 60, -372.196), 
+		Ogre::Vector3(0, 3.14159, 0), "models/Keyboard.mesh" ) );
+	addObject( "Keyboard14", new Objects::GenericObject( Ogre::Vector3(339.076, 60, -372.196), 
+		Ogre::Vector3(0, 3.14159, 0), "models/Keyboard.mesh" ) );
+	addObject( "Keyboard15", new Objects::GenericObject( Ogre::Vector3(523.076, 60, -372.196), 
+		Ogre::Vector3(0, 3.14159, 0), "models/Keyboard.mesh" ) );
+
+	// mice
+	addObject( "Mouse1", new Objects::GenericObject( Ogre::Vector3(532.076, 60, -242.996), 
+		Ogre::Vector3(0, 3.14159, 0), "models/Mouse.mesh" ) );
+	addObject( "Mouse2", new Objects::GenericObject( Ogre::Vector3(350, 60, -242.996), 
+		Ogre::Vector3(0, 3.14159, 0), "models/Mouse.mesh" ) );
+	addObject( "Mouse3", new Objects::GenericObject( Ogre::Vector3(165, 60, -242.996), 
+		Ogre::Vector3(0, 3.14159, 0), "models/Mouse.mesh" ) );
+	addObject( "Mouse4", new Objects::GenericObject( Ogre::Vector3(-19, 60, -242.996), 
+		Ogre::Vector3(0, 3.14159, 0), "models/Mouse.mesh" ) );
+	addObject( "Mouse5", new Objects::GenericObject( Ogre::Vector3(-203, 60, -242.996), 
+		Ogre::Vector3(0, 3.14159, 0), "models/Mouse.mesh" ) );
+
+	addObject( "Mouse6", new Objects::GenericObject( Ogre::Vector3(532.076, 60, -327.516), 
+		Ogre::Vector3(0, 3.14159, 0), "models/Mouse.mesh" ) );
+	addObject( "Mouse7", new Objects::GenericObject( Ogre::Vector3(350, 60, -327.516), 
+		Ogre::Vector3(0, 3.14159, 0), "models/Mouse.mesh" ) );
+	addObject( "Mouse8", new Objects::GenericObject( Ogre::Vector3(165, 60, -327.516), 
+		Ogre::Vector3(0, 3.14159, 0), "models/Mouse.mesh" ) );
+	addObject( "Mouse9", new Objects::GenericObject( Ogre::Vector3(-19, 60, -327.516), 
+		Ogre::Vector3(0, 3.14159, 0), "models/Mouse.mesh" ) );
+	addObject( "Mouse10", new Objects::GenericObject( Ogre::Vector3(-203, 60, -327.516), 
+		Ogre::Vector3(0, 3.14159, 0), "models/Mouse.mesh" ) );
+
+	addObject( "Mouse11", new Objects::GenericObject( Ogre::Vector3(532.076, 60, -413.952), 
+		Ogre::Vector3(0, 3.14159, 0), "models/Mouse.mesh" ) );
+	addObject( "Mouse12", new Objects::GenericObject( Ogre::Vector3(350, 60, -413.952), 
+		Ogre::Vector3(0, 3.14159, 0), "models/Mouse.mesh" ) );
+	addObject( "Mouse13", new Objects::GenericObject( Ogre::Vector3(165, 60, -413.952), 
+		Ogre::Vector3(0, 3.14159, 0), "models/Mouse.mesh" ) );
+	addObject( "Mouse14", new Objects::GenericObject( Ogre::Vector3(-19, 60, -413.952), 
+		Ogre::Vector3(0, 3.14159, 0), "models/Mouse.mesh" ) );
+	addObject( "Mouse15", new Objects::GenericObject( Ogre::Vector3(-203, 60, -413.952), 
+		Ogre::Vector3(0, 3.14159, 0), "models/Mouse.mesh" ) );
 }
 
 void ITBuildingScene::freeCamera( float deltaTime )
