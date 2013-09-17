@@ -390,5 +390,5 @@ void ITBuildingScene::moveObject( std::string objectName, float deltaTime )
 		getObject( objectName )->changePosition( Ogre::Vector3(0, 0, -20 * deltaTime) );
 	}
 
-	std::cout << "Position: " << getObject( objectName )->getPosition() << std::endl;
+	//std::cout << "Position: " << getObject( objectName )->getPosition() << std::endl;
 }
