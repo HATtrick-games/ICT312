@@ -456,7 +456,7 @@ void ITBuildingScene::firstPersonCamera( float deltaTime )
 		getObject( "Camera" )->getPosition().y, getObject( "Camera" )->getPosition().z );
 	translate = translate * deltaTime * cameraSpeed;
 
-	//std::cout << getObject( "Camera" )->getPosition() << std::endl;
+	std::cout << getObject( "Camera" )->getPosition() << std::endl;
 	getObject( "Camera" )->changePosition( getObject( "Camera" )->getOrientation() * translate );
 }
 
