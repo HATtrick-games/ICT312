@@ -334,7 +334,7 @@ void ITBuildingScene::firstPersonCamera( float deltaTime )
 		getObject( "Camera" )->getPosition().y, getObject( "Camera" )->getPosition().z );
 	translate = translate * deltaTime * cameraSpeed;
 
-	std::cout << getObject( "Camera" )->getPosition() << std::endl;
+	//std::cout << getObject( "Camera" )->getPosition() << std::endl;
 	getObject( "Camera" )->changePosition( getObject( "Camera" )->getOrientation() * translate );
 }
 
@@ -357,5 +357,5 @@ void ITBuildingScene::moveObject( std::string objectName, float deltaTime )
 		getObject( objectName )->changePosition( Ogre::Vector3(0, 0, -10 * deltaTime) );
 	}
 
-	std::cout << "Position: " << getObject( objectName )->getPosition() << std::endl;
+	//std::cout << "Position: " << getObject( objectName )->getPosition() << std::endl;
 }

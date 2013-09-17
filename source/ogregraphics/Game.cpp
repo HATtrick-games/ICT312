@@ -13,26 +13,13 @@ Scenes::SceneManager* Game::m_sceneManager = NULL;
 OIS::InputManager* Game::m_inputManager = NULL;
 OIS::Keyboard* Game::m_keyboard = NULL;
 OIS::Mouse* Game::m_mouse = NULL;
-//CollisionObject* col1;
-//CollisionObject* col2;
+
 CollisionObject* PlayerSphere;
 //CollisionObject* col[10];
 TemporaryPlayerObject* Player;
 
 
-void Game::BuildCollisionRoom()
-{
-	/* col1 = new CollisionObject();
-	 col2 = new CollisionObject();
-	 col1->AddBoxShape(12,12,12);
-	 col2->AddBoxShape(1,1,1);
-	 col1->SetPosition(0,0,-50);
-	 col2->SetPosition(10,0,0);*/
 
-	//Front Left Side
-	
-
-}
 
 Game::~Game(void)
 {
@@ -73,17 +60,23 @@ int Game::initialise()
 
 
 	 Player = new TemporaryPlayerObject();
+	// Player->SetLastPos(0,0,0);
 	 PlayerSphere = new CollisionObject();
-	 PlayerSphere->AddSphereShape(0.1);
+	 PlayerSphere->AddSphereShape(1);
 	 PlayerSphere->SetPosition(0,0,0);
 	 PlayerSphere->SetUserPointer(Player);
 	
 	 /***Collision GOES HERE****************************/
 	CollisionObject* WallSection1 = new CollisionObject();
-	WallSection1->AddBoxShape(51.535,1000,5);
-	WallSection1->SetPosition(-693.3385,0,17.939);
+	WallSection1->AddBoxShape(1000,1000,10);
+	WallSection1->SetPosition(-693.3385,100,17.939);
 
-
+	CollisionObject* random1 = new CollisionObject();
+	CollisionObject* random2 = new CollisionObject();
+//	random1->AddBoxShape(100,100,100);
+	random2->AddBoxShape(100,100,5);
+//	random1->SetPosition(100,0,-50);
+	random2->SetPosition(100,100,0);
 
 	/*********************ENDS HERE*********??????????????/////////////*/
 
@@ -96,8 +89,8 @@ void Game::gameLoop()
 	while( m_running )
 	{
 		CollisionWorldSingleton::Instance()->CheckCollision();
-		
-		Player->SetLastPos(m_sceneManager->GetScene()->getObject("Camera")->getPosition().x,m_sceneManager->GetScene()->getObject("Camera")->getPosition().y,m_sceneManager->GetScene()->getObject("Player")->getPosition().z);
+		std::cout<<m_sceneManager->GetScene()->getObject("Camera")->getPosition().z<<"\n";
+		Player->SetLastPos(m_sceneManager->GetScene()->getObject("Camera")->getPosition().x,m_sceneManager->GetScene()->getObject("Camera")->getPosition().y,m_sceneManager->GetScene()->getObject("Camera")->getPosition().z);
 		m_keyboard->capture();
 		m_mouse->capture();
 		
@@ -108,7 +101,7 @@ void Game::gameLoop()
 		{
 			m_sceneManager->updateScene( m_graphics->getDeltaTime() );
 		}
-		//std::cout<<m_sceneManager->GetScene()->getObject("Player")->getPosition().z;
+		
 		PlayerSphere->SetPosition(m_sceneManager->GetScene()->getObject("Camera")->getPosition().x,m_sceneManager->GetScene()->getObject("Camera")->getPosition().y,m_sceneManager->GetScene()->getObject("Camera")->getPosition().z);
 	}
 }
