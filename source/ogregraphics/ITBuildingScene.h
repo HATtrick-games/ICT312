@@ -1,6 +1,7 @@
 #pragma once
 
 #include "IScene.h"
+#include "SceneLoader.h"
 
 namespace Scenes
 {
@@ -13,6 +14,8 @@ namespace Scenes
 		virtual void onExit();
 
 	private:
+		SceneLoader m_sceneLoader;
+
 		CameraType		m_cameraType;
 		float cameraSpeed;
 	

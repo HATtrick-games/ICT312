@@ -26,6 +26,8 @@ void ITBuildingScene::initialise()
 	addObject( "Camera", new Objects::GenericObject( Ogre::Vector3(100.0f, 100.0f, 100.0f), 
 		Ogre::Vector3(0, 0, 0), "models/boxmesh.mesh" ) );
 
+	m_sceneLoader.loadScene("../assets/itbuilding.scene");
+
 	createScene();
 }
 

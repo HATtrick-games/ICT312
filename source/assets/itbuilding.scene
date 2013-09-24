@@ -1,0 +1,40 @@
+<scene upAxis="y" unitsPerMeter="1" unitType="meters" formatVersion="1.0" minOgreVersion="1.8" author="EasyOgreExporter">
+    <environment>
+        <colourAmbient r="0" g="0" b="0" />
+        <colourBackground r="0" g="0" b="0" />
+    </environment>
+    <nodes>
+        <node name="Plane001" id="0" isTarget="false">
+            <position x="0.0248663" y="0" z="0" />
+            <rotation qx="-0" qy="-0" qz="-0" qw="-1" />
+            <scale x="0.0894701" y="0.0894701" z="0.0894701" />
+            <entity name="resourcePlane001" id="1" meshFile="resourcePlane001.mesh" castShadows="true">
+                <subentities>
+                    <subentity index="0" materialName="resource03_-_Default" />
+                </subentities>
+            </entity>
+        </node>
+        <node name="Box001" id="2" isTarget="false">
+            <position x="-17.001" y="0.240398" z="-2.24467" />
+            <rotation qx="-0" qy="-0" qz="-0" qw="-1" />
+            <scale x="1" y="1" z="1" />
+            <entity name="resourceBox001" id="3" meshFile="resourceBox001.mesh" castShadows="true">
+                <subentities>
+                    <subentity index="0" materialName="resourceMaterial__27" />
+                    <subentity index="1" materialName="resourceMaterial__27" />
+                </subentities>
+            </entity>
+        </node>
+        <node name="Box001" id="4" isTarget="false">
+            <position x="-17.001" y="0.240398" z="-6.68663" />
+            <rotation qx="-0" qy="-0" qz="-0" qw="-1" />
+            <scale x="1" y="1" z="1" />
+            <entity name="resourceBox001" id="5" meshFile="resourceBox001.mesh" castShadows="true">
+                <subentities>
+                    <subentity index="0" materialName="resourceMaterial__27" />
+                    <subentity index="1" materialName="resourceMaterial__27" />
+                </subentities>
+            </entity>
+        </node>
+    </nodes>
+</scene>
