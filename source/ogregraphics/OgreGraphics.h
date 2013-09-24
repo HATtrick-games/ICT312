@@ -241,6 +241,7 @@ namespace Graphics
 		void				setEntityPosition( std::string identifier, float x, float y, float z );
 		Ogre::Quaternion	getEntityOrientation( std::string identifier );
 		void				setEntityOrientation( std::string identifier, Ogre::Quaternion quat );
+		void				setEntityScale( std::string identifier, Ogre::Vector3 scale );
 
 	private:
 		MapSceneNode		m_sceneNodes;

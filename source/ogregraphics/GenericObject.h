@@ -8,7 +8,9 @@ namespace Objects
 		public IObject
 	{
 	public:
+		GenericObject();
 		GenericObject(Ogre::Vector3 pos, Ogre::Vector3 rot, std::string meshFile);
+		GenericObject(Ogre::Vector3 pos, Ogre::Quaternion rot, Ogre::Vector3 scale, std::string meshFile);
 		~GenericObject(void);
 
 		virtual void initialise();

@@ -26,6 +26,7 @@ void ITBuildingScene::initialise()
 	addObject( "Camera", new Objects::GenericObject( Ogre::Vector3(100.0f, 100.0f, 100.0f), 
 		Ogre::Vector3(0, 0, 0), "models/boxmesh.mesh" ) );
 
+	m_sceneLoader = SceneLoader(this);
 	m_sceneLoader.loadScene("../assets/itbuilding.scene");
 
 	createScene();
@@ -59,7 +60,7 @@ void ITBuildingScene::update( float deltaTime )
 		break;
 	}
 
-	moveObject("Mouse11", deltaTime);
+	//moveObject("Mouse11", deltaTime);
 
 	IScene::update( deltaTime ); // must always be last
 }
@@ -604,7 +605,7 @@ void ITBuildingScene::firstPersonCamera( float deltaTime )
 		getObject( "Camera" )->getPosition().y, getObject( "Camera" )->getPosition().z );
 	translate = translate * deltaTime * cameraSpeed;
 
-	std::cout << getObject( "Camera" )->getPosition() << std::endl;
+	//std::cout << getObject( "Camera" )->getPosition() << std::endl;
 	getObject( "Camera" )->changePosition( getObject( "Camera" )->getOrientation() * translate );
 }
 

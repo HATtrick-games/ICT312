@@ -10,16 +10,23 @@ namespace Objects
 		virtual void		initialise() = 0;
 		virtual void		update( float deltaTime );
 
+		void				setMeshFile( std::string filename );
+
 		Ogre::Vector3		getPosition();
 		void				setPosition( Ogre::Vector3 pos );
 		void				changePosition( Ogre::Vector3 pos );
 
 		Ogre::Quaternion	getOrientation() const;
 
+		void				setOrientation( Ogre::Quaternion rot );
 		void				setYaw( float angle );
 		void				setPitch( float angle );
 		void				setRoll( float angle );
 
+		void				setScale( float x, float y, float z );
+		void				setScale( Ogre::Vector3 scale );
+
+		std::string getEntity();
 	protected:
 		void				loadMesh() const;
 
@@ -29,7 +36,6 @@ namespace Objects
 		std::string m_filename;
 
 		void setID();
-		std::string getEntity();
 	private:
 		std::string m_entity;
 

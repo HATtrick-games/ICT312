@@ -11,6 +11,12 @@ void IObject::update( float deltaTime )
 		m_position.x, m_position.y, m_position.z );
 }
 
+void IObject::setMeshFile( std::string filename )
+{
+	m_filename = filename;
+	if(!m_filename.empty()) loadMesh();
+}
+
 Ogre::Vector3 IObject::getPosition()
 {
 	return m_position;
@@ -31,6 +37,11 @@ Ogre::Quaternion IObject::getOrientation() const
 	return Core::Game::getGraphics()->getEntityOrientation( m_entity );
 }
 
+void IObject::setOrientation( Ogre::Quaternion rot )
+{
+	Core::Game::getGraphics()->setEntityOrientation( m_entity, rot );
+}
+
 void IObject::loadMesh() const
 {
 	Core::Game::getGraphics()->createMeshEntity( m_entity, m_filename );
@@ -49,6 +60,16 @@ void IObject::setPitch( float angle )
 void IObject::setRoll( float angle )
 {
 	Core::Game::getGraphics()->setEntityRoll( m_entity, angle );
+}
+
+void IObject::setScale( float x, float y, float z )
+{
+	Core::Game::getGraphics()->setEntityScale( m_entity, Ogre::Vector3(x, y, z) );
+}
+
+void IObject::setScale( Ogre::Vector3 scale )
+{
+	Core::Game::getGraphics()->setEntityScale( m_entity, scale );
 }
 
 void IObject::setID()
