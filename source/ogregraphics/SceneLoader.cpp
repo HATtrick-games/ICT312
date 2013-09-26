@@ -81,16 +81,15 @@ void SceneLoader::processNodes(rapidxml::xml_node<>* XMLnode)
 
 void SceneLoader::processNode(rapidxml::xml_node<>* XMLnode)
 {
-	Objects::GenericObject object = Objects::GenericObject();
-	std::cout << object.getEntity() << std::endl;
+	Ogre::Vector3 position, scale;
+	Ogre::Quaternion rotation;
+	std::string meshFile;
 
 	std::string name = getAttrib(XMLnode, "name", "") + getAttrib(XMLnode, "id", "");
 	if(name.empty())
 	{
 		return;
 	}
-
-	std::cout << name << std::endl;
 
 	bool isTarget = getAttribBool(XMLnode, "isTarget", false);
 
@@ -99,33 +98,31 @@ void SceneLoader::processNode(rapidxml::xml_node<>* XMLnode)
 	element = XMLnode->first_node("position");
 	if(element)
 	{
-		object.setPosition(parseVector3(element));
-		std::cout << "position: " << parseVector3(element) << std::endl;
+		position = parseVector3(element);
 	}
 
 	element = XMLnode->first_node("rotation");
 	if(element)
 	{
-		//object.setOrientation( parseQuaternion(element) );
-		std::cout << "rotation: " << parseQuaternion(element) << std::endl;
+		rotation = parseQuaternion(element);
 	}
 
 	element = XMLnode->first_node("scale");
 	if(element)
 	{
-		object.setScale(parseVector3(element));
-		std::cout << "scale: " << parseVector3(element) << " " << std::endl;
+		scale = parseVector3(element);
 	}
 
 	element = XMLnode->first_node("entity");
 	if(element)
 	{
-		processEntity(element);
+		processEntity(element, name, position, rotation, scale);
+
 		element = element->next_sibling("entity");
 	}
 }
 
-void SceneLoader::processEntity(rapidxml::xml_node<>* XMLnode)
+void SceneLoader::processEntity(rapidxml::xml_node<>* XMLnode, std::string entityName, Ogre::Vector3 pos, Ogre::Quaternion rot, Ogre::Vector3 scale)
 {
 	// process attributes
 	std::string name = getAttrib(XMLnode, "name", "");
@@ -133,14 +130,17 @@ void SceneLoader::processEntity(rapidxml::xml_node<>* XMLnode)
 	std::string meshFile = getAttrib(XMLnode, "meshFile", "");
 	std::string materialFile = getAttrib(XMLnode, "materialFile", "");
 
-	rapidxml::xml_node<>* element;
-
-	/*std::cout << "Entity name: " << name << std::endl;
-	std::cout << "Entity id: " << id << std::endl;
-	std::cout << "Entity meshFile: " << meshFile << std::endl;
-	std::cout << "Entity materialFile: " << materialFile << std::endl;*/
-
-
+	if(!meshFile.empty())
+	{
+		try
+		{
+			m_scene->addObject(entityName, new Objects::GenericObject(pos, rot, scale, meshFile));
+		}
+		catch (Ogre::Exception &)
+		{
+			Ogre::LogManager::getSingleton().logMessage("[SceneLoader] Error loading an entity!");
+		}
+	}
 }
 
 std::string SceneLoader::getAttrib(rapidxml::xml_node<>* XMLnode, const std::string &attrib, const std::string default)

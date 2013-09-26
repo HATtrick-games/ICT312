@@ -28,7 +28,7 @@ namespace Scenes
 
 		void processNodes(rapidxml::xml_node<>* XMLnode);
 		void processNode(rapidxml::xml_node<>* XMLnode);
-		void processEntity(rapidxml::xml_node<>* XMLnode);
+		void processEntity(rapidxml::xml_node<>* XMLnode, std::string entityName, Ogre::Vector3 pos, Ogre::Quaternion rot, Ogre::Vector3 scale);
 
 		std::string getAttrib(rapidxml::xml_node<>* XMLnode, const std::string &attrib, const std::string default);
 		float getAttribFloat(rapidxml::xml_node<>* XMLnode, const std::string &attrib, const float default);

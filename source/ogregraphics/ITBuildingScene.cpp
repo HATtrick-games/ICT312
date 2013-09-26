@@ -6,7 +6,7 @@ using namespace Scenes;
 void ITBuildingScene::initialise()
 {
 	m_cameraType = CAM_FIRSTPERSON;
-	cameraSpeed = 100.0f;
+	cameraSpeed = 1000.0f;
 
 	Core::Game::getGraphics()->cameraSetPosition( 0, 0, 50 );
 	Core::Game::getGraphics()->cameraSetLookAt( 0, 0, 0 );
@@ -72,7 +72,7 @@ void ITBuildingScene::onExit()
 
 void ITBuildingScene::createScene()
 {
-	addObject( "FloorPlan", new Objects::GenericObject( Ogre::Vector3(-1.88, 10, 82.5697),
+	/*addObject( "FloorPlan", new Objects::GenericObject( Ogre::Vector3(-1.88, 10, 82.5697),
 		Ogre::Vector3(0, 0, 0), "models/FloorPlan.mesh" ) );
 
 	addObject( "GlassDoor", new Objects::GenericObject( Ogre::Vector3(-742.279, 10, 122.35),
@@ -519,7 +519,7 @@ void ITBuildingScene::createScene()
 	addObject( "Mouse14", new Objects::GenericObject( Ogre::Vector3(-19, 60, -413.952), 
 		Ogre::Vector3(0, 3.14159, 0), "models/Mouse.mesh" ) );
 	addObject( "Mouse15", new Objects::GenericObject( Ogre::Vector3(-203, 60, -413.952), 
-		Ogre::Vector3(0, 3.14159, 0), "models/Mouse.mesh" ) );
+		Ogre::Vector3(0, 3.14159, 0), "models/Mouse.mesh" ) );*/
 }
 
 void ITBuildingScene::freeCamera( float deltaTime )
