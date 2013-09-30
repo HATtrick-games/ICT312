@@ -10,7 +10,32 @@ material 03-Default
 
 			texture_unit
 			{
-				texture itcommonroom.jpg
+				texture floor.jpg
+				transform 1 0 0 -0.005 0 1 0 0 0 0 1 0 0 0 0 1
+			}
+		}
+
+	}
+
+}
+
+
+
+material 07-Default
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.588235 0.588235 0.588235 1
+			diffuse 0.588235 0.588235 0.588235 1
+			specular 0 0 0 1 10
+
+			texture_unit
+			{
+				texture roof.jpg
+				tex_address_mode mirror mirror
+				transform -1 0 0 0 0 -1 0 -0.999999 0 0 1 0 0 0 0 1
 			}
 		}
 
@@ -57,6 +82,29 @@ material Material#25
 			texture_unit
 			{
 				texture MonitorsTexFin.png
+			}
+		}
+
+	}
+
+}
+
+
+
+material Material#26
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.588 0.588 0.588 1
+			diffuse 0.588 0.588 0.588 1
+			specular 0 0 0 1 10
+			scene_blend one one_minus_src_alpha
+
+			texture_unit
+			{
+				texture WindowTexFin.png
 			}
 		}
 
@@ -204,6 +252,190 @@ material Material#31
 
 
 
+material Material#32
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.588 0.588 0.588 1
+			diffuse 0.588 0.588 0.588 1
+			specular 0 0 0 1 10
+			scene_blend one one_minus_src_alpha
+
+			texture_unit
+			{
+				texture ComputerChairTexFin.png
+			}
+		}
+
+	}
+
+}
+
+
+
+material Material#33
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.588 0.588 0.588 1
+			diffuse 0.588 0.588 0.588 1
+			specular 0 0 0 1 10
+			scene_blend one one_minus_src_alpha
+
+			texture_unit
+			{
+				texture KeyboardTexFin.png
+			}
+		}
+
+	}
+
+}
+
+
+
+material Material#34
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.588 0.588 0.588 1
+			diffuse 0.588 0.588 0.588 1
+			specular 0 0 0 1 10
+			scene_blend one one_minus_src_alpha
+
+			texture_unit
+			{
+				texture MouseTexFin.png
+			}
+		}
+
+	}
+
+}
+
+
+
+material Material#35
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.588 0.588 0.588 1
+			diffuse 0.588 0.588 0.588 1
+			specular 0 0 0 1 10
+			scene_blend one one_minus_src_alpha
+
+			texture_unit
+			{
+				texture ComputerTexFin.png
+			}
+		}
+
+	}
+
+}
+
+
+
+material Material#36
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.588 0.588 0.588 1
+			diffuse 0.588 0.588 0.588 1
+			specular 0 0 0 1 10
+			scene_blend one one_minus_src_alpha
+
+			texture_unit
+			{
+				texture StoolTexFin.png
+			}
+		}
+
+	}
+
+}
+
+
+
+material Material#37
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.588 0.588 0.588 1
+			diffuse 0.588 0.588 0.588 1
+			specular 0 0 0 1 10
+			scene_blend one one_minus_src_alpha
+
+			texture_unit
+			{
+				texture CorkboardTexFin.png
+			}
+		}
+
+	}
+
+}
+
+
+
+material Material#38
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.588 0.588 0.588 1
+			diffuse 0.588 0.588 0.588 1
+			specular 0 0 0 1 10
+			scene_blend one one_minus_src_alpha
+
+			texture_unit
+			{
+				texture StraightSofaGreenTexFin.png
+			}
+		}
+
+	}
+
+}
+
+
+
+material Material#39
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.588 0.588 0.588 1
+			diffuse 0.588 0.588 0.588 1
+			specular 0 0 0 1 10
+			scene_blend one one_minus_src_alpha
+
+			texture_unit
+			{
+				texture StraightSofaBlackTexFin.png
+			}
+		}
+
+	}
+
+}
+
+
+
 material Material#4
 {
 	technique
@@ -218,6 +450,98 @@ material Material#4
 			texture_unit
 			{
 				texture ComputerTableTexFin.png
+			}
+		}
+
+	}
+
+}
+
+
+
+material Material#40
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.588 0.588 0.588 1
+			diffuse 0.588 0.588 0.588 1
+			specular 0 0 0 1 10
+			scene_blend one one_minus_src_alpha
+
+			texture_unit
+			{
+				texture CurvedSofaTexFin.png
+			}
+		}
+
+	}
+
+}
+
+
+
+material Material#41
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.588 0.588 0.588 1
+			diffuse 0.588 0.588 0.588 1
+			specular 0 0 0 1 10
+			scene_blend one one_minus_src_alpha
+
+			texture_unit
+			{
+				texture CornerTableTexFin.png
+			}
+		}
+
+	}
+
+}
+
+
+
+material Material#5
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.588 0.588 0.588 1
+			diffuse 0.588 0.588 0.588 1
+			specular 0 0 0 1 10
+			scene_blend one one_minus_src_alpha
+
+			texture_unit
+			{
+				texture KitchenCabinetFin.png
+			}
+		}
+
+	}
+
+}
+
+
+
+material Material#7
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.588 0.588 0.588 1
+			diffuse 0.588 0.588 0.588 1
+			specular 0 0 0 1 10
+			scene_blend one one_minus_src_alpha
+
+			texture_unit
+			{
+				texture CurvedSofaBigTexFin.png
 			}
 		}
 

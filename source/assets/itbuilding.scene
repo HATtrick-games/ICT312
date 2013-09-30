@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<scene formatVersion="1.0" upAxis="y" unitsPerMeter="39.3701" minOgreVersion="1.8" ogreMaxVersion="2.4.8" author="OgreMax Scene Exporter (www.ogremax.com)" application="3DS Max">
+<scene formatVersion="1.0" upAxis="y" unitsPerMeter="39.3701" minOgreVersion="1.7" ogreMaxVersion="2.4.8" author="OgreMax Scene Exporter (www.ogremax.com)" application="3DS Max">
     <environment>
         <colourAmbient r="0.333333" g="0.333333" b="0.333333"/>
         <colourBackground r="0" g="0" b="0"/>
@@ -817,7 +817,7 @@
             </entity>
         </node>
         <node name="ComputerTable">
-            <position x="53.9052" y="-433.046" z="-1560.05"/>
+            <position x="53.9052" y="-437.535" z="-1560.05"/>
             <scale x="0.652574" y="0.652574" z="0.652574"/>
             <rotation qx="0" qy="0" qz="0" qw="1"/>
             <entity name="ComputerTable" castShadows="true" receiveShadows="true" meshFile="ComputerTable.mesh">
@@ -827,7 +827,7 @@
             </entity>
         </node>
         <node name="ComputerTable_1">
-            <position x="324.004" y="-433.046" z="-1560.05"/>
+            <position x="324.004" y="-437.535" z="-1560.05"/>
             <scale x="0.652574" y="0.652574" z="0.652574"/>
             <rotation qx="0" qy="0" qz="0" qw="1"/>
             <entity name="ComputerTable_1" castShadows="true" receiveShadows="true" meshFile="ComputerTable_1.mesh">
@@ -837,7 +837,7 @@
             </entity>
         </node>
         <node name="ComputerTable_2">
-            <position x="593.639" y="-433.046" z="-1560.05"/>
+            <position x="593.639" y="-437.535" z="-1560.05"/>
             <scale x="0.652574" y="0.652574" z="0.652574"/>
             <rotation qx="0" qy="0" qz="0" qw="1"/>
             <entity name="ComputerTable_2" castShadows="true" receiveShadows="true" meshFile="ComputerTable_2.mesh">
@@ -847,7 +847,7 @@
             </entity>
         </node>
         <node name="ComputerTable_3">
-            <position x="863.681" y="-433.046" z="-1560.05"/>
+            <position x="863.681" y="-437.535" z="-1560.05"/>
             <scale x="0.652574" y="0.652574" z="0.652574"/>
             <rotation qx="0" qy="0" qz="0" qw="1"/>
             <entity name="ComputerTable_3" castShadows="true" receiveShadows="true" meshFile="ComputerTable_3.mesh">
@@ -857,7 +857,7 @@
             </entity>
         </node>
         <node name="ComputerTable_4">
-            <position x="1133.27" y="-433.046" z="-1560.05"/>
+            <position x="1133.27" y="-437.79" z="-1560.05"/>
             <scale x="0.652574" y="0.652574" z="0.652574"/>
             <rotation qx="0" qy="0" qz="0" qw="1"/>
             <entity name="ComputerTable_4" castShadows="true" receiveShadows="true" meshFile="ComputerTable_4.mesh">
@@ -926,13 +926,1078 @@
                 </subentities>
             </entity>
         </node>
-        <node name="Box001">
-            <position x="37.4153" y="-384.054" z="-1486.48"/>
+        <node name="Monitor">
+            <position x="37.4153" y="-388.544" z="-1486.48"/>
             <scale x="0.745991" y="0.745991" z="0.745991"/>
             <rotation qx="0" qy="-0.707107" qz="3.09086e-008" qw="0.707107"/>
-            <entity name="Box001" castShadows="true" receiveShadows="true" meshFile="Box001.mesh">
+            <entity name="Monitor" castShadows="true" receiveShadows="true" meshFile="Monitor.mesh">
                 <subentities>
                     <subentity index="0" materialName="Material#25"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Monitor_1">
+            <position x="37.4153" y="-388.544" z="-1623.83"/>
+            <scale x="0.745991" y="0.745991" z="0.745991"/>
+            <rotation qx="0" qy="-0.707107" qz="3.09086e-008" qw="0.707107"/>
+            <entity name="Monitor_1" castShadows="true" receiveShadows="true" meshFile="Monitor_1.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#25"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Monitor_2">
+            <position x="37.4153" y="-388.544" z="-1757.85"/>
+            <scale x="0.745991" y="0.745991" z="0.745991"/>
+            <rotation qx="0" qy="-0.707107" qz="3.09086e-008" qw="0.707107"/>
+            <entity name="Monitor_2" castShadows="true" receiveShadows="true" meshFile="Monitor_2.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#25"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Monitor_3">
+            <position x="306.812" y="-388.544" z="-1757.85"/>
+            <scale x="0.745991" y="0.745991" z="0.745991"/>
+            <rotation qx="0" qy="-0.707107" qz="3.09086e-008" qw="0.707107"/>
+            <entity name="Monitor_3" castShadows="true" receiveShadows="true" meshFile="Monitor_3.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#25"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Monitor_4">
+            <position x="306.812" y="-388.544" z="-1623.83"/>
+            <scale x="0.745991" y="0.745991" z="0.745991"/>
+            <rotation qx="0" qy="-0.707107" qz="3.09086e-008" qw="0.707107"/>
+            <entity name="Monitor_4" castShadows="true" receiveShadows="true" meshFile="Monitor_4.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#25"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Monitor_5">
+            <position x="306.812" y="-388.544" z="-1486.48"/>
+            <scale x="0.745991" y="0.745991" z="0.745991"/>
+            <rotation qx="0" qy="-0.707107" qz="3.09086e-008" qw="0.707107"/>
+            <entity name="Monitor_5" castShadows="true" receiveShadows="true" meshFile="Monitor_5.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#25"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Monitor_6">
+            <position x="577.849" y="-388.544" z="-1757.85"/>
+            <scale x="0.745991" y="0.745991" z="0.745991"/>
+            <rotation qx="0" qy="-0.707107" qz="3.09086e-008" qw="0.707107"/>
+            <entity name="Monitor_6" castShadows="true" receiveShadows="true" meshFile="Monitor_6.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#25"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Monitor_7">
+            <position x="577.849" y="-388.544" z="-1623.83"/>
+            <scale x="0.745991" y="0.745991" z="0.745991"/>
+            <rotation qx="0" qy="-0.707107" qz="3.09086e-008" qw="0.707107"/>
+            <entity name="Monitor_7" castShadows="true" receiveShadows="true" meshFile="Monitor_7.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#25"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Monitor_8">
+            <position x="577.849" y="-388.544" z="-1486.48"/>
+            <scale x="0.745991" y="0.745991" z="0.745991"/>
+            <rotation qx="0" qy="-0.707107" qz="3.09086e-008" qw="0.707107"/>
+            <entity name="Monitor_8" castShadows="true" receiveShadows="true" meshFile="Monitor_8.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#25"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Monitor_9">
+            <position x="848.557" y="-388.544" z="-1757.85"/>
+            <scale x="0.745991" y="0.745991" z="0.745991"/>
+            <rotation qx="0" qy="-0.707107" qz="3.09086e-008" qw="0.707107"/>
+            <entity name="Monitor_9" castShadows="true" receiveShadows="true" meshFile="Monitor_9.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#25"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Monitor_10">
+            <position x="848.557" y="-388.544" z="-1623.83"/>
+            <scale x="0.745991" y="0.745991" z="0.745991"/>
+            <rotation qx="0" qy="-0.707107" qz="3.09086e-008" qw="0.707107"/>
+            <entity name="Monitor_10" castShadows="true" receiveShadows="true" meshFile="Monitor_10.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#25"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Monitor_11">
+            <position x="848.557" y="-388.544" z="-1486.48"/>
+            <scale x="0.745991" y="0.745991" z="0.745991"/>
+            <rotation qx="0" qy="-0.707107" qz="3.09086e-008" qw="0.707107"/>
+            <entity name="Monitor_11" castShadows="true" receiveShadows="true" meshFile="Monitor_11.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#25"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Monitor_12">
+            <position x="1118.94" y="-384.054" z="-1757.85"/>
+            <scale x="0.745991" y="0.745991" z="0.745991"/>
+            <rotation qx="0" qy="-0.707107" qz="3.09086e-008" qw="0.707107"/>
+            <entity name="Monitor_12" castShadows="true" receiveShadows="true" meshFile="Monitor_12.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#25"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Monitor_13">
+            <position x="1118.94" y="-384.054" z="-1623.83"/>
+            <scale x="0.745991" y="0.745991" z="0.745991"/>
+            <rotation qx="0" qy="-0.707107" qz="3.09086e-008" qw="0.707107"/>
+            <entity name="Monitor_13" castShadows="true" receiveShadows="true" meshFile="Monitor_13.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#25"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Monitor_14">
+            <position x="1118.94" y="-384.054" z="-1486.48"/>
+            <scale x="0.745991" y="0.745991" z="0.745991"/>
+            <rotation qx="0" qy="-0.707107" qz="3.09086e-008" qw="0.707107"/>
+            <entity name="Monitor_14" castShadows="true" receiveShadows="true" meshFile="Monitor_14.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#25"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Chair">
+            <position x="94.1581" y="-477.055" z="-1479.99"/>
+            <scale x="0.201501" y="0.201501" z="0.201501"/>
+            <rotation qx="0" qy="0" qz="0" qw="1"/>
+            <entity name="Chair" castShadows="true" receiveShadows="true" meshFile="Chair.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#32"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Chair_1">
+            <position x="94.1581" y="-477.055" z="-1618.71"/>
+            <scale x="0.201501" y="0.201501" z="0.201501"/>
+            <rotation qx="0" qy="0" qz="0" qw="1"/>
+            <entity name="Chair_1" castShadows="true" receiveShadows="true" meshFile="Chair_1.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#32"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Chair_2">
+            <position x="94.1581" y="-477.055" z="-1749.92"/>
+            <scale x="0.201501" y="0.201501" z="0.201501"/>
+            <rotation qx="0" qy="0" qz="0" qw="1"/>
+            <entity name="Chair_2" castShadows="true" receiveShadows="true" meshFile="Chair_2.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#32"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Chair_3">
+            <position x="367.725" y="-477.055" z="-1749.92"/>
+            <scale x="0.201501" y="0.201501" z="0.201501"/>
+            <rotation qx="0" qy="0" qz="0" qw="1"/>
+            <entity name="Chair_3" castShadows="true" receiveShadows="true" meshFile="Chair_3.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#32"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Chair_4">
+            <position x="367.725" y="-477.055" z="-1618.71"/>
+            <scale x="0.201501" y="0.201501" z="0.201501"/>
+            <rotation qx="0" qy="0" qz="0" qw="1"/>
+            <entity name="Chair_4" castShadows="true" receiveShadows="true" meshFile="Chair_4.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#32"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Chair_5">
+            <position x="367.725" y="-477.055" z="-1479.99"/>
+            <scale x="0.201501" y="0.201501" z="0.201501"/>
+            <rotation qx="0" qy="0" qz="0" qw="1"/>
+            <entity name="Chair_5" castShadows="true" receiveShadows="true" meshFile="Chair_5.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#32"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Chair_6">
+            <position x="641.439" y="-477.055" z="-1749.92"/>
+            <scale x="0.201501" y="0.201501" z="0.201501"/>
+            <rotation qx="0" qy="0" qz="0" qw="1"/>
+            <entity name="Chair_6" castShadows="true" receiveShadows="true" meshFile="Chair_6.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#32"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Chair_7">
+            <position x="641.439" y="-477.055" z="-1618.71"/>
+            <scale x="0.201501" y="0.201501" z="0.201501"/>
+            <rotation qx="0" qy="0" qz="0" qw="1"/>
+            <entity name="Chair_7" castShadows="true" receiveShadows="true" meshFile="Chair_7.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#32"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Chair_8">
+            <position x="641.439" y="-477.055" z="-1479.99"/>
+            <scale x="0.201501" y="0.201501" z="0.201501"/>
+            <rotation qx="0" qy="0" qz="0" qw="1"/>
+            <entity name="Chair_8" castShadows="true" receiveShadows="true" meshFile="Chair_8.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#32"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Chair_9">
+            <position x="907.848" y="-477.055" z="-1749.92"/>
+            <scale x="0.201501" y="0.201501" z="0.201501"/>
+            <rotation qx="0" qy="0" qz="0" qw="1"/>
+            <entity name="Chair_9" castShadows="true" receiveShadows="true" meshFile="Chair_9.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#32"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Chair_10">
+            <position x="907.848" y="-477.055" z="-1618.71"/>
+            <scale x="0.201501" y="0.201501" z="0.201501"/>
+            <rotation qx="0" qy="0" qz="0" qw="1"/>
+            <entity name="Chair_10" castShadows="true" receiveShadows="true" meshFile="Chair_10.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#32"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Chair_11">
+            <position x="907.848" y="-477.055" z="-1479.99"/>
+            <scale x="0.201501" y="0.201501" z="0.201501"/>
+            <rotation qx="0" qy="0" qz="0" qw="1"/>
+            <entity name="Chair_11" castShadows="true" receiveShadows="true" meshFile="Chair_11.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#32"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Chair_12">
+            <position x="1176.42" y="-477.055" z="-1749.92"/>
+            <scale x="0.201501" y="0.201501" z="0.201501"/>
+            <rotation qx="0" qy="0" qz="0" qw="1"/>
+            <entity name="Chair_12" castShadows="true" receiveShadows="true" meshFile="Chair_12.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#32"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Chair_13">
+            <position x="1176.42" y="-477.055" z="-1618.71"/>
+            <scale x="0.201501" y="0.201501" z="0.201501"/>
+            <rotation qx="0" qy="0" qz="0" qw="1"/>
+            <entity name="Chair_13" castShadows="true" receiveShadows="true" meshFile="Chair_13.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#32"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Chair_14">
+            <position x="1176.42" y="-477.055" z="-1479.99"/>
+            <scale x="0.201501" y="0.201501" z="0.201501"/>
+            <rotation qx="0" qy="0" qz="0" qw="1"/>
+            <entity name="Chair_14" castShadows="true" receiveShadows="true" meshFile="Chair_14.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#32"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Keyboard">
+            <position x="82.0695" y="-388.608" z="-1470.39"/>
+            <scale x="0.726045" y="0.726045" z="0.726045"/>
+            <rotation qx="0" qy="1" qz="-4.37114e-008" qw="-7.54979e-008"/>
+            <entity name="Keyboard" castShadows="true" receiveShadows="true" meshFile="Keyboard.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#33"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Keyboard_1">
+            <position x="82.0695" y="-388.608" z="-1603.81"/>
+            <scale x="0.726045" y="0.726045" z="0.726045"/>
+            <rotation qx="0" qy="1" qz="-4.37114e-008" qw="-7.54979e-008"/>
+            <entity name="Keyboard_1" castShadows="true" receiveShadows="true" meshFile="Keyboard_1.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#33"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Keyboard_2">
+            <position x="82.0695" y="-388.608" z="-1737.49"/>
+            <scale x="0.726045" y="0.726045" z="0.726045"/>
+            <rotation qx="0" qy="1" qz="-4.37114e-008" qw="-7.54979e-008"/>
+            <entity name="Keyboard_2" castShadows="true" receiveShadows="true" meshFile="Keyboard_2.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#33"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Keyboard_3">
+            <position x="352.869" y="-388.608" z="-1603.81"/>
+            <scale x="0.726045" y="0.726045" z="0.726045"/>
+            <rotation qx="0" qy="1" qz="-4.37114e-008" qw="-7.54979e-008"/>
+            <entity name="Keyboard_3" castShadows="true" receiveShadows="true" meshFile="Keyboard_3.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#33"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Keyboard_4">
+            <position x="352.869" y="-388.608" z="-1737.49"/>
+            <scale x="0.726045" y="0.726045" z="0.726045"/>
+            <rotation qx="0" qy="1" qz="-4.37114e-008" qw="-7.54979e-008"/>
+            <entity name="Keyboard_4" castShadows="true" receiveShadows="true" meshFile="Keyboard_4.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#33"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Keyboard_5">
+            <position x="352.869" y="-388.608" z="-1470.39"/>
+            <scale x="0.726045" y="0.726045" z="0.726045"/>
+            <rotation qx="0" qy="1" qz="-4.37114e-008" qw="-7.54979e-008"/>
+            <entity name="Keyboard_5" castShadows="true" receiveShadows="true" meshFile="Keyboard_5.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#33"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Keyboard_6">
+            <position x="621.508" y="-388.608" z="-1603.81"/>
+            <scale x="0.726045" y="0.726045" z="0.726045"/>
+            <rotation qx="0" qy="1" qz="-4.37114e-008" qw="-7.54979e-008"/>
+            <entity name="Keyboard_6" castShadows="true" receiveShadows="true" meshFile="Keyboard_6.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#33"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Keyboard_7">
+            <position x="621.508" y="-388.608" z="-1737.49"/>
+            <scale x="0.726045" y="0.726045" z="0.726045"/>
+            <rotation qx="0" qy="1" qz="-4.37114e-008" qw="-7.54979e-008"/>
+            <entity name="Keyboard_7" castShadows="true" receiveShadows="true" meshFile="Keyboard_7.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#33"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Keyboard_8">
+            <position x="621.508" y="-388.608" z="-1470.39"/>
+            <scale x="0.726045" y="0.726045" z="0.726045"/>
+            <rotation qx="0" qy="1" qz="-4.37114e-008" qw="-7.54979e-008"/>
+            <entity name="Keyboard_8" castShadows="true" receiveShadows="true" meshFile="Keyboard_8.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#33"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Keyboard_9">
+            <position x="891.117" y="-388.608" z="-1603.81"/>
+            <scale x="0.726045" y="0.726045" z="0.726045"/>
+            <rotation qx="0" qy="1" qz="-4.37114e-008" qw="-7.54979e-008"/>
+            <entity name="Keyboard_9" castShadows="true" receiveShadows="true" meshFile="Keyboard_9.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#33"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Keyboard_10">
+            <position x="891.117" y="-388.608" z="-1737.49"/>
+            <scale x="0.726045" y="0.726045" z="0.726045"/>
+            <rotation qx="0" qy="1" qz="-4.37114e-008" qw="-7.54979e-008"/>
+            <entity name="Keyboard_10" castShadows="true" receiveShadows="true" meshFile="Keyboard_10.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#33"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Keyboard_11">
+            <position x="891.117" y="-388.608" z="-1470.39"/>
+            <scale x="0.726045" y="0.726045" z="0.726045"/>
+            <rotation qx="0" qy="1" qz="-4.37114e-008" qw="-7.54979e-008"/>
+            <entity name="Keyboard_11" castShadows="true" receiveShadows="true" meshFile="Keyboard_11.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#33"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Keyboard_12">
+            <position x="1161.19" y="-388.608" z="-1603.81"/>
+            <scale x="0.726045" y="0.726045" z="0.726045"/>
+            <rotation qx="0" qy="1" qz="-4.37114e-008" qw="-7.54979e-008"/>
+            <entity name="Keyboard_12" castShadows="true" receiveShadows="true" meshFile="Keyboard_12.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#33"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Keyboard_13">
+            <position x="1161.19" y="-388.608" z="-1737.49"/>
+            <scale x="0.726045" y="0.726045" z="0.726045"/>
+            <rotation qx="0" qy="1" qz="-4.37114e-008" qw="-7.54979e-008"/>
+            <entity name="Keyboard_13" castShadows="true" receiveShadows="true" meshFile="Keyboard_13.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#33"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Keyboard_14">
+            <position x="1161.19" y="-388.608" z="-1470.39"/>
+            <scale x="0.726045" y="0.726045" z="0.726045"/>
+            <rotation qx="0" qy="1" qz="-4.37114e-008" qw="-7.54979e-008"/>
+            <entity name="Keyboard_14" castShadows="true" receiveShadows="true" meshFile="Keyboard_14.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#33"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Mouse">
+            <position x="81.3941" y="-390.341" z="-1514.12"/>
+            <scale x="0.410582" y="0.410582" z="0.410582"/>
+            <rotation qx="0" qy="0" qz="0" qw="1"/>
+            <entity name="Mouse" castShadows="true" receiveShadows="true" meshFile="Mouse.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#34"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Mouse_1">
+            <position x="81.3941" y="-390.341" z="-1645.99"/>
+            <scale x="0.410582" y="0.410582" z="0.410582"/>
+            <rotation qx="0" qy="0" qz="0" qw="1"/>
+            <entity name="Mouse_1" castShadows="true" receiveShadows="true" meshFile="Mouse_1.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#34"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Mouse_2">
+            <position x="81.3941" y="-390.341" z="-1778.85"/>
+            <scale x="0.410582" y="0.410582" z="0.410582"/>
+            <rotation qx="0" qy="0" qz="0" qw="1"/>
+            <entity name="Mouse_2" castShadows="true" receiveShadows="true" meshFile="Mouse_2.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#34"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Mouse_3">
+            <position x="353.525" y="-390.341" z="-1514.12"/>
+            <scale x="0.410582" y="0.410582" z="0.410582"/>
+            <rotation qx="0" qy="0" qz="0" qw="1"/>
+            <entity name="Mouse_3" castShadows="true" receiveShadows="true" meshFile="Mouse_3.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#34"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Mouse_4">
+            <position x="353.525" y="-390.341" z="-1645.99"/>
+            <scale x="0.410582" y="0.410582" z="0.410582"/>
+            <rotation qx="0" qy="0" qz="0" qw="1"/>
+            <entity name="Mouse_4" castShadows="true" receiveShadows="true" meshFile="Mouse_4.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#34"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Mouse_5">
+            <position x="353.525" y="-390.341" z="-1778.85"/>
+            <scale x="0.410582" y="0.410582" z="0.410582"/>
+            <rotation qx="0" qy="0" qz="0" qw="1"/>
+            <entity name="Mouse_5" castShadows="true" receiveShadows="true" meshFile="Mouse_5.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#34"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Mouse_6">
+            <position x="622.156" y="-390.341" z="-1514.12"/>
+            <scale x="0.410582" y="0.410582" z="0.410582"/>
+            <rotation qx="0" qy="0" qz="0" qw="1"/>
+            <entity name="Mouse_6" castShadows="true" receiveShadows="true" meshFile="Mouse_6.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#34"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Mouse_7">
+            <position x="622.156" y="-390.341" z="-1645.99"/>
+            <scale x="0.410582" y="0.410582" z="0.410582"/>
+            <rotation qx="0" qy="0" qz="0" qw="1"/>
+            <entity name="Mouse_7" castShadows="true" receiveShadows="true" meshFile="Mouse_7.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#34"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Mouse_8">
+            <position x="622.156" y="-390.341" z="-1778.85"/>
+            <scale x="0.410582" y="0.410582" z="0.410582"/>
+            <rotation qx="0" qy="0" qz="0" qw="1"/>
+            <entity name="Mouse_8" castShadows="true" receiveShadows="true" meshFile="Mouse_8.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#34"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Mouse_9">
+            <position x="891.945" y="-390.341" z="-1514.12"/>
+            <scale x="0.410582" y="0.410582" z="0.410582"/>
+            <rotation qx="0" qy="0" qz="0" qw="1"/>
+            <entity name="Mouse_9" castShadows="true" receiveShadows="true" meshFile="Mouse_9.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#34"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Mouse_10">
+            <position x="891.945" y="-390.341" z="-1645.99"/>
+            <scale x="0.410582" y="0.410582" z="0.410582"/>
+            <rotation qx="0" qy="0" qz="0" qw="1"/>
+            <entity name="Mouse_10" castShadows="true" receiveShadows="true" meshFile="Mouse_10.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#34"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Mouse_11">
+            <position x="891.945" y="-390.341" z="-1778.85"/>
+            <scale x="0.410582" y="0.410582" z="0.410582"/>
+            <rotation qx="0" qy="0" qz="0" qw="1"/>
+            <entity name="Mouse_11" castShadows="true" receiveShadows="true" meshFile="Mouse_11.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#34"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Mouse_12">
+            <position x="1161.29" y="-390.341" z="-1514.12"/>
+            <scale x="0.410582" y="0.410582" z="0.410582"/>
+            <rotation qx="0" qy="0" qz="0" qw="1"/>
+            <entity name="Mouse_12" castShadows="true" receiveShadows="true" meshFile="Mouse_12.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#34"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Mouse_13">
+            <position x="1161.29" y="-390.341" z="-1645.99"/>
+            <scale x="0.410582" y="0.410582" z="0.410582"/>
+            <rotation qx="0" qy="0" qz="0" qw="1"/>
+            <entity name="Mouse_13" castShadows="true" receiveShadows="true" meshFile="Mouse_13.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#34"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Mouse_14">
+            <position x="1161.29" y="-390.341" z="-1778.85"/>
+            <scale x="0.410582" y="0.410582" z="0.410582"/>
+            <rotation qx="0" qy="0" qz="0" qw="1"/>
+            <entity name="Mouse_14" castShadows="true" receiveShadows="true" meshFile="Mouse_14.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#34"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Wall_74">
+            <position x="-713.041" y="-464.182" z="-1100.05"/>
+            <scale x="1.49188" y="1.49188" z="1.49188"/>
+            <rotation qx="0" qy="0.707107" qz="-3.09086e-008" qw="0.707107"/>
+            <entity name="Wall_74" castShadows="true" receiveShadows="true" meshFile="Wall_74.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#27"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Wall_75">
+            <position x="-713.041" y="-464.182" z="-947.832"/>
+            <scale x="1.49188" y="1.49188" z="1.49188"/>
+            <rotation qx="0" qy="0.707107" qz="-3.09086e-008" qw="0.707107"/>
+            <entity name="Wall_75" castShadows="true" receiveShadows="true" meshFile="Wall_75.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#27"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Computer">
+            <position x="97.4177" y="-478.293" z="-1534.03"/>
+            <scale x="0.563698" y="0.563698" z="0.563698"/>
+            <rotation qx="0" qy="1" qz="-4.37114e-008" qw="-7.54979e-008"/>
+            <entity name="Computer" castShadows="true" receiveShadows="true" meshFile="Computer.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#35"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Computer_1">
+            <position x="97.4177" y="-478.293" z="-1668.51"/>
+            <scale x="0.563698" y="0.563698" z="0.563698"/>
+            <rotation qx="0" qy="1" qz="-4.37114e-008" qw="-7.54979e-008"/>
+            <entity name="Computer_1" castShadows="true" receiveShadows="true" meshFile="Computer_1.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#35"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Computer_2">
+            <position x="97.4177" y="-478.293" z="-1804"/>
+            <scale x="0.563698" y="0.563698" z="0.563698"/>
+            <rotation qx="0" qy="1" qz="-4.37114e-008" qw="-7.54979e-008"/>
+            <entity name="Computer_2" castShadows="true" receiveShadows="true" meshFile="Computer_2.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#35"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Computer_3">
+            <position x="372.013" y="-478.293" z="-1804"/>
+            <scale x="0.563698" y="0.563698" z="0.563698"/>
+            <rotation qx="0" qy="1" qz="-4.37114e-008" qw="-7.54979e-008"/>
+            <entity name="Computer_3" castShadows="true" receiveShadows="true" meshFile="Computer_3.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#35"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Computer_4">
+            <position x="372.013" y="-478.293" z="-1668.51"/>
+            <scale x="0.563698" y="0.563698" z="0.563698"/>
+            <rotation qx="0" qy="1" qz="-4.37114e-008" qw="-7.54979e-008"/>
+            <entity name="Computer_4" castShadows="true" receiveShadows="true" meshFile="Computer_4.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#35"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Computer_5">
+            <position x="372.013" y="-478.293" z="-1534.03"/>
+            <scale x="0.563698" y="0.563698" z="0.563698"/>
+            <rotation qx="0" qy="1" qz="-4.37114e-008" qw="-7.54979e-008"/>
+            <entity name="Computer_5" castShadows="true" receiveShadows="true" meshFile="Computer_5.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#35"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Computer_6">
+            <position x="637.956" y="-478.293" z="-1804"/>
+            <scale x="0.563698" y="0.563698" z="0.563698"/>
+            <rotation qx="0" qy="1" qz="-4.37114e-008" qw="-7.54979e-008"/>
+            <entity name="Computer_6" castShadows="true" receiveShadows="true" meshFile="Computer_6.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#35"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Computer_7">
+            <position x="637.956" y="-478.293" z="-1668.51"/>
+            <scale x="0.563698" y="0.563698" z="0.563698"/>
+            <rotation qx="0" qy="1" qz="-4.37114e-008" qw="-7.54979e-008"/>
+            <entity name="Computer_7" castShadows="true" receiveShadows="true" meshFile="Computer_7.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#35"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Computer_8">
+            <position x="637.956" y="-478.293" z="-1534.03"/>
+            <scale x="0.563698" y="0.563698" z="0.563698"/>
+            <rotation qx="0" qy="1" qz="-4.37114e-008" qw="-7.54979e-008"/>
+            <entity name="Computer_8" castShadows="true" receiveShadows="true" meshFile="Computer_8.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#35"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Computer_9">
+            <position x="908.474" y="-478.293" z="-1804"/>
+            <scale x="0.563698" y="0.563698" z="0.563698"/>
+            <rotation qx="0" qy="1" qz="-4.37114e-008" qw="-7.54979e-008"/>
+            <entity name="Computer_9" castShadows="true" receiveShadows="true" meshFile="Computer_9.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#35"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Computer_10">
+            <position x="908.474" y="-478.293" z="-1668.51"/>
+            <scale x="0.563698" y="0.563698" z="0.563698"/>
+            <rotation qx="0" qy="1" qz="-4.37114e-008" qw="-7.54979e-008"/>
+            <entity name="Computer_10" castShadows="true" receiveShadows="true" meshFile="Computer_10.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#35"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Computer_11">
+            <position x="908.474" y="-478.293" z="-1534.03"/>
+            <scale x="0.563698" y="0.563698" z="0.563698"/>
+            <rotation qx="0" qy="1" qz="-4.37114e-008" qw="-7.54979e-008"/>
+            <entity name="Computer_11" castShadows="true" receiveShadows="true" meshFile="Computer_11.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#35"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Computer_12">
+            <position x="1179.13" y="-478.293" z="-1804"/>
+            <scale x="0.563698" y="0.563698" z="0.563698"/>
+            <rotation qx="0" qy="1" qz="-4.37114e-008" qw="-7.54979e-008"/>
+            <entity name="Computer_12" castShadows="true" receiveShadows="true" meshFile="Computer_12.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#35"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Computer_13">
+            <position x="1179.13" y="-478.293" z="-1668.51"/>
+            <scale x="0.563698" y="0.563698" z="0.563698"/>
+            <rotation qx="0" qy="1" qz="-4.37114e-008" qw="-7.54979e-008"/>
+            <entity name="Computer_13" castShadows="true" receiveShadows="true" meshFile="Computer_13.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#35"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Computer_14">
+            <position x="1179.13" y="-478.293" z="-1534.03"/>
+            <scale x="0.563698" y="0.563698" z="0.563698"/>
+            <rotation qx="0" qy="1" qz="-4.37114e-008" qw="-7.54979e-008"/>
+            <entity name="Computer_14" castShadows="true" receiveShadows="true" meshFile="Computer_14.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#35"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Stool">
+            <position x="-455.452" y="-480.006" z="-968.779"/>
+            <scale x="0.176472" y="0.176472" z="0.176472"/>
+            <rotation qx="0" qy="0" qz="0" qw="1"/>
+            <entity name="Stool" castShadows="true" receiveShadows="true" meshFile="Stool.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#36"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Stool_1">
+            <position x="-347.852" y="-480.006" z="-968.779"/>
+            <scale x="0.176472" y="0.176472" z="0.176472"/>
+            <rotation qx="0" qy="0" qz="0" qw="1"/>
+            <entity name="Stool_1" castShadows="true" receiveShadows="true" meshFile="Stool_1.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#36"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Stool_2">
+            <position x="-237.956" y="-480.006" z="-968.779"/>
+            <scale x="0.176472" y="0.176472" z="0.176472"/>
+            <rotation qx="0" qy="0" qz="0" qw="1"/>
+            <entity name="Stool_2" castShadows="true" receiveShadows="true" meshFile="Stool_2.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#36"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Stool_3">
+            <position x="92.7835" y="-480.006" z="-968.779"/>
+            <scale x="0.176472" y="0.176472" z="0.176472"/>
+            <rotation qx="0" qy="0" qz="0" qw="1"/>
+            <entity name="Stool_3" castShadows="true" receiveShadows="true" meshFile="Stool_3.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#36"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Stool002">
+            <position x="-17.1121" y="-480.006" z="-968.779"/>
+            <scale x="0.176472" y="0.176472" z="0.176472"/>
+            <rotation qx="0" qy="0" qz="0" qw="1"/>
+            <entity name="Stool002" castShadows="true" receiveShadows="true" meshFile="Stool002.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#36"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Stool_4">
+            <position x="-124.712" y="-480.006" z="-968.779"/>
+            <scale x="0.176472" y="0.176472" z="0.176472"/>
+            <rotation qx="0" qy="0" qz="0" qw="1"/>
+            <entity name="Stool_4" castShadows="true" receiveShadows="true" meshFile="Stool_4.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#36"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Board">
+            <position x="1001" y="-350.207" z="-1203.55"/>
+            <scale x="1.2285" y="1.2285" z="1"/>
+            <rotation qx="0" qy="0" qz="0" qw="1"/>
+            <entity name="Board" castShadows="true" receiveShadows="true" meshFile="Board.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#37"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Board_1">
+            <position x="1184.31" y="-350.207" z="-1203.55"/>
+            <scale x="1.2285" y="1.2285" z="1"/>
+            <rotation qx="0" qy="0" qz="0" qw="1"/>
+            <entity name="Board_1" castShadows="true" receiveShadows="true" meshFile="Board_1.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#37"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Board_2">
+            <position x="636.494" y="-350.207" z="-1203.55"/>
+            <scale x="1.2285" y="1.2285" z="1"/>
+            <rotation qx="0" qy="0" qz="0" qw="1"/>
+            <entity name="Board_2" castShadows="true" receiveShadows="true" meshFile="Board_2.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#37"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Board_3">
+            <position x="456.808" y="-350.207" z="-1203.55"/>
+            <scale x="1.2285" y="1.2285" z="1"/>
+            <rotation qx="0" qy="0" qz="0" qw="1"/>
+            <entity name="Board_3" castShadows="true" receiveShadows="true" meshFile="Board_3.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#37"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Board_4">
+            <position x="62.8102" y="-350.207" z="-1203.55"/>
+            <scale x="1.2285" y="1.2285" z="1"/>
+            <rotation qx="0" qy="0" qz="0" qw="1"/>
+            <entity name="Board_4" castShadows="true" receiveShadows="true" meshFile="Board_4.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#37"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Board_5">
+            <position x="-115.757" y="-350.207" z="-1203.55"/>
+            <scale x="1.2285" y="1.2285" z="1"/>
+            <rotation qx="0" qy="0" qz="0" qw="1"/>
+            <entity name="Board_5" castShadows="true" receiveShadows="true" meshFile="Board_5.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#37"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Cabinet_3">
+            <position x="909.631" y="-379.268" z="-360.394"/>
+            <scale x="1" y="1" z="1"/>
+            <rotation qx="0" qy="0.707107" qz="-3.09086e-008" qw="0.707107"/>
+            <entity name="Cabinet_3" castShadows="true" receiveShadows="true" meshFile="Cabinet_3.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#5"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Cabinet_4">
+            <position x="780.769" y="-379.268" z="-360.394"/>
+            <scale x="1" y="1" z="1"/>
+            <rotation qx="0" qy="0.707107" qz="-3.09086e-008" qw="0.707107"/>
+            <entity name="Cabinet_4" castShadows="true" receiveShadows="true" meshFile="Cabinet_4.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#5"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Cabinet_5">
+            <position x="650.223" y="-379.268" z="-360.394"/>
+            <scale x="1" y="1" z="1"/>
+            <rotation qx="0" qy="0.707107" qz="-3.09086e-008" qw="0.707107"/>
+            <entity name="Cabinet_5" castShadows="true" receiveShadows="true" meshFile="Cabinet_5.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#5"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Cabinet_6">
+            <position x="519.14" y="-379.268" z="-360.394"/>
+            <scale x="1" y="1" z="1"/>
+            <rotation qx="0" qy="0.707107" qz="-3.09086e-008" qw="0.707107"/>
+            <entity name="Cabinet_6" castShadows="true" receiveShadows="true" meshFile="Cabinet_6.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#5"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="SofaGreen">
+            <position x="1292.08" y="-469.906" z="-654.63"/>
+            <scale x="0.865951" y="0.867899" z="0.703705"/>
+            <rotation qx="-2.51215e-015" qy="0.707107" qz="-3.09086e-008" qw="0.707107"/>
+            <entity name="SofaGreen" castShadows="true" receiveShadows="true" meshFile="SofaGreen.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#38"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="SofaBlue">
+            <position x="1291.98" y="-468.968" z="-446.72"/>
+            <scale x="0.844719" y="0.844719" z="0.699436"/>
+            <rotation qx="0" qy="0.707107" qz="-3.09086e-008" qw="0.707107"/>
+            <entity name="SofaBlue" castShadows="true" receiveShadows="true" meshFile="SofaBlue.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#39"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="CurvedSofa">
+            <position x="1209.08" y="-468.968" z="-820.851"/>
+            <scale x="0.888277" y="0.888277" z="0.888277"/>
+            <rotation qx="0" qy="0.92388" qz="-4.03841e-008" qw="0.382683"/>
+            <entity name="CurvedSofa" castShadows="true" receiveShadows="true" meshFile="CurvedSofa.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#7"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="CurvedSofa_1">
+            <position x="1066.79" y="-468.968" z="-748.441"/>
+            <scale x="0.888277" y="0.888277" z="0.888277"/>
+            <rotation qx="0" qy="0.92388" qz="-4.03841e-008" qw="-0.382683"/>
+            <entity name="CurvedSofa_1" castShadows="true" receiveShadows="true" meshFile="CurvedSofa_1.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#7"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="CurvedSofa_2">
+            <position x="737.557" y="-468.968" z="-927.963"/>
+            <scale x="0.888277" y="0.888277" z="0.888277"/>
+            <rotation qx="0" qy="0.92388" qz="-4.03841e-008" qw="0.382683"/>
+            <entity name="CurvedSofa_2" castShadows="true" receiveShadows="true" meshFile="CurvedSofa_2.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#7"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="CurvedSofa002">
+            <position x="595.273" y="-468.968" z="-855.553"/>
+            <scale x="0.888277" y="0.888277" z="0.888277"/>
+            <rotation qx="0" qy="0.92388" qz="-4.03841e-008" qw="-0.382683"/>
+            <entity name="CurvedSofa002" castShadows="true" receiveShadows="true" meshFile="CurvedSofa002.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#7"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="SofaBlue_1">
+            <position x="584.873" y="-468.968" z="-665.444"/>
+            <scale x="0.844719" y="0.844719" z="0.699436"/>
+            <rotation qx="0" qy="-0.707107" qz="3.09086e-008" qw="0.707107"/>
+            <entity name="SofaBlue_1" castShadows="true" receiveShadows="true" meshFile="SofaBlue_1.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#39"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Box002">
+            <position x="712.026" y="-480.244" z="-763.049"/>
+            <scale x="1" y="1" z="1"/>
+            <rotation qx="0" qy="0" qz="0" qw="1"/>
+            <node name="Box003">
+                <position x="44.574" y="0" z="-28.8605"/>
+                <scale x="1" y="1" z="1"/>
+                <rotation qx="0" qy="0" qz="0" qw="1"/>
+                <node name="Box001">
+                    <position x="-44.574" y="0" z="-30.1619"/>
+                    <scale x="1" y="1" z="1"/>
+                    <rotation qx="0" qy="0" qz="0" qw="1"/>
+                </node>
+            </node>
+        </node>
+        <node name="SofaStool">
+            <position x="702.876" y="-461.417" z="-813.957"/>
+            <scale x="1" y="1" z="1"/>
+            <rotation qx="0" qy="0" qz="0" qw="1"/>
+            <entity name="SofaStool" castShadows="true" receiveShadows="true" meshFile="SofaStool.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#40"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="SofaStool_1">
+            <position x="1173.65" y="-461.417" z="-704.17"/>
+            <scale x="1" y="1" z="1"/>
+            <rotation qx="0" qy="0" qz="0" qw="1"/>
+            <entity name="SofaStool_1" castShadows="true" receiveShadows="true" meshFile="SofaStool_1.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#40"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="CornerTable">
+            <position x="-83.3346" y="-435.49" z="-1249.49"/>
+            <scale x="0.678392" y="0.678392" z="0.678392"/>
+            <rotation qx="0" qy="0.707107" qz="-3.09086e-008" qw="0.707107"/>
+            <entity name="CornerTable" castShadows="true" receiveShadows="true" meshFile="CornerTable.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#41"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="CornerTable_1">
+            <position x="1306.27" y="-435.49" z="-1258.43"/>
+            <scale x="0.678392" y="0.678392" z="0.678392"/>
+            <rotation qx="0" qy="-0.707107" qz="3.09086e-008" qw="0.707107"/>
+            <entity name="CornerTable_1" castShadows="true" receiveShadows="true" meshFile="CornerTable_1.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#41"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Window">
+            <position x="1192.42" y="-344.439" z="-309.112"/>
+            <scale x="2.15303" y="2.15303" z="1"/>
+            <rotation qx="0" qy="0" qz="0" qw="1"/>
+            <entity name="Window" castShadows="true" receiveShadows="true" meshFile="Window.mesh">
+                <subentities>
+                    <subentity index="0" materialName="Material#26"/>
+                </subentities>
+            </entity>
+        </node>
+        <node name="Plane002">
+            <position x="378.709" y="-112.535" z="-1061.43"/>
+            <scale x="0.133479" y="0.133479" z="0.133479"/>
+            <rotation qx="1" qy="0" qz="0" qw="-4.37114e-008"/>
+            <entity name="Plane002" castShadows="true" receiveShadows="true" meshFile="Plane002.mesh">
+                <subentities>
+                    <subentity index="0" materialName="07-Default"/>
                 </subentities>
             </entity>
         </node>

@@ -6,7 +6,7 @@ using namespace Scenes;
 void ITBuildingScene::initialise()
 {
 	m_cameraType = CAM_FIRSTPERSON;
-	cameraSpeed = 1000.0f;
+	cameraSpeed = 100.0f;
 
 	Core::Game::getGraphics()->cameraSetPosition( 0, 0, 50 );
 	Core::Game::getGraphics()->cameraSetLookAt( 0, 0, 0 );
@@ -23,7 +23,7 @@ void ITBuildingScene::initialise()
 	addObject( "Player", new Objects::GenericObject( Ogre::Vector3(0, -120, 0), 
 		Ogre::Vector3(0, 0, 0), "models/boxmesh.mesh" ) );
 
-	addObject( "Camera", new Objects::GenericObject( Ogre::Vector3(100.0f, 100.0f, 100.0f), 
+	addObject( "Camera", new Objects::GenericObject( Ogre::Vector3(-623.419, -277, -1048.77), 
 		Ogre::Vector3(0, 0, 0), "models/boxmesh.mesh" ) );
 
 	m_sceneLoader = SceneLoader(this);
