@@ -11,6 +11,7 @@ BulletCollisionObject = new btCollisionObject();
 
 void CollisionObject::SetUserPointer(void* obj)
 {
+	
 	BulletCollisionObject->setUserPointer(obj);
 }
 
