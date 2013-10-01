@@ -83,7 +83,12 @@ void IObject::setID()
 	m_entity = "entity" + idString.str();
 }
 
-std::string IObject::getEntity()
+std::string IObject::getEntityName()
 {
 	return m_entity;
+}
+
+Ogre::Entity* IObject::getEntity()
+{
+	return Core::Game::getGraphics()->getEntity(m_entity);
 }

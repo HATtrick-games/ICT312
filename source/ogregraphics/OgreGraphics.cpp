@@ -249,3 +249,8 @@ void OgreGraphics::setEntityScale( std::string identifier, Ogre::Vector3 scale )
 {
 	m_sceneNodes[identifier]->setScale( scale );
 }
+
+Ogre::Entity* OgreGraphics::getEntity( std::string identifier )
+{
+	return static_cast<Ogre::Entity*>(m_sceneNodes[identifier]->getAttachedObject(0));
+}

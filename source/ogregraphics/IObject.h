@@ -26,7 +26,8 @@ namespace Objects
 		void				setScale( float x, float y, float z );
 		void				setScale( Ogre::Vector3 scale );
 
-		std::string getEntity();
+		std::string			getEntityName();
+		Ogre::Entity*		getEntity();
 	protected:
 		void				loadMesh() const;
 
