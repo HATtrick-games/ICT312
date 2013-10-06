@@ -34,14 +34,20 @@ void CollisionWorldSingleton::CheckCollision()
 		{
 		TemporaryPlayerObject* obj = (TemporaryPlayerObject*)obA->getUserPointer();
 		Core::Game::getSceneManager()->GetScene()->getObject("Camera")->setPosition(Ogre::Vector3(obj->lastposition.x,obj->lastposition.y,obj->lastposition.z));
+		std::cout<<"Colliding\n";
 		//Sleep(1000);
 
 		}
-		if(obB->getUserPointer())
+		else if(obB->getUserPointer())
 		{
 			TemporaryPlayerObject* obj = (TemporaryPlayerObject*)obB->getUserPointer();
 			Core::Game::getSceneManager()->GetScene()->getObject("Camera")->setPosition(Ogre::Vector3(obj->lastposition.x,obj->lastposition.y,obj->lastposition.z));
-		//	Sleep(1000);
+		std::cout<<"Colliding\n";
+			//	Sleep(1000);
+		}
+		else
+		{
+			//std::cout<<"Colliding\n";
 		}
 	
 		

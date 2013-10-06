@@ -1,5 +1,9 @@
 #include "stdafx.h"
 #include "CollisionObject.h"
+#include "Utils/OgreBulletConverter.h"
+#include "Utils/OgreBulletCollisionsMeshToShapeConverter.h"
+#include "Shapes/OgreBulletCollisionsConvexHullShape.h"
+#include "Shapes/OgreBulletCollisionsTrimeshShape.h"
 
 
 CollisionObject::CollisionObject()
@@ -13,6 +17,33 @@ void CollisionObject::SetUserPointer(void* obj)
 {
 	
 	BulletCollisionObject->setUserPointer(obj);
+}
+
+
+void CollisionObject::AddMeshShape(Ogre::Entity* Ent)
+{
+	
+	OgreBulletCollisions::StaticMeshToShapeConverter *convert;
+
+
+	convert = new OgreBulletCollisions::StaticMeshToShapeConverter(Ent, Ent->_getParentNodeFullTransform());
+	std::cout<<"OMFG WHY IS THIS PART NOT WORKING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n";
+
+
+	OgreBulletCollisions::TriangleMeshCollisionShape *shape = convert->createTrimesh();
+	//OgreBulletCollisions::BoxCollisionShape * shape = convert->createBox();
+	//OgreBulletCollisions::ConvexHullCollisionShape * shape = convert->createConvex();
+
+	//btConvexHullShape * mesh = (btConvexHullShape*)(shape->getBulletShape());
+	//btBoxShape * mesh = (btBoxShape*)(shape->getBulletShape());
+	btConvexTriangleMeshShape * mesh = (btConvexTriangleMeshShape*)(shape->getBulletShape());
+BulletCollisionObject->setCollisionShape(mesh);
+CollisionWorldSingleton::Instance()->AddObject(BulletCollisionObject);
+
+	
+	
+	
+
 }
 
 void CollisionObject::AddBoxShape(float xLength, float yLength, float zLength)
@@ -88,4 +119,18 @@ void CollisionObject::SetObjectOrientation(Math::Vector3 axis, float Degrees)
 	Degrees = (Degrees*(3.14159265359/180));
 	btQuaternion quat(btVector3(axis.x,axis.y,axis.z),Degrees);
 	BulletCollisionObject->getWorldTransform().setRotation(quat);
+}
+
+void CollisionObject::SetObjectOrientation(Ogre::Quaternion quat)
+{
+	btQuaternion btquat(quat.x,quat.y,quat.z,quat.w);
+	BulletCollisionObject->getWorldTransform().setRotation(btquat);
+		
+		
+}
+
+void CollisionObject::SetScale(float xs, float ys, float zs)
+{
+	BulletCollisionObject->getCollisionShape()->setLocalScaling(btVector3(xs,ys,zs));
+
 }

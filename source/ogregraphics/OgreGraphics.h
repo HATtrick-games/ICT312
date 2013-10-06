@@ -243,6 +243,7 @@ namespace Graphics
 		Ogre::Quaternion	getEntityOrientation( std::string identifier );
 		void				setEntityOrientation( std::string identifier, Ogre::Quaternion quat );
 		void				setEntityScale( std::string identifier, Ogre::Vector3 scale );
+		Ogre::Vector3		getEntityScale(std::string identifier);
 
 		Ogre::Entity*		getEntity( std::string identifier );
 		DebugDrawer*		getDebugDrawer();

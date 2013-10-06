@@ -239,6 +239,11 @@ Ogre::Quaternion OgreGraphics::getEntityOrientation( std::string identifier )
 	return m_sceneNodes[identifier]->getOrientation();
 }
 
+Ogre::Vector3 OgreGraphics::getEntityScale(std::string identifier)
+{
+	return m_sceneNodes[identifier]->getScale();
+}
+
 void OgreGraphics::setEntityOrientation( std::string identifier, Ogre::Quaternion quat )
 {
 	if(!identifier.empty())

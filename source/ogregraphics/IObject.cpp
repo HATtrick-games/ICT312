@@ -83,6 +83,30 @@ void IObject::setID()
 	m_entity = "entity" + idString.str();
 }
 
+Ogre::Vector3 IObject::getScale()
+{
+	return(Core::Game::getGraphics()->getEntityScale(m_entity));
+}
+
+Ogre::Quaternion IObject::getOrientation()
+{
+	return(Core::Game::getGraphics()->getEntityOrientation(m_entity));
+}
+
+
+void IObject::MakeCollisionObject()
+{
+//	if(getEntity() != NULL)
+	//{
+	ColObj = new CollisionObject();
+	ColObj->AddMeshShape(getEntity());
+	ColObj->SetPosition(getPosition().x,getPosition().y,getPosition().z);
+	ColObj->SetObjectOrientation(getOrientation());
+	ColObj->SetScale(getScale().x,getScale().y,getScale().z);
+	//}
+	//need to set values like position here as well.
+}
+
 std::string IObject::getEntityName()
 {
 	return m_entity;

@@ -3,9 +3,19 @@
  *
  * \brief	Declares the collision object class.
  */
+#pragma once
+#include "CollisionWorldSingleton.h"
+#include "CollisionWorldSingleton.h"
+#include "OgreBulletCollisionsPreRequisites.h"
+#include "OgreBulletCollisionsWorld.h"
 
-#include "CollisionWorldSingleton.h"
-#include "CollisionWorldSingleton.h"
+#include "OgreBulletCollisions.h"
+
+#include "OgreBulletCollisionsObject.h"
+#include "Debug/OgreBulletCollisionsDebugShape.h"
+
+#include "OgreBulletCollisionsObjectState.h"
+#include "OgreBulletCollisionsShape.h"
 #include "Vector3.h"
 #include "IObject.h"
 
@@ -22,6 +32,7 @@ class CollisionObject
 {
 public:
 	CollisionObject();
+	void AddMeshShape(Ogre::Entity* Ent);
 	void AddBoxShape(float xLength, float yLength, float zLength);//creates a collision object with a box shape
 
 	/**
@@ -52,7 +63,9 @@ public:
 
 	void MoveObject(Math::Vector3 vec);//moves position by passed vector
 	void SetObjectOrientation(Math::Vector3 axis, float Degrees);
+	void SetObjectOrientation(Ogre::Quaternion quat);
 	void SetUserPointer(void* obj);
+	void SetScale(float xs, float ys, float zs);
 	Math::Vector3 GetObjectPosition();
 	
 protected:
