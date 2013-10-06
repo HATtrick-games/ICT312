@@ -48,7 +48,7 @@ bool OgreGraphics::initialise()
 	//m_camera->setAspectRatio( Ogre::Real( m_viewport->getActualWidth() ) /
 		//						Ogre::Real( m_viewport->getActualHeight() ) );
 
-	m_frameListener = new FrameListener();
+	m_frameListener = new FrameListener(m_sceneManager);
 	m_root->addFrameListener( m_frameListener );
 
 	loadResources();
@@ -253,4 +253,9 @@ void OgreGraphics::setEntityScale( std::string identifier, Ogre::Vector3 scale )
 Ogre::Entity* OgreGraphics::getEntity( std::string identifier )
 {
 	return static_cast<Ogre::Entity*>(m_sceneNodes[identifier]->getAttachedObject(0));
+}
+
+DebugDrawer* OgreGraphics::getDebugDrawer()
+{
+	return DebugDrawer::getSingletonPtr();
 }

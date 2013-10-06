@@ -85,6 +85,7 @@
     <ClInclude Include="CollisionObject.h" />
     <ClInclude Include="CollisionWorldSingleton.h" />
     <ClInclude Include="Constants.h" />
+    <ClInclude Include="DebugDrawer.h" />
     <ClInclude Include="FrameListener.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GenericObject.h" />
@@ -107,6 +108,7 @@
   <ItemGroup>
     <ClCompile Include="CollisionObject.cpp" />
     <ClCompile Include="CollisionWorldSingleton.cpp" />
+    <ClCompile Include="DebugDrawer.cpp" />
     <ClCompile Include="FrameListener.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GenericObject.cpp" />

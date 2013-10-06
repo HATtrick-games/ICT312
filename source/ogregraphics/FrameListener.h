@@ -1,12 +1,14 @@
 #pragma once
 
+#include "DebugDrawer.h"
+
 namespace Graphics
 {
 	class FrameListener :
 		public Ogre::FrameListener
 	{
 	public:
-		FrameListener();
+		FrameListener(Ogre::SceneManager* sceneManager);
 		~FrameListener();
 
 		virtual bool	frameStarted( const Ogre::FrameEvent& evt );

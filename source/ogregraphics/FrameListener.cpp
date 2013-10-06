@@ -3,24 +3,30 @@
 
 using namespace Graphics;
 
-FrameListener::FrameListener() :
+FrameListener::FrameListener(Ogre::SceneManager* sceneManager) :
 	m_deltaTime( 0.0f )
 {
+	new DebugDrawer(sceneManager, 0.5f);
 }
 
 FrameListener::~FrameListener()
 {
+	delete DebugDrawer::getSingletonPtr();
 }
 
 bool FrameListener::frameStarted( const Ogre::FrameEvent& evt )
 {
 	m_deltaTime = evt.timeSinceLastFrame;
 
+	DebugDrawer::getSingleton().build();
+
 	return true;
 }
 
 bool FrameListener::frameEnded( const Ogre::FrameEvent& evt )
 {
+	DebugDrawer::getSingleton().clear();
+
 	return true;
 }
 
