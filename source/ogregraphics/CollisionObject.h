@@ -57,6 +57,7 @@ public:
 	
 protected:
 private:
+	btScaledBvhTriangleMeshShape* obj;
 	btCollisionObject* BulletCollisionObject;
 	bool ShapeAdded;
 };
