@@ -19,7 +19,9 @@ namespace Objects
 	protected:
 		Ogre::Vector3 m_force;
 		float m_mass;
+		float m_restitution;
 
+		Ogre::Vector3 m_position;
 		Ogre::Vector3 m_acceleration;
 		Ogre::Vector3 m_velocity;
 	private:

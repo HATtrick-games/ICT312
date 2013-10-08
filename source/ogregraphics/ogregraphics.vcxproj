@@ -84,7 +84,6 @@
   <ItemGroup>
     <ClInclude Include="CollisionObject.h" />
     <ClInclude Include="CollisionWorldSingleton.h" />
-    <ClInclude Include="Constants.h" />
     <ClInclude Include="DebugDrawer.h" />
     <ClInclude Include="FrameListener.h" />
     <ClInclude Include="Game.h" />
@@ -92,10 +91,10 @@
     <ClInclude Include="IObject.h" />
     <ClInclude Include="IScene.h" />
     <ClInclude Include="ITBuildingScene.h" />
-    <ClInclude Include="LinearMotion.h" />
+    <ClInclude Include="Manifold.h" />
     <ClInclude Include="OgreGraphics.h" />
+    <ClInclude Include="PhysicsEngine.h" />
     <ClInclude Include="RigidBodyObject.h" />
-    <ClInclude Include="RotationalMotion.h" />
     <ClInclude Include="SceneLoader.h" />
     <ClInclude Include="SceneManager.h" />
     <ClInclude Include="stdafx.h" />
@@ -115,10 +114,9 @@
     <ClCompile Include="IObject.cpp" />
     <ClCompile Include="IScene.cpp" />
     <ClCompile Include="ITBuildingScene.cpp" />
-    <ClCompile Include="LinearMotion.cpp" />
     <ClCompile Include="OgreGraphics.cpp" />
+    <ClCompile Include="PhysicsEngine.cpp" />
     <ClCompile Include="RigidBodyObject.cpp" />
-    <ClCompile Include="RotationalMotion.cpp" />
     <ClCompile Include="SceneLoader.cpp" />
     <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="stdafx.cpp">

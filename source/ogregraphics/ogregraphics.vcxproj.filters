@@ -84,15 +84,6 @@
     <ClInclude Include="TestObject.h">
       <Filter>Header Files\Objects</Filter>
     </ClInclude>
-    <ClInclude Include="Constants.h">
-      <Filter>Header Files\Physics</Filter>
-    </ClInclude>
-    <ClInclude Include="LinearMotion.h">
-      <Filter>Header Files\Physics</Filter>
-    </ClInclude>
-    <ClInclude Include="RotationalMotion.h">
-      <Filter>Header Files\Physics</Filter>
-    </ClInclude>
     <ClInclude Include="RigidBodyObject.h">
       <Filter>Header Files\Objects</Filter>
     </ClInclude>
@@ -119,6 +110,12 @@
     </ClInclude>
     <ClInclude Include="DebugDrawer.h">
       <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="PhysicsEngine.h">
+      <Filter>Header Files\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Manifold.h">
+      <Filter>Header Files\Physics</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -152,12 +149,6 @@
     <ClCompile Include="IScene.cpp">
       <Filter>Source Files\Scenes</Filter>
     </ClCompile>
-    <ClCompile Include="LinearMotion.cpp">
-      <Filter>Source Files\Physics</Filter>
-    </ClCompile>
-    <ClCompile Include="RotationalMotion.cpp">
-      <Filter>Source Files\Physics</Filter>
-    </ClCompile>
     <ClCompile Include="RigidBodyObject.cpp">
       <Filter>Source Files\Objects</Filter>
     </ClCompile>
@@ -181,6 +172,9 @@
     </ClCompile>
     <ClCompile Include="DebugDrawer.cpp">
       <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="PhysicsEngine.cpp">
+      <Filter>Source Files\Physics</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

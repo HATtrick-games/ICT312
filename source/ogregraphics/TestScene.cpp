@@ -19,17 +19,7 @@ void TestScene::initialise()
 
 	Core::Game::getGraphics()->createDirectionalLight( "Light1", 0, 0, 0, 1, -1, 0 );
 
-	addObject( "Player", new Objects::TestObject() );
-	//addObject( "WallSection", new Objects::GenericObject( Ogre::Vector3(100, 0, 0), Ogre::Vector3(0, 0, 0), "models/WallSection.mesh" ) );
-	//addObject( "Cabinet", new Objects::GenericObject( Ogre::Vector3(200, 0, 0), Ogre::Vector3(0, 0, 0), "models/Cabinet.mesh" ) );
-	//addObject( "ComputerTable", new Objects::GenericObject( Ogre::Vector3(300, 0, 0), Ogre::Vector3(0, 0, 0), "models/ComputerTable.mesh" ) );
-	//addObject( "DoorClosed", new Objects::GenericObject( Ogre::Vector3(400, 0, 0), Ogre::Vector3(0, 0, 0), "models/DoorClosed.mesh" ) );
-	//addObject( "DoorOpen", new Objects::GenericObject( Ogre::Vector3(500, 0, 0), Ogre::Vector3(0, 0, 0), "models/DoorOpen.mesh" ) );
-	//addObject( "FloorCarpet1", new Objects::GenericObject( Ogre::Vector3(600, 0, 0), Ogre::Vector3(0, 0, 0), "models/FloorCarpet1.mesh" ) );
-	//addObject( "FloorCarpet2", new Objects::GenericObject( Ogre::Vector3(700, 0, 0), Ogre::Vector3(0, 0, 0), "models/FloorCarpet2.mesh" ) );
-	addObject( "Stool", new Objects::GenericObject( Ogre::Vector3(800, 0, 0), Ogre::Vector3(0, 0, 0), "models/Stool.mesh" ) );
-	addObject( "Floor", new Objects::GenericObject( Ogre::Vector3(0, 20, 0), Ogre::Vector3(0, 0, 0), "models/FloorPlan.mesh" ) );
-	//addObject( "TableMesh", new Objects::GenericObject( Ogre::Vector3(900, 0, 0), Ogre::Vector3(0, 0, 0), "models/TableMesh.mesh" ) );
+	addObject( "Camera", new Objects::TestObject() );
 }
 
 void TestScene::update( float deltaTime )
@@ -39,11 +29,11 @@ void TestScene::update( float deltaTime )
 	{
 		Core::Game::setRunning( false );
 	}
-	if( Core::Game::getKeyboard()->isKeyDown( OIS::KC_Q ) )
+	if( Core::Game::getKeyboard()->isKeyDown( OIS::KC_1 ) )
 	{
 		m_cameraType = CAM_FREE;
 	}
-	if( Core::Game::getKeyboard()->isKeyDown( OIS::KC_E ) )
+	if( Core::Game::getKeyboard()->isKeyDown( OIS::KC_2 ) )
 	{
 		m_cameraType = CAM_FIRSTPERSON;
 	}
@@ -68,7 +58,7 @@ void TestScene::onExit()
 
 void TestScene::freeCamera( float deltaTime )
 {
-	float movementSpeed = 1000.0f;	
+	float movementSpeed = 500.0f;	
 
 	Ogre::Vector3 translate( 0, 0, 0 );
 	if( Core::Game::getKeyboard()->isKeyDown( OIS::KC_W ) )
@@ -86,6 +76,14 @@ void TestScene::freeCamera( float deltaTime )
 	if( Core::Game::getKeyboard()->isKeyDown( OIS::KC_D ) )
 	{
 		translate += Ogre::Vector3( 1, 0, 0 );
+	}
+	if( Core::Game::getKeyboard()->isKeyDown( OIS::KC_Q ) )
+	{
+		translate += Ogre::Vector3( 0, -1, 0 );
+	}
+	if( Core::Game::getKeyboard()->isKeyDown( OIS::KC_E ) )
+	{
+		translate += Ogre::Vector3( 0, 1, 0 );
 	}
 	
 	Core::Game::getGraphics()->cameraMoveRelative( translate * deltaTime * movementSpeed );
@@ -95,12 +93,12 @@ void TestScene::freeCamera( float deltaTime )
 	Core::Game::getGraphics()->cameraYaw( Ogre::Radian( rotX ) );
 	Core::Game::getGraphics()->cameraPitch( Ogre::Radian( rotY ) );
 
-	getObject( "Player" )->setYaw( rotX );
+	getObject( "Camera" )->setYaw( rotX );
 }
 
 void TestScene::firstPersonCamera( float deltaTime )
 {
-	float movementSpeed = 1000.0f;	
+	float movementSpeed = 500.0f;	
 
 	Ogre::Vector3 translate( 0, 0, 0 );
 	if( Core::Game::getKeyboard()->isKeyDown( OIS::KC_W ) )
@@ -119,18 +117,26 @@ void TestScene::firstPersonCamera( float deltaTime )
 	{
 		translate += Ogre::Vector3( 1, 0, 0 );
 	}
+	if( Core::Game::getKeyboard()->isKeyDown( OIS::KC_Q ) )
+	{
+		translate += Ogre::Vector3( 0, -1, 0 );
+	}
+	if( Core::Game::getKeyboard()->isKeyDown( OIS::KC_E ) )
+	{
+		translate += Ogre::Vector3( 0, 1, 0 );
+	}
 
 	float rotX = Core::Game::getMouse()->getMouseState().X.rel * deltaTime * -0.3;
 	float rotY = Core::Game::getMouse()->getMouseState().Y.rel * deltaTime * -0.3;
 	Core::Game::getGraphics()->cameraYaw( Ogre::Radian( rotX ) );
 	Core::Game::getGraphics()->cameraPitch( Ogre::Radian( rotY ) );
 
-	getObject( "Player" )->setYaw( rotX );
+	getObject( "Camera" )->setYaw( rotX );
 
-	Core::Game::getGraphics()->cameraSetPosition( getObject( "Player" )->getPosition().x, 
-		getObject( "Player" )->getPosition().y, getObject( "Player" )->getPosition().z );
+	Core::Game::getGraphics()->cameraSetPosition( getObject( "Camera" )->getPosition().x, 
+		getObject( "Camera" )->getPosition().y, getObject( "Camera" )->getPosition().z );
 	translate = translate * deltaTime * movementSpeed;
 
 	//std::cout << translate * getObject( "Player" )->getForwardVector() << std::endl;
-	getObject( "Player" )->changePosition( getObject( "Player" )->getOrientation() * translate );
+	getObject( "Camera" )->changePosition( getObject( "Camera" )->getOrientation() * translate );
 }
