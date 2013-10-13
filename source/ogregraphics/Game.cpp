@@ -216,8 +216,8 @@ int Game::initialise()
 
 	/*********************ENDS HERE*********??????????????/////////////*/
 
-	Core::Game::getSceneManager()->GetScene()->getObject("Camera")->setPosition(Ogre::Vector3(-623.419, -277, -1048.77));
-	Player->SetLastPos(-623.419, -277, -1048.77);
+	Core::Game::getSceneManager()->GetScene()->getObject("Camera")->setPosition(Ogre::Vector3(0.0f, 0.0f, 0.0f));
+	Player->SetLastPos(0.0f, 0.0f, 0.0f);
 	return 0;
 }
 

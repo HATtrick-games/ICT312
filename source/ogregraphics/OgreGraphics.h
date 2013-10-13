@@ -153,6 +153,8 @@ namespace Graphics
 		 */
 		void				cameraPitch( Ogre::Radian& angle );
 
+		Ogre::Vector3		cameraDirection() { return m_camera->getDirection(); }
+
 		/**
 		 * \fn	int OgreGraphics::getWindowWidth() const
 		 *

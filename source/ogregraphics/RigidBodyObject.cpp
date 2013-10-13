@@ -5,12 +5,12 @@ using namespace Objects;
 
 RigidBodyObject::RigidBodyObject(void)
 {
-	m_force = Ogre::Vector3();
-	m_mass = 10.0f; // 10.0kg
+	m_force = Ogre::Vector3(0.0f, 0.0f, 0.0f);
+	m_mass = 1.0f;
+	m_restitution = 0.0f;
 
-	m_position = Ogre::Vector3();
-	m_acceleration = Ogre::Vector3();
-	m_velocity = Ogre::Vector3();
+	m_acceleration = Ogre::Vector3(0.0f, 0.0f, 0.0f);
+	m_velocity = Ogre::Vector3(0.0f, 0.0f, 0.0f);
 }
 
 
@@ -25,21 +25,22 @@ void RigidBodyObject::initialise()
 
 void RigidBodyObject::update( float deltaTime )
 {
-	m_acceleration = m_force * m_mass;
-
-	Ogre::Vector3 deltaVel = Core::Game::getGraphics()->getDeltaTime() * m_acceleration;
-	m_velocity += deltaVel;
-
-	changePosition( Core::Game::getGraphics()->getDeltaTime() * m_velocity);
-
-	checkPosition();
+	// velocity vertlet
+	m_lastAcceleration = m_acceleration;
+	m_position += m_velocity * deltaTime + (0.5 * m_lastAcceleration * deltaTime * deltaTime);
 	
-	IObject::update( deltaTime ); // must always be the last part
+	if( m_mass > 0.0f )
+		m_acceleration = m_force / m_mass;
+	
+	Ogre::Vector3 avgAcceleration = ( m_lastAcceleration - m_acceleration ) / 2.0f;
+	m_velocity += avgAcceleration * deltaTime;
+
+	m_force = Ogre::Vector3::ZERO;
+	
+	GenericObject::update( deltaTime ); // must always be the last part
 }
 
-void RigidBodyObject::checkPosition()
+void RigidBodyObject::applyForce(Ogre::Vector3 force)
 {
-	//Physics::Constants::clamp(m_position.x, Physics::Constants::MIN_X, Physics::Constants::MAX_X);
-	//Physics::Constants::clamp(m_position.y, Physics::Constants::MIN_Y, Physics::Constants::MAX_Y);
-	//Physics::Constants::clamp(m_position.z, Physics::Constants::MIN_Z, Physics::Constants::MAX_Z);
+	m_force = force;
 }

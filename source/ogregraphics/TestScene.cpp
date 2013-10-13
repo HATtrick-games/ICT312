@@ -1,11 +1,14 @@
 #include "StdAfx.h"
 #include "TestScene.h"
+#include "ProjectileObject.h"
 
 using namespace Scenes;
 
 void TestScene::initialise()
 {
 	m_cameraType = CAM_FIRSTPERSON;
+	m_projectileKeyDown = false;
+	m_numProjectiles = 0;
 
 	Core::Game::getGraphics()->cameraSetPosition( 0, 0, 50 );
 	Core::Game::getGraphics()->cameraSetLookAt( 0, 0, 0 );
@@ -20,10 +23,14 @@ void TestScene::initialise()
 	Core::Game::getGraphics()->createDirectionalLight( "Light1", 0, 0, 0, 1, -1, 0 );
 
 	addObject( "Camera", new Objects::TestObject() );
+	addObject( "Target", new Objects::TargetObject() );
+	//addObject( "Projectile", new Objects::ProjectileObject() );
 }
 
 void TestScene::update( float deltaTime )
 {
+
+
 	// close the window if ESC is pressed
 	if( Core::Game::getKeyboard()->isKeyDown( OIS::KC_ESCAPE ) )
 	{
@@ -48,6 +55,17 @@ void TestScene::update( float deltaTime )
 		break;
 	}
 
+	if( Core::Game::getKeyboard()->isKeyDown( OIS::KC_SPACE ) && !m_projectileKeyDown )
+	{
+		createProjectile();
+		m_projectileKeyDown = true;
+	}
+
+	if( !Core::Game::getKeyboard()->isKeyDown( OIS::KC_SPACE ))
+	{
+		m_projectileKeyDown = false;
+	}
+
 	IScene::update( deltaTime ); // make sure this is always last
 }
 
@@ -58,7 +76,7 @@ void TestScene::onExit()
 
 void TestScene::freeCamera( float deltaTime )
 {
-	float movementSpeed = 500.0f;	
+	float movementSpeed = 100.0f;	
 
 	Ogre::Vector3 translate( 0, 0, 0 );
 	if( Core::Game::getKeyboard()->isKeyDown( OIS::KC_W ) )
@@ -98,7 +116,7 @@ void TestScene::freeCamera( float deltaTime )
 
 void TestScene::firstPersonCamera( float deltaTime )
 {
-	float movementSpeed = 500.0f;	
+	float movementSpeed = 100.0f;	
 
 	Ogre::Vector3 translate( 0, 0, 0 );
 	if( Core::Game::getKeyboard()->isKeyDown( OIS::KC_W ) )
@@ -139,4 +157,19 @@ void TestScene::firstPersonCamera( float deltaTime )
 
 	//std::cout << translate * getObject( "Player" )->getForwardVector() << std::endl;
 	getObject( "Camera" )->changePosition( getObject( "Camera" )->getOrientation() * translate );
+}
+
+void TestScene::createProjectile()
+{
+	Objects::ProjectileObject* projectile = new Objects::ProjectileObject(getObject("Camera")->getPosition());
+	projectile->applyForce(10000 * Core::Game::getGraphics()->cameraDirection() );
+
+	std::ostringstream idString;
+	idString << m_numProjectiles;
+
+	addObject("projectile" + idString.str() , projectile );
+
+	std::cout << 10000 * Core::Game::getGraphics()->cameraDirection() << std::endl;
+
+	m_numProjectiles++;
 }

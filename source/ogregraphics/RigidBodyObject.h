@@ -1,12 +1,11 @@
 #pragma once
 
 #include "IObject.h"
-#include "Constants.h"
 
 namespace Objects
 {
 	class RigidBodyObject :
-		public IObject
+		public GenericObject
 	{
 	public:
 		RigidBodyObject(void);
@@ -15,15 +14,17 @@ namespace Objects
 		virtual void		initialise();
 		virtual void		update( float deltaTime );
 
-		void checkPosition();
+		void applyForce(Ogre::Vector3 force);
+
 	protected:
 		Ogre::Vector3 m_force;
 		float m_mass;
 		float m_restitution;
 
-		Ogre::Vector3 m_position;
 		Ogre::Vector3 m_acceleration;
 		Ogre::Vector3 m_velocity;
+
+		Ogre::Vector3 m_lastAcceleration;
 	private:
 
 	};

@@ -3,6 +3,7 @@
 #include "IScene.h"
 #include "TestObject.h"
 #include "GenericObject.h"
+#include "TargetObject.h"
 
 enum CameraType
 {
@@ -22,8 +23,12 @@ namespace Scenes
 
 	private:
 		CameraType		m_cameraType;
+		bool			m_projectileKeyDown;
+		int				m_numProjectiles;
 
 		void freeCamera( float deltaTime );
 		void firstPersonCamera( float deltaTime );
+
+		void createProjectile();
 	};
 }

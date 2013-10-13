@@ -94,10 +94,12 @@
     <ClInclude Include="Manifold.h" />
     <ClInclude Include="OgreGraphics.h" />
     <ClInclude Include="PhysicsEngine.h" />
+    <ClInclude Include="ProjectileObject.h" />
     <ClInclude Include="RigidBodyObject.h" />
     <ClInclude Include="SceneLoader.h" />
     <ClInclude Include="SceneManager.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="TargetObject.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="TemporaryPlayerObject.h" />
     <ClInclude Include="TestObject.h" />
@@ -116,6 +118,7 @@
     <ClCompile Include="ITBuildingScene.cpp" />
     <ClCompile Include="OgreGraphics.cpp" />
     <ClCompile Include="PhysicsEngine.cpp" />
+    <ClCompile Include="ProjectileObject.cpp" />
     <ClCompile Include="RigidBodyObject.cpp" />
     <ClCompile Include="SceneLoader.cpp" />
     <ClCompile Include="SceneManager.cpp" />
@@ -123,6 +126,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="TargetObject.cpp" />
     <ClCompile Include="TemporaryPlayerObject.cpp" />
     <ClCompile Include="TestObject.cpp" />
     <ClCompile Include="TestScene.cpp" />
