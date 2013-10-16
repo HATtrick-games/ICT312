@@ -101,8 +101,9 @@ void IObject::MakeCollisionObject()
 	ColObj = new CollisionObject();
 	ColObj->AddMeshShape(getEntity());
 	ColObj->SetPosition(getPosition().x,getPosition().y,getPosition().z);
-	ColObj->SetObjectOrientation(getOrientation());
-	ColObj->SetScale(getScale().x,getScale().y,getScale().z);
+	//ColObj->SetObjectOrientation(Math::Vector3(0,1,0),90);
+//	ColObj->SetObjectOrientation(getOrientation());
+//	ColObj->SetScale(getScale().x,getScale().y,getScale().z);
 	//}
 	//need to set values like position here as well.
 }

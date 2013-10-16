@@ -27,7 +27,7 @@ void CollisionObject::AddMeshShape(Ogre::Entity* Ent)
 
 
 	convert = new OgreBulletCollisions::StaticMeshToShapeConverter(Ent, Ent->_getParentNodeFullTransform());
-	std::cout<<"OMFG WHY IS THIS PART NOT WORKING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n";
+	//std::cout<<"OMFG WHY IS THIS PART NOT WORKING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n";
 
 
 	OgreBulletCollisions::TriangleMeshCollisionShape *shape = convert->createTrimesh();
@@ -118,6 +118,10 @@ void CollisionObject::SetObjectOrientation(Math::Vector3 axis, float Degrees)
 {
 	Degrees = (Degrees*(3.14159265359/180));
 	btQuaternion quat(btVector3(axis.x,axis.y,axis.z),Degrees);
+	quat = BulletCollisionObject->getWorldTransform().getRotation();
+	quat = quat.normalize();
+	quat.setRotation(btVector3(0,1,0),1.57079633);
+	
 	BulletCollisionObject->getWorldTransform().setRotation(quat);
 }
 
