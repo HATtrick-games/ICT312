@@ -60,10 +60,10 @@ int Game::initialise()
 
 
 	 Player = new TemporaryPlayerObject();
-	// Player->SetLastPos(0,0,0);
+	 Player->SetLastPos(0,0,0);
 	 PlayerSphere = new CollisionObject();
 	 PlayerSphere->AddSphereShape(1);
-	 PlayerSphere->SetPosition(0,0,0);
+PlayerSphere->SetPosition(0,0,0);
 	 PlayerSphere->SetUserPointer(Player);
 	
 	 /***Collision GOES HERE****************************/

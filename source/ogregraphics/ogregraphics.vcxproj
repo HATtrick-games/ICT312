@@ -93,6 +93,10 @@
     <ClInclude Include="IScene.h" />
     <ClInclude Include="ITBuildingScene.h" />
     <ClInclude Include="LinearMotion.h" />
+    <ClInclude Include="MapNode.h" />
+    <ClInclude Include="micropather.h" />
+    <ClInclude Include="NodeContainerSingleton.h" />
+    <ClInclude Include="OgreBulletDraw.h" />
     <ClInclude Include="OgreGraphics.h" />
     <ClInclude Include="RigidBodyObject.h" />
     <ClInclude Include="RotationalMotion.h" />
@@ -104,6 +108,7 @@
     <ClInclude Include="TestObject.h" />
     <ClInclude Include="TestScene.h" />
     <ClInclude Include="Vector3.h" />
+    <ClInclude Include="WorldMap.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CollisionObject.cpp" />
@@ -116,6 +121,10 @@
     <ClCompile Include="IScene.cpp" />
     <ClCompile Include="ITBuildingScene.cpp" />
     <ClCompile Include="LinearMotion.cpp" />
+    <ClCompile Include="MapNode.cpp" />
+    <ClCompile Include="micropather.cpp" />
+    <ClCompile Include="NodeContainerSingleton.cpp" />
+    <ClCompile Include="OgreBulletDraw.cpp" />
     <ClCompile Include="OgreGraphics.cpp" />
     <ClCompile Include="RigidBodyObject.cpp" />
     <ClCompile Include="RotationalMotion.cpp" />
@@ -129,6 +138,7 @@
     <ClCompile Include="TestObject.cpp" />
     <ClCompile Include="TestScene.cpp" />
     <ClCompile Include="Vector3.cpp" />
+    <ClCompile Include="WorldMap.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

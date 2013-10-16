@@ -49,6 +49,12 @@
     <Filter Include="Header Files\Physics">
       <UniqueIdentifier>{ab32751f-d01b-4142-8ce5-e00aab979ada}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Pathing">
+      <UniqueIdentifier>{9421fd2f-5d09-418b-b48c-3339f707e16e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Pathing">
+      <UniqueIdentifier>{2f7c491e-6d3c-4bb1-835e-ed49a47eddab}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="ReadMe.txt" />
@@ -120,6 +126,21 @@
     <ClInclude Include="DebugDrawer.h">
       <Filter>Header Files\Graphics</Filter>
     </ClInclude>
+    <ClInclude Include="OgreBulletDraw.h">
+      <Filter>Header Files\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldMap.h">
+      <Filter>Header Files\Pathing</Filter>
+    </ClInclude>
+    <ClInclude Include="MapNode.h">
+      <Filter>Header Files\Pathing</Filter>
+    </ClInclude>
+    <ClInclude Include="NodeContainerSingleton.h">
+      <Filter>Header Files\Pathing</Filter>
+    </ClInclude>
+    <ClInclude Include="micropather.h">
+      <Filter>Header Files\Pathing</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -181,6 +202,21 @@
     </ClCompile>
     <ClCompile Include="DebugDrawer.cpp">
       <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="OgreBulletDraw.cpp">
+      <Filter>Source Files\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldMap.cpp">
+      <Filter>Source Files\Pathing</Filter>
+    </ClCompile>
+    <ClCompile Include="MapNode.cpp">
+      <Filter>Source Files\Pathing</Filter>
+    </ClCompile>
+    <ClCompile Include="NodeContainerSingleton.cpp">
+      <Filter>Source Files\Pathing</Filter>
+    </ClCompile>
+    <ClCompile Include="micropather.cpp">
+      <Filter>Source Files\Pathing</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -11,6 +11,7 @@
 #include "Shapes/OgreBulletCollisionsBoxShape.h"  
 #include "Vector3.h"
 #include "OgreGraphics.h"
+#include "OgreBulletDraw.h"
 
 
 class CollisionWorldSingleton
@@ -21,6 +22,8 @@ public:
 	void CheckCollision();
 protected:
 private:
+	int i;
+	OgreBulletDraw* DebugObject;
 	btDbvtBroadphase*	broadphase;
 	btCollisionWorld* collisionWorld;
 	btCollisionDispatcher* dispatcher;
@@ -28,10 +31,14 @@ private:
 
 	CollisionWorldSingleton()
 	{
+		i = 0;
+		DebugObject = new OgreBulletDraw();
 		collisionConfiguration = new btDefaultCollisionConfiguration();
 		dispatcher = new btCollisionDispatcher(collisionConfiguration);
 		broadphase = new btDbvtBroadphase();
 		collisionWorld = new btCollisionWorld(dispatcher,broadphase,collisionConfiguration);
+		collisionWorld->setDebugDrawer(DebugObject);
+		collisionWorld->getDebugDrawer()->setDebugMode(btIDebugDraw::DBG_DrawWireframe);
 		
 	}
 };

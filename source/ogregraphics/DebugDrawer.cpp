@@ -1,14 +1,18 @@
-#include "DebugDrawer.h"
 #include "StdAfx.h"
+#include "DebugDrawer.h"
 #include <OgreSceneManager.h>
 #include <OgreRenderQueue.h>
 #include <OgreManualObject.h>
 #include <OgreAxisAlignedBox.h>
- 
+
+
+
+
 IcoSphere::IcoSphere()
-	: index(0)
 {
+index = 0;
 }
+
  
 IcoSphere::~IcoSphere()
 {

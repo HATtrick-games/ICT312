@@ -33,24 +33,25 @@ GenericObject::GenericObject(Ogre::Vector3 pos, Ogre::Quaternion rot, Ogre::Vect
 	setOrientation(rot);
 	setScale(scale);
 	
-	if(meshFile == "SofaGreen.mesh")
+	MakeCollisionObject();
+	/*if(meshFile == "SofaGreen.mesh")
+	{
+	std::cout<<meshFile;
+	Sleep(1000);
+	MakeCollisionObject();
+	}
+	/*
+	if ((meshFile.find("Wall") == std::string::npos)&&((meshFile.find("Plane") == std::string::npos))) 
+	{
+    MakeCollisionObject();
+	}
+	*/
+	/*if(meshFile == "CornerTable_1.mesh")
 	{
 	std::cout<<meshFile;
 		Sleep(1000);
-	MakeCollisionObject();
-	}
-	if(meshFile == "CornerTable.mesh")
-	{
-	std::cout<<meshFile;
-		Sleep(1000);
-	MakeCollisionObject();
-	}
-	if(meshFile == "CornerTable_1.mesh")
-	{
-	std::cout<<meshFile;
-		Sleep(1000);
-	MakeCollisionObject();
-	}
+	MakeCollisionObject();*/
+	
 	//	std::cout<<"TABLE IS MADE HERE \n\n\n\n";
 		
 	

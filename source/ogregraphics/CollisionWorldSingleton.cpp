@@ -18,6 +18,10 @@ void CollisionWorldSingleton::AddObject(btCollisionObject* colobj)
 
 void CollisionWorldSingleton::CheckCollision()
 {
+
+	
+	//collisionWorld->debugDrawWorld();
+//	}
 	broadphase->calculateOverlappingPairs(dispatcher);
 	collisionWorld->performDiscreteCollisionDetection();
 
@@ -72,6 +76,6 @@ void CollisionWorldSingleton::CheckCollision()
 		}
 		contactManifold->clearManifold();	
 	}
-
+	
 
 }
