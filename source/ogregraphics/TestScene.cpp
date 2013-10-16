@@ -169,7 +169,5 @@ void TestScene::createProjectile()
 
 	addObject("projectile" + idString.str() , projectile );
 
-	std::cout << 10000 * Core::Game::getGraphics()->cameraDirection() << std::endl;
-
 	m_numProjectiles++;
 }
