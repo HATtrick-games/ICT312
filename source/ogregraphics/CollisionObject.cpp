@@ -20,6 +20,11 @@ void CollisionObject::SetUserPointer(void* obj)
 }
 
 
+void CollisionObject::AddMeshShapeWithOffset(Ogre::Entity* Ent, Math::Vector3 Offset)
+{
+
+}
+
 void CollisionObject::AddMeshShape(Ogre::Entity* Ent)
 {
 	

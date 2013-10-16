@@ -19,7 +19,7 @@ GenericObject::GenericObject(Ogre::Vector3 pos, Ogre::Vector3 rot, std::string m
 	setRoll(rot.x);
 	setYaw(rot.y);
 	setPitch(rot.z);
-	//MakeCollisionObject();
+	MakeCollisionObject();
 }
 
 GenericObject::GenericObject(Ogre::Vector3 pos, Ogre::Quaternion rot, Ogre::Vector3 scale, std::string meshFile)
@@ -32,8 +32,8 @@ GenericObject::GenericObject(Ogre::Vector3 pos, Ogre::Quaternion rot, Ogre::Vect
 
 	setOrientation(rot);
 	setScale(scale);
-	
-	if(meshFile == "SofaGreen.mesh")
+	MakeCollisionObject();
+	/*if(meshFile == "SofaGreen.mesh")
 	{
 	std::cout<<meshFile;
 		Sleep(1000);
@@ -50,7 +50,7 @@ GenericObject::GenericObject(Ogre::Vector3 pos, Ogre::Quaternion rot, Ogre::Vect
 	std::cout<<meshFile;
 		Sleep(1000);
 	MakeCollisionObject();
-	}
+	}*/
 	//	std::cout<<"TABLE IS MADE HERE \n\n\n\n";
 		
 	

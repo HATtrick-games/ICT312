@@ -9,6 +9,7 @@ TargetObject::TargetObject(void)
 	m_position = Ogre::Vector3(0.0f, 0.0f, 0.0f);
 	m_filename = "Target.mesh";
 	loadMesh();
+	//MakeCollisionObject();
 }
 
 

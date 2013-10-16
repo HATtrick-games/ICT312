@@ -92,6 +92,7 @@
     <ClInclude Include="IScene.h" />
     <ClInclude Include="ITBuildingScene.h" />
     <ClInclude Include="Manifold.h" />
+    <ClInclude Include="OgreBulletDraw.h" />
     <ClInclude Include="OgreGraphics.h" />
     <ClInclude Include="PhysicsEngine.h" />
     <ClInclude Include="ProjectileObject.h" />
@@ -116,6 +117,7 @@
     <ClCompile Include="IObject.cpp" />
     <ClCompile Include="IScene.cpp" />
     <ClCompile Include="ITBuildingScene.cpp" />
+    <ClCompile Include="OgreBulletDraw.cpp" />
     <ClCompile Include="OgreGraphics.cpp" />
     <ClCompile Include="PhysicsEngine.cpp" />
     <ClCompile Include="ProjectileObject.cpp" />

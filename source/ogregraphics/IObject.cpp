@@ -98,6 +98,7 @@ void IObject::MakeCollisionObject()
 {
 //	if(getEntity() != NULL)
 	//{
+	cout<<"Building COllision Object\n";
 	ColObj = new CollisionObject();
 	ColObj->AddMeshShape(getEntity());
 	ColObj->SetPosition(getPosition().x,getPosition().y,getPosition().z);

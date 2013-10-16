@@ -14,13 +14,15 @@ CollisionWorldSingleton* CollisionWorldSingleton::Instance()
 void CollisionWorldSingleton::AddObject(btCollisionObject* colobj)
 {
 	collisionWorld->addCollisionObject(colobj);
+	
 }
 
 void CollisionWorldSingleton::CheckCollision()
 {
-
 	
-	//collisionWorld->debugDrawWorld();
+	
+	collisionWorld->debugDrawWorld();
+	
 //	}
 	broadphase->calculateOverlappingPairs(dispatcher);
 	collisionWorld->performDiscreteCollisionDetection();
@@ -37,6 +39,7 @@ void CollisionWorldSingleton::CheckCollision()
 		if(obA->getUserPointer())
 		{
 		TemporaryPlayerObject* obj = (TemporaryPlayerObject*)obA->getUserPointer();
+		
 		Core::Game::getSceneManager()->GetScene()->getObject("Camera")->setPosition(Ogre::Vector3(obj->lastposition.x,obj->lastposition.y,obj->lastposition.z));
 		std::cout<<"Colliding\n";
 		//Sleep(1000);

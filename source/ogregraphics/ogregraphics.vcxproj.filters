@@ -123,6 +123,9 @@
     <ClInclude Include="ProjectileObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="OgreBulletDraw.h">
+      <Filter>Header Files\Collision</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -187,6 +190,9 @@
     </ClCompile>
     <ClCompile Include="ProjectileObject.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OgreBulletDraw.cpp">
+      <Filter>Source Files\Collision</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -9,6 +9,7 @@ ProjectileObject::ProjectileObject(Ogre::Vector3 pos)
 	m_filename = "Projectile.mesh";
 	m_position = pos;
 	loadMesh();
+	//MakeCollisionObject();
 }
 
 

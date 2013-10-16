@@ -33,6 +33,7 @@ class CollisionObject
 public:
 	CollisionObject();
 	void AddMeshShape(Ogre::Entity* Ent);
+	void AddMeshShapeWithOffset(Ogre::Entity* Ent, Math::Vector3 Offset);
 	void AddBoxShape(float xLength, float yLength, float zLength);//creates a collision object with a box shape
 
 	/**
