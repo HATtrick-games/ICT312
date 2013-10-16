@@ -8,7 +8,7 @@ namespace Objects
 		public GenericObject
 	{
 	public:
-		RigidBodyObject(void);
+		RigidBodyObject(std::string meshFile);
 		~RigidBodyObject(void);
 
 		virtual void		initialise();

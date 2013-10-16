@@ -3,14 +3,19 @@
 
 using namespace Objects;
 
-RigidBodyObject::RigidBodyObject(void)
+RigidBodyObject::RigidBodyObject(std::string meshFile)
 {
+	setID();
+	m_filename = meshFile;
+	loadMesh();
+
 	m_force = Ogre::Vector3(0.0f, 0.0f, 0.0f);
 	m_mass = 1.0f;
 	m_restitution = 0.0f;
 
 	m_acceleration = Ogre::Vector3(0.0f, 0.0f, 0.0f);
 	m_velocity = Ogre::Vector3(0.0f, 0.0f, 0.0f);
+	m_position = Ogre::Vector3(0.0f, 0.0f, 0.0f);
 }
 
 

@@ -3,12 +3,15 @@
 
 using namespace Objects;
 
-TargetObject::TargetObject(void)
+TargetObject::TargetObject(void) : RigidBodyObject("Target.mesh")
 {
-	setID();
+	/*setID();
 	m_position = Ogre::Vector3(0.0f, 0.0f, 0.0f);
 	m_filename = "Target.mesh";
-	loadMesh();
+	loadMesh();*/
+
+	//RigidBodyObject("Target.mesh");
+
 	//MakeCollisionObject();
 }
 

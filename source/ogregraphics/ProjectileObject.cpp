@@ -3,13 +3,14 @@
 
 using namespace Objects;
 
-ProjectileObject::ProjectileObject(Ogre::Vector3 pos)
+ProjectileObject::ProjectileObject(Ogre::Vector3 pos) : RigidBodyObject("Projectile.mesh")
 {
-	setID();
+	/*setID();
 	m_filename = "Projectile.mesh";
-	m_position = pos;
-	loadMesh();
+	
+	loadMesh();*/
 	//MakeCollisionObject();
+	m_position = pos;
 }
 
 
