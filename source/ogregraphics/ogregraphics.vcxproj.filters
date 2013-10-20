@@ -1,198 +1,201 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="FrameListener.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="DebugDrawer.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="Game.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="GenericObject.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="IObject.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="IScene.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="ITBuildingScene.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="OgreBulletDraw.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="OgreGraphics.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="PhysicsEngine.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="ProjectileObject.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="RigidBodyObject.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="SceneLoader.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="SceneManager.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="TargetObject.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="stdafx.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="TemporaryPlayerObject.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="TestObject.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="TestScene.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="Vector3.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="micropather.cpp">
-      <Filter>Header</Filter>
-    </ClCompile>
-    <ClCompile Include="CollisionObject.cpp">
-      <Filter>Source\Collision</Filter>
-    </ClCompile>
-    <ClCompile Include="CollisionWorldSingleton.cpp">
-      <Filter>Source\Collision</Filter>
-    </ClCompile>
-    <ClCompile Include="MapNode.cpp">
-      <Filter>Source\Pathing</Filter>
-    </ClCompile>
-    <ClCompile Include="NodeContainerSingleton.cpp">
-      <Filter>Source\Pathing</Filter>
-    </ClCompile>
-    <ClCompile Include="WorldMap.cpp">
-      <Filter>Source\Pathing</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="ConvexDecomposition.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="DebugDrawer.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="Force.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="FrameListener.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="Game.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="GenericObject.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="IObject.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="IScene.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="ITBuildingScene.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="Manifold.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="OgreBulletDraw.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="OgreGraphics.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="PhysicsEngine.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="ProjectileObject.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="RigidBodyObject.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="SceneLoader.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="SceneManager.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="stdafx.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="TargetObject.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="targetver.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="TemporaryPlayerObject.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="TestObject.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="TestScene.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="Vector3.h">
-      <Filter>Header</Filter>
-    </ClInclude>
-    <ClInclude Include="CollisionObject.h">
-      <Filter>Header\Collision</Filter>
-    </ClInclude>
-    <ClInclude Include="CollisionWorldSingleton.h">
-      <Filter>Header\Collision</Filter>
-    </ClInclude>
-    <ClInclude Include="WorldMap.h">
-      <Filter>Header\Pathing</Filter>
-    </ClInclude>
-    <ClInclude Include="micropather.h">
-      <Filter>Header\Pathing</Filter>
-    </ClInclude>
-    <ClInclude Include="MapNode.h">
-      <Filter>Header\Pathing</Filter>
-    </ClInclude>
-    <ClInclude Include="NodeContainerSingleton.h">
-      <Filter>Source\Pathing</Filter>
-    </ClInclude>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Graphics">
+      <UniqueIdentifier>{2c33d3b7-27df-4b5b-97c6-7862687c3589}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Graphics">
+      <UniqueIdentifier>{163f39f0-05dd-4f56-beb6-15546078ef30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Scenes">
+      <UniqueIdentifier>{697fb2c4-f72a-41d6-a378-5af78620bad6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Scenes">
+      <UniqueIdentifier>{feb916cb-dcaa-4704-b83c-9bec48f7656b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Objects">
+      <UniqueIdentifier>{908996d6-f143-4c65-8a11-142f8eb0cc19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Objects">
+      <UniqueIdentifier>{944092e3-8246-4d19-a5e8-613ae2990a06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Math">
+      <UniqueIdentifier>{8e69cb40-6629-4f25-ba1e-0e9cbd8063d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Math">
+      <UniqueIdentifier>{c7486240-7f4d-465b-ac87-f7c9d23015a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Collision">
+      <UniqueIdentifier>{69592699-2859-456a-806f-52a2553f91f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Collision">
+      <UniqueIdentifier>{5809cfb6-13eb-4a81-832b-a889a44bcd14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Physics">
+      <UniqueIdentifier>{f6fff6f0-dc25-429c-a851-9c88e2eebf74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Physics">
+      <UniqueIdentifier>{ab32751f-d01b-4142-8ce5-e00aab979ada}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="Header">
-      <UniqueIdentifier>{1be6b0c3-4e56-40b6-a90a-ac931d275fff}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source">
-      <UniqueIdentifier>{f11d8da4-f658-479d-bb59-c974cbf778d3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header\Collision">
-      <UniqueIdentifier>{f1cda930-619d-4a88-9d15-e370deaa8dc0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Collision">
-      <UniqueIdentifier>{0960789a-ba04-42c9-a25c-b1d272417dfe}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header\Pathing">
-      <UniqueIdentifier>{8683d020-a670-44c5-88f5-d4900487bd8b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Pathing">
-      <UniqueIdentifier>{d1c5d4de-bb01-4dc9-b94b-46c52229e965}</UniqueIdentifier>
-    </Filter>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OgreGraphics.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameListener.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="IScene.h">
+      <Filter>Header Files\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>Header Files\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="TestScene.h">
+      <Filter>Header Files\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="IObject.h">
+      <Filter>Header Files\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector3.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="TestObject.h">
+      <Filter>Header Files\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="RigidBodyObject.h">
+      <Filter>Header Files\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionObject.h">
+      <Filter>Header Files\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionWorldSingleton.h">
+      <Filter>Header Files\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="TemporaryPlayerObject.h">
+      <Filter>Header Files\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="GenericObject.h">
+      <Filter>Header Files\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="ITBuildingScene.h">
+      <Filter>Header Files\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneLoader.h">
+      <Filter>Header Files\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugDrawer.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="PhysicsEngine.h">
+      <Filter>Header Files\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Manifold.h">
+      <Filter>Header Files\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="TargetObject.h">
+      <Filter>Header Files\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="OgreBulletDraw.h">
+      <Filter>Header Files\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="ProjectileObject.h">
+      <Filter>Header Files\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Force.h">
+      <Filter>Header Files\Physics</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OgreGraphics.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameListener.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneManager.cpp">
+      <Filter>Source Files\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="TestScene.cpp">
+      <Filter>Source Files\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="IObject.cpp">
+      <Filter>Source Files\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector3.cpp">
+      <Filter>Source Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="TestObject.cpp">
+      <Filter>Source Files\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="IScene.cpp">
+      <Filter>Source Files\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="RigidBodyObject.cpp">
+      <Filter>Source Files\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionObject.cpp">
+      <Filter>Source Files\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionWorldSingleton.cpp">
+      <Filter>Source Files\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="TemporaryPlayerObject.cpp">
+      <Filter>Source Files\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="GenericObject.cpp">
+      <Filter>Source Files\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="ITBuildingScene.cpp">
+      <Filter>Source Files\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneLoader.cpp">
+      <Filter>Source Files\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugDrawer.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="PhysicsEngine.cpp">
+      <Filter>Source Files\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="TargetObject.cpp">
+      <Filter>Source Files\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="OgreBulletDraw.cpp">
+      <Filter>Source Files\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="ProjectileObject.cpp">
+      <Filter>Source Files\Objects</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -40,7 +40,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <ExecutablePath>$(SolutionDir)thirdparty\bin\debug;$(VCInstallDir)bin;$(WindowsSdkDir)bin\NETFX 4.0 Tools;$(WindowsSdkDir)bin;$(VSInstallDir)Common7\Tools\bin;$(VSInstallDir)Common7\tools;$(VSInstallDir)Common7\ide;$(ProgramFiles)\HTML Help Workshop;$(FrameworkSDKDir)\bin;$(MSBuildToolsPath32);$(VSInstallDir);$(SystemRoot)\SysWow64;$(FxCopDir);$(PATH);</ExecutablePath>
-    <IncludePath>A:\IT\GitHub\ICT312\source\thirdparty\include\BulletCollision\NarrowPhaseCollision;A:\IT\GitHub\ICT312\source\thirdparty\include\BulletCollision\Gimpact;A:\IT\GitHub\ICT312\source\thirdparty\include\BulletCollision\CollisionDispatch;A:\IT\GitHub\ICT312\source\thirdparty\include\BulletCollision\BroadphaseCollision;A:\IT\GitHub\ICT312\source\thirdparty\include\BulletCollision\CollisionShapes;$(SolutionDir)thirdparty\include;A:\IT\GitHub\ICT312\source\thirdparty\include\Debug;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;$(SolutionDir)thirdparty\include\Ogre</IncludePath>
+    <IncludePath>$(SolutionDir)thirdparty\include;A:\IT\GitHub\ICT312\source\thirdparty\include\Debug;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;$(SolutionDir)thirdparty\include\Ogre</IncludePath>
     <ReferencePath>$(SolutionDir)thirdparty\lib\debug;$(VCInstallDir)atlmfc\lib;$(VCInstallDir)lib</ReferencePath>
     <LibraryPath>$(SolutionDir)thirdparty\lib\debug;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(FrameworkSDKDir)\lib</LibraryPath>
   </PropertyGroup>
@@ -84,7 +84,6 @@
   <ItemGroup>
     <ClInclude Include="CollisionObject.h" />
     <ClInclude Include="CollisionWorldSingleton.h" />
-    <ClInclude Include="ConvexDecomposition.h" />
     <ClInclude Include="DebugDrawer.h" />
     <ClInclude Include="Force.h" />
     <ClInclude Include="FrameListener.h" />
@@ -94,9 +93,6 @@
     <ClInclude Include="IScene.h" />
     <ClInclude Include="ITBuildingScene.h" />
     <ClInclude Include="Manifold.h" />
-    <ClInclude Include="MapNode.h" />
-    <ClInclude Include="micropather.h" />
-    <ClInclude Include="NodeContainerSingleton.h" />
     <ClInclude Include="OgreBulletDraw.h" />
     <ClInclude Include="OgreGraphics.h" />
     <ClInclude Include="PhysicsEngine.h" />
@@ -111,7 +107,6 @@
     <ClInclude Include="TestObject.h" />
     <ClInclude Include="TestScene.h" />
     <ClInclude Include="Vector3.h" />
-    <ClInclude Include="WorldMap.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CollisionObject.cpp" />
@@ -123,9 +118,6 @@
     <ClCompile Include="IObject.cpp" />
     <ClCompile Include="IScene.cpp" />
     <ClCompile Include="ITBuildingScene.cpp" />
-    <ClCompile Include="MapNode.cpp" />
-    <ClCompile Include="micropather.cpp" />
-    <ClCompile Include="NodeContainerSingleton.cpp" />
     <ClCompile Include="OgreBulletDraw.cpp" />
     <ClCompile Include="OgreGraphics.cpp" />
     <ClCompile Include="PhysicsEngine.cpp" />
@@ -142,7 +134,6 @@
     <ClCompile Include="TestObject.cpp" />
     <ClCompile Include="TestScene.cpp" />
     <ClCompile Include="Vector3.cpp" />
-    <ClCompile Include="WorldMap.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
