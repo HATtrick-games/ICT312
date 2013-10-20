@@ -40,7 +40,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <ExecutablePath>$(SolutionDir)thirdparty\bin\debug;$(VCInstallDir)bin;$(WindowsSdkDir)bin\NETFX 4.0 Tools;$(WindowsSdkDir)bin;$(VSInstallDir)Common7\Tools\bin;$(VSInstallDir)Common7\tools;$(VSInstallDir)Common7\ide;$(ProgramFiles)\HTML Help Workshop;$(FrameworkSDKDir)\bin;$(MSBuildToolsPath32);$(VSInstallDir);$(SystemRoot)\SysWow64;$(FxCopDir);$(PATH);</ExecutablePath>
-    <IncludePath>$(SolutionDir)thirdparty\include;A:\IT\GitHub\ICT312\source\thirdparty\include\Debug;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;$(SolutionDir)thirdparty\include\Ogre</IncludePath>
+    <IncludePath>A:\IT\GitHub\ICT312\source\thirdparty\include\BulletCollision\NarrowPhaseCollision;A:\IT\GitHub\ICT312\source\thirdparty\include\BulletCollision\Gimpact;A:\IT\GitHub\ICT312\source\thirdparty\include\BulletCollision\CollisionDispatch;A:\IT\GitHub\ICT312\source\thirdparty\include\BulletCollision\BroadphaseCollision;A:\IT\GitHub\ICT312\source\thirdparty\include\BulletCollision\CollisionShapes;$(SolutionDir)thirdparty\include;A:\IT\GitHub\ICT312\source\thirdparty\include\Debug;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;$(SolutionDir)thirdparty\include\Ogre</IncludePath>
     <ReferencePath>$(SolutionDir)thirdparty\lib\debug;$(VCInstallDir)atlmfc\lib;$(VCInstallDir)lib</ReferencePath>
     <LibraryPath>$(SolutionDir)thirdparty\lib\debug;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(FrameworkSDKDir)\lib</LibraryPath>
   </PropertyGroup>

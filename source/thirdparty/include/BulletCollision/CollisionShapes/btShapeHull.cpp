@@ -36,7 +36,7 @@ btShapeHull::~btShapeHull ()
 }
 
 bool
-btShapeHull::buildHull (btScalar /*margin*/)
+btShapeHull::buildHull (btScalar margin)
 {
 	int numSampleDirections = NUM_UNITSPHERE_POINTS;
 	{
