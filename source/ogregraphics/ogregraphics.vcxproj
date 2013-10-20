@@ -85,6 +85,7 @@
     <ClInclude Include="CollisionObject.h" />
     <ClInclude Include="CollisionWorldSingleton.h" />
     <ClInclude Include="DebugDrawer.h" />
+    <ClInclude Include="Force.h" />
     <ClInclude Include="FrameListener.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GenericObject.h" />

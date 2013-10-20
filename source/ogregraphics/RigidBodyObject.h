@@ -2,6 +2,8 @@
 
 #include "PhysicsEngine.h"
 #include "IObject.h"
+#include "Force.h"
+#include "Manifold.h"
 
 namespace Objects
 {
@@ -16,6 +18,7 @@ namespace Objects
 		virtual void		update( float deltaTime );
 
 		void applyForce(Ogre::Vector3 force);
+		void applyForce(Physics::Force force);
 
 	protected:
 		Ogre::Vector3 m_force;
@@ -27,6 +30,9 @@ namespace Objects
 		Ogre::Vector3 m_velocity;
 
 		Ogre::Vector3 m_lastAcceleration;
+
+		std::vector<Physics::Force> m_forces;
+		std::vector<Physics::Manifold> m_contacts;
 
 		CollisionObject* m_collisionObject;
 	};
