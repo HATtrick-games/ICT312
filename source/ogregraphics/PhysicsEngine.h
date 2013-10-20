@@ -1,8 +1,10 @@
 #pragma once
-class PhysicsEngine
-{
-public:
-	PhysicsEngine(void);
-	~PhysicsEngine(void);
-};
 
+namespace Physics
+{
+	class PhysicsEngine
+	{
+	public:
+		static Ogre::Vector3 GRAVITY;
+	};
+}

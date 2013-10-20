@@ -11,7 +11,6 @@ RigidBodyObject::RigidBodyObject(std::string meshFile)
 
 	m_force = Ogre::Vector3(0.0f, 0.0f, 0.0f);
 	m_mass = 1.0f;
-	m_restitution = 0.0f;
 
 	m_acceleration = Ogre::Vector3(0.0f, 0.0f, 0.0f);
 	m_velocity = Ogre::Vector3(0.0f, 0.0f, 0.0f);
@@ -25,7 +24,7 @@ RigidBodyObject::~RigidBodyObject(void)
 
 void RigidBodyObject::initialise()
 {
-
+	
 }
 
 void RigidBodyObject::update( float deltaTime )
@@ -37,10 +36,13 @@ void RigidBodyObject::update( float deltaTime )
 	if( m_mass > 0.0f )
 		m_acceleration = m_force / m_mass;
 	
-	Ogre::Vector3 avgAcceleration = ( m_lastAcceleration - m_acceleration ) / 2.0f;
+	Ogre::Vector3 avgAcceleration = (( m_lastAcceleration - m_acceleration ) / 2.0f);// + Physics::PhysicsEngine::GRAVITY;
+
 	m_velocity += avgAcceleration * deltaTime;
 
 	m_force = Ogre::Vector3::ZERO;
+
+	//checkPosition();
 	
 	GenericObject::update( deltaTime ); // must always be the last part
 }

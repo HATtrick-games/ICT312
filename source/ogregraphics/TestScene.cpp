@@ -162,12 +162,15 @@ void TestScene::firstPersonCamera( float deltaTime )
 void TestScene::createProjectile()
 {
 	Objects::ProjectileObject* projectile = new Objects::ProjectileObject(getObject("Camera")->getPosition());
-	projectile->applyForce(10000 * Core::Game::getGraphics()->cameraDirection() );
+	projectile->applyForce(1000 * Core::Game::getGraphics()->cameraDirection() );
 
 	std::ostringstream idString;
 	idString << m_numProjectiles;
 
 	addObject("projectile" + idString.str() , projectile );
+
+	// for some reason the projectiles will only fire properly when this is in there
+	std::cout << 1000 * Core::Game::getGraphics()->cameraDirection() << std::endl;
 
 	m_numProjectiles++;
 }

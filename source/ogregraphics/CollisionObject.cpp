@@ -42,8 +42,8 @@ void CollisionObject::AddMeshShape(Ogre::Entity* Ent)
 	//btConvexHullShape * mesh = (btConvexHullShape*)(shape->getBulletShape());
 	//btBoxShape * mesh = (btBoxShape*)(shape->getBulletShape());
 	btConvexTriangleMeshShape * mesh = (btConvexTriangleMeshShape*)(shape->getBulletShape());
-BulletCollisionObject->setCollisionShape(mesh);
-CollisionWorldSingleton::Instance()->AddObject(BulletCollisionObject);
+	BulletCollisionObject->setCollisionShape(mesh);
+	CollisionWorldSingleton::Instance()->AddObject(BulletCollisionObject);
 
 	
 	

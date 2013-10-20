@@ -21,7 +21,7 @@ void CollisionWorldSingleton::CheckCollision()
 {
 	
 	
-	collisionWorld->debugDrawWorld();
+	//collisionWorld->debugDrawWorld();
 	
 //	}
 	broadphase->calculateOverlappingPairs(dispatcher);
@@ -54,7 +54,7 @@ void CollisionWorldSingleton::CheckCollision()
 		}
 		else
 		{
-			//std::cout<<"Colliding\n";
+			std::cout<<"Colliding\n";
 		}
 	
 		

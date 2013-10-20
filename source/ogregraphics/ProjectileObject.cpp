@@ -5,11 +5,8 @@ using namespace Objects;
 
 ProjectileObject::ProjectileObject(Ogre::Vector3 pos) : RigidBodyObject("Projectile.mesh")
 {
-	/*setID();
-	m_filename = "Projectile.mesh";
-	
-	loadMesh();*/
-	//MakeCollisionObject();
+	m_collisionObject = new CollisionObject();
+	m_collisionObject->AddMeshShape(getEntity());
 	m_position = pos;
 }
 

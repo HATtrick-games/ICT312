@@ -1,5 +1,6 @@
 #pragma once
 
+#include "PhysicsEngine.h"
 #include "IObject.h"
 
 namespace Objects
@@ -18,14 +19,15 @@ namespace Objects
 
 	protected:
 		Ogre::Vector3 m_force;
+
 		float m_mass;
-		float m_restitution;
+		Ogre::Matrix3 m_momentOfInertia;
 
 		Ogre::Vector3 m_acceleration;
 		Ogre::Vector3 m_velocity;
 
 		Ogre::Vector3 m_lastAcceleration;
-	private:
 
+		CollisionObject* m_collisionObject;
 	};
 }
