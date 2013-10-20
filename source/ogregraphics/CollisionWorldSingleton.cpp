@@ -23,7 +23,7 @@ void CollisionWorldSingleton::CheckCollision()
 {
 	
 	
-	collisionWorld->debugDrawWorld();
+	//collisionWorld->debugDrawWorld();
 	
 //	}
 	broadphase->calculateOverlappingPairs(dispatcher);

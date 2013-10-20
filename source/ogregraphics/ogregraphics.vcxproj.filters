@@ -49,6 +49,12 @@
     <Filter Include="Header Files\Physics">
       <UniqueIdentifier>{ab32751f-d01b-4142-8ce5-e00aab979ada}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Pathing">
+      <UniqueIdentifier>{3a461e25-bae0-4f54-b026-4334650dca0a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Pathing">
+      <UniqueIdentifier>{0df4da6a-27dd-426a-8002-d539f0b44b4f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="ReadMe.txt" />
@@ -126,8 +132,25 @@
     <ClInclude Include="ProjectileObject.h">
       <Filter>Header Files\Objects</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="Force.h">
       <Filter>Header Files\Physics</Filter>
+=======
+    <ClInclude Include="MapNode.h">
+      <Filter>Header Files\Pathing</Filter>
+    </ClInclude>
+    <ClInclude Include="micropather.h">
+      <Filter>Header Files\Pathing</Filter>
+    </ClInclude>
+    <ClInclude Include="NodeContainerSingleton.h">
+      <Filter>Header Files\Pathing</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldMap.h">
+      <Filter>Header Files\Pathing</Filter>
+    </ClInclude>
+    <ClInclude Include="ConvexDecomposition.h">
+      <Filter>Source Files\Pathing</Filter>
+>>>>>>> Pathing classes re added
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -196,6 +219,18 @@
     </ClCompile>
     <ClCompile Include="ProjectileObject.cpp">
       <Filter>Source Files\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="MapNode.cpp">
+      <Filter>Source Files\Pathing</Filter>
+    </ClCompile>
+    <ClCompile Include="micropather.cpp">
+      <Filter>Source Files\Pathing</Filter>
+    </ClCompile>
+    <ClCompile Include="NodeContainerSingleton.cpp">
+      <Filter>Source Files\Pathing</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldMap.cpp">
+      <Filter>Source Files\Pathing</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
