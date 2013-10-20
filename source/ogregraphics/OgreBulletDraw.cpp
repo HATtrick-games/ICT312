@@ -37,5 +37,5 @@ void    OgreBulletDraw::drawContactPoint(const btVector3& pointOnB,const btVecto
 void    OgreBulletDraw::drawLine(const btVector3& from,const btVector3& to,const btVector3& color)
 {
 	
- 	//Core::Game::getGraphics()->getDebugDrawer()->drawLine(Ogre::Vector3(from.x(),from.y(),from.z()), Ogre::Vector3(to.x(),to.y(),to.z()), Ogre::ColourValue(1,1,1));
+ 	Core::Game::getGraphics()->getDebugDrawer()->drawLine(Ogre::Vector3(from.x(),from.y(),from.z()), Ogre::Vector3(to.x(),to.y(),to.z()), Ogre::ColourValue(1,1,1));
 }

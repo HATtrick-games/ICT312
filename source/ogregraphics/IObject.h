@@ -8,11 +8,13 @@ namespace Objects
 	class IObject
 	{
 	public:
+		int m_id;
 		virtual void		initialise() = 0;
 		virtual void		update( float deltaTime );
 
 		void				setMeshFile( std::string filename );
 		void				MakeCollisionObject();
+		void				MakeSphereCollisionObject();
 
 		Ogre::Vector3		getPosition();
 		void				setPosition( Ogre::Vector3 pos );
@@ -44,7 +46,7 @@ namespace Objects
 	private:
 		std::string m_entity;
 		
-		int m_id;
+		
 		static int m_objCount;
 	};
 }

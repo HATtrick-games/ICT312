@@ -31,6 +31,7 @@
 class CollisionObject
 {
 public:
+	btConvexHullShape* convexShape;
 	CollisionObject();
 	void AddMeshShape(Ogre::Entity* Ent);
 	void AddMeshShapeWithOffset(Ogre::Entity* Ent, Math::Vector3 Offset);
@@ -61,9 +62,9 @@ public:
 	 *
 	 * \param	vec	The vector.
 	 */
-
+	void AddSphereShape(Ogre::Entity* Ent);
 	void MoveObject(Math::Vector3 vec);//moves position by passed vector
-	void SetObjectOrientation(Math::Vector3 axis, float Degrees);
+	void SetObjectOrientation(float x, float y, float z, float Degrees);
 	void SetObjectOrientation(Ogre::Quaternion quat);
 	void SetUserPointer(void* obj);
 	void SetScale(float xs, float ys, float zs);

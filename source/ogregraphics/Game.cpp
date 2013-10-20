@@ -64,7 +64,7 @@ int Game::initialise()
 	 PlayerSphere = new CollisionObject();
 	 PlayerSphere->AddSphereShape(1);
 	 PlayerSphere->SetPosition(0,0,0);
-	 PlayerSphere->SetUserPointer(Player);
+	 //PlayerSphere->SetUserPointer(Player);
 	
 	 /***Collision GOES HERE****************************/
 /*	 //left side wall

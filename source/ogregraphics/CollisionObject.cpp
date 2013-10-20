@@ -4,6 +4,11 @@
 #include "Utils/OgreBulletCollisionsMeshToShapeConverter.h"
 #include "Shapes/OgreBulletCollisionsConvexHullShape.h"
 #include "Shapes/OgreBulletCollisionsTrimeshShape.h"
+#include "Shapes/OgreBulletCollisionsSphereShape.h"
+#include "btShapeHull.h"
+#include "btConvexHullShape.h"
+
+
 
 
 CollisionObject::CollisionObject()
@@ -25,6 +30,23 @@ void CollisionObject::AddMeshShapeWithOffset(Ogre::Entity* Ent, Math::Vector3 Of
 
 }
 
+
+void CollisionObject::AddSphereShape(Ogre::Entity* Ent)
+{
+	OgreBulletCollisions::StaticMeshToShapeConverter *convert;
+
+
+	convert = new OgreBulletCollisions::StaticMeshToShapeConverter(Ent, Ent->_getParentNodeFullTransform());
+	
+	
+	OgreBulletCollisions::SphereCollisionShape * shape = convert->createSphere();
+	
+	//btBoxShape * mesh = (btSphereShape*)(shape->getBulletShape());
+	btSphereShape * mesh = (btSphereShape*)(shape->getBulletShape());
+	BulletCollisionObject->setCollisionShape(mesh);
+	CollisionWorldSingleton::Instance()->AddObject(BulletCollisionObject);
+}
+
 void CollisionObject::AddMeshShape(Ogre::Entity* Ent)
 {
 	
@@ -35,13 +57,16 @@ void CollisionObject::AddMeshShape(Ogre::Entity* Ent)
 	//std::cout<<"OMFG WHY IS THIS PART NOT WORKING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n";
 
 
-	OgreBulletCollisions::TriangleMeshCollisionShape *shape = convert->createTrimesh();
-	//OgreBulletCollisions::BoxCollisionShape * shape = convert->createBox();
+	//OgreBulletCollisions::TriangleMeshCollisionShape *shape = convert->createTrimesh();
+	OgreBulletCollisions::BoxCollisionShape * shape = convert->createBox();
 	//OgreBulletCollisions::ConvexHullCollisionShape * shape = convert->createConvex();
-
+	
 	//btConvexHullShape * mesh = (btConvexHullShape*)(shape->getBulletShape());
-	//btBoxShape * mesh = (btBoxShape*)(shape->getBulletShape());
-	btConvexTriangleMeshShape * mesh = (btConvexTriangleMeshShape*)(shape->getBulletShape());
+	btBoxShape * mesh = (btBoxShape*)(shape->getBulletShape());
+	
+
+
+
 	BulletCollisionObject->setCollisionShape(mesh);
 	CollisionWorldSingleton::Instance()->AddObject(BulletCollisionObject);
 
@@ -119,13 +144,13 @@ Math::Vector3 CollisionObject::GetObjectPosition()
 	return Vector;
 }
 
-void CollisionObject::SetObjectOrientation(Math::Vector3 axis, float Degrees)
+void CollisionObject::SetObjectOrientation(float x, float y, float z, float Degrees)
 {
 	Degrees = (Degrees*(3.14159265359/180));
-	btQuaternion quat(btVector3(axis.x,axis.y,axis.z),Degrees);
+	btQuaternion quat(btVector3(x,y,z),Degrees);
 	quat = BulletCollisionObject->getWorldTransform().getRotation();
 	quat = quat.normalize();
-	quat.setRotation(btVector3(0,1,0),1.57079633);
+	quat.setRotation(btVector3(x,y,z),1.57079633);
 	
 	BulletCollisionObject->getWorldTransform().setRotation(quat);
 }

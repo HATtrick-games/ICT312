@@ -93,20 +93,24 @@ Ogre::Quaternion IObject::getOrientation()
 	return(Core::Game::getGraphics()->getEntityOrientation(m_entity));
 }
 
+void IObject::MakeSphereCollisionObject()
+{
+
+	ColObj = new CollisionObject();
+	ColObj->AddSphereShape(getEntity());
+	ColObj->SetUserPointer(this);
+	//ColObj->SetScale(2,2,2);
+}
 
 void IObject::MakeCollisionObject()
 {
-//	if(getEntity() != NULL)
-	//{
+
 	cout<<"Building COllision Object\n";
 	ColObj = new CollisionObject();
 	ColObj->AddMeshShape(getEntity());
-	ColObj->SetPosition(getPosition().x,getPosition().y,getPosition().z);
-	//ColObj->SetObjectOrientation(Math::Vector3(0,1,0),90);
-//	ColObj->SetObjectOrientation(getOrientation());
-//	ColObj->SetScale(getScale().x,getScale().y,getScale().z);
-	//}
-	//need to set values like position here as well.
+	ColObj->SetUserPointer(this);
+	ColObj->SetScale(0.5,0.5,0.5);
+	
 }
 
 std::string IObject::getEntityName()
