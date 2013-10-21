@@ -2,8 +2,10 @@
 
 #include "PhysicsEngine.h"
 #include "IObject.h"
+//#include "GenericObject.h"
 #include "Force.h"
-#include "Manifold.h"
+//#include "Contact.h"
+//#include "CollisionObject.h"
 
 namespace Objects
 {
@@ -17,9 +19,16 @@ namespace Objects
 		virtual void		initialise();
 		virtual void		update( float deltaTime );
 
+		void setAngularVelocity(Ogre::Vector3 axis, float angle);
+
 		void applyForce(Ogre::Vector3 force);
 		void applyForce(Physics::Force force);
 
+		void setVelocity(Ogre::Vector3 vel) { m_velocity = vel; }
+		Ogre::Vector3 getVelocity() { return m_velocity; }
+
+		float getMass() { return m_mass; }
+		void setMass(float mass);
 	protected:
 		Ogre::Vector3 m_force;
 
@@ -32,8 +41,8 @@ namespace Objects
 		Ogre::Vector3 m_lastAcceleration;
 
 		std::vector<Physics::Force> m_forces;
-		std::vector<Physics::Manifold> m_contacts;
+//		std::vector<Physics::Contact> m_contacts;
 
-		CollisionObject* m_collisionObject;
+//		CollisionObject* m_collisionObject;
 	};
 }

@@ -5,8 +5,8 @@
 #include "Shapes/OgreBulletCollisionsConvexHullShape.h"
 #include "Shapes/OgreBulletCollisionsTrimeshShape.h"
 #include "Shapes/OgreBulletCollisionsSphereShape.h"
-#include "btShapeHull.h"
-#include "btConvexHullShape.h"
+//#include "btShapeHull.h"
+//#include "btConvexHullShape.h"
 
 
 

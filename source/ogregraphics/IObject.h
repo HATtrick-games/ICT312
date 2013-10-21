@@ -15,6 +15,7 @@ namespace Objects
 		void				setMeshFile( std::string filename );
 		void				MakeCollisionObject();
 		void				MakeSphereCollisionObject();
+		void				MakeBoxCollisionObject();
 
 		Ogre::Vector3		getPosition();
 		void				setPosition( Ogre::Vector3 pos );

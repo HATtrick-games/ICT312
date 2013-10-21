@@ -42,7 +42,7 @@ void RigidBodyObject::update( float deltaTime )
 
 	m_force = Ogre::Vector3::ZERO;
 
-	//checkPosition();
+	if(m_position.y < 0) m_position.y = 0;
 	
 	GenericObject::update( deltaTime ); // must always be the last part
 }

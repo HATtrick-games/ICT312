@@ -7,7 +7,7 @@ ProjectileObject::ProjectileObject(Ogre::Vector3 pos) : RigidBodyObject("Project
 {
 	
 	m_position = pos;
-	MakeSphereCollisionObject();
+	MakeBoxCollisionObject();
 }
 
 

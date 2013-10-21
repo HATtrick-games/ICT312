@@ -43,11 +43,18 @@ void CollisionWorldSingleton::CheckCollision()
 		if((obB->getUserPointer())&&(obA->getUserPointer()))
 				{
 					Physics::Manifold mani;
-					mani.A = (Objects::GenericObject*)obA->getUserPointer();
-					mani.B = (Objects::GenericObject*)obB->getUserPointer();
+					mani.A = static_cast<Objects::RigidBodyObject*>(obA->getUserPointer());
+					mani.B = static_cast<Objects::RigidBodyObject*>(obB->getUserPointer());
 					std::cout<<"ID1: = "<<mani.A->m_id<<"\n";
 					std::cout<<"ID2: = "<<mani.B->m_id<<"\n";
-				
+					if(contactManifold->getNumContacts() > 0)
+					{
+						btManifoldPoint contact = contactManifold->getContactPoint(0);
+						std::cout << contactManifold->getNumContacts() << std::endl;
+						std::cout<< contact.getPositionWorldOnA().getX() << " " << contact.getPositionWorldOnA().getY() << " " << contact.getPositionWorldOnA().getZ() << " " << std::endl;
+					}
+
+					Physics::PhysicsEngine::ResolveCollision(mani);
 				}
 /*
 		if(obA->getUserPointer())

@@ -102,6 +102,8 @@ void IObject::MakeSphereCollisionObject()
 	//ColObj->SetScale(2,2,2);
 }
 
+
+
 void IObject::MakeCollisionObject()
 {
 
@@ -111,6 +113,15 @@ void IObject::MakeCollisionObject()
 	ColObj->SetUserPointer(this);
 	ColObj->SetScale(0.5,0.5,0.5);
 	
+}
+
+void IObject::MakeBoxCollisionObject()
+{
+	Ogre::Vector3 boundingBox = getEntity()->getBoundingBox().getSize();
+
+	ColObj = new CollisionObject();
+	ColObj->AddBoxShape(boundingBox.x, boundingBox.y, boundingBox.z);
+	ColObj->SetUserPointer(this);
 }
 
 std::string IObject::getEntityName()
