@@ -70,6 +70,7 @@ public:
 	void SetScale(float xs, float ys, float zs);
 	Math::Vector3 GetObjectPosition();
 	
+	btCollisionObject* GetCollisionObject() { return BulletCollisionObject; }
 protected:
 private:
 	btScaledBvhTriangleMeshShape* obj;

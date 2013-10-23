@@ -51,3 +51,19 @@ void RigidBodyObject::applyForce(Ogre::Vector3 force)
 {
 	m_force = force;
 }
+
+void RigidBodyObject::setMass(float mass)
+{
+	m_mass = mass;
+	m_invMass = 1.0f / mass;
+}
+
+void RigidBodyObject::addVelocity(Ogre::Vector3& velocity)
+{
+	m_velocity += velocity;
+}
+
+void RigidBodyObject::addRotation(Ogre::Vector3& rotation)
+{
+	
+}

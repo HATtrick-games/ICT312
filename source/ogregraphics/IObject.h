@@ -22,6 +22,7 @@ namespace Objects
 		void				changePosition( Ogre::Vector3 pos );
 
 		Ogre::Quaternion	getOrientation() const;
+		Ogre::Vector3		getRotation() const;
 
 		void				setOrientation( Ogre::Quaternion rot );
 		void				setYaw( float angle );

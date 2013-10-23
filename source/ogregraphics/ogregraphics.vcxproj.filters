@@ -200,5 +200,8 @@
     <ClCompile Include="ProjectileObject.cpp">
       <Filter>Source Files\Objects</Filter>
     </ClCompile>
+    <ClCompile Include="Contact.cpp">
+      <Filter>Source Files\Physics</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

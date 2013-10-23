@@ -44,8 +44,13 @@ void PhysicsEngine::ResolveCollision(Physics::Manifold& manifold)
 		manifold.penetration = z_overlap;
 	}
 
-	std::cout << "Normal: " << manifold.normal << std::endl;
-	std::cout << "Penetration: " << manifold.normal << std::endl;
+	//std::cout << "Normal: " << manifold.normal << std::endl;
+	//std::cout << "Penetration: " << manifold.normal << std::endl;
+	//std::cout << "Contacts: " << manifold.numContacts << std::endl;
+	//std::cout << manifold.contacts[0] << std::endl;
+	//std::cout << manifold.contacts[1] << std::endl;
+	std::cout << c1.position << std::endl;
+	std::cout << c2.position << std::endl;
 
 	ApplyImpulse(manifold);
 }
@@ -65,4 +70,34 @@ void PhysicsEngine::ApplyImpulse(Physics::Manifold& manifold)
 	Ogre::Vector3 impulse = impulseScalar * manifold.normal;
 	manifold.A->setVelocity(manifold.A->getVelocity() - (impulse / manifold.A->getMass()));
 	manifold.B->setVelocity(manifold.B->getVelocity() + (impulse / manifold.B->getMass()));
+}
+
+bool PhysicsEngine::AABBvsAABB(Physics::Manifold& manifold)
+{
+	/*Objects::RigidBodyObject* A = manifold.A;
+	Objects::RigidBodyObject* B = manifold.B;
+
+	Ogre::Vector3 n = B->getPosition() - A->getPosition;
+
+	Ogre::AxisAlignedBox aBox = A->getEntity()->getBoundingBox();
+	Ogre::AxisAlignedBox bBox = B->getEntity()->getBoundingBox();
+
+	float aExtent = (aBox.getMaximum().x - aBox.getMinimum().x) / 2.0f;
+	float bExtent = (bBox.getMaximum().x - bBox.getMinimum().x) / 2.0f;
+
+	float xOverlap = aExtent + bExtent - abs(n.x);
+
+	if(xOverlap > 0)
+	{
+		aExtent = (aBox.getMaximum().y - aBox.getMinimum().y) / 2.0f;
+		bExtent = (bBox.getMaximum().y - bBox.getMinimum().y) / 2.0f;
+
+		float yOverlap = aExtent + bExtent - abs(n.y);
+
+		if(yOverlap > 0)
+		{
+			aExtent = (aBox.getMaximum().z - aBox.getMinimum().y) / 2.0f;
+		}
+	}*/
+	return true;
 }

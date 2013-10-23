@@ -50,11 +50,20 @@ void CollisionWorldSingleton::CheckCollision()
 					if(contactManifold->getNumContacts() > 0)
 					{
 						btManifoldPoint contact = contactManifold->getContactPoint(0);
+
+						mani.numContacts = contactManifold->getNumContacts();
+						mani.contacts[0] = Ogre::Vector3(contact.getPositionWorldOnA().getX(), contact.getPositionWorldOnA().getY(), contact.getPositionWorldOnA().getZ());
+						mani.contacts[1] = Ogre::Vector3(contact.getPositionWorldOnB().getX(), contact.getPositionWorldOnB().getY(), contact.getPositionWorldOnB().getZ());
+
 						std::cout << contactManifold->getNumContacts() << std::endl;
-						std::cout<< contact.getPositionWorldOnA().getX() << " " << contact.getPositionWorldOnA().getY() << " " << contact.getPositionWorldOnA().getZ() << " " << std::endl;
+						std::cout<< contact.m_normalWorldOnB.getX() << " " << contact.m_normalWorldOnB.getY() << " " << contact.m_normalWorldOnB.getZ() << " " << std::endl;
+
+						mani.normal = Ogre::Vector3(contact.m_normalWorldOnB.getX(), contact.m_normalWorldOnB.getY(), contact.m_normalWorldOnB.getZ());
+
+						Physics::PhysicsEngine::ApplyImpulse(mani);
 					}
 
-					Physics::PhysicsEngine::ResolveCollision(mani);
+					
 				}
 /*
 		if(obA->getUserPointer())

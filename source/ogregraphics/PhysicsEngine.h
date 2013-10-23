@@ -12,5 +12,7 @@ namespace Physics
 
 		static void ResolveCollision(Physics::Manifold& manifold);
 		static void ApplyImpulse(Physics::Manifold& manifold);
+
+		static bool AABBvsAABB(Physics::Manifold& manifold);
 	};
 }

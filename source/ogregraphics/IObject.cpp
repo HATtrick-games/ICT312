@@ -133,3 +133,10 @@ Ogre::Entity* IObject::getEntity()
 {
 	return Core::Game::getGraphics()->getEntity(m_entity);
 }
+
+Ogre::Vector3 IObject::getRotation() const
+{
+	return Ogre::Vector3(getOrientation().getRoll().valueDegrees(),
+							getOrientation().getPitch().valueDegrees(),
+							getOrientation().getYaw().valueDegrees());
+}

@@ -112,6 +112,7 @@
   <ItemGroup>
     <ClCompile Include="CollisionObject.cpp" />
     <ClCompile Include="CollisionWorldSingleton.cpp" />
+    <ClCompile Include="Contact.cpp" />
     <ClCompile Include="DebugDrawer.cpp" />
     <ClCompile Include="FrameListener.cpp" />
     <ClCompile Include="Game.cpp" />
