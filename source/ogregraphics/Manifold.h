@@ -1,7 +1,6 @@
 #pragma once
 
 #include "RigidBodyObject.h"
-#include "Contact.h"
 
 namespace Objects
 {

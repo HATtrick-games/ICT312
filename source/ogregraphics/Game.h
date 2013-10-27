@@ -34,7 +34,6 @@ namespace Core
 		static OIS::Keyboard*			m_keyboard;
 		static OIS::Mouse*				m_mouse;
 		void BuildCollisionRoom();
-
 	};
 }
 

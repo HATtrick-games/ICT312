@@ -188,12 +188,12 @@ void OgreGraphics::createDirectionalLight( std::string name, float posX, float p
 
 void OgreGraphics::translateEntity( std::string identifier, float x, float y, float z )
 {
-	m_sceneNodes[identifier]->translate( x, y, z, Ogre::Node::TS_PARENT );
+	m_sceneNodes[identifier]->translate( x, y, z, Ogre::Node::TS_LOCAL );
 }
 
 void OgreGraphics::translateEntity( std::string identifier, Ogre::Vector3 translateVector )
 {
-	m_sceneNodes[identifier]->translate( translateVector, Ogre::Node::TS_PARENT );
+	m_sceneNodes[identifier]->translate( translateVector, Ogre::Node::TS_LOCAL );
 }
 
 void OgreGraphics::setEntityYaw( std::string identifier, float angle )

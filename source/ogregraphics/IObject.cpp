@@ -42,6 +42,13 @@ void IObject::setOrientation( Ogre::Quaternion rot )
 	Core::Game::getGraphics()->setEntityOrientation( m_entity, rot );
 }
 
+void IObject::rotateByVector( Ogre::Vector3& rot, float scale )
+{
+	Ogre::Quaternion q(0, rot.x * scale, rot.y * scale, rot.z * scale);
+	
+	setOrientation(getOrientation() * q);
+}
+
 void IObject::loadMesh() const
 {
 	Core::Game::getGraphics()->createMeshEntity( m_entity, m_filename );

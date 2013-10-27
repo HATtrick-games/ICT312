@@ -60,7 +60,11 @@ void CollisionWorldSingleton::CheckCollision()
 
 						mani.normal = Ogre::Vector3(contact.m_normalWorldOnB.getX(), contact.m_normalWorldOnB.getY(), contact.m_normalWorldOnB.getZ());
 
-						Physics::PhysicsEngine::ApplyImpulse(mani);
+						//Physics::PhysicsEngine::ApplyImpulse(mani);
+						/*Physics::Contact(static_cast<Objects::RigidBodyObject*>(obA->getUserPointer()),
+							static_cast<Objects::RigidBodyObject*>(obB->getUserPointer()),
+							Ogre::Vector3(contact.getPositionWorldOnA().getX(), contact.getPositionWorldOnA().getY(), contact.getPositionWorldOnA().getZ()),
+							contact.m_normalWorldOnB.getX(), contact.m_normalWorldOnB.getY(), contact.m_normalWorldOnB.getZ());*/
 					}
 
 					

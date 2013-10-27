@@ -21,6 +21,9 @@ namespace Physics
 
 			position = pos;
 			normal = norm;
+
+			Initialise();
+			ApplyVelocityChange();
 		}
 
 		void Initialise();
@@ -30,7 +33,7 @@ namespace Physics
 		Ogre::Vector3 CalculateLocalVelocity(bool isA);
 		void CalculateDeltaVelocity();
 
-		void ApplyVelocityChange(Ogre::Vector3 velocityChange[2], Ogre::Vector3 rotationChange[2]);
+		void ApplyVelocityChange();
 
 		Ogre::Matrix3 contactToWorld;
 		Ogre::Matrix3 worldToContact;

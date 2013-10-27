@@ -129,8 +129,11 @@ Ogre::Vector3 Contact::CalculateImpulse(Ogre::Matrix3* inverseInertiaTensor)
 	return impulseContact;
 }
 
-void Contact::ApplyVelocityChange(Ogre::Vector3 velocityChange[2], Ogre::Vector3 rotationChange[2])
+void Contact::ApplyVelocityChange()
 {
+	Ogre::Vector3 velocityChange[2];
+	Ogre::Vector3 rotationChange[2];
+
 	Ogre::Matrix3 inverseInertiaTensor[2]; 
 	inverseInertiaTensor[0] = A->getInverseInertiaTensorWorld();
 	inverseInertiaTensor[1] = B->getInverseInertiaTensorWorld();

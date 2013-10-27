@@ -25,6 +25,7 @@ namespace Objects
 		Ogre::Vector3		getRotation() const;
 
 		void				setOrientation( Ogre::Quaternion rot );
+		void				rotateByVector( Ogre::Vector3& rot, float scale = 1.0f );
 		void				setYaw( float angle );
 		void				setPitch( float angle );
 		void				setRoll( float angle );
