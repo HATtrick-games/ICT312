@@ -1,9 +1,9 @@
 #pragma once
 
 #include "PhysicsEngine.h"
-#include "IObject.h"
+//#include "IObject.h"
 #include "GenericObject.h"
-#include "Force.h"
+//#include "Force.h"
 //#include "Contact.h"
 //#include "CollisionObject.h"
 
@@ -23,7 +23,7 @@ namespace Objects
 		void setAngularVelocity(Ogre::Vector3 axis, float angle);
 
 		void applyForce(Ogre::Vector3 force);
-		void applyForce(Physics::Force force);
+		//void applyForce(Physics::Force force);
 
 		void setVelocity(Ogre::Vector3 vel) { m_velocity = vel; }
 		Ogre::Vector3 getVelocity() { return m_velocity; }

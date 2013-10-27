@@ -3,11 +3,6 @@
 #include <cmath>
 #include "RigidBodyObject.h"
 
-namespace Objects
-{
-	class RigidBodyObject;
-};
-
 namespace Physics
 {
 	struct Contact

@@ -4,6 +4,11 @@
 
 namespace Objects
 {
+	class IObject;
+};
+
+namespace Objects
+{
 	class GenericObject :
 		public IObject
 	{

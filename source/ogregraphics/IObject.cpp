@@ -114,7 +114,7 @@ void IObject::MakeSphereCollisionObject()
 void IObject::MakeCollisionObject()
 {
 
-	cout<<"Building COllision Object\n";
+	std::cout<<"Building COllision Object\n";
 	ColObj = new CollisionObject();
 	ColObj->AddMeshShape(getEntity());
 	ColObj->SetUserPointer(this);

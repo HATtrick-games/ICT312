@@ -5,7 +5,6 @@
  */
 #pragma once
 #include "CollisionWorldSingleton.h"
-#include "CollisionWorldSingleton.h"
 #include "OgreBulletCollisionsPreRequisites.h"
 #include "OgreBulletCollisionsWorld.h"
 

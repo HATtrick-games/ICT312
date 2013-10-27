@@ -169,7 +169,6 @@ void TestScene::createProjectile()
 
 	addObject("projectile" + idString.str() , projectile );
 
-	// for some reason the projectiles will only fire properly when this is in there
 	std::cout << 1000 * Core::Game::getGraphics()->cameraDirection() << std::endl;
 
 	m_numProjectiles++;

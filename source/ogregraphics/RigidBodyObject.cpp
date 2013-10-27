@@ -19,7 +19,7 @@ RigidBodyObject::RigidBodyObject(std::string meshFile)
 	m_inertiaTensor = Ogre::Matrix3::ZERO;
 	m_invInertiaTensor = Ogre::Matrix3::ZERO;
 
-	m_angularVelocity = Ogre::Vector3::ZERO;
+	m_angularVelocity = Ogre::Vector3(0.0f, 0.0f, 0.0f);
 }
 
 
@@ -49,7 +49,7 @@ void RigidBodyObject::update( float deltaTime )
 
 	if(m_position.y < 0) m_position.y = 0;
 
-	rotateByVector(m_angularVelocity, Core::Game::getGraphics()->getDeltaTime());
+	//rotateByVector(m_angularVelocity, Core::Game::getGraphics()->getDeltaTime());
 	
 	GenericObject::update( deltaTime ); // must always be the last part
 
