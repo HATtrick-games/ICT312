@@ -3,6 +3,9 @@
 #include "CollisionObject.h"
 #include "CollisionWorldSingleton.h"
 #include "TemporaryPlayerObject.h"
+#include "NodeContainerSingleton.h"
+#include "MapNode.h"
+#include "WorldMap.h"
 
 using namespace Core;
 
@@ -17,7 +20,7 @@ OIS::Mouse* Game::m_mouse = NULL;
 CollisionObject* PlayerSphere;
 //CollisionObject* col[10];
 TemporaryPlayerObject* Player;
-
+WorldMap * mapper;
 
 
 
@@ -33,6 +36,7 @@ Game::~Game(void)
 
 int Game::initialise()
 {
+	
 	// initialise graphics
 	m_graphics = new Graphics::OgreGraphics();
 	if( !m_graphics->initialise() )
@@ -218,7 +222,16 @@ int Game::initialise()
 
 	Core::Game::getSceneManager()->GetScene()->getObject("Camera")->setPosition(Ogre::Vector3(0.0f, 0.0f, 0.0f));
 	Player->SetLastPos(0.0f, 0.0f, 0.0f);
+	mapper = new WorldMap;
+	mapper->FindPath(Ogre::Vector3(1,0,0),Ogre::Vector3(2,0,10));
+	MapNode * temp;
+	for(int i = 0; i<mapper->path.size(); i++)
+	{
+		temp = (MapNode*)mapper->path[i];
+		cout<<"Location of "<<i<<" node ="<< temp->GetLocation().x<<temp->GetLocation().y<<temp->GetLocation().z<<"\n";
+	}
 	return 0;
+
 }
 
 void Game::gameLoop()

@@ -32,6 +32,7 @@ void WorldMap::AdjacentCost(void *node, std::vector<micropather::StateCost> *nei
 
 	for(int i = 0; i < adjacent->GetPartners()->size(); i++)
 	{
+		//cout<<adjacent->GetPartnerById(i)->GetLocation().x<<"\n";
 		micropather::StateCost nodeCost = {(void*)adjacent->GetPartnerById(i), LeastCostEstimate(node, (void*)adjacent->GetPartnerById(i))};
 		neighbors->push_back(nodeCost);
 	}
@@ -42,7 +43,7 @@ void WorldMap::AdjacentCost(void *node, std::vector<micropather::StateCost> *nei
 
 
 
-bool WorldMap::FindPath(Math::Vector3 pos, Math::Vector3 pos2)
+bool WorldMap::FindPath(Ogre::Vector3 pos, Ogre::Vector3 pos2)
 {
 	int result;
 	float totalCost;

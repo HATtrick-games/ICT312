@@ -1,14 +1,15 @@
 #include "stdafx.h"
 #include "MapNode.h"
+#include "Vector3.h"
 
-MapNode::MapNode(int ident, Math::Vector3 location)
+MapNode::MapNode(int ident, Ogre::Vector3 location)
 {
 	LocationVec = location;
 	id = ident;
 
 }
 
-MapNode::MapNode(int ident, Math::Vector3 location, std::vector<int> links)
+MapNode::MapNode(int ident, Ogre::Vector3 location, std::vector<int> links)
 {
 	LocationVec = location;
 	id = ident;
@@ -29,7 +30,7 @@ int MapNode::GetId()
 	return id;
 }
 
-Math::Vector3 MapNode::GetLocation()
+Ogre::Vector3 MapNode::GetLocation()
 {
 	return LocationVec;
 }
