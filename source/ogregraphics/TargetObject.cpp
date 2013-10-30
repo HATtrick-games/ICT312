@@ -27,7 +27,7 @@ void TargetObject::update( float deltaTime )
 	RigidBodyObject::update(deltaTime);
 	ColObj->SetPosition(m_position.x,m_position.y+30,m_position.z);
 	ColObj->SetObjectOrientation(getOrientation());
-	//ColObj->SetObjectOrientation(Math::Vector3(0,0,1),90);
+	//ColObj->SetObjectOrientation(Ogre::Vector3(0,0,1),90);
 	//ColObj->SetPosition(getPosition().x,getPosition().y,getPosition().z); 
 	//cout<<"///////////////////////////////////////"<<getPosition().y<<"/////////////////////////////\n";
 }
