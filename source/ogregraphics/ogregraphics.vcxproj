@@ -93,6 +93,7 @@
     <ClInclude Include="IObject.h" />
     <ClInclude Include="IScene.h" />
     <ClInclude Include="ITBuildingScene.h" />
+    <ClInclude Include="ItemStore.h" />
     <ClInclude Include="Manifold.h" />
     <ClInclude Include="MapNode.h" />
     <ClInclude Include="micropather.h" />
@@ -123,6 +124,7 @@
     <ClCompile Include="IObject.cpp" />
     <ClCompile Include="IScene.cpp" />
     <ClCompile Include="ITBuildingScene.cpp" />
+    <ClCompile Include="ItemStore.cpp" />
     <ClCompile Include="MapNode.cpp" />
     <ClCompile Include="micropather.cpp" />
     <ClCompile Include="NodeContainerSingleton.cpp" />

@@ -35,6 +35,9 @@ namespace Objects
 
 		std::string			getEntityName();
 		Ogre::Entity*		getEntity();
+		std::map<std::string,int>* GetMap();
+		bool IsInteractable();
+		int GetAffodance(std::string affordance);
 	protected:
 		void				loadMesh() const;
 		CollisionObject* ColObj;
@@ -46,7 +49,8 @@ namespace Objects
 		void setID();
 	private:
 		std::string m_entity;
-		
+		std::map<std::string,int>* Affordances;
+		bool Interactable;
 		
 		static int m_objCount;
 	};

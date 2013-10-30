@@ -133,3 +133,19 @@ Ogre::Entity* IObject::getEntity()
 {
 	return Core::Game::getGraphics()->getEntity(m_entity);
 }
+
+std::map<std::string,int>* IObject::GetMap()
+{
+	return Affordances;
+}
+
+int IObject::GetAffodance(std::string affordance)
+{
+	return Affordances->find(affordance)->second;
+}
+
+
+bool IObject::IsInteractable()
+{
+	return Interactable;
+}

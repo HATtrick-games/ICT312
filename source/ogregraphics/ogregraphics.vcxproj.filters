@@ -55,6 +55,12 @@
     <Filter Include="Source Files\Pathing">
       <UniqueIdentifier>{492175b2-7d74-409f-b05d-be6be79f0090}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\ObjectHandler">
+      <UniqueIdentifier>{7572733f-549f-4525-a208-231746662e50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ObjectHandler">
+      <UniqueIdentifier>{2cb6711c-de9a-4cfb-975b-2841bae0b778}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="ReadMe.txt" />
@@ -150,6 +156,9 @@
     <ClInclude Include="WorldMap.h">
       <Filter>Header Files\Pathing</Filter>
     </ClInclude>
+    <ClInclude Include="ItemStore.h">
+      <Filter>Header Files\ObjectHandler</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -229,6 +238,9 @@
     </ClCompile>
     <ClCompile Include="WorldMap.cpp">
       <Filter>Source Files\Pathing</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemStore.cpp">
+      <Filter>Source Files\ObjectHandler</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
