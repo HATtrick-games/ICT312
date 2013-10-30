@@ -225,11 +225,11 @@ int Game::initialise()
 	mapper = new WorldMap;
 	mapper->FindPath(Ogre::Vector3(1,0,0),Ogre::Vector3(2,0,10));
 	MapNode * temp;
-	/*for(int i = 0; i<mapper->path.size(); i++)
+	for(int i = 0; i<mapper->path.size(); i++)
 	{
 		temp = (MapNode*)mapper->path[i];
 		cout<<"Location of "<<i<<" node ="<< temp->GetLocation().x<<temp->GetLocation().y<<temp->GetLocation().z<<"\n";
-	}*/
+	}
 	return 0;
 
 }

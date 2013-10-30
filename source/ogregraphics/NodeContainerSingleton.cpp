@@ -11,6 +11,7 @@ NodeContainerSingleton* NodeContainerSingleton::Instance()
 
 void NodeContainerSingleton::BuildMap()
 {
+	//This functions sets up all nodes.
 	Hallway.push_back(new MapNode(1, Ogre::Vector3(1,0,0)));
 	Hallway.push_back(new MapNode(2, Ogre::Vector3(2,0,0)));
 	Hallway.push_back(new MapNode(3, Ogre::Vector3(2,0,1)));
@@ -31,8 +32,8 @@ MapNode* NodeContainerSingleton::FindNearestNode(Ogre::Vector3 pos)
 
 	
 	cout<<"Position = "<<pos.x<<pos.y<<pos.z<<"\n";
-	//if(1)//between this range)
-	//{
+	if(1)//between this range)
+	{
 		for(int i = 0; i< Hallway.size(); i++)
 		{
 			DisVec.x = pos.x - Hallway[i]->GetLocation().x;
@@ -46,8 +47,8 @@ MapNode* NodeContainerSingleton::FindNearestNode(Ogre::Vector3 pos)
 			}
 		}
 
-	//}
-	/*else if(1)//between next range)
+	}
+	else if(1)//between next range)
 	{
 		for(int i = 0; i<CommonRoom.size(); i++)
 		{
@@ -115,7 +116,7 @@ MapNode* NodeContainerSingleton::FindNearestNode(Ogre::Vector3 pos)
 				TempNode = ItRoom[i];
 			}
 		}
-	}*/
+	}
 	cout<<"Temp node id = "<<TempNode->GetId()<<"\n";
 	return TempNode;
 }
