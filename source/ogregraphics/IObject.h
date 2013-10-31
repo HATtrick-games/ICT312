@@ -8,6 +8,7 @@ namespace Objects
 	class IObject
 	{
 	public:
+		std::string Type;
 		int m_id;
 		virtual void		initialise() = 0;
 		virtual void		update( float deltaTime );
@@ -43,7 +44,7 @@ namespace Objects
 		CollisionObject* ColObj;
 		Ogre::Vector3 m_position;
 		Ogre::Quaternion m_rotation;
-
+		
 		std::string m_filename;
 
 		void setID();
@@ -51,6 +52,7 @@ namespace Objects
 		std::string m_entity;
 		std::map<std::string,int>* Affordances;
 		bool Interactable;
+		
 		
 		static int m_objCount;
 	};

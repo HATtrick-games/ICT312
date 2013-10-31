@@ -8,8 +8,9 @@ RigidBodyObject::RigidBodyObject(std::string meshFile)
 	setID();
 	m_filename = meshFile;
 	loadMesh();
-	getEntity()->setUserAny((Ogre::Any)this);
-	//getEntity()->
+	getEntity()->setUserAny((Ogre::Any)(GenericObject*)this);
+	Type = "RigidBodyObject";
+	getEntity()->setQueryFlags(Targetable);
 
 	m_force = Ogre::Vector3(0.0f, 0.0f, 0.0f);
 	m_mass = 1.0f;

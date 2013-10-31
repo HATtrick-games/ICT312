@@ -7,6 +7,7 @@
 #include "MapNode.h"
 #include "WorldMap.h"
 #include "IObject.h"
+//#include "GenericObject.h"
 
 
 using namespace Core;
@@ -39,6 +40,7 @@ void Game::TestSelect()
 		Ogre::Ray mouseRay(Core::Game::getGraphics()->GetPosition(),Core::Game::getGraphics()->cameraDirection());
 		mRaySceneQuery->setRay(mouseRay);
 		mRaySceneQuery->setSortByDistance(true);
+		mRaySceneQuery->setQueryMask(Targetable);
 		// Execute query
 		Ogre::RaySceneQueryResult &result = mRaySceneQuery->execute();
 
@@ -50,7 +52,7 @@ void Game::TestSelect()
 
 		 for(rayIterator = result.begin(); rayIterator != result.end(); rayIterator++ ) 
      {
-         if ((*rayIterator).movable !=NULL && closestDistance>(*rayIterator).distance && (*rayIterator).movable->getMovableType() != "TerrainMipMap"&& (*rayIterator ).movable->getName() != "entity0")
+		 if ((*rayIterator).movable !=NULL && closestDistance>(*rayIterator).distance && (*rayIterator).movable->getMovableType() != "TerrainMipMap"&& (*rayIterator ).movable->getName() != "entity0" && (*rayIterator).movable->getQueryFlags() == Targetable)
          {
              closestObject = ( *rayIterator ).movable;
              closestDistance = ( *rayIterator ).distance;
@@ -66,7 +68,18 @@ void Game::TestSelect()
 	if(closestObject)
 	{
 	 cout<<"ID = "<< closestObject->getName()<<"\n";
-	//Objects::RigidBodyObject * temp = Ogre::any_cast<Objects::RigidBodyObject*>(closestObject->getUserAny());
+	/*Objects::GenericObject * temp = Ogre::any_cast<Objects::GenericObject*>(closestObject->getUserAny());
+	if(temp->Type != "\0")
+	{
+		if(temp->Type == "RigidBodyObject")
+		{
+			cout<<"This is a rigidbody"<<"\n";
+		}
+	}
+	else
+	{
+		cout<<"This is not a rigid body \n";
+	}*/
 	//temp->applyForce((temp->getPosition() - Core::Game::getGraphics()->GetPosition())*100);
 	}
 

@@ -97,6 +97,7 @@
     <ClInclude Include="ItemStore.h" />
     <ClInclude Include="Manifold.h" />
     <ClInclude Include="MapNode.h" />
+    <ClInclude Include="Masks.h" />
     <ClInclude Include="micropather.h" />
     <ClInclude Include="NodeContainerSingleton.h" />
     <ClInclude Include="OgreBulletDraw.h" />

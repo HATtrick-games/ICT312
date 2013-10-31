@@ -1,5 +1,5 @@
 #pragma once
-
+#include "Masks.h"
 #include "PhysicsEngine.h"
 #include "IObject.h"
 //#include "GenericObject.h"
