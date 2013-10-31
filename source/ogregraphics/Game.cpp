@@ -66,7 +66,7 @@ void Game::TestSelect()
 	if(closestObject)
 	{
 	 cout<<"ID = "<< closestObject->getName()<<"\n";
-	Objects::RigidBodyObject * temp = Ogre::any_cast<Objects::RigidBodyObject*>(closestObject->getUserAny());
+	//Objects::RigidBodyObject * temp = Ogre::any_cast<Objects::RigidBodyObject*>(closestObject->getUserAny());
 	//temp->applyForce((temp->getPosition() - Core::Game::getGraphics()->GetPosition())*100);
 	}
 
