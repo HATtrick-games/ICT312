@@ -86,6 +86,7 @@
     <ClInclude Include="CollisionWorldSingleton.h" />
     <ClInclude Include="Contact.h" />
     <ClInclude Include="DebugDrawer.h" />
+    <ClInclude Include="DebugDrawerOg.h" />
     <ClInclude Include="Force.h" />
     <ClInclude Include="FrameListener.h" />
     <ClInclude Include="Game.h" />
@@ -99,6 +100,7 @@
     <ClInclude Include="micropather.h" />
     <ClInclude Include="NodeContainerSingleton.h" />
     <ClInclude Include="OgreBulletDraw.h" />
+    <ClInclude Include="OgreBulletUtils.h" />
     <ClInclude Include="OgreGraphics.h" />
     <ClInclude Include="PhysicsEngine.h" />
     <ClInclude Include="ProjectileObject.h" />
@@ -118,6 +120,7 @@
     <ClCompile Include="CollisionObject.cpp" />
     <ClCompile Include="CollisionWorldSingleton.cpp" />
     <ClCompile Include="DebugDrawer.cpp" />
+    <ClCompile Include="DebugDrawerOg.cpp" />
     <ClCompile Include="FrameListener.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GenericObject.cpp" />

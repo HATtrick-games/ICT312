@@ -249,10 +249,10 @@ namespace Graphics
 
 		Ogre::Entity*		getEntity( std::string identifier );
 		DebugDrawer*		getDebugDrawer();
-
+		Ogre::SceneManager* GetSceneManager();
 	private:
 		MapSceneNode		m_sceneNodes;
-
+		
 		Ogre::Root*			m_root;
 		Ogre::RenderWindow*	m_renderWindow;
 		Ogre::SceneManager*	m_sceneManager;

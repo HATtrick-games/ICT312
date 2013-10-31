@@ -19,6 +19,14 @@ void CollisionWorldSingleton::AddObject(btCollisionObject* colobj)
 	
 }
 
+void CollisionWorldSingleton::SetUpDebug()
+{
+	
+	 OgreDebugger = new OgreDebugDrawer(Core::Game::getGraphics()->GetSceneManager());
+		OgreDebugger->setDebugMode( btIDebugDraw::DBG_DrawWireframe );
+		collisionWorld->setDebugDrawer(OgreDebugger);
+}
+
 void CollisionWorldSingleton::CheckCollision()
 {
 	
@@ -63,7 +71,7 @@ void CollisionWorldSingleton::CheckCollision()
 		
 		TemporaryPlayerObject* obj = (TemporaryPlayerObject*)obA->getUserPointer();
 		
-	//	Core::Game::getSceneManager()->GetScene()->getObject("Camera")->setPosition(Ogre::Vector3(obj->lastposition.x,obj->lastposition.y,obj->lastposition.z));
+		Core::Game::getSceneManager()->GetScene()->getObject("Camera")->setPosition(Ogre::Vector3(obj->lastposition.x,obj->lastposition.y,obj->lastposition.z));
 		//std::cout<<"Colliding\n";
 		//Sleep(1000);
 

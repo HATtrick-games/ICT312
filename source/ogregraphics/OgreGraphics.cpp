@@ -3,6 +3,11 @@
 
 using namespace Graphics;
 
+Ogre::SceneManager* OgreGraphics::GetSceneManager()
+{
+	return m_sceneManager;
+}
+
 //-----------------------------------------------------------------------------
 
 OgreGraphics::OgreGraphics(void)

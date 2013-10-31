@@ -159,6 +159,12 @@
     <ClInclude Include="ItemStore.h">
       <Filter>Header Files\ObjectHandler</Filter>
     </ClInclude>
+    <ClInclude Include="DebugDrawerOg.h">
+      <Filter>Header Files\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="OgreBulletUtils.h">
+      <Filter>Header Files\Collision</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -241,6 +247,9 @@
     </ClCompile>
     <ClCompile Include="ItemStore.cpp">
       <Filter>Source Files\ObjectHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugDrawerOg.cpp">
+      <Filter>Source Files\Collision</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

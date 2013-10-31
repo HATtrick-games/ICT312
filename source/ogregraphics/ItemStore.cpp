@@ -61,7 +61,7 @@ Objects::IObject* ItemStore::GetObject(Ogre::Vector3 pos, std::string affordance
 				{
 					if((temp = CheckVector(Other, pos, affordance, min)) ==  NULL)
 					{
-						return temp;
+						
 					}
 				}
 			}
@@ -80,7 +80,7 @@ Objects::IObject* ItemStore::GetObject(Ogre::Vector3 pos, std::string affordance
 				{
 					if((temp = CheckVector(Other, pos, affordance, min)) ==  NULL)
 					{
-						return temp;
+						
 					}
 				}
 			}
@@ -98,7 +98,7 @@ Objects::IObject* ItemStore::GetObject(Ogre::Vector3 pos, std::string affordance
 				{
 					if((temp = CheckVector(Other, pos, affordance, min)) ==  NULL)
 					{
-						return temp;
+						
 					}
 				}
 			}
@@ -116,7 +116,7 @@ Objects::IObject* ItemStore::GetObject(Ogre::Vector3 pos, std::string affordance
 				{
 					if((temp = CheckVector(ItRoom, pos, affordance, min)) ==  NULL)
 					{
-						return temp;
+						
 					}
 				}
 			}

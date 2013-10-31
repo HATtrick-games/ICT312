@@ -230,6 +230,8 @@ int Game::initialise()
 		temp = (MapNode*)mapper->path[i];
 		cout<<"Location of "<<i<<" node ="<< temp->GetLocation().x<<temp->GetLocation().y<<temp->GetLocation().z<<"\n";
 	}
+
+	CollisionWorldSingleton::Instance()->SetUpDebug();
 	return 0;
 
 }

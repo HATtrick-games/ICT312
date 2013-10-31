@@ -12,6 +12,8 @@
 #include "Vector3.h"
 #include "OgreGraphics.h"
 #include "OgreBulletDraw.h"
+#include "DebugDrawerOg.h"
+#include "Game.h"
 
 //#include "PhysicsEngine.h"
 
@@ -27,7 +29,7 @@
 class CollisionWorldSingleton
 {
 public:
-
+	void SetUpDebug();
 	/**
 	 * \fn	static CollisionWorldSingleton* CollisionWorldSingleton::Instance();
 	 *
@@ -66,6 +68,9 @@ public:
 	void CheckCollision();
 protected:
 private:
+
+
+	OgreDebugDrawer* OgreDebugger;
 
 	/**
 	 * \brief	Zero-based index of the.
@@ -115,15 +120,20 @@ private:
 	CollisionWorldSingleton()
 	{
 		i = 0;
+		
+
+		
 		DebugObject = new OgreBulletDraw();
 		collisionConfiguration = new btDefaultCollisionConfiguration();
 		dispatcher = new btCollisionDispatcher(collisionConfiguration);
 		broadphase = new btDbvtBroadphase();
 		collisionWorld = new btCollisionWorld(dispatcher,broadphase,collisionConfiguration);
-		collisionWorld->setDebugDrawer(DebugObject);
-		collisionWorld->getDebugDrawer()->setDebugMode(btIDebugDraw::DBG_DrawWireframe);
+		
+		//collisionWorld->getDebugDrawer()->setDebugMode(btIDebugDraw::DBG_DrawWireframe);
 		
 	}
+
+	
 };
 
 /**
