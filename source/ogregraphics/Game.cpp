@@ -7,6 +7,7 @@
 #include "MapNode.h"
 #include "WorldMap.h"
 
+
 using namespace Core;
 
 bool Game::m_running = true;
@@ -21,8 +22,51 @@ CollisionObject* PlayerSphere;
 //CollisionObject* col[10];
 TemporaryPlayerObject* Player;
 WorldMap * mapper;
+Ogre::RaySceneQuery * mRaySceneQuery;
 
 
+void Game::TestSelect()
+{
+	if(Core::Game::getMouse()->getMouseState().buttonDown(OIS::MB_Left))
+	{
+		mRaySceneQuery = Core::Game::getGraphics()->GetSceneManager()->createRayQuery(Ogre::Ray());
+		Ogre::Vector3 oldpos;
+		Ogre::Vector3 originalPos;
+
+		//Core::Game::getGraphics()->cameraDirection()
+		
+		Ogre::Ray mouseRay(Core::Game::getGraphics()->GetPosition(),Core::Game::getGraphics()->cameraDirection());
+		mRaySceneQuery->setRay(mouseRay);
+		mRaySceneQuery->setSortByDistance(true);
+		// Execute query
+		Ogre::RaySceneQueryResult &result = mRaySceneQuery->execute();
+
+		Ogre::MovableObject *closestObject = NULL;
+		Ogre::Real closestDistance = 100000;
+		//Ogre::RaySceneQueryResult::iterator itr = result.begin();
+		
+		 Ogre::RaySceneQueryResult::iterator rayIterator;
+
+		 for(rayIterator = result.begin(); rayIterator != result.end(); rayIterator++ ) 
+     {
+         if ((*rayIterator).movable !=NULL && closestDistance>(*rayIterator).distance && (*rayIterator).movable->getMovableType() != "TerrainMipMap"&& (*rayIterator ).movable->getName() != "entity0")
+         {
+             closestObject = ( *rayIterator ).movable;
+             closestDistance = ( *rayIterator ).distance;
+             oldpos = mouseRay.getPoint((*rayIterator).distance);
+             originalPos = oldpos;
+         }
+     }
+ 
+     mRaySceneQuery->clearResults();
+
+	 //cout<<Core::Game::getGraphics()->cameraDirection().x<<"    "<<Core::Game::getGraphics()->cameraDirection().y<<"    "<<Core::Game::getGraphics()->cameraDirection().z<<"\n";
+	// cout<<Core::Game::getGraphics()->GetPosition().x<<"    "<<Core::Game::getGraphics()->GetPosition().y<<"    "<<Core::Game::getGraphics()->GetPosition().z<<"\n";
+	if(closestObject)
+	 cout<<"ID = "<< closestObject->getName()<<"\n";
+
+	}
+}
 
 Game::~Game(void)
 {
@@ -238,6 +282,7 @@ int Game::initialise()
 
 void Game::gameLoop()
 {
+	
 	while( m_running )
 	{
 		CollisionWorldSingleton::Instance()->CheckCollision();
@@ -255,5 +300,6 @@ void Game::gameLoop()
 		}
 		
 		PlayerSphere->SetPosition(m_sceneManager->GetScene()->getObject("Camera")->getPosition().x,m_sceneManager->GetScene()->getObject("Camera")->getPosition().y,m_sceneManager->GetScene()->getObject("Camera")->getPosition().z);
+		TestSelect();
 	}
 }

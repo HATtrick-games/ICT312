@@ -11,7 +11,7 @@ namespace Core
 	{
 	public:
 		~Game(void);
-
+		
 		static int		initialise();
 		static void		gameLoop();
 
@@ -23,6 +23,7 @@ namespace Core
 		static OIS::InputManager*		getInputManager() { return m_inputManager; }
 		static OIS::Keyboard*			getKeyboard() { return m_keyboard; }
 		static OIS::Mouse*				getMouse() { return m_mouse; }
+		static void TestSelect();
 	private:
 		Game() { }
 

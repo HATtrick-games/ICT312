@@ -44,6 +44,7 @@ void IObject::setOrientation( Ogre::Quaternion rot )
 
 void IObject::loadMesh() const
 {
+	cout<<"ENTITY MADE HERE "<<m_entity<<"\n";
 	Core::Game::getGraphics()->createMeshEntity( m_entity, m_filename );
 }
 
