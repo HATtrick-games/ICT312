@@ -22,6 +22,7 @@ void CollisionWorldSingleton::AddObject(btCollisionObject* colobj)
 void CollisionWorldSingleton::SetUpDebug()
 {
 	
+	
 	 OgreDebugger = new OgreDebugDrawer(Core::Game::getGraphics()->GetSceneManager());
 		OgreDebugger->setDebugMode( btIDebugDraw::DBG_DrawWireframe );
 		collisionWorld->setDebugDrawer(OgreDebugger);
