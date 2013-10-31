@@ -6,6 +6,7 @@
 #include "NodeContainerSingleton.h"
 #include "MapNode.h"
 #include "WorldMap.h"
+#include "IObject.h"
 
 
 using namespace Core;
@@ -63,7 +64,11 @@ void Game::TestSelect()
 	 //cout<<Core::Game::getGraphics()->cameraDirection().x<<"    "<<Core::Game::getGraphics()->cameraDirection().y<<"    "<<Core::Game::getGraphics()->cameraDirection().z<<"\n";
 	// cout<<Core::Game::getGraphics()->GetPosition().x<<"    "<<Core::Game::getGraphics()->GetPosition().y<<"    "<<Core::Game::getGraphics()->GetPosition().z<<"\n";
 	if(closestObject)
+	{
 	 cout<<"ID = "<< closestObject->getName()<<"\n";
+	Objects::RigidBodyObject * temp = Ogre::any_cast<Objects::RigidBodyObject*>(closestObject->getUserAny());
+	//temp->applyForce((temp->getPosition() - Core::Game::getGraphics()->GetPosition())*100);
+	}
 
 	}
 }
