@@ -43,7 +43,7 @@ void Game::TestSelect()
 		Ogre::RaySceneQueryResult &result = mRaySceneQuery->execute();
 
 		Ogre::MovableObject *closestObject = NULL;
-		Ogre::Real closestDistance = 100000;
+		Ogre::Real closestDistance = 100;
 		//Ogre::RaySceneQueryResult::iterator itr = result.begin();
 		
 		 Ogre::RaySceneQueryResult::iterator rayIterator;
