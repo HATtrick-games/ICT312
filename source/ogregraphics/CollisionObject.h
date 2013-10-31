@@ -229,7 +229,7 @@ public:
 
 	Ogre::Vector3 GetObjectPosition();
 
-	
+	void AddBoxMesh(Ogre::Entity* Ent);
 protected:
 
 private:

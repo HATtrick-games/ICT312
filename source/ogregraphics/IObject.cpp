@@ -111,17 +111,23 @@ void IObject::MakeCollisionObject()
 	ColObj = new CollisionObject();
 	ColObj->AddMeshShape(getEntity());
 	ColObj->SetUserPointer(this);
-	ColObj->SetScale(0.5,0.5,0.5);
+	ColObj->SetPosition(getPosition());
+	//ColObj->SetScale(0.5,0.5,0.5);
 	
 }
 
 void IObject::MakeBoxCollisionObject()
 {
-	Ogre::Vector3 boundingBox = getEntity()->getBoundingBox().getSize();
-
 	ColObj = new CollisionObject();
-	ColObj->AddBoxShape(boundingBox.x, boundingBox.y, boundingBox.z);
+	{
+		ColObj->AddBoxMesh(getEntity());
+	}
+	//Ogre::Vector3 boundingBox = getEntity()->getBoundingBox().getSize();
+
+	//ColObj = new CollisionObject();
+	//ColObj->AddBoxShape(boundingBox.x, boundingBox.y, boundingBox.z);
 	ColObj->SetUserPointer(this);
+	ColObj->SetScale(0.5,0.5,0.5);
 }
 
 std::string IObject::getEntityName()

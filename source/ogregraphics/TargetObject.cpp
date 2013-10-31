@@ -8,6 +8,7 @@ TargetObject::TargetObject(void) : RigidBodyObject("Target.mesh")
 	//m_collisionObject = new CollisionObject();
 	//m_collisionObject->AddMeshShape(getEntity());
 	MakeBoxCollisionObject();
+	//MakeCollisionObject();
 } 
 
 

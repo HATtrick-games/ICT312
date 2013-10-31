@@ -57,13 +57,13 @@ void CollisionObject::AddMeshShape(Ogre::Entity* Ent)
 	//std::cout<<"OMFG WHY IS THIS PART NOT WORKING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n";
 
 
-	//OgreBulletCollisions::TriangleMeshCollisionShape *shape = convert->createTrimesh();
-	OgreBulletCollisions::BoxCollisionShape * shape = convert->createBox();
+	OgreBulletCollisions::TriangleMeshCollisionShape *shape = convert->createTrimesh();
+	//OgreBulletCollisions::BoxCollisionShape * shape = convert->createBox();
 	//OgreBulletCollisions::ConvexHullCollisionShape * shape = convert->createConvex();
 	
 	//btConvexHullShape * mesh = (btConvexHullShape*)(shape->getBulletShape());
-	btBoxShape * mesh = (btBoxShape*)(shape->getBulletShape());
-	
+	//btBoxShape * mesh = (btBoxShape*)(shape->getBulletShape());
+	btTriangleMeshShape * mesh =(btTriangleMeshShape*)shape->getBulletShape();
 
 
 
@@ -73,6 +73,23 @@ void CollisionObject::AddMeshShape(Ogre::Entity* Ent)
 	
 	
 	
+
+}
+
+void CollisionObject::AddBoxMesh(Ogre::Entity* Ent)
+{
+	OgreBulletCollisions::StaticMeshToShapeConverter *convert;
+
+
+	convert = new OgreBulletCollisions::StaticMeshToShapeConverter(Ent, Ent->_getParentNodeFullTransform());
+		
+	OgreBulletCollisions::BoxCollisionShape * shape = convert->createBox();
+	
+	
+	btBoxShape * mesh = (btBoxShape*)(shape->getBulletShape());
+	
+	BulletCollisionObject->setCollisionShape(mesh);
+	CollisionWorldSingleton::Instance()->AddObject(BulletCollisionObject);
 
 }
 
