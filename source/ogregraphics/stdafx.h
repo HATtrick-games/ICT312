@@ -9,14 +9,16 @@
 
 #include <stdio.h>
 #include <tchar.h>
-
+#include <map>
+#include <iostream>
+#include <time.h>
+#include <vector>
 
 
 // TODO: reference additional headers your program requires here
-#include <string>
-#include <map>
 
 #include <Ogre/Ogre.h>
 #include <OIS/OIS.h>
 
 #include "Game.h"
+#include "EnumSpace.h"
