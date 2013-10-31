@@ -7,13 +7,15 @@
 #include "MapNode.h"
 #include "WorldMap.h"
 #include "IObject.h"
+#include <time.h>    
 //#include "GenericObject.h"
 
 
 using namespace Core;
 
 bool Game::m_running = true;
-
+time_t timer;
+time_t timer2;
 Graphics::OgreGraphics* Game::m_graphics = NULL;
 Scenes::SceneManager* Game::m_sceneManager = NULL;
 OIS::InputManager* Game::m_inputManager = NULL;
@@ -293,6 +295,7 @@ int Game::initialise()
 	}
 
 	CollisionWorldSingleton::Instance()->SetUpDebug();
+	time(&timer);
 	return 0;
 
 }
@@ -315,8 +318,23 @@ void Game::gameLoop()
 		{
 			m_sceneManager->updateScene( m_graphics->getDeltaTime() );
 		}
-		
+		time(&timer2);
 		PlayerSphere->SetPosition(m_sceneManager->GetScene()->getObject("Camera")->getPosition().x,m_sceneManager->GetScene()->getObject("Camera")->getPosition().y,m_sceneManager->GetScene()->getObject("Camera")->getPosition().z);
 		TestSelect();
+		if(Core::Game::getKeyboard()->isKeyDown( OIS::KC_L )&&difftime(timer2,timer)>0.01)
+		{
+			time(&timer);
+			if(CollisionWorldSingleton::Instance()->Draw)
+			{
+				CollisionWorldSingleton::Instance()->Draw =false;
+			}
+			else
+			{
+				CollisionWorldSingleton::Instance()->Draw =true;
+			}
+
+		}
+
+
 	}
 }

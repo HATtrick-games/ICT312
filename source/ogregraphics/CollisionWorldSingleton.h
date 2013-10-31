@@ -29,6 +29,7 @@
 class CollisionWorldSingleton
 {
 public:
+	bool Draw;
 	void SetUpDebug();
 	/**
 	 * \fn	static CollisionWorldSingleton* CollisionWorldSingleton::Instance();
@@ -68,6 +69,7 @@ public:
 	void CheckCollision();
 protected:
 private:
+	
 
 
 	OgreDebugDrawer* OgreDebugger;
@@ -122,7 +124,7 @@ private:
 		i = 0;
 		
 
-		
+		Draw = false;
 		DebugObject = new OgreBulletDraw();
 		collisionConfiguration = new btDefaultCollisionConfiguration();
 		dispatcher = new btCollisionDispatcher(collisionConfiguration);

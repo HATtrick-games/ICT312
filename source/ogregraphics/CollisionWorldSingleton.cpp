@@ -31,7 +31,7 @@ void CollisionWorldSingleton::SetUpDebug()
 void CollisionWorldSingleton::CheckCollision()
 {
 	
-	
+	if(Draw)
 	collisionWorld->debugDrawWorld();
 	
 //	}
