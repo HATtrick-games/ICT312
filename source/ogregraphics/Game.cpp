@@ -35,8 +35,6 @@ void Game::TestSelect()
 		Ogre::Vector3 oldpos;
 		Ogre::Vector3 originalPos;
 
-		//Core::Game::getGraphics()->cameraDirection()
-		
 		Ogre::Ray mouseRay(Core::Game::getGraphics()->GetPosition(),Core::Game::getGraphics()->cameraDirection());
 		mRaySceneQuery->setRay(mouseRay);
 		mRaySceneQuery->setSortByDistance(true);
