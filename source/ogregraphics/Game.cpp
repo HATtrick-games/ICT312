@@ -280,6 +280,7 @@ int Game::initialise()
 
 	/*********************ENDS HERE*********??????????????/////////////*/
 
+	//Core::Game::getSceneManager()->GetScene()->addObject(string aNamegoeshere,  new Objects::Typegoeshere);
 	Core::Game::getSceneManager()->GetScene()->getObject("Camera")->setPosition(Ogre::Vector3(0.0f, 0.0f, 0.0f));
 	Player->SetLastPos(0.0f, 0.0f, 0.0f);
 	mapper = new WorldMap;
