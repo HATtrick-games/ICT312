@@ -12,7 +12,7 @@ ItemStore* ItemStore::Instance()
 Objects::IObject* ItemStore::CheckVector(std::vector<Objects::IObject*> vec, Ogre::Vector3 pos, std::string affordance, int min )
 {	
 	
-	
+	//cout<<min<<"\n";
 	int current = -1;
 	for(int i = 0; i<vec.size(); i++)
 		{
@@ -36,10 +36,12 @@ Objects::IObject* ItemStore::CheckVector(std::vector<Objects::IObject*> vec, Ogr
 		}
 		if(current == -1)
 		{
+			cout<<"Getting to here \n";
 			return(NULL);
 		}
 		else
 		{
+			//cout<<"Getting to here \n";
 			return vec[current];
 		}
 
@@ -48,9 +50,10 @@ Objects::IObject* ItemStore::CheckVector(std::vector<Objects::IObject*> vec, Ogr
 
 Objects::IObject* ItemStore::GetObject(Ogre::Vector3 pos, std::string affordance, int min)
 {
+	
 	Objects::IObject* temp;
 	temp = NULL;
-	
+	//return temp;
 	if(1)
 	{
 		if((temp = CheckVector(Hallway, pos, affordance, min)) ==  NULL)
@@ -65,8 +68,9 @@ Objects::IObject* ItemStore::GetObject(Ogre::Vector3 pos, std::string affordance
 					}
 				}
 			}
+			
 		}
-
+		//temp = CheckVector(Hallway, pos, affordance, min);
 		return temp;
 				
 	}

@@ -184,6 +184,8 @@ bool NPC::DetermineGoal()
 			}
 
 		}
+		CurrentGoal->ResetThreshhold();
+
 			
 		return true;
 	}
@@ -250,9 +252,12 @@ bool NPC::runCurrentState()
 			
 				//CurrentGoal->GetThreshold(); //compare this to affordance value on objects
 				ObjectPointer = NULL;
-				ObjectPointer = ItemStore::Instance()->GetObject(myObj->getPosition(), CurrentGoal->GetAction()->GetAffordanceName(), CurrentGoal->GetThreshold());
+				cout<<CurrentGoal->GetAction()->GetAffordanceName()<<"\n";
+				cout<<CurrentGoal->GetThreshold()<<"\n";
+				ObjectPointer = ItemStore::Instance()->GetObject(myObj->getPosition(), "Sit", CurrentGoal->GetThreshold());
 				std::cout << "Checked ItemSTORE";
 				std::getchar();
+				//cout<<ObjectPointer->getEntityName()<<"\n";
 				if ( ObjectPointer == NULL )
 				{
 				//	Object Not found // change affordance value for next attempt

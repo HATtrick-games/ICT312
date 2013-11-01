@@ -301,6 +301,7 @@ int Game::initialise()
 
 	Core::Game::getSceneManager()->GetScene()->addObject("NPC1",  new Objects::GenericObject(Ogre::Vector3(0,0,-100), Ogre::Vector3(0,0,0), "Projectile.mesh"));
 	Core::Game::getSceneManager()->GetScene()->getObject("SofaStool_1")->Affordances["Sit"] = 100;
+	Core::Game::getSceneManager()->GetScene()->getObject("SofaStool_1")->Affordances["UseComputer"] = 0;
 	ItemStore::Instance()->AddObject(Core::Game::getSceneManager()->GetScene()->getObject("SofaStool_1"));
 	Core::Game::getSceneManager()->GetScene()->getObject("SofaStool_1")->SetInteractable(true);
 
