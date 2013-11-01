@@ -41,6 +41,7 @@ namespace Objects
 		bool IsInteractable();
 		void SetInteractable(bool set){Interactable = set;}
 		int GetAffodance(std::string affordance);
+		std::map<std::string,int> Affordances;
 	protected:
 		void				loadMesh() const;
 		CollisionObject* ColObj;
@@ -52,7 +53,7 @@ namespace Objects
 		void setID();
 	private:
 		std::string m_entity;
-		std::map<std::string,int>* Affordances;
+		
 		bool Interactable;
 		
 		
