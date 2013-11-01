@@ -344,6 +344,10 @@
     <ClCompile Include="ProjectileObject.cpp">
       <Filter>Source Files\Objects</Filter>
     </ClCompile>
+<<<<<<< HEAD
+    <ClCompile Include="Contact.cpp">
+      <Filter>Source Files\Physics</Filter>
+=======
     <ClCompile Include="MapNode.cpp">
       <Filter>Source Files\Pathing</Filter>
     </ClCompile>
@@ -412,6 +416,7 @@
     </ClCompile>
     <ClCompile Include="NPC.cpp">
       <Filter>Source Files\AI</Filter>
+>>>>>>> a20f80bd55a5e6a7caa7120e3e82361f9e782733
     </ClCompile>
     <ClCompile Include="EasyGoing.cpp">
       <Filter>Source Files\AI\Trait</Filter>

@@ -147,6 +147,7 @@
     <ClCompile Include="Bad.cpp" />
     <ClCompile Include="CollisionObject.cpp" />
     <ClCompile Include="CollisionWorldSingleton.cpp" />
+    <ClCompile Include="Contact.cpp" />
     <ClCompile Include="DebugDrawer.cpp" />
     <ClCompile Include="DebugDrawerOg.cpp" />
     <ClCompile Include="EasyGoing.cpp" />

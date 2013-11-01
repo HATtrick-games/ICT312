@@ -1,5 +1,6 @@
 # pragma once
 #ifndef COLLISION_WORLD_SINGLETON
+
 #include "OgreBulletCollisions.h"
 #include "OgreBulletCollisionsObject.h"
 #include "Debug/OgreBulletCollisionsDebugShape.h"
@@ -15,7 +16,7 @@
 #include "DebugDrawerOg.h"
 #include "Game.h"
 
-//#include "PhysicsEngine.h"
+//#include "Manifold.h"
 
 /**
  * \class	CollisionWorldSingleton

@@ -42,6 +42,13 @@ void IObject::setOrientation( Ogre::Quaternion rot )
 	Core::Game::getGraphics()->setEntityOrientation( m_entity, rot );
 }
 
+void IObject::rotateByVector( Ogre::Vector3& rot, float scale )
+{
+	Ogre::Quaternion q(0, rot.x * scale, rot.y * scale, rot.z * scale);
+	
+	setOrientation(getOrientation() * q);
+}
+
 void IObject::loadMesh() const
 {
 	cout<<"ENTITY MADE HERE "<<m_entity<<"\n";
@@ -108,7 +115,7 @@ void IObject::MakeSphereCollisionObject()
 void IObject::MakeCollisionObject()
 {
 
-	cout<<"Building COllision Object\n";
+	std::cout<<"Building COllision Object\n";
 	ColObj = new CollisionObject();
 	ColObj->AddMeshShape(getEntity());
 	ColObj->SetUserPointer(this);
@@ -139,6 +146,14 @@ std::string IObject::getEntityName()
 Ogre::Entity* IObject::getEntity()
 {
 	return Core::Game::getGraphics()->getEntity(m_entity);
+}
+
+
+Ogre::Vector3 IObject::getRotation() const
+{
+	return Ogre::Vector3(getOrientation().getRoll().valueDegrees(),
+							getOrientation().getPitch().valueDegrees(),
+							getOrientation().getYaw().valueDegrees());
 }
 
 std::map<std::string,int>* IObject::GetMap()

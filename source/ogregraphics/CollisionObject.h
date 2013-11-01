@@ -5,7 +5,6 @@
  */
 #pragma once
 #include "CollisionWorldSingleton.h"
-#include "CollisionWorldSingleton.h"
 #include "OgreBulletCollisionsPreRequisites.h"
 #include "OgreBulletCollisionsWorld.h"
 
@@ -215,6 +214,9 @@ public:
 	 */
 
 	void SetScale(float xs, float ys, float zs);
+	Math::Vector3 GetObjectPosition();
+	
+	btCollisionObject* GetCollisionObject() { return BulletCollisionObject; }
 
 	/**
 	 * \fn	Ogre::Vector3 CollisionObject::Ogre::Vector3 GetObjectPosition();
@@ -230,6 +232,7 @@ public:
 	Ogre::Vector3 GetObjectPosition();
 
 	void AddBoxMesh(Ogre::Entity* Ent);
+
 protected:
 
 private:

@@ -1,7 +1,6 @@
 #pragma once
 
 #include "RigidBodyObject.h"
-#include "Contact.h"
 
 namespace Objects
 {
@@ -17,5 +16,8 @@ namespace Physics
 		
 		Ogre::Vector3 normal; // the normal to the collision
 		float penetration;
+
+		int numContacts;
+		Ogre::Vector3 contacts[2];
 	};
 }
