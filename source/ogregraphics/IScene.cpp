@@ -13,6 +13,7 @@ void IScene::update( float deltaTime )
 
 void IScene::addObject( std::string identifier, Objects::IObject* object )
 {
+	cout<<identifier<<"\n";
 	m_objects[identifier] = object;
 	m_objects[identifier]->initialise();
 }

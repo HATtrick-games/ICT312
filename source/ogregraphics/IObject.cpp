@@ -51,7 +51,7 @@ void IObject::rotateByVector( Ogre::Vector3& rot, float scale )
 
 void IObject::loadMesh() const
 {
-	cout<<"ENTITY MADE HERE "<<m_entity<<"\n";
+	
 	Core::Game::getGraphics()->createMeshEntity( m_entity, m_filename );
 }
 
@@ -158,12 +158,12 @@ Ogre::Vector3 IObject::getRotation() const
 
 std::map<std::string,int>* IObject::GetMap()
 {
-	return Affordances;
+	return &Affordances;
 }
 
 int IObject::GetAffodance(std::string affordance)
 {
-	return Affordances->find(affordance)->second;
+	return Affordances.find(affordance)->second;
 }
 
 
