@@ -4,6 +4,7 @@
 #include "SceneManager.h"
 #include "TestScene.h"
 #include "ITBuildingScene.h"
+#include "AIManager.h"
 
 namespace Core
 {
@@ -34,6 +35,7 @@ namespace Core
 		static OIS::InputManager*		m_inputManager;
 		static OIS::Keyboard*			m_keyboard;
 		static OIS::Mouse*				m_mouse;
+		//AIManager*	Controller;
 		void BuildCollisionRoom();
 	};
 }
