@@ -3,11 +3,19 @@
 #include "CollisionObject.h"
 #include "CollisionWorldSingleton.h"
 #include "TemporaryPlayerObject.h"
+#include "NodeContainerSingleton.h"
+#include "MapNode.h"
+#include "WorldMap.h"
+#include "IObject.h"
+#include <time.h>    
+//#include "GenericObject.h"
+
 
 using namespace Core;
 
 bool Game::m_running = true;
-
+time_t timer;
+time_t timer2;
 Graphics::OgreGraphics* Game::m_graphics = NULL;
 Scenes::SceneManager* Game::m_sceneManager = NULL;
 OIS::InputManager* Game::m_inputManager = NULL;
@@ -17,9 +25,66 @@ OIS::Mouse* Game::m_mouse = NULL;
 CollisionObject* PlayerSphere;
 //CollisionObject* col[10];
 TemporaryPlayerObject* Player;
+WorldMap * mapper;
+Ogre::RaySceneQuery * mRaySceneQuery;
 
 
+void Game::TestSelect()
+{
+	if(Core::Game::getMouse()->getMouseState().buttonDown(OIS::MB_Left))
+	{
+		mRaySceneQuery = Core::Game::getGraphics()->GetSceneManager()->createRayQuery(Ogre::Ray());
+		Ogre::Vector3 oldpos;
+		Ogre::Vector3 originalPos;
 
+		Ogre::Ray mouseRay(Core::Game::getGraphics()->GetPosition(),Core::Game::getGraphics()->cameraDirection());
+		mRaySceneQuery->setRay(mouseRay);
+		mRaySceneQuery->setSortByDistance(true);
+		mRaySceneQuery->setQueryMask(Targetable);
+		// Execute query
+		Ogre::RaySceneQueryResult &result = mRaySceneQuery->execute();
+
+		Ogre::MovableObject *closestObject = NULL;
+		Ogre::Real closestDistance = 100;
+		//Ogre::RaySceneQueryResult::iterator itr = result.begin();
+		
+		 Ogre::RaySceneQueryResult::iterator rayIterator;
+
+		 for(rayIterator = result.begin(); rayIterator != result.end(); rayIterator++ ) 
+     {
+		 if ((*rayIterator).movable !=NULL && closestDistance>(*rayIterator).distance && (*rayIterator).movable->getMovableType() != "TerrainMipMap"&& (*rayIterator ).movable->getName() != "entity0" && (*rayIterator).movable->getQueryFlags() == Targetable)
+         {
+             closestObject = ( *rayIterator ).movable;
+             closestDistance = ( *rayIterator ).distance;
+             oldpos = mouseRay.getPoint((*rayIterator).distance);
+             originalPos = oldpos;
+         }
+     }
+ 
+     mRaySceneQuery->clearResults();
+
+	 //cout<<Core::Game::getGraphics()->cameraDirection().x<<"    "<<Core::Game::getGraphics()->cameraDirection().y<<"    "<<Core::Game::getGraphics()->cameraDirection().z<<"\n";
+	// cout<<Core::Game::getGraphics()->GetPosition().x<<"    "<<Core::Game::getGraphics()->GetPosition().y<<"    "<<Core::Game::getGraphics()->GetPosition().z<<"\n";
+	if(closestObject)
+	{
+	 cout<<"ID = "<< closestObject->getName()<<"\n";
+	/*Objects::GenericObject * temp = Ogre::any_cast<Objects::GenericObject*>(closestObject->getUserAny());
+	if(temp->Type != "\0")
+	{
+		if(temp->Type == "RigidBodyObject")
+		{
+			cout<<"This is a rigidbody"<<"\n";
+		}
+	}
+	else
+	{
+		cout<<"This is not a rigid body \n";
+	}*/
+	//temp->applyForce((temp->getPosition() - Core::Game::getGraphics()->GetPosition())*100);
+	}
+
+	}
+}
 
 Game::~Game(void)
 {
@@ -33,6 +98,7 @@ Game::~Game(void)
 
 int Game::initialise()
 {
+	
 	// initialise graphics
 	m_graphics = new Graphics::OgreGraphics();
 	if( !m_graphics->initialise() )
@@ -216,13 +282,27 @@ int Game::initialise()
 
 	/*********************ENDS HERE*********??????????????/////////////*/
 
+	//Core::Game::getSceneManager()->GetScene()->addObject(string aNamegoeshere,  new Objects::Typegoeshere);
 	Core::Game::getSceneManager()->GetScene()->getObject("Camera")->setPosition(Ogre::Vector3(0.0f, 0.0f, 0.0f));
 	Player->SetLastPos(0.0f, 0.0f, 0.0f);
+	mapper = new WorldMap;
+	mapper->FindPath(Ogre::Vector3(1,0,0),Ogre::Vector3(2,0,10));
+	MapNode * temp;
+	for(int i = 0; i<mapper->path.size(); i++)
+	{
+		temp = (MapNode*)mapper->path[i];
+		cout<<"Location of "<<i<<" node ="<< temp->GetLocation().x<<temp->GetLocation().y<<temp->GetLocation().z<<"\n";
+	}
+
+	CollisionWorldSingleton::Instance()->SetUpDebug();
+	time(&timer);
 	return 0;
+
 }
 
 void Game::gameLoop()
 {
+	
 	while( m_running )
 	{
 		CollisionWorldSingleton::Instance()->CheckCollision();
@@ -238,7 +318,23 @@ void Game::gameLoop()
 		{
 			m_sceneManager->updateScene( m_graphics->getDeltaTime() );
 		}
-		
+		time(&timer2);
 		PlayerSphere->SetPosition(m_sceneManager->GetScene()->getObject("Camera")->getPosition().x,m_sceneManager->GetScene()->getObject("Camera")->getPosition().y,m_sceneManager->GetScene()->getObject("Camera")->getPosition().z);
+		TestSelect();
+		if(Core::Game::getKeyboard()->isKeyDown( OIS::KC_L )&&difftime(timer2,timer)>0.01)
+		{
+			time(&timer);
+			if(CollisionWorldSingleton::Instance()->Draw)
+			{
+				CollisionWorldSingleton::Instance()->Draw =false;
+			}
+			else
+			{
+				CollisionWorldSingleton::Instance()->Draw =true;
+			}
+
+		}
+
+
 	}
 }

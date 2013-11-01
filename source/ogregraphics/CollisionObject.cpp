@@ -25,7 +25,7 @@ void CollisionObject::SetUserPointer(void* obj)
 }
 
 
-void CollisionObject::AddMeshShapeWithOffset(Ogre::Entity* Ent, Math::Vector3 Offset)
+void CollisionObject::AddMeshShapeWithOffset(Ogre::Entity* Ent, Ogre::Vector3 Offset)
 {
 
 }
@@ -57,13 +57,13 @@ void CollisionObject::AddMeshShape(Ogre::Entity* Ent)
 	//std::cout<<"OMFG WHY IS THIS PART NOT WORKING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n";
 
 
-	//OgreBulletCollisions::TriangleMeshCollisionShape *shape = convert->createTrimesh();
-	OgreBulletCollisions::BoxCollisionShape * shape = convert->createBox();
+	OgreBulletCollisions::TriangleMeshCollisionShape *shape = convert->createTrimesh();
+	//OgreBulletCollisions::BoxCollisionShape * shape = convert->createBox();
 	//OgreBulletCollisions::ConvexHullCollisionShape * shape = convert->createConvex();
 	
 	//btConvexHullShape * mesh = (btConvexHullShape*)(shape->getBulletShape());
-	btBoxShape * mesh = (btBoxShape*)(shape->getBulletShape());
-	
+	//btBoxShape * mesh = (btBoxShape*)(shape->getBulletShape());
+	btTriangleMeshShape * mesh =(btTriangleMeshShape*)shape->getBulletShape();
 
 
 
@@ -73,6 +73,23 @@ void CollisionObject::AddMeshShape(Ogre::Entity* Ent)
 	
 	
 	
+
+}
+
+void CollisionObject::AddBoxMesh(Ogre::Entity* Ent)
+{
+	OgreBulletCollisions::StaticMeshToShapeConverter *convert;
+
+
+	convert = new OgreBulletCollisions::StaticMeshToShapeConverter(Ent, Ent->_getParentNodeFullTransform());
+		
+	OgreBulletCollisions::BoxCollisionShape * shape = convert->createBox();
+	
+	
+	btBoxShape * mesh = (btBoxShape*)(shape->getBulletShape());
+	
+	BulletCollisionObject->setCollisionShape(mesh);
+	CollisionWorldSingleton::Instance()->AddObject(BulletCollisionObject);
 
 }
 
@@ -121,12 +138,12 @@ void CollisionObject::SetPosition(float xpos, float ypos, float zpos)
 	BulletCollisionObject->getWorldTransform().setOrigin(btVector3(xpos, ypos, zpos));
 }
 
-void CollisionObject::SetPosition(Math::Vector3 vecpos)
+void CollisionObject::SetPosition(Ogre::Vector3 vecpos)
 {
 	BulletCollisionObject->getWorldTransform().setOrigin(btVector3(vecpos.x, vecpos.y, vecpos.z));
 }
 
-void CollisionObject::MoveObject(Math::Vector3 vec)
+void CollisionObject::MoveObject(Ogre::Vector3 vec)
 {
 	vec.x = (BulletCollisionObject->getWorldTransform().getOrigin().x() + vec.x);
 	vec.y = (BulletCollisionObject->getWorldTransform().getOrigin().y() + vec.y);
@@ -135,9 +152,9 @@ void CollisionObject::MoveObject(Math::Vector3 vec)
 	BulletCollisionObject->getWorldTransform().setOrigin(btVector3(vec.x,vec.y,vec.z));
 }
 
-Math::Vector3 CollisionObject::GetObjectPosition()
+Ogre::Vector3 CollisionObject::GetObjectPosition()
 {
-	Math::Vector3 Vector;
+	Ogre::Vector3 Vector;
 	Vector.x = BulletCollisionObject->getWorldTransform().getOrigin().x();
 	Vector.y = BulletCollisionObject->getWorldTransform().getOrigin().y();
 	Vector.z = BulletCollisionObject->getWorldTransform().getOrigin().z();

@@ -51,6 +51,7 @@ void IObject::rotateByVector( Ogre::Vector3& rot, float scale )
 
 void IObject::loadMesh() const
 {
+	cout<<"ENTITY MADE HERE "<<m_entity<<"\n";
 	Core::Game::getGraphics()->createMeshEntity( m_entity, m_filename );
 }
 
@@ -118,17 +119,23 @@ void IObject::MakeCollisionObject()
 	ColObj = new CollisionObject();
 	ColObj->AddMeshShape(getEntity());
 	ColObj->SetUserPointer(this);
-	ColObj->SetScale(0.5,0.5,0.5);
+	ColObj->SetPosition(getPosition());
+	//ColObj->SetScale(0.5,0.5,0.5);
 	
 }
 
 void IObject::MakeBoxCollisionObject()
 {
-	Ogre::Vector3 boundingBox = getEntity()->getBoundingBox().getSize();
-
 	ColObj = new CollisionObject();
-	ColObj->AddBoxShape(boundingBox.x, boundingBox.y, boundingBox.z);
+	{
+		ColObj->AddBoxMesh(getEntity());
+	}
+	//Ogre::Vector3 boundingBox = getEntity()->getBoundingBox().getSize();
+
+	//ColObj = new CollisionObject();
+	//ColObj->AddBoxShape(boundingBox.x, boundingBox.y, boundingBox.z);
 	ColObj->SetUserPointer(this);
+	ColObj->SetScale(0.5,0.5,0.5);
 }
 
 std::string IObject::getEntityName()
@@ -141,9 +148,26 @@ Ogre::Entity* IObject::getEntity()
 	return Core::Game::getGraphics()->getEntity(m_entity);
 }
 
+
 Ogre::Vector3 IObject::getRotation() const
 {
 	return Ogre::Vector3(getOrientation().getRoll().valueDegrees(),
 							getOrientation().getPitch().valueDegrees(),
 							getOrientation().getYaw().valueDegrees());
+}
+
+std::map<std::string,int>* IObject::GetMap()
+{
+	return Affordances;
+}
+
+int IObject::GetAffodance(std::string affordance)
+{
+	return Affordances->find(affordance)->second;
+}
+
+
+bool IObject::IsInteractable()
+{
+	return Interactable;
 }

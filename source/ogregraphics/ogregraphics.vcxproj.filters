@@ -49,6 +49,54 @@
     <Filter Include="Header Files\Physics">
       <UniqueIdentifier>{ab32751f-d01b-4142-8ce5-e00aab979ada}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Pathing">
+      <UniqueIdentifier>{08b35ae8-0980-49a9-ac65-55ffe1e67564}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Pathing">
+      <UniqueIdentifier>{492175b2-7d74-409f-b05d-be6be79f0090}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ObjectHandler">
+      <UniqueIdentifier>{7572733f-549f-4525-a208-231746662e50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ObjectHandler">
+      <UniqueIdentifier>{2cb6711c-de9a-4cfb-975b-2841bae0b778}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\AI">
+      <UniqueIdentifier>{99d80d69-d390-4cad-a0c5-1afa21f3b565}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AI">
+      <UniqueIdentifier>{080b6505-e4d1-458c-9715-07857da1e2e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AI\Emotion">
+      <UniqueIdentifier>{5c897f52-a983-41b0-aacd-974ac73db82f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AI\Mood">
+      <UniqueIdentifier>{b96ba1ad-28ad-4e1d-a143-c27b5fbb71b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AI\Action">
+      <UniqueIdentifier>{b57449c2-f9c5-4ff4-90e5-822ff4e2f197}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AI\Goal">
+      <UniqueIdentifier>{64d45e3e-ca18-4830-91b9-ffb6813b9e77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\AI\Emotion">
+      <UniqueIdentifier>{c5fe69b5-639c-46e5-a10f-9ca2c8a25646}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\AI\Mood">
+      <UniqueIdentifier>{e8dd343c-d513-46eb-a76f-a3fe0da1fb12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\AI\Action">
+      <UniqueIdentifier>{6270bc02-c66b-42ba-a01d-aeeea4f9c9b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\AI\Goal">
+      <UniqueIdentifier>{bb8435a4-310c-437f-97f8-c3fe862c42fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\AI\Trait">
+      <UniqueIdentifier>{4d6f0138-05f1-4c0d-a398-01e57eb9903d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AI\Trait">
+      <UniqueIdentifier>{41b84bbe-d1dd-421a-98bb-6e92da9cdad1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="ReadMe.txt" />
@@ -132,6 +180,99 @@
     <ClInclude Include="Contact.h">
       <Filter>Header Files\Physics</Filter>
     </ClInclude>
+    <ClInclude Include="MapNode.h">
+      <Filter>Header Files\Pathing</Filter>
+    </ClInclude>
+    <ClInclude Include="micropather.h">
+      <Filter>Header Files\Pathing</Filter>
+    </ClInclude>
+    <ClInclude Include="NodeContainerSingleton.h">
+      <Filter>Header Files\Pathing</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldMap.h">
+      <Filter>Header Files\Pathing</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemStore.h">
+      <Filter>Header Files\ObjectHandler</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugDrawerOg.h">
+      <Filter>Header Files\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="OgreBulletUtils.h">
+      <Filter>Header Files\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="Masks.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ActionManager.h">
+      <Filter>Header Files\AI\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="Action.h">
+      <Filter>Header Files\AI\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="Emotion.h">
+      <Filter>Header Files\AI\Emotion</Filter>
+    </ClInclude>
+    <ClInclude Include="Bad.h">
+      <Filter>Header Files\AI\Mood</Filter>
+    </ClInclude>
+    <ClInclude Include="EmotionManager.h">
+      <Filter>Header Files\AI\Emotion</Filter>
+    </ClInclude>
+    <ClInclude Include="Goal.h">
+      <Filter>Header Files\AI\Goal</Filter>
+    </ClInclude>
+    <ClInclude Include="Good.h">
+      <Filter>Header Files\AI\Mood</Filter>
+    </ClInclude>
+    <ClInclude Include="Mood.h">
+      <Filter>Header Files\AI\Mood</Filter>
+    </ClInclude>
+    <ClInclude Include="Neutral.h">
+      <Filter>Header Files\AI\Emotion</Filter>
+    </ClInclude>
+    <ClInclude Include="Relax.h">
+      <Filter>Header Files\AI\Goal</Filter>
+    </ClInclude>
+    <ClInclude Include="Sad.h">
+      <Filter>Header Files\AI\Emotion</Filter>
+    </ClInclude>
+    <ClInclude Include="UseComputer.h">
+      <Filter>Header Files\AI\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="Work.h">
+      <Filter>Header Files\AI\Goal</Filter>
+    </ClInclude>
+    <ClInclude Include="Sit.h">
+      <Filter>Header Files\AI\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="MoodManager.h">
+      <Filter>Header Files\AI\Mood</Filter>
+    </ClInclude>
+    <ClInclude Include="MoveItem.h">
+      <Filter>Header Files\AI\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="Happy.h">
+      <Filter>Header Files\AI\Emotion</Filter>
+    </ClInclude>
+    <ClInclude Include="FunLoving.h">
+      <Filter>Header Files\AI\Trait</Filter>
+    </ClInclude>
+    <ClInclude Include="Studious.h">
+      <Filter>Header Files\AI\Trait</Filter>
+    </ClInclude>
+    <ClInclude Include="Trait.h">
+      <Filter>Header Files\AI\Trait</Filter>
+    </ClInclude>
+    <ClInclude Include="EnumSpace.h">
+      <Filter>Header Files\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="AIManager.h">
+      <Filter>Header Files\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="NPC.h">
+      <Filter>Header Files\AI</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -200,8 +341,79 @@
     <ClCompile Include="ProjectileObject.cpp">
       <Filter>Source Files\Objects</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="Contact.cpp">
       <Filter>Source Files\Physics</Filter>
+=======
+    <ClCompile Include="MapNode.cpp">
+      <Filter>Source Files\Pathing</Filter>
+    </ClCompile>
+    <ClCompile Include="micropather.cpp">
+      <Filter>Source Files\Pathing</Filter>
+    </ClCompile>
+    <ClCompile Include="NodeContainerSingleton.cpp">
+      <Filter>Source Files\Pathing</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldMap.cpp">
+      <Filter>Source Files\Pathing</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemStore.cpp">
+      <Filter>Source Files\ObjectHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugDrawerOg.cpp">
+      <Filter>Source Files\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="Sit.cpp">
+      <Filter>Source Files\AI\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="Neutral.cpp">
+      <Filter>Source Files\AI\Emotion</Filter>
+    </ClCompile>
+    <ClCompile Include="EmotionManager.cpp">
+      <Filter>Source Files\AI\Emotion</Filter>
+    </ClCompile>
+    <ClCompile Include="MoodManager.cpp">
+      <Filter>Source Files\AI\Mood</Filter>
+    </ClCompile>
+    <ClCompile Include="UseComputer.cpp">
+      <Filter>Source Files\AI\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="MoveItem.cpp">
+      <Filter>Source Files\AI\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="ActionManager.cpp">
+      <Filter>Source Files\AI\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="Bad.cpp">
+      <Filter>Source Files\AI\Mood</Filter>
+    </ClCompile>
+    <ClCompile Include="Good.cpp">
+      <Filter>Source Files\AI\Mood</Filter>
+    </ClCompile>
+    <ClCompile Include="Happy.cpp">
+      <Filter>Source Files\AI\Emotion</Filter>
+    </ClCompile>
+    <ClCompile Include="Sad.cpp">
+      <Filter>Source Files\AI\Emotion</Filter>
+    </ClCompile>
+    <ClCompile Include="Relax.cpp">
+      <Filter>Source Files\AI\Goal</Filter>
+    </ClCompile>
+    <ClCompile Include="Work.cpp">
+      <Filter>Source Files\AI\Goal</Filter>
+    </ClCompile>
+    <ClCompile Include="Studious.cpp">
+      <Filter>Source Files\AI\Trait</Filter>
+    </ClCompile>
+    <ClCompile Include="FunLoving.cpp">
+      <Filter>Source Files\AI\Trait</Filter>
+    </ClCompile>
+    <ClCompile Include="AIManager.cpp">
+      <Filter>Source Files\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="NPC.cpp">
+      <Filter>Source Files\AI</Filter>
+>>>>>>> a20f80bd55a5e6a7caa7120e3e82361f9e782733
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -6,7 +6,9 @@ using namespace Objects;
 ProjectileObject::ProjectileObject(Ogre::Vector3 pos) : RigidBodyObject("Projectile.mesh")
 {
 	m_position = pos;
-	MakeBoxCollisionObject();
+	//MakeCollisionObject();
+	//MakeBoxCollisionObject();
+	MakeSphereCollisionObject();
 }
 
 

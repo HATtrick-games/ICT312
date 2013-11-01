@@ -6,6 +6,7 @@ using namespace Objects;
 TargetObject::TargetObject(void) : RigidBodyObject("Target.mesh")
 {
 	MakeBoxCollisionObject();
+	//MakeCollisionObject();
 } 
 
 
@@ -29,5 +30,9 @@ void TargetObject::update( float deltaTime )
 	
 	//ColObj->SetObjectOrientation(getOrientation());
 	//ColObj->SetObjectOrientation(Math::Vector3(0,0,1),90);
+	ColObj->SetPosition(m_position.x,m_position.y+30,m_position.z);
+	ColObj->SetObjectOrientation(getOrientation());
+	//ColObj->SetObjectOrientation(Ogre::Vector3(0,0,1),90);
+	//ColObj->SetPosition(getPosition().x,getPosition().y,getPosition().z); 
 	//cout<<"///////////////////////////////////////"<<getPosition().y<<"/////////////////////////////\n";
 }

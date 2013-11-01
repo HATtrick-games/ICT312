@@ -3,7 +3,7 @@
 class TemporaryPlayerObject
 {
 public:
-	Math::Vector3 lastposition;
+	Ogre::Vector3 lastposition;
 	TemporaryPlayerObject()
 	{
 		lastposition.x = 0;

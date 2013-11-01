@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "NodeContainerSingleton.h"
+#include "Vector3.h"
 
 NodeContainerSingleton* NodeContainerSingleton::Instance()
 {
@@ -8,15 +9,29 @@ NodeContainerSingleton* NodeContainerSingleton::Instance()
 	return &instance;
 }
 
+void NodeContainerSingleton::BuildMap()
+{
+	//This functions sets up all nodes.
+	Hallway.push_back(new MapNode(1, Ogre::Vector3(1,0,0)));
+	Hallway.push_back(new MapNode(2, Ogre::Vector3(2,0,0)));
+	Hallway.push_back(new MapNode(3, Ogre::Vector3(2,0,1)));
+	Hallway.push_back(new MapNode(4, Ogre::Vector3(1,0,-1)));
+	Hallway[0]->Partners.push_back(Hallway[1]);
+	Hallway[1]->Partners.push_back(Hallway[0]);
+	Hallway[1]->Partners.push_back(Hallway[2]);
+	Hallway[1]->Partners.push_back(Hallway[3]);
+	Hallway[2]->Partners.push_back(Hallway[1]);
+	Hallway[3]->Partners.push_back(Hallway[1]);
+	
+}
 
 
-
-MapNode* NodeContainerSingleton::FindNearestNode(Math::Vector3 pos)
+MapNode* NodeContainerSingleton::FindNearestNode(Ogre::Vector3 pos)
 {
 	float min = 100000;
 
 	
-	
+	cout<<"Position = "<<pos.x<<pos.y<<pos.z<<"\n";
 	if(1)//between this range)
 	{
 		for(int i = 0; i< Hallway.size(); i++)
@@ -102,6 +117,6 @@ MapNode* NodeContainerSingleton::FindNearestNode(Math::Vector3 pos)
 			}
 		}
 	}
-
+	cout<<"Temp node id = "<<TempNode->GetId()<<"\n";
 	return TempNode;
 }
