@@ -11,7 +11,8 @@
 #include "FunLoving.h"
 #include "Studious.h"
 #include "EasyGoing.h"
-//#include "npcFSM.h"
+#include "ItemStore.h"
+#include "IObject.h"
 
 class NPC //abstract later
 {
@@ -38,6 +39,9 @@ protected:
 	Goal* CurrentGoal;
 	EnumSpace::NPCState CurrentState;
 	Trait* myTrait;
+	Objects::IObject * myObj;
+	Objects::IObject* ObjectPointer;
+
 
 	std::map <EnumSpace::NeedTypes, int> CurrentNeeds;
 	std::map<EnumSpace::MoodTypes, int> MoodProgress;

@@ -14,7 +14,8 @@ public:
 	
 	virtual int GetThreshold(){return (GoalAction->GetThreshold() - AffordanceThreshold);}
 
-	void DecayThreshold(){AffordanceThreshold--;}
+	void DecayThreshold(){AffordanceThreshold++;}
+	void ResetThreshhold(){AffordanceThreshold = 0;}
 protected:
 	int AffordanceThreshold;
 	std::map<EnumSpace::NeedTypes, int> NeedOutcomes;

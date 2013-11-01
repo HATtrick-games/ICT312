@@ -12,6 +12,8 @@ public:
 
 	int GetThreshold() {return Threshold;}
 
+	std::string GetAffordanceName(){return AffordanceName;}
+
 	virtual void Activate() = 0;
 protected:
 
@@ -19,6 +21,7 @@ protected:
 
 	int* EmotionalMultipliers;
 
+	std::string AffordanceName;
 	int Threshold; //affordance
 	EnumSpace::ActionTypes Type;
 };

@@ -22,6 +22,8 @@ void NPC::Initialise(void)
 	CurrentMood = MoodManager::GetInstance()->FetchMood(EnumSpace::enumGood);
 	CurrentState = EnumSpace::enumIdling;
 
+	myObj = Core::Game::getSceneManager()->GetScene()->getObject("NPC1");
+
 	int i = rand() % 3;
 	
 	if(i == 0)
@@ -233,6 +235,8 @@ bool NPC::runCurrentState()
 			std::cout << "Interacting" << std::endl;
 			//get current object, perform current goal action with (% chance to repeat action = return false)
 			//CurrentGoal->GetAction()->Use();
+			//
+
 			return false;
 			break;
 		}
@@ -240,21 +244,21 @@ bool NPC::runCurrentState()
 		{
 			std::cout << "Searching for interactable object" << std::endl;
 			//this is where affordance checking comes in.
-			/*
 			
-				CurrentGoal->GetThreshold(); //compare this to affordance value on objects
+			
+				//CurrentGoal->GetThreshold(); //compare this to affordance value on objects
 				ObjectPointer = NULL;
-				ObjectPointer = blahclass::GetInstance()->GetObject(AI postion Ogre Vector, CurrentGoal->AffordanceName(string) CurrentGoal->AffordanceMin(int));
-				if (  == NULL )
+				ObjectPointer = ItemStore::Instance()->GetObject(myObj->getPosition(), CurrentGoal->GetAction()->GetAffordanceName(), CurrentGoal->GetThreshold());
+				if ( ObjectPointer == NULL )
 				{
-					Object Not found // change affordance value for next attempt
+				//	Object Not found // change affordance value for next attempt
+					CurrentGoal->DecayThreshold();
 				}
 				else
 				{
-					myObjectPointer = ObjectPointer;
+					CurrentState = EnumSpace::enumInteracting;
 				}
-
-			*/
+		
 			return true;
 			break;
 		}
