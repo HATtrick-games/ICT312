@@ -2,6 +2,7 @@
 #include "stdafx.h"
 #include "Action.h"
 #include "EnumSpace.h"
+#include "ActionManager.h"
 
 class Goal abstract
 {

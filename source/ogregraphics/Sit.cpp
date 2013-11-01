@@ -5,6 +5,7 @@
 Sit::Sit(void)
 {
 	Threshold = 70;
+	AffordanceName = "Sit";
 }
 
 

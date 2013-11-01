@@ -5,9 +5,9 @@ namespace EnumSpace
 {
 	enum ActionTypes
 	{
-		enumMoveItem,
-		enumUseItem,
-		ActionTypes_Max = enumUseItem
+		enumSit,
+		enumUseComputer,
+		ActionTypes_Max = enumUseComputer
 	};
 
 	enum MoodTypes

@@ -4,6 +4,7 @@
 UseComputer::UseComputer(void)
 {
 	Threshold = 70;
+	AffordanceName = "UseComputer";
 }
 
 

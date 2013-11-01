@@ -7,7 +7,7 @@ Work::Work(void)
 	//std::map<std::string, int> AffordanceThreshholds;
 	//std::map<EnumSpace::NeedTypes, int> NeedOutcomes;
 	
-
+	GoalAction = ActionManager::GetInstance()->FetchAction(EnumSpace::enumUseComputer);
 }
 
 

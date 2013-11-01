@@ -1,7 +1,8 @@
 #pragma once
 #include "stdafx.h"
 #include "Action.h"
-#include "MoveItem.h"
+#include "Sit.h"
+#include "UseComputer.h"
 #include "EmotionManager.h"
 
 class Action;

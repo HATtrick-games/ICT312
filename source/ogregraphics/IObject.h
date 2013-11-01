@@ -39,6 +39,7 @@ namespace Objects
 		Ogre::Entity*		getEntity();
 		std::map<std::string,int>* GetMap();
 		bool IsInteractable();
+		void SetInteractable(bool set){Interactable = set;}
 		int GetAffodance(std::string affordance);
 	protected:
 		void				loadMesh() const;

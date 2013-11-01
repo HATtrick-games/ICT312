@@ -220,7 +220,7 @@ bool NPC::runCurrentState()
 			std::cout << "Idling" << std::endl;
 			if(rand() %2 == 0)
 			{
-				std::cout << "Motivated, examining goals" << std::endl;
+				std::cout << "Motivated, examining goals..";
 				CurrentState = EnumSpace::enumThinking;
 				return true;
 			}
@@ -232,17 +232,17 @@ bool NPC::runCurrentState()
 		}
 		case EnumSpace::enumInteracting:
 		{
-			std::cout << "Interacting" << std::endl;
+			std::cout << "Interacting";
 			//get current object, perform current goal action with (% chance to repeat action = return false)
 			//CurrentGoal->GetAction()->Use();
-			//
+			ObjectPointer->SetInteractable(false);
 
 			return false;
 			break;
 		}
 		case EnumSpace::enumSearching:
 		{
-			std::cout << "Searching for interactable object" << std::endl;
+			std::cout << "Searching for interactable object... ";
 			//this is where affordance checking comes in.
 			
 			
@@ -256,6 +256,7 @@ bool NPC::runCurrentState()
 				}
 				else
 				{
+					std::cout << "Found an object with suitable affordance";
 					CurrentState = EnumSpace::enumInteracting;
 				}
 		

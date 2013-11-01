@@ -17,13 +17,13 @@ Action* ActionManager::FetchAction(EnumSpace::ActionTypes DesiredAction)
 {
 	if(ActionDB[DesiredAction] == NULL)
 	{
-		if(DesiredAction== EnumSpace::enumMoveItem)
+		if(DesiredAction== EnumSpace::enumSit)
 		{
-			//ActionDB[DesiredAction] = new MoveItem;
+			ActionDB[DesiredAction] = new Sit;
 		}
-		else if(DesiredAction == EnumSpace::enumUseItem)
+		else if(DesiredAction == EnumSpace::enumUseComputer)
 		{
-			//ActionDB[DesiredAction] = new Bad;	
+			ActionDB[DesiredAction] = new UseComputer;	
 		}
 		return ActionDB[DesiredAction];
 	}
@@ -49,7 +49,7 @@ void ActionManager::InitialiseAction(EnumSpace::ActionTypes ActionType, int Mult
 void ActionManager::Init(void)
 {
 	int Multipliers[] = {7, 1, 2};
-	InitialiseAction(EnumSpace::enumMoveItem, Multipliers);
+	InitialiseAction(EnumSpace::enumUseComputer, Multipliers);
 }
 
 ActionManager* ActionManager::GetInstance()

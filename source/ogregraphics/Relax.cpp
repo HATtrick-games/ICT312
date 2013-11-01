@@ -4,6 +4,7 @@
 
 Relax::Relax(void)
 {
+	GoalAction = ActionManager::GetInstance()->FetchAction(EnumSpace::enumSit);
 }
 
 
