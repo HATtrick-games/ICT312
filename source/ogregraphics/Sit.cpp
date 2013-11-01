@@ -4,6 +4,7 @@
 
 Sit::Sit(void)
 {
+	Threshold = 70;
 }
 
 

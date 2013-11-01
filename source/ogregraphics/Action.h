@@ -19,6 +19,6 @@ protected:
 
 	int* EmotionalMultipliers;
 
-	int Threshold;
+	int Threshold; //affordance
 	EnumSpace::ActionTypes Type;
 };

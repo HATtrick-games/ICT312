@@ -10,6 +10,7 @@
 #include "Trait.h"
 #include "FunLoving.h"
 #include "Studious.h"
+#include "EasyGoing.h"
 //#include "npcFSM.h"
 
 class NPC //abstract later

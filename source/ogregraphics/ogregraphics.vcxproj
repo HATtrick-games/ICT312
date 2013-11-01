@@ -91,6 +91,7 @@
     <ClInclude Include="Contact.h" />
     <ClInclude Include="DebugDrawer.h" />
     <ClInclude Include="DebugDrawerOg.h" />
+    <ClInclude Include="EasyGoing.h" />
     <ClInclude Include="Emotion.h" />
     <ClInclude Include="EmotionManager.h" />
     <ClInclude Include="EnumSpace.h" />
@@ -148,6 +149,7 @@
     <ClCompile Include="CollisionWorldSingleton.cpp" />
     <ClCompile Include="DebugDrawer.cpp" />
     <ClCompile Include="DebugDrawerOg.cpp" />
+    <ClCompile Include="EasyGoing.cpp" />
     <ClCompile Include="EmotionManager.cpp" />
     <ClCompile Include="FrameListener.cpp" />
     <ClCompile Include="FunLoving.cpp" />

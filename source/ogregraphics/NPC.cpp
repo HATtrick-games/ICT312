@@ -34,7 +34,7 @@ void NPC::Initialise(void)
 	}
 	else
 	{
-		myTrait = new FunLoving; //change to third
+		myTrait = new EasyGoing; 
 	}
 }
 
@@ -68,7 +68,6 @@ bool NPC::EmotionCheck(void)
 	CurrentEmotion = EmotionManager::GetInstance()->FetchEmotion(EmotionalOutcome); //Change emotion
 
 	ProgressMood(EmotionalOutcome);
-	//Do something with this emotion. Swap it out and ...?
 
 	return true;
 }
@@ -299,4 +298,9 @@ void NPC::Update()
 	}
 
 	//if currently owns a goal + affordance, decay that affordance
+	
+	if(CurrentGoal != NULL)
+	{
+		CurrentGoal->DecayThreshold();
+	}
 }

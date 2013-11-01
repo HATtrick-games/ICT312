@@ -273,6 +273,9 @@
     <ClInclude Include="NPC.h">
       <Filter>Header Files\AI</Filter>
     </ClInclude>
+    <ClInclude Include="EasyGoing.h">
+      <Filter>Header Files\AI\Trait</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -409,6 +412,9 @@
     </ClCompile>
     <ClCompile Include="NPC.cpp">
       <Filter>Source Files\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="EasyGoing.cpp">
+      <Filter>Source Files\AI\Trait</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
