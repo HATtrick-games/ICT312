@@ -27,6 +27,7 @@ CollisionObject* PlayerSphere;
 //CollisionObject* col[10];
 TemporaryPlayerObject* Player;
 WorldMap * mapper;
+AIManager*	Controller;
 Ogre::RaySceneQuery * mRaySceneQuery;
 
 
@@ -125,8 +126,6 @@ int Game::initialise()
 	// initialise scene manager
 	m_sceneManager = new Scenes::SceneManager( new Scenes::ITBuildingScene() );
 	
-	//Controller = new AIManager;
-
 
 	 Player = new TemporaryPlayerObject();
 	// Player->SetLastPos(0,0,0);
@@ -305,13 +304,16 @@ int Game::initialise()
 	ItemStore::Instance()->AddObject(Core::Game::getSceneManager()->GetScene()->getObject("SofaStool_1"));
 	Core::Game::getSceneManager()->GetScene()->getObject("SofaStool_1")->SetInteractable(true);
 
+	Controller = new AIManager();
+
 	return 0;
 
 }
 
 void Game::gameLoop()
 {
-	
+
+
 	while( m_running )
 	{
 		CollisionWorldSingleton::Instance()->CheckCollision();
@@ -330,6 +332,7 @@ void Game::gameLoop()
 		time(&timer2);
 		PlayerSphere->SetPosition(m_sceneManager->GetScene()->getObject("Camera")->getPosition().x,m_sceneManager->GetScene()->getObject("Camera")->getPosition().y,m_sceneManager->GetScene()->getObject("Camera")->getPosition().z);
 		TestSelect();
+		Controller->UpdateAI();
 		if(Core::Game::getKeyboard()->isKeyDown( OIS::KC_L )&&difftime(timer2,timer)>0.01)
 		{
 			time(&timer);

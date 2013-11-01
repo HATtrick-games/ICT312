@@ -63,6 +63,7 @@ void AIManager::UpdateAI()
 	{
 		std::cout << "NPC " << i << " ";
 		NPCList[i]->Update();
+
 		NPCList[i]->runCurrentState();
 	}
 }

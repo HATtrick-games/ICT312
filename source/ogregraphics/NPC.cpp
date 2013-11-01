@@ -21,7 +21,7 @@ void NPC::Initialise(void)
 	CurrentEmotion = EmotionManager::GetInstance()->FetchEmotion(EnumSpace::enumNeutral);
 	CurrentMood = MoodManager::GetInstance()->FetchMood(EnumSpace::enumGood);
 	CurrentState = EnumSpace::enumIdling;
-
+	CurrentGoal = NULL;
 	myObj = Core::Game::getSceneManager()->GetScene()->getObject("NPC1");
 
 	int i = rand() % 3;
@@ -196,6 +196,8 @@ bool NPC::DetermineGoal()
 }
 bool NPC::runCurrentState()
 {
+	std::cout << "CURRENT STATE";
+	std::getchar();
 	switch(CurrentState)
 	{
 		case EnumSpace::enumThinking:
@@ -249,6 +251,8 @@ bool NPC::runCurrentState()
 				//CurrentGoal->GetThreshold(); //compare this to affordance value on objects
 				ObjectPointer = NULL;
 				ObjectPointer = ItemStore::Instance()->GetObject(myObj->getPosition(), CurrentGoal->GetAction()->GetAffordanceName(), CurrentGoal->GetThreshold());
+				std::cout << "Checked ItemSTORE";
+				std::getchar();
 				if ( ObjectPointer == NULL )
 				{
 				//	Object Not found // change affordance value for next attempt
@@ -304,6 +308,7 @@ void NPC::Update()
 
 	//if currently owns a goal + affordance, decay that affordance
 	
+
 	if(CurrentGoal != NULL)
 	{
 		CurrentGoal->DecayThreshold();

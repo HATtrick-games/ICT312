@@ -1,3 +1,4 @@
+#pragma once
 #include "Vector3.h"
 #include <stdlib.h>
 #include "IObject.h"
