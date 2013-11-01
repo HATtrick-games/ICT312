@@ -297,7 +297,7 @@ int Game::initialise()
 	CollisionWorldSingleton::Instance()->SetUpDebug();
 	time(&timer);
 
-	Core::Game::getSceneManager()->GetScene()->addObject("NPC1",  new Objects::GenericObject(Ogre::Vector3(0,0,-100), Ogre::Vector3(0,0,0), "Corkboard.mesh"));
+	Core::Game::getSceneManager()->GetScene()->addObject("NPC1",  new Objects::GenericObject(Ogre::Vector3(0,0,-100), Ogre::Vector3(0,0,0), "Projectile.mesh"));
 	return 0;
 
 }
