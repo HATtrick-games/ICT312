@@ -173,14 +173,17 @@ bool NPC::DetermineGoal()
 		case EnumSpace::enumFun:
 			{
 				CurrentGoal = new Relax;
+				break;
 			}
 		case EnumSpace::enumComfort:
 			{
 				CurrentGoal = new Relax;
+				break;
 			}
 		case EnumSpace::enumGrades:
 			{
 				CurrentGoal = new Work;
+				break;
 			}
 
 		}
@@ -241,6 +244,10 @@ bool NPC::runCurrentState()
 			//CurrentGoal->GetAction()->Use();
 			ObjectPointer->SetInteractable(false);
 
+			if(rand()%10 == 0) //replace
+			{
+				CurrentState = EnumSpace::enumIdling; ///replace
+			}
 			return false;
 			break;
 		}
