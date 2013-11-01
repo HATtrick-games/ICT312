@@ -110,9 +110,15 @@ bool NPC::DetermineGoal()
 {
 	//Determine a status bar priority
 	
-	//Slot in here ADD TRAIT MODIFIER TO APPROPRIATE NEED
+	int Grades = 0;
+	int Comfort = 0;
+	int Fun = 0;
 
-	int Total = CurrentNeeds[EnumSpace::enumGrades] + CurrentNeeds[EnumSpace::enumComfort] + CurrentNeeds[EnumSpace::enumFun];
+	Grades = CurrentNeeds[EnumSpace::enumGrades] + myTrait->GetGoalModifier()[EnumSpace::enumGrades];
+	Comfort = CurrentNeeds[EnumSpace::enumComfort] + myTrait->GetGoalModifier()[EnumSpace::enumComfort];
+	Fun = CurrentNeeds[EnumSpace::enumFun] + myTrait->GetGoalModifier()[EnumSpace::enumFun];
+
+	int Total = Grades + Comfort + Fun;
 
 	int Outcome = 0;
 	if(Total != 0)
@@ -123,22 +129,22 @@ bool NPC::DetermineGoal()
 	int NeedLevel = 0;
 	EnumSpace::NeedTypes Need;
 	getchar();
-	if(Outcome > (Total -= CurrentNeeds[EnumSpace::enumFun]))
+	if(Outcome > (Total -= Fun))
 	{
 		std::cout << "Prioritising Fun" << std::endl;
-		NeedLevel = CurrentNeeds[EnumSpace::enumFun];
+		NeedLevel = Fun;
 		Need = EnumSpace::enumFun;
 	}
-	else if(Outcome > (Total -= CurrentNeeds[EnumSpace::enumComfort]))
+	else if(Outcome > (Total -= Comfort))
 	{
 		std::cout << "Prioritising Comfort" << std::endl;
-		NeedLevel = CurrentNeeds[EnumSpace::enumComfort];
+		NeedLevel = Comfort;
 		Need = EnumSpace::enumComfort;
 	}
-	else if(Outcome > (Total -= CurrentNeeds[EnumSpace::enumGrades]))
+	else if(Outcome > (Total -= Grades))
 	{
 		std::cout << "Prioritising Grades" << std::endl;
-		NeedLevel = CurrentNeeds[EnumSpace::enumGrades];
+		NeedLevel = Grades;
 		Need = EnumSpace::enumGrades;
 	}
 	else
@@ -177,8 +183,7 @@ bool NPC::DetermineGoal()
 			}
 
 		}
-	
-		
+			
 		return true;
 	}
 	else

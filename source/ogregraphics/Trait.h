@@ -5,8 +5,9 @@ class Trait abstract
 {
 public:
 
+	std::map<EnumSpace::NeedTypes, int> GetGoalModifier() {return GoalModifier;}
 
 protected:
-	
+	std::map<EnumSpace::NeedTypes, int> GoalModifier;
 };
 
