@@ -122,7 +122,7 @@ int Game::initialise()
 	m_mouse = static_cast< OIS::Mouse* >( m_inputManager->createInputObject( OIS::OISMouse, false ) );
 
 	// initialise scene manager
-	m_sceneManager = new Scenes::SceneManager( new Scenes::TestScene() );
+	m_sceneManager = new Scenes::SceneManager( new Scenes::ITBuildingScene() );
 
 
 	 Player = new TemporaryPlayerObject();
@@ -283,8 +283,8 @@ int Game::initialise()
 	/*********************ENDS HERE*********??????????????/////////////*/
 
 	//Core::Game::getSceneManager()->GetScene()->addObject(string aNamegoeshere,  new Objects::Typegoeshere);
-	Core::Game::getSceneManager()->GetScene()->getObject("Camera")->setPosition(Ogre::Vector3(0.0f, 0.0f, 0.0f));
-	Player->SetLastPos(0.0f, 0.0f, 0.0f);
+	Core::Game::getSceneManager()->GetScene()->getObject("Camera")->setPosition(Ogre::Vector3(-623.419, -277, -1048.77));
+	Player->SetLastPos(-623.419, -277, -1048.77);
 	mapper = new WorldMap;
 	mapper->FindPath(Ogre::Vector3(1,0,0),Ogre::Vector3(2,0,10));
 	MapNode * temp;
