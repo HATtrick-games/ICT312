@@ -47,7 +47,7 @@ bool NPC::EmotionCheck(void)
 
 	for(int i =0; i < EnumSpace::EmotionTypes_Max; i++)
 	{	
-		TotalModifiers[i] += (ActionManager::GetInstance()->GetEmotionMultipliers(CurrentAction->GetType())[(EnumSpace::EmotionTypes)i]);
+		TotalModifiers[i] += (ActionManager::GetInstance()->GetEmotionMultipliers(CurrentGoal->GetAction()->GetType())[(EnumSpace::EmotionTypes)i]);
 		TotalModifiers[i] += (MoodManager::GetInstance()->GetEmotionMultipliers(CurrentMood->GetType())[(EnumSpace::EmotionTypes)i]);
 
 		Total += TotalModifiers[i];
@@ -239,21 +239,35 @@ bool NPC::runCurrentState()
 		}
 		case EnumSpace::enumInteracting:
 		{
-			std::cout << "Interacting";
+			std::cout << "Interacting" << std::endl;
 			//get current object, perform current goal action with (% chance to repeat action = return false)
 			//CurrentGoal->GetAction()->Use();
 			ObjectPointer->SetInteractable(false);
 
 			if(CurrentGoal->GetAction()->Activate())
 			{
-				//Increment and check needs
-				// 
+				EmotionCheck();
+				CurrentState = EnumSpace::enumIdling; 
+			}
+			else
+			{
+				CurrentNeeds[EnumSpace::enumFun] -= (*CurrentGoal->ModifyNeeds())[EnumSpace::enumFun];
+				CurrentNeeds[EnumSpace::enumGrades] -= (*CurrentGoal->ModifyNeeds())[EnumSpace::enumGrades];
+				CurrentNeeds[EnumSpace::enumComfort] -= (*CurrentGoal->ModifyNeeds())[EnumSpace::enumComfort];
+				if(CurrentNeeds[EnumSpace::enumFun] < 0)
+				{
+					CurrentNeeds[EnumSpace::enumFun] = 0;
+				}
+				if(CurrentNeeds[EnumSpace::enumGrades] < 0)
+				{
+					CurrentNeeds[EnumSpace::enumGrades] = 0;
+				}
+				if(CurrentNeeds[EnumSpace::enumComfort] < 0)
+				{
+					CurrentNeeds[EnumSpace::enumComfort] = 0;
+				}
 			}
 
-			if(rand()%10 == 0) //replace
-			{
-				CurrentState = EnumSpace::enumIdling; ///replace
-			}
 			return false;
 			break;
 		}

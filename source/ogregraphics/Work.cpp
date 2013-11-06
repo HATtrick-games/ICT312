@@ -8,6 +8,10 @@ Work::Work(void)
 	//std::map<EnumSpace::NeedTypes, int> NeedOutcomes;
 	
 	GoalAction = ActionManager::GetInstance()->FetchAction(EnumSpace::enumUseComputer);
+
+	NeedOutcomes[EnumSpace::enumFun] = 0;
+	NeedOutcomes[EnumSpace::enumComfort] = 0;
+	NeedOutcomes[EnumSpace::enumGrades] = 3;
 }
 
 
