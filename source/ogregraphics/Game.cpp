@@ -300,16 +300,17 @@ int Game::initialise()
 	time(&timer);
 
 	Core::Game::getSceneManager()->GetScene()->addObject("NPC1",  new Objects::GenericObject(Ogre::Vector3(0,0,-100), Ogre::Vector3(0,0,0), "Projectile.mesh"));
-	Core::Game::getSceneManager()->GetScene()->getObject("SofaStool_1")->Affordances["Sit"] = 100;
-	Core::Game::getSceneManager()->GetScene()->getObject("SofaStool_1")->Affordances["UseComputer"] = 0;
-	ItemStore::Instance()->AddObject(Core::Game::getSceneManager()->GetScene()->getObject("SofaStool_1"));
-	Core::Game::getSceneManager()->GetScene()->getObject("SofaStool_1")->SetInteractable(true);
+
+	SetAffordances();
+	
 
 	Controller = new AIManager();
 
 	return 0;
 
 }
+
+
 
 void Game::gameLoop()
 {
@@ -350,4 +351,158 @@ void Game::gameLoop()
 
 
 	}
+}
+
+
+
+void Game::SetAffordances()
+{
+	Core::Game::getSceneManager()->GetScene()->getObject("Chair_1")->Affordances["Sit"] = 80;
+	Core::Game::getSceneManager()->GetScene()->getObject("Chair_1")->SetInteractable(true);
+	ItemStore::Instance()->AddObject(Core::Game::getSceneManager()->GetScene()->getObject("Chair_1"));
+	Core::Game::getSceneManager()->GetScene()->getObject("Chair_2")->Affordances["Sit"] = 80;
+	Core::Game::getSceneManager()->GetScene()->getObject("Chair_2")->SetInteractable(true);
+	ItemStore::Instance()->AddObject(Core::Game::getSceneManager()->GetScene()->getObject("Chair_2"));
+	Core::Game::getSceneManager()->GetScene()->getObject("Chair_3")->Affordances["Sit"] = 80;
+	Core::Game::getSceneManager()->GetScene()->getObject("Chair_3")->SetInteractable(true);
+	ItemStore::Instance()->AddObject(Core::Game::getSceneManager()->GetScene()->getObject("Chair_3"));
+	Core::Game::getSceneManager()->GetScene()->getObject("Chair_4")->Affordances["Sit"] = 80;
+	Core::Game::getSceneManager()->GetScene()->getObject("Chair_4")->SetInteractable(true);
+	ItemStore::Instance()->AddObject(Core::Game::getSceneManager()->GetScene()->getObject("Chair_4"));
+	Core::Game::getSceneManager()->GetScene()->getObject("Chair_5")->Affordances["Sit"] = 80;
+	Core::Game::getSceneManager()->GetScene()->getObject("Chair_5")->SetInteractable(true);
+	ItemStore::Instance()->AddObject(Core::Game::getSceneManager()->GetScene()->getObject("Chair_5"));
+	Core::Game::getSceneManager()->GetScene()->getObject("Chair_6")->Affordances["Sit"] = 80;
+	Core::Game::getSceneManager()->GetScene()->getObject("Chair_6")->SetInteractable(true);
+	ItemStore::Instance()->AddObject(Core::Game::getSceneManager()->GetScene()->getObject("Chair_6"));
+	Core::Game::getSceneManager()->GetScene()->getObject("Chair_7")->Affordances["Sit"] = 80;
+	Core::Game::getSceneManager()->GetScene()->getObject("Chair_7")->SetInteractable(true);
+	ItemStore::Instance()->AddObject(Core::Game::getSceneManager()->GetScene()->getObject("Chair_7"));
+	Core::Game::getSceneManager()->GetScene()->getObject("Chair_8")->Affordances["Sit"] = 80;
+	Core::Game::getSceneManager()->GetScene()->getObject("Chair_8")->SetInteractable(true);
+	ItemStore::Instance()->AddObject(Core::Game::getSceneManager()->GetScene()->getObject("Chair_8"));
+	Core::Game::getSceneManager()->GetScene()->getObject("Chair_9")->Affordances["Sit"] = 80;
+	Core::Game::getSceneManager()->GetScene()->getObject("Chair_9")->SetInteractable(true);
+	ItemStore::Instance()->AddObject(Core::Game::getSceneManager()->GetScene()->getObject("Chair_9"));
+	Core::Game::getSceneManager()->GetScene()->getObject("Chair_10")->Affordances["Sit"] = 80;
+	Core::Game::getSceneManager()->GetScene()->getObject("Chair_10")->SetInteractable(true);
+	ItemStore::Instance()->AddObject(Core::Game::getSceneManager()->GetScene()->getObject("Chair_10"));
+	Core::Game::getSceneManager()->GetScene()->getObject("Chair_11")->Affordances["Sit"] = 80;
+	Core::Game::getSceneManager()->GetScene()->getObject("Chair_11")->SetInteractable(true);
+	ItemStore::Instance()->AddObject(Core::Game::getSceneManager()->GetScene()->getObject("Chair_11"));
+	Core::Game::getSceneManager()->GetScene()->getObject("Chair_12")->Affordances["Sit"] = 80;
+	Core::Game::getSceneManager()->GetScene()->getObject("Chair_12")->SetInteractable(true);
+	ItemStore::Instance()->AddObject(Core::Game::getSceneManager()->GetScene()->getObject("Chair_12"));
+	Core::Game::getSceneManager()->GetScene()->getObject("Chair_13")->Affordances["Sit"] = 80;
+	Core::Game::getSceneManager()->GetScene()->getObject("Chair_13")->SetInteractable(true);
+	ItemStore::Instance()->AddObject(Core::Game::getSceneManager()->GetScene()->getObject("Chair_13"));
+	Core::Game::getSceneManager()->GetScene()->getObject("Chair_14")->Affordances["Sit"] = 80;
+	Core::Game::getSceneManager()->GetScene()->getObject("Chair_14")->SetInteractable(true);
+	ItemStore::Instance()->AddObject(Core::Game::getSceneManager()->GetScene()->getObject("Chair_14"));
+	Core::Game::getSceneManager()->GetScene()->getObject("Computer")->Affordances["Sit"] = 1;
+	Core::Game::getSceneManager()->GetScene()->getObject("Computer")->Affordances["UseComputer"] = 100;
+	Core::Game::getSceneManager()->GetScene()->getObject("Computer")->SetInteractable(true);
+	ItemStore::Instance()->AddObject(Core::Game::getSceneManager()->GetScene()->getObject("Computer"));
+	Core::Game::getSceneManager()->GetScene()->getObject("Computer_1")->Affordances["Sit"] = 1;
+	Core::Game::getSceneManager()->GetScene()->getObject("Computer_1")->Affordances["UseComputer"] = 100;
+	Core::Game::getSceneManager()->GetScene()->getObject("Computer_1")->SetInteractable(true);
+	ItemStore::Instance()->AddObject(Core::Game::getSceneManager()->GetScene()->getObject("Computer_1"));
+	Core::Game::getSceneManager()->GetScene()->getObject("Computer_2")->Affordances["Sit"] = 1;
+	Core::Game::getSceneManager()->GetScene()->getObject("Computer_2")->Affordances["UseComputer"] = 100;
+	Core::Game::getSceneManager()->GetScene()->getObject("Computer_2")->SetInteractable(true);
+	ItemStore::Instance()->AddObject(Core::Game::getSceneManager()->GetScene()->getObject("Computer_2"));
+	Core::Game::getSceneManager()->GetScene()->getObject("Computer_3")->Affordances["Sit"] = 1;
+	Core::Game::getSceneManager()->GetScene()->getObject("Computer_3")->Affordances["UseComputer"] = 100;
+	Core::Game::getSceneManager()->GetScene()->getObject("Computer_3")->SetInteractable(true);
+	ItemStore::Instance()->AddObject(Core::Game::getSceneManager()->GetScene()->getObject("Computer_3"));
+	Core::Game::getSceneManager()->GetScene()->getObject("Computer_4")->Affordances["Sit"] = 1;
+	Core::Game::getSceneManager()->GetScene()->getObject("Computer_4")->Affordances["UseComputer"] = 100;
+	Core::Game::getSceneManager()->GetScene()->getObject("Computer_4")->SetInteractable(true);
+	ItemStore::Instance()->AddObject(Core::Game::getSceneManager()->GetScene()->getObject("Computer_4"));
+	Core::Game::getSceneManager()->GetScene()->getObject("Computer_5")->Affordances["Sit"] = 1;
+	Core::Game::getSceneManager()->GetScene()->getObject("Computer_5")->Affordances["UseComputer"] = 100;
+	Core::Game::getSceneManager()->GetScene()->getObject("Computer_5")->SetInteractable(true);
+	ItemStore::Instance()->AddObject(Core::Game::getSceneManager()->GetScene()->getObject("Computer_5"));
+	Core::Game::getSceneManager()->GetScene()->getObject("Computer_6")->Affordances["Sit"] = 1;
+	Core::Game::getSceneManager()->GetScene()->getObject("Computer_6")->Affordances["UseComputer"] = 100;
+	Core::Game::getSceneManager()->GetScene()->getObject("Computer_6")->SetInteractable(true);
+	ItemStore::Instance()->AddObject(Core::Game::getSceneManager()->GetScene()->getObject("Computer_6"));
+	Core::Game::getSceneManager()->GetScene()->getObject("Computer_7")->Affordances["Sit"] = 1;
+	Core::Game::getSceneManager()->GetScene()->getObject("Computer_7")->Affordances["UseComputer"] = 100;
+	Core::Game::getSceneManager()->GetScene()->getObject("Computer_7")->SetInteractable(true);
+	ItemStore::Instance()->AddObject(Core::Game::getSceneManager()->GetScene()->getObject("Computer_7"));
+	Core::Game::getSceneManager()->GetScene()->getObject("Computer_8")->Affordances["Sit"] = 1;
+	Core::Game::getSceneManager()->GetScene()->getObject("Computer_8")->Affordances["UseComputer"] = 100;
+	Core::Game::getSceneManager()->GetScene()->getObject("Computer_8")->SetInteractable(true);
+	ItemStore::Instance()->AddObject(Core::Game::getSceneManager()->GetScene()->getObject("Computer_8"));
+	Core::Game::getSceneManager()->GetScene()->getObject("Computer_9")->Affordances["Sit"] = 1;
+	Core::Game::getSceneManager()->GetScene()->getObject("Computer_9")->Affordances["UseComputer"] = 100;
+	Core::Game::getSceneManager()->GetScene()->getObject("Computer_9")->SetInteractable(true);
+	ItemStore::Instance()->AddObject(Core::Game::getSceneManager()->GetScene()->getObject("Computer_9"));
+	Core::Game::getSceneManager()->GetScene()->getObject("Computer_10")->Affordances["Sit"] = 1;
+	Core::Game::getSceneManager()->GetScene()->getObject("Computer_10")->Affordances["UseComputer"] = 100;
+	Core::Game::getSceneManager()->GetScene()->getObject("Computer_10")->SetInteractable(true);
+	ItemStore::Instance()->AddObject(Core::Game::getSceneManager()->GetScene()->getObject("Computer_10"));
+	Core::Game::getSceneManager()->GetScene()->getObject("Computer_11")->Affordances["Sit"] = 1;
+	Core::Game::getSceneManager()->GetScene()->getObject("Computer_11")->Affordances["UseComputer"] = 100;
+	Core::Game::getSceneManager()->GetScene()->getObject("Computer_11")->SetInteractable(true);
+	ItemStore::Instance()->AddObject(Core::Game::getSceneManager()->GetScene()->getObject("Computer_11"));
+	Core::Game::getSceneManager()->GetScene()->getObject("Computer_12")->Affordances["Sit"] = 1;
+	Core::Game::getSceneManager()->GetScene()->getObject("Computer_12")->Affordances["UseComputer"] = 100;
+	Core::Game::getSceneManager()->GetScene()->getObject("Computer_12")->SetInteractable(true);
+	ItemStore::Instance()->AddObject(Core::Game::getSceneManager()->GetScene()->getObject("Computer_12"));
+	Core::Game::getSceneManager()->GetScene()->getObject("Computer_13")->Affordances["Sit"] = 1;
+	Core::Game::getSceneManager()->GetScene()->getObject("Computer_13")->Affordances["UseComputer"] = 100;
+	Core::Game::getSceneManager()->GetScene()->getObject("Computer_13")->SetInteractable(true);
+	ItemStore::Instance()->AddObject(Core::Game::getSceneManager()->GetScene()->getObject("Computer_13"));
+	Core::Game::getSceneManager()->GetScene()->getObject("Computer_14")->Affordances["Sit"] = 1;
+	Core::Game::getSceneManager()->GetScene()->getObject("Computer_14")->Affordances["UseComputer"] = 100;
+	Core::Game::getSceneManager()->GetScene()->getObject("Computer_14")->SetInteractable(true);
+	ItemStore::Instance()->AddObject(Core::Game::getSceneManager()->GetScene()->getObject("Computer_14"));
+	Core::Game::getSceneManager()->GetScene()->getObject("Stool")->Affordances["Sit"] = 70;
+	Core::Game::getSceneManager()->GetScene()->getObject("Stool")->SetInteractable(true);
+	ItemStore::Instance()->AddObject(Core::Game::getSceneManager()->GetScene()->getObject("Stool"));
+	Core::Game::getSceneManager()->GetScene()->getObject("Stool_2")->Affordances["Sit"] = 70;
+	Core::Game::getSceneManager()->GetScene()->getObject("Stool_2")->SetInteractable(true);
+	ItemStore::Instance()->AddObject(Core::Game::getSceneManager()->GetScene()->getObject("Stool_2"));
+	Core::Game::getSceneManager()->GetScene()->getObject("Stool_1")->Affordances["Sit"] = 70;
+	Core::Game::getSceneManager()->GetScene()->getObject("Stool_1")->SetInteractable(true);
+	ItemStore::Instance()->AddObject(Core::Game::getSceneManager()->GetScene()->getObject("Stool_1"));
+	Core::Game::getSceneManager()->GetScene()->getObject("Stool_3")->Affordances["Sit"] = 70;
+	Core::Game::getSceneManager()->GetScene()->getObject("Stool_3")->SetInteractable(true);
+	ItemStore::Instance()->AddObject(Core::Game::getSceneManager()->GetScene()->getObject("Stool_3"));
+	Core::Game::getSceneManager()->GetScene()->getObject("Stool002")->Affordances["Sit"] = 70;
+	Core::Game::getSceneManager()->GetScene()->getObject("Stool002")->SetInteractable(true);
+	ItemStore::Instance()->AddObject(Core::Game::getSceneManager()->GetScene()->getObject("Stool002"));
+	Core::Game::getSceneManager()->GetScene()->getObject("Stool_4")->Affordances["Sit"] = 70;
+	Core::Game::getSceneManager()->GetScene()->getObject("Stool_4")->SetInteractable(true);
+	ItemStore::Instance()->AddObject(Core::Game::getSceneManager()->GetScene()->getObject("Stool_4"));
+	Core::Game::getSceneManager()->GetScene()->getObject("SofaBlue")->Affordances["Sit"] = 90;
+	Core::Game::getSceneManager()->GetScene()->getObject("SofaBlue")->SetInteractable(true);
+	ItemStore::Instance()->AddObject(Core::Game::getSceneManager()->GetScene()->getObject("SofaBlue"));
+	Core::Game::getSceneManager()->GetScene()->getObject("CurvedSofa")->Affordances["Sit"] = 90;
+	Core::Game::getSceneManager()->GetScene()->getObject("CurvedSofa")->SetInteractable(true);
+	ItemStore::Instance()->AddObject(Core::Game::getSceneManager()->GetScene()->getObject("CurvedSofa"));
+	Core::Game::getSceneManager()->GetScene()->getObject("CurvedSofa_1")->Affordances["Sit"] = 90;
+	Core::Game::getSceneManager()->GetScene()->getObject("CurvedSofa_1")->SetInteractable(true);
+	ItemStore::Instance()->AddObject(Core::Game::getSceneManager()->GetScene()->getObject("CurvedSofa_1"));
+	Core::Game::getSceneManager()->GetScene()->getObject("CurvedSofa_2")->Affordances["Sit"] = 90;
+	Core::Game::getSceneManager()->GetScene()->getObject("CurvedSofa_2")->SetInteractable(true);
+	ItemStore::Instance()->AddObject(Core::Game::getSceneManager()->GetScene()->getObject("CurvedSofa_2"));
+	Core::Game::getSceneManager()->GetScene()->getObject("CurvedSofa002")->Affordances["Sit"] = 90;
+	Core::Game::getSceneManager()->GetScene()->getObject("CurvedSofa002")->SetInteractable(true);
+	ItemStore::Instance()->AddObject(Core::Game::getSceneManager()->GetScene()->getObject("CurvedSofa002"));
+	Core::Game::getSceneManager()->GetScene()->getObject("SofaBlue_1")->Affordances["Sit"] = 90;
+	Core::Game::getSceneManager()->GetScene()->getObject("SofaBlue_1")->SetInteractable(true);
+	ItemStore::Instance()->AddObject(Core::Game::getSceneManager()->GetScene()->getObject("SofaBlue_1"));
+	Core::Game::getSceneManager()->GetScene()->getObject("CornerTable")->Affordances["Sit"] = 30;
+	Core::Game::getSceneManager()->GetScene()->getObject("CornerTable")->SetInteractable(true);
+	ItemStore::Instance()->AddObject(Core::Game::getSceneManager()->GetScene()->getObject("CornerTable"));
+	Core::Game::getSceneManager()->GetScene()->getObject("CornerTable_1")->Affordances["Sit"] = 30;
+	Core::Game::getSceneManager()->GetScene()->getObject("CornerTable_1")->SetInteractable(true);
+	ItemStore::Instance()->AddObject(Core::Game::getSceneManager()->GetScene()->getObject("CornerTable_1"));
+	Core::Game::getSceneManager()->GetScene()->getObject("SofaStool_1")->Affordances["Sit"] = 75;
+	Core::Game::getSceneManager()->GetScene()->getObject("SofaStool_1")->Affordances["UseComputer"] = 0;
+	ItemStore::Instance()->AddObject(Core::Game::getSceneManager()->GetScene()->getObject("SofaStool_1"));
+	Core::Game::getSceneManager()->GetScene()->getObject("SofaStool_1")->SetInteractable(true);
 }

@@ -25,6 +25,7 @@ namespace Core
 		static OIS::Keyboard*			getKeyboard() { return m_keyboard; }
 		static OIS::Mouse*				getMouse() { return m_mouse; }
 		static void TestSelect();
+		static void SetAffordances();
 	private:
 		Game() { }
 

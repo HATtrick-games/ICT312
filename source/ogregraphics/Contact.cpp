@@ -122,6 +122,7 @@ Ogre::Vector3 Contact::CalculateImpulse(Ogre::Matrix3* inverseInertiaTensor)
 	deltaVelocity += deltaVelWorld.dotProduct(normal);
 	deltaVelocity += B->getInverseMass();
 
+	// calculate the required size of the impulse
 	impulseContact.x = desiredDeltaVelocity / deltaVelocity;
 	impulseContact.y = 0;
 	impulseContact.z = 0;
@@ -150,7 +151,7 @@ void Contact::ApplyVelocityChange()
 	
 	impulsiveTorque = relativeContactPosition[1].crossProduct(impulse);
 	rotationChange[1] = inverseInertiaTensor[1] * impulsiveTorque;
-	velocityChange[1] = impulse * A->getInverseMass();
+	velocityChange[1] = impulse * -1 * B->getInverseMass();
 
 	B->addVelocity(velocityChange[1]);
 	B->addRotation(rotationChange[1]);
