@@ -9,6 +9,6 @@ public:
 	UseComputer(void);
 	~UseComputer(void);
 
-	void Activate();
+	bool Activate();
 };
 

@@ -19,3 +19,8 @@ bool Work::CheckForTrigger(std::map<EnumSpace::NeedTypes, int>)
 {
 	return true;
 }
+
+std::map<EnumSpace::NeedTypes, int>* Work::ModifyNeeds()
+{
+
+}

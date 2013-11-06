@@ -8,6 +8,6 @@ public:
 	Sit(void);
 	~Sit(void);
 
-	void Activate();
+	bool Activate();
 };
 

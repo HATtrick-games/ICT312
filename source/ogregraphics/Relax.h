@@ -11,6 +11,7 @@ public:
 
 	bool CheckForTrigger(std::map<EnumSpace::NeedTypes, int>);
 
+	std::map<EnumSpace::NeedTypes, int>* ModifyNeeds();
 	//bool isCompleted(){};
 };
 

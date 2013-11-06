@@ -244,6 +244,12 @@ bool NPC::runCurrentState()
 			//CurrentGoal->GetAction()->Use();
 			ObjectPointer->SetInteractable(false);
 
+			if(CurrentGoal->GetAction()->Activate())
+			{
+				//Increment and check needs
+				// 
+			}
+
 			if(rand()%10 == 0) //replace
 			{
 				CurrentState = EnumSpace::enumIdling; ///replace
