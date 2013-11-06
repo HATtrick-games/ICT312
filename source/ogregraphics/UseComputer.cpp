@@ -14,5 +14,5 @@ UseComputer::~UseComputer(void)
 
 bool UseComputer::Activate()
 {
-
+	return true;
 }

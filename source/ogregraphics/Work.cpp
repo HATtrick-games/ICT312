@@ -22,5 +22,5 @@ bool Work::CheckForTrigger(std::map<EnumSpace::NeedTypes, int>)
 
 std::map<EnumSpace::NeedTypes, int>* Work::ModifyNeeds()
 {
-
+	return &NeedOutcomes;
 }
