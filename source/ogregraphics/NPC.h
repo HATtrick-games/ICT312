@@ -18,7 +18,7 @@ class NPC
 {
 public:
 	NPC(void);
-	NPC(Objects::IObject* Obj){ObjectPointer = Obj; Initialise();};
+	NPC(Objects::IObject* Obj){myObj = Obj; Initialise();}
 	~NPC(void);
 
 	bool EmotionCheck();
