@@ -7,6 +7,8 @@ GenericObject::GenericObject()
 {
 	
 	setID();
+	AI = -1;
+
 }
 
 GenericObject::GenericObject(Ogre::Vector3 pos, Ogre::Vector3 rot, std::string meshFile)
@@ -14,17 +16,21 @@ GenericObject::GenericObject(Ogre::Vector3 pos, Ogre::Vector3 rot, std::string m
 	setID();
 	m_position = pos;
 	m_filename = meshFile;
-
+	AI = -1;
 	loadMesh();
 
 	setRoll(rot.x);
 	setYaw(rot.y);
 	setPitch(rot.z);
 	MakeCollisionObject();
+	Type = "RigidBodyObject";
+	getEntity()->setQueryFlags(Targetable);
+	getEntity()->setUserAny((Ogre::Any)(GenericObject*)this);
 }
 
 GenericObject::GenericObject(Ogre::Vector3 pos, Ogre::Quaternion rot, Ogre::Vector3 scale, std::string meshFile)
 {
+	AI = -1;
 	setID();
 	m_position = pos;
 	m_filename = meshFile;
@@ -54,7 +60,9 @@ GenericObject::GenericObject(Ogre::Vector3 pos, Ogre::Quaternion rot, Ogre::Vect
 	}*/
 	//	std::cout<<"TABLE IS MADE HERE \n\n\n\n";
 		
-	
+	Type = "RigidBodyObject";
+	getEntity()->setQueryFlags(Targetable);
+	getEntity()->setUserAny((Ogre::Any)(GenericObject*)this);
 	
 }
 

@@ -30,7 +30,7 @@ public:
 	bool runCurrentState();
 	void ProgressMood(EnumSpace::EmotionTypes S);
 
-	void Clicked();
+	void Clicked(std::string click);
 
 protected:
 	Action* CurrentAction;

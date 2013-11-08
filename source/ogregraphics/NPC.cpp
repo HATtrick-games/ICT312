@@ -129,7 +129,7 @@ bool NPC::DetermineGoal()
 
 	int NeedLevel = 0;
 	EnumSpace::NeedTypes Need;
-	getchar();
+	//getchar();
 	if(Outcome > (Total -= Fun))
 	{
 		std::cout << "Prioritising Fun" << std::endl;
@@ -200,16 +200,24 @@ bool NPC::DetermineGoal()
 
 }
 
-void NPC::Clicked()
+void NPC::Clicked(std::string Click)
 {
+	if(Click == "Left")
+	{
 	std::cout << "Hey don't click me!";
 	ProgressMood(EnumSpace::enumSad);
+	}
+	else
+	{
+		std::cout<<"That feels nice!";
+		ProgressMood(EnumSpace::enumHappy);
+	}
 }
 
 bool NPC::runCurrentState()
 {
 	std::cout << "CURRENT STATE";
-	std::getchar();
+	//std::getchar();
 	switch(CurrentState)
 	{
 		case EnumSpace::enumThinking:
@@ -289,7 +297,7 @@ bool NPC::runCurrentState()
 				cout<<CurrentGoal->GetThreshold()<<"\n";
 				ObjectPointer = ItemStore::Instance()->GetObject(myObj->getPosition(), "Sit", CurrentGoal->GetThreshold());
 				std::cout << "Checked ItemSTORE";
-				std::getchar();
+				//std::getchar();
 				//cout<<ObjectPointer->getEntityName()<<"\n";
 				if ( ObjectPointer == NULL )
 				{

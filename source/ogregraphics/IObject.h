@@ -7,6 +7,7 @@ namespace Objects
 	class IObject
 	{
 	public:
+		int AI;
 		std::string Type;
 		int m_id;
 		virtual void		initialise() = 0;
