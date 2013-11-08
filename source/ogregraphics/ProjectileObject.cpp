@@ -26,7 +26,7 @@ void ProjectileObject::initialise()
 void ProjectileObject::update(float deltaTime)
 {
 	//std::cout << getPosition() << std::endl;
-	std::cout << m_velocity << std::endl;
+	//std::cout << m_velocity << std::endl;
 
 	RigidBodyObject::update(deltaTime);
 	ColObj->SetPosition(m_position.x,m_position.y,m_position.z);

@@ -50,7 +50,7 @@ void RigidBodyObject::update( float deltaTime )
 
 	m_force = Ogre::Vector3::ZERO;
 
-	if(m_position.y < 0) m_position.y = 0;
+	if(m_position.y < 0) m_velocity.y *= -0.8; // bouncing
 
 	//rotateByVector(m_angularVelocity, Core::Game::getGraphics()->getDeltaTime());
 	
