@@ -22,7 +22,7 @@ void NPC::Initialise(void)
 	CurrentMood = MoodManager::GetInstance()->FetchMood(EnumSpace::enumGood);
 	CurrentState = EnumSpace::enumIdling;
 	CurrentGoal = NULL;
-	myObj = Core::Game::getSceneManager()->GetScene()->getObject("NPC1");
+
 
 	int i = rand() % 3;
 	
@@ -199,6 +199,13 @@ bool NPC::DetermineGoal()
 
 
 }
+
+void NPC::Clicked()
+{
+	std::cout << "Hey don't click me!";
+	ProgressMood(EnumSpace::enumSad);
+}
+
 bool NPC::runCurrentState()
 {
 	std::cout << "CURRENT STATE";
@@ -240,8 +247,7 @@ bool NPC::runCurrentState()
 		case EnumSpace::enumInteracting:
 		{
 			std::cout << "Interacting" << std::endl;
-			//get current object, perform current goal action with (% chance to repeat action = return false)
-			//CurrentGoal->GetAction()->Use();
+
 			ObjectPointer->SetInteractable(false);
 
 			if(CurrentGoal->GetAction()->Activate())

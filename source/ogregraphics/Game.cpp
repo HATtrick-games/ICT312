@@ -300,11 +300,16 @@ int Game::initialise()
 	time(&timer);
 
 	Core::Game::getSceneManager()->GetScene()->addObject("NPC1",  new Objects::GenericObject(Ogre::Vector3(0,0,-100), Ogre::Vector3(0,0,0), "Projectile.mesh"));
+	Core::Game::getSceneManager()->GetScene()->addObject("NPC2",  new Objects::GenericObject(Ogre::Vector3(50,0,-100), Ogre::Vector3(0,0,0), "Projectile.mesh"));
+	Core::Game::getSceneManager()->GetScene()->addObject("NPC3",  new Objects::GenericObject(Ogre::Vector3(-50,0,-100), Ogre::Vector3(0,0,0), "Projectile.mesh"));
 
 	SetAffordances();
 	
 
 	Controller = new AIManager();
+	Controller->AddNPC(Core::Game::getSceneManager()->GetScene()->getObject("NPC1"));
+	Controller->AddNPC(Core::Game::getSceneManager()->GetScene()->getObject("NPC2"));
+	Controller->AddNPC(Core::Game::getSceneManager()->GetScene()->getObject("NPC3"));
 
 	return 0;
 
