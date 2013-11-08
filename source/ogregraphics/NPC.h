@@ -14,10 +14,11 @@
 #include "ItemStore.h"
 #include "IObject.h"
 
-class NPC //abstract later
+class NPC 
 {
 public:
 	NPC(void);
+	NPC(Objects::IObject* Obj){myObj = Obj; Initialise();}
 	~NPC(void);
 
 	bool EmotionCheck();
@@ -29,8 +30,7 @@ public:
 	bool runCurrentState();
 	void ProgressMood(EnumSpace::EmotionTypes S);
 
-	//void setPosition();
-	//vector3 getPosition
+	void Clicked(std::string click);
 
 protected:
 	Action* CurrentAction;

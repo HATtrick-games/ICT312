@@ -33,8 +33,17 @@ Ogre::RaySceneQuery * mRaySceneQuery;
 
 void Game::TestSelect()
 {
-	if(Core::Game::getMouse()->getMouseState().buttonDown(OIS::MB_Left))
+	std::string click;
+	if(Core::Game::getMouse()->getMouseState().buttonDown(OIS::MB_Left) ||Core::Game::getMouse()->getMouseState().buttonDown(OIS::MB_Right))
 	{
+		if(Core::Game::getMouse()->getMouseState().buttonDown(OIS::MB_Right))
+		{
+			click = "Right";
+		}
+		else
+		{
+			click = "Left";
+		}
 		mRaySceneQuery = Core::Game::getGraphics()->GetSceneManager()->createRayQuery(Ogre::Ray());
 		Ogre::Vector3 oldpos;
 		Ogre::Vector3 originalPos;
@@ -47,14 +56,14 @@ void Game::TestSelect()
 		Ogre::RaySceneQueryResult &result = mRaySceneQuery->execute();
 
 		Ogre::MovableObject *closestObject = NULL;
-		Ogre::Real closestDistance = 100;
+		Ogre::Real closestDistance = 300;
 		//Ogre::RaySceneQueryResult::iterator itr = result.begin();
 		
 		 Ogre::RaySceneQueryResult::iterator rayIterator;
 
 		 for(rayIterator = result.begin(); rayIterator != result.end(); rayIterator++ ) 
      {
-		 if ((*rayIterator).movable !=NULL && closestDistance>(*rayIterator).distance && (*rayIterator).movable->getMovableType() != "TerrainMipMap"&& (*rayIterator ).movable->getName() != "entity0" && (*rayIterator).movable->getQueryFlags() == Targetable)
+		 if ((*rayIterator).movable !=NULL && closestDistance>(*rayIterator).distance && (*rayIterator).movable->getMovableType() != "TerrainMipMap"&& (*rayIterator ).movable->getName() != "entity1" && (*rayIterator).movable->getQueryFlags() == Targetable)
          {
              closestObject = ( *rayIterator ).movable;
              closestDistance = ( *rayIterator ).distance;
@@ -70,6 +79,13 @@ void Game::TestSelect()
 	if(closestObject)
 	{
 	 cout<<"ID = "<< closestObject->getName()<<"\n";
+	 Objects::GenericObject * temp = Ogre::any_cast<Objects::GenericObject*>(closestObject->getUserAny());
+	 if(temp->AI > -1)
+	 {
+		 Controller->GetNPC(temp->AI)->Clicked(click);
+		 Sleep(100);
+	 }
+	 
 	/*Objects::GenericObject * temp = Ogre::any_cast<Objects::GenericObject*>(closestObject->getUserAny());
 	if(temp->Type != "\0")
 	{
@@ -86,6 +102,8 @@ void Game::TestSelect()
 	}
 
 	}
+
+	
 }
 
 Game::~Game(void)
@@ -299,12 +317,24 @@ int Game::initialise()
 	CollisionWorldSingleton::Instance()->SetUpDebug();
 	time(&timer);
 
-	Core::Game::getSceneManager()->GetScene()->addObject("NPC1",  new Objects::GenericObject(Ogre::Vector3(0,0,-100), Ogre::Vector3(0,0,0), "Projectile.mesh"));
+	Core::Game::getSceneManager()->GetScene()->addObject("NPC1",  new Objects::GenericObject(Ogre::Vector3(-623.419, -277, -1048.77), Ogre::Vector3(0,0,0), "Projectile.mesh"));
+	Core::Game::getSceneManager()->GetScene()->addObject("NPC2",  new Objects::GenericObject(Ogre::Vector3(-200.419, -277, -1048.77), Ogre::Vector3(0,0,0), "Projectile.mesh"));
+	Core::Game::getSceneManager()->GetScene()->addObject("NPC3",  new Objects::GenericObject(Ogre::Vector3(100.419, -277, -1048.77), Ogre::Vector3(0,0,0), "Projectile.mesh"));
 
 	SetAffordances();
 	
 
 	Controller = new AIManager();
+	Controller->AddNPC(Core::Game::getSceneManager()->GetScene()->getObject("NPC1"));
+	Core::Game::getSceneManager()->GetScene()->getObject("NPC1")->AI = 0;
+	Core::Game::getSceneManager()->GetScene()->getObject("NPC1")->setScale(Ogre::Vector3(20,20,20));
+	Controller->AddNPC(Core::Game::getSceneManager()->GetScene()->getObject("NPC2"));
+	Core::Game::getSceneManager()->GetScene()->getObject("NPC2")->AI = 1;
+	Core::Game::getSceneManager()->GetScene()->getObject("NPC2")->setScale(Ogre::Vector3(20,20,20));
+	Controller->AddNPC(Core::Game::getSceneManager()->GetScene()->getObject("NPC3"));
+	Core::Game::getSceneManager()->GetScene()->getObject("NPC3")->AI = 2;
+	Core::Game::getSceneManager()->GetScene()->getObject("NPC3")->setScale(Ogre::Vector3(20,20,20));
+	
 
 	return 0;
 

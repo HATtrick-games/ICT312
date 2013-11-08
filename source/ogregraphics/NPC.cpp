@@ -22,7 +22,7 @@ void NPC::Initialise(void)
 	CurrentMood = MoodManager::GetInstance()->FetchMood(EnumSpace::enumGood);
 	CurrentState = EnumSpace::enumIdling;
 	CurrentGoal = NULL;
-	myObj = Core::Game::getSceneManager()->GetScene()->getObject("NPC1");
+
 
 	int i = rand() % 3;
 	
@@ -47,7 +47,7 @@ bool NPC::EmotionCheck(void)
 
 	for(int i =0; i < EnumSpace::EmotionTypes_Max; i++)
 	{	
-		TotalModifiers[i] += (ActionManager::GetInstance()->GetEmotionMultipliers(CurrentAction->GetType())[(EnumSpace::EmotionTypes)i]);
+		TotalModifiers[i] += (ActionManager::GetInstance()->GetEmotionMultipliers(CurrentGoal->GetAction()->GetType())[(EnumSpace::EmotionTypes)i]);
 		TotalModifiers[i] += (MoodManager::GetInstance()->GetEmotionMultipliers(CurrentMood->GetType())[(EnumSpace::EmotionTypes)i]);
 
 		Total += TotalModifiers[i];
@@ -129,7 +129,7 @@ bool NPC::DetermineGoal()
 
 	int NeedLevel = 0;
 	EnumSpace::NeedTypes Need;
-	getchar();
+	//getchar();
 	if(Outcome > (Total -= Fun))
 	{
 		std::cout << "Prioritising Fun" << std::endl;
@@ -199,10 +199,25 @@ bool NPC::DetermineGoal()
 
 
 }
+
+void NPC::Clicked(std::string Click)
+{
+	if(Click == "Left")
+	{
+	std::cout << "Hey don't click me!";
+	ProgressMood(EnumSpace::enumSad);
+	}
+	else
+	{
+		std::cout<<"That feels nice!";
+		ProgressMood(EnumSpace::enumHappy);
+	}
+}
+
 bool NPC::runCurrentState()
 {
 	std::cout << "CURRENT STATE";
-	std::getchar();
+	//std::getchar();
 	switch(CurrentState)
 	{
 		case EnumSpace::enumThinking:
@@ -239,15 +254,34 @@ bool NPC::runCurrentState()
 		}
 		case EnumSpace::enumInteracting:
 		{
-			std::cout << "Interacting";
-			//get current object, perform current goal action with (% chance to repeat action = return false)
-			//CurrentGoal->GetAction()->Use();
+			std::cout << "Interacting" << std::endl;
+
 			ObjectPointer->SetInteractable(false);
 
-			if(rand()%10 == 0) //replace
+			if(CurrentGoal->GetAction()->Activate())
 			{
-				CurrentState = EnumSpace::enumIdling; ///replace
+				EmotionCheck();
+				CurrentState = EnumSpace::enumIdling; 
 			}
+			else
+			{
+				CurrentNeeds[EnumSpace::enumFun] -= (*CurrentGoal->ModifyNeeds())[EnumSpace::enumFun];
+				CurrentNeeds[EnumSpace::enumGrades] -= (*CurrentGoal->ModifyNeeds())[EnumSpace::enumGrades];
+				CurrentNeeds[EnumSpace::enumComfort] -= (*CurrentGoal->ModifyNeeds())[EnumSpace::enumComfort];
+				if(CurrentNeeds[EnumSpace::enumFun] < 0)
+				{
+					CurrentNeeds[EnumSpace::enumFun] = 0;
+				}
+				if(CurrentNeeds[EnumSpace::enumGrades] < 0)
+				{
+					CurrentNeeds[EnumSpace::enumGrades] = 0;
+				}
+				if(CurrentNeeds[EnumSpace::enumComfort] < 0)
+				{
+					CurrentNeeds[EnumSpace::enumComfort] = 0;
+				}
+			}
+
 			return false;
 			break;
 		}
@@ -263,7 +297,7 @@ bool NPC::runCurrentState()
 				cout<<CurrentGoal->GetThreshold()<<"\n";
 				ObjectPointer = ItemStore::Instance()->GetObject(myObj->getPosition(), "Sit", CurrentGoal->GetThreshold());
 				std::cout << "Checked ItemSTORE";
-				std::getchar();
+				//std::getchar();
 				//cout<<ObjectPointer->getEntityName()<<"\n";
 				if ( ObjectPointer == NULL )
 				{

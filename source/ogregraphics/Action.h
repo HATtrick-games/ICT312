@@ -14,7 +14,7 @@ public:
 
 	std::string GetAffordanceName(){return AffordanceName;}
 
-	virtual void Activate() = 0;
+	virtual bool Activate() = 0;
 protected:
 
 	void SetEmotionalMultipliers(int *MultiplierArray) {EmotionalMultipliers = new int[EnumSpace::EmotionTypes_Max]; EmotionalMultipliers = MultiplierArray;};

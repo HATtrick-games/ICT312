@@ -12,7 +12,7 @@ UseComputer::~UseComputer(void)
 {
 }
 
-void UseComputer::Activate()
+bool UseComputer::Activate()
 {
-
+	return true;
 }

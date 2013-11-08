@@ -13,7 +13,18 @@ Sit::~Sit(void)
 {
 }
 
-void Sit::Activate()
+bool Sit::Activate()
 {
+	std::cout << "Sitting";
 
+	int outcome = rand() %10;
+
+	if(outcome == 0)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
 }
