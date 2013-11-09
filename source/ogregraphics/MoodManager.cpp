@@ -54,8 +54,10 @@ std::map<EnumSpace::EmotionTypes, int> MoodManager::GetEmotionMultipliers(EnumSp
 
 void MoodManager::Init(void)
 {
-	int Multipliers[] = {7, 1, 2};
+	int Multipliers[] = {1, 3, 0};
 	InitialiseMood(EnumSpace::enumGood, Multipliers);
+	int Multipliers2[] = {1, 0, 3};
+	InitialiseMood(EnumSpace::enumBad, Multipliers2);
 }
 
 MoodManager* MoodManager::GetInstance()
