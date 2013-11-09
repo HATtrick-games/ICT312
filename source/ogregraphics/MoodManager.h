@@ -25,7 +25,6 @@ public:
 private:
 	std::map<EnumSpace::MoodTypes, Mood*> MoodDB;
 	std::map<EnumSpace::MoodTypes, std::map<EnumSpace::EmotionTypes, int>> MoodEmotionMultipliers;
-	//std::map<EnumSpace::MoodTypes, int> MoodProgression;
 
 
 	static MoodManager* Instance;

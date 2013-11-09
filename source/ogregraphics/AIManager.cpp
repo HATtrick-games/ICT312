@@ -4,7 +4,7 @@
 
 AIManager::AIManager(void)
 {
-
+	counter = 0;
 }
 
 
@@ -28,11 +28,16 @@ NPC* AIManager::GetNPC(int Index)
 
 void AIManager::UpdateAI()
 {
-	for(int i = 0; i < NPCList.size(); i++)
+	if(counter%100 == 0)
 	{
-		std::cout << "NPC " << i << " ";
-		NPCList[i]->Update();
+		for(int i = 0; i < NPCList.size(); i++)
+		{
+			std::cout << std::endl << "NPC " << i << " " << std::endl;
+			NPCList[i]->Update();
 
-		NPCList[i]->runCurrentState();
+			NPCList[i]->runCurrentState();
+
+		}
 	}
+	counter++;
 }

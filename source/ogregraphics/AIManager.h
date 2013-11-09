@@ -15,7 +15,7 @@ public:
 	NPC* GetNPC(int index);
 
 private:
-
+	int counter;
 	std::vector<NPC*> NPCList;
 };
 
