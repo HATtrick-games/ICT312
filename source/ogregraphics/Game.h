@@ -24,7 +24,27 @@ namespace Core
 		static OIS::InputManager*		getInputManager() { return m_inputManager; }
 		static OIS::Keyboard*			getKeyboard() { return m_keyboard; }
 		static OIS::Mouse*				getMouse() { return m_mouse; }
+
+		/**
+		 * \fn	static void Game::TestSelect();
+		 *
+		 * \brief	This is a raycasting function for triggering a response in AI.
+		 *
+		 * \author	Arran Ford
+		 * \date	09/11/2013
+		 */
+
 		static void TestSelect();
+
+		/**
+		 * \fn	static void Game::SetAffordances();
+		 *
+		 * \brief	Sets affordances for objects in the world
+		 *
+		 * \author	Arran Ford
+		 * \date	09/11/2013
+		 */
+
 		static void SetAffordances();
 	private:
 		Game() { }
