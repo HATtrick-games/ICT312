@@ -1,0 +1,9 @@
+What Works:
+	Collision Detection
+	RayCasting
+	Model Rendering
+	Camera Movement
+	Player to NPC interaction
+	
+What Does Not Work:
+	
