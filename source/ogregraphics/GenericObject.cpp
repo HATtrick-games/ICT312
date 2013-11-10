@@ -73,7 +73,8 @@ GenericObject::~GenericObject(void)
 
 void GenericObject::initialise()
 {
-
+	Affordances["UseComputer"] = 0;
+	Affordances["Sit"] = 0;
 }
 
 void GenericObject::update( float deltaTime )
