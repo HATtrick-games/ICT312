@@ -5,6 +5,7 @@ using namespace Objects;
 
 RigidBodyObject::RigidBodyObject(std::string meshFile)
 {
+	isDynamic = true;
 	setID();
 	m_filename = meshFile;
 	loadMesh();

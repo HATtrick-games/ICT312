@@ -657,7 +657,7 @@ void ITBuildingScene::createProjectile()
 
 	addObject("projectile" + idString.str() , projectile );
 
-	std::cout << Core::Game::getGraphics()->cameraDirection() << std::endl;
+	//std::cout << Core::Game::getGraphics()->cameraDirection() << std::endl;
 
 	m_numProjectiles++;
 }

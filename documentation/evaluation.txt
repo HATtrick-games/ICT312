@@ -7,7 +7,9 @@ What Works:
 	AI mood and emotion system
 	Goal based AI decision making
 	Random trait system for AI
-	AI responds to the player	
-
-What Does Not Work:
+	AI responds to the player
+	Firing of projectiles when pressing the spacebar
+	Projectiles bouncing when they hit the floor
 	
+What Does Not Work:
+	Projectile collision with all objects in the scene
