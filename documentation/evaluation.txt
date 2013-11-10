@@ -4,6 +4,10 @@ What Works:
 	Model Rendering
 	Camera Movement
 	Player to NPC interaction
-	
+	AI mood and emotion system
+	Goal based AI decision making
+	Random trait system for AI
+	AI responds to the player	
+
 What Does Not Work:
 	

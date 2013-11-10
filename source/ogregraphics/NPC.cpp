@@ -108,9 +108,7 @@ void NPC::ProgressMood(EnumSpace::EmotionTypes EmotionalOutcome)
 }
 
 bool NPC::DetermineGoal()
-{
-	//Determine a status bar priority
-	
+{	
 	int Grades = 0;
 	int Comfort = 0;
 	int Fun = 0;
@@ -129,7 +127,6 @@ bool NPC::DetermineGoal()
 
 	int NeedLevel = 0;
 	EnumSpace::NeedTypes Need;
-	//getchar();
 	if(Outcome > (Total -= Fun))
 	{
 		std::cout << "Prioritising Fun" << std::endl;
@@ -188,7 +185,6 @@ bool NPC::DetermineGoal()
 
 		}
 		CurrentGoal->ResetThreshhold();
-
 			
 		return true;
 	}
@@ -216,14 +212,13 @@ void NPC::Clicked(std::string Click)
 
 bool NPC::runCurrentState()
 {
-	std::cout << "CURRENT STATE";
-	//std::getchar();
+	std::cout << "CURRENT STATE" << std::endl;
 	switch(CurrentState)
 	{
 		case EnumSpace::enumThinking:
 		{
 			std::cout << "Thinking" << std::endl;
-			if(DetermineGoal()) //return true if a goal is determined, if not return to idle?
+			if(DetermineGoal()) 
 			{
 				std::cout << "Goal Determined" << std::endl;
 				CurrentState = EnumSpace::enumSearching;
@@ -242,7 +237,7 @@ bool NPC::runCurrentState()
 			std::cout << "Idling" << std::endl;
 			if(rand() %2 == 0)
 			{
-				std::cout << "Motivated, examining goals..";
+				std::cout << "Motivated, examining goals.." << std::endl;
 				CurrentState = EnumSpace::enumThinking;
 				return true;
 			}
@@ -287,26 +282,19 @@ bool NPC::runCurrentState()
 		}
 		case EnumSpace::enumSearching:
 		{
-			std::cout << "Searching for interactable object... ";
-			//this is where affordance checking comes in.
-			
-			
-				//CurrentGoal->GetThreshold(); //compare this to affordance value on objects
+			std::cout << "Searching for interactable object... " << std::endl;
+
 				ObjectPointer = NULL;
-				cout<<CurrentGoal->GetAction()->GetAffordanceName()<<"\n";
-				cout<<CurrentGoal->GetThreshold()<<"\n";
-				ObjectPointer = ItemStore::Instance()->GetObject(myObj->getPosition(), "Sit", CurrentGoal->GetThreshold());
-				std::cout << "Checked ItemSTORE";
-				//std::getchar();
-				//cout<<ObjectPointer->getEntityName()<<"\n";
+				std::cout << CurrentGoal->GetAction()->GetAffordanceName();
+				ObjectPointer = ItemStore::Instance()->GetObject(myObj->getPosition(), CurrentGoal->GetAction()->GetAffordanceName(), CurrentGoal->GetThreshold());
+
 				if ( ObjectPointer == NULL )
 				{
-				//	Object Not found // change affordance value for next attempt
 					CurrentGoal->DecayThreshold();
 				}
 				else
 				{
-					std::cout << "Found an object with suitable affordance";
+					std::cout << "Found an object with suitable affordance" << std::endl;
 					CurrentState = EnumSpace::enumInteracting;
 				}
 		
@@ -317,10 +305,6 @@ bool NPC::runCurrentState()
 }
 void NPC::Update()
 {
-
-
-	//Decay a random Need
-
 	switch(rand() % 3)
 	{
 	case 0:
@@ -351,9 +335,6 @@ void NPC::Update()
 			break;
 		}
 	}
-
-	//if currently owns a goal + affordance, decay that affordance
-	
 
 	if(CurrentGoal != NULL)
 	{

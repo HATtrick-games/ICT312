@@ -83,9 +83,9 @@ void Game::TestSelect()
 	 if(temp->AI > -1)
 	 {
 		 Controller->GetNPC(temp->AI)->Clicked(click);
-		 Sleep(100);
+
 	 }
-	 
+	 Sleep(100);
 	/*Objects::GenericObject * temp = Ogre::any_cast<Objects::GenericObject*>(closestObject->getUserAny());
 	if(temp->Type != "\0")
 	{
