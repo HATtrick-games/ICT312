@@ -126,7 +126,7 @@ private:
 		
 
 		Draw = false;
-		DebugObject = new OgreBulletDraw();
+		//DebugObject = new OgreBulletDraw();
 		collisionConfiguration = new btDefaultCollisionConfiguration();
 		dispatcher = new btCollisionDispatcher(collisionConfiguration);
 		broadphase = new btDbvtBroadphase();
