@@ -220,7 +220,8 @@ void OgreGraphics::setEntityRoll( std::string identifier, float angle )
 
 void OgreGraphics::setEntityPosition( std::string identifier, float x, float y, float z )
 {
-	m_sceneNodes[identifier]->setPosition( x, y, z );
+	if(!_isnan(x) && !_isnan(y) && !_isnan(z))
+		m_sceneNodes[identifier]->setPosition( x, y, z );
 }
 
 //-----------------------------------------------------------------------------

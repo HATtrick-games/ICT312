@@ -2,6 +2,8 @@
 
 #include "IScene.h"
 #include "SceneLoader.h"
+#include "TargetObject.h"
+#include "ProjectileObject.h"
 
 namespace Scenes
 {
@@ -18,10 +20,15 @@ namespace Scenes
 
 		CameraType		m_cameraType;
 		float cameraSpeed;
+
+		bool m_projectileKeyDown;
+		int m_numProjectiles;
 	
 		void createScene();
 		void freeCamera( float deltaTime );
 		void firstPersonCamera( float deltaTime );
+
+		void createProjectile();
 
 		void moveObject( std::string objectName, float deltaTime ); // FOR DEBUG PURPOSES
 	};
