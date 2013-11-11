@@ -47,34 +47,20 @@ void CollisionWorldSingleton::CheckCollision()
 		btPersistentManifold* contactManifold =  collisionWorld->getDispatcher()->getManifoldByIndexInternal(i);
 		btCollisionObject* obA = (btCollisionObject*)(contactManifold->getBody0());
 		btCollisionObject* obB = (btCollisionObject*)(contactManifold->getBody1());
-		
-		
 
 		if((obB->getUserPointer())&&(obA->getUserPointer()))
 				{
-					Physics::Manifold mani;
-					mani.A = static_cast<Objects::RigidBodyObject*>(obA->getUserPointer());
-					mani.B = static_cast<Objects::RigidBodyObject*>(obB->getUserPointer());
-					std::cout<<"ID1: = "<<mani.A->m_id<<"\n";
-					std::cout<<"ID2: = "<<mani.B->m_id<<"\n";
 					if(contactManifold->getNumContacts() > 0)
 					{
 						btManifoldPoint contact = contactManifold->getContactPoint(0);
 
-						mani.numContacts = contactManifold->getNumContacts();
-						mani.contacts[0] = Ogre::Vector3(contact.getPositionWorldOnA().getX(), contact.getPositionWorldOnA().getY(), contact.getPositionWorldOnA().getZ());
-						mani.contacts[1] = Ogre::Vector3(contact.getPositionWorldOnB().getX(), contact.getPositionWorldOnB().getY(), contact.getPositionWorldOnB().getZ());
-
-						std::cout << contactManifold->getNumContacts() << std::endl;
-						std::cout<< contact.m_normalWorldOnB.getX() << " " << contact.m_normalWorldOnB.getY() << " " << contact.m_normalWorldOnB.getZ() << " " << std::endl;
-
-						mani.normal = Ogre::Vector3(contact.m_normalWorldOnB.getX(), contact.m_normalWorldOnB.getY(), contact.m_normalWorldOnB.getZ());
-
-						//Physics::PhysicsEngine::ApplyImpulse(mani);
-						Physics::Contact(static_cast<Objects::RigidBodyObject*>(obA->getUserPointer()),
-							static_cast<Objects::RigidBodyObject*>(obB->getUserPointer()),
-							Ogre::Vector3(contact.getPositionWorldOnA().getX(), contact.getPositionWorldOnA().getY(), contact.getPositionWorldOnA().getZ()),
-							Ogre::Vector3(contact.m_normalWorldOnB.getX(), contact.m_normalWorldOnB.getY(), contact.m_normalWorldOnB.getZ()));
+						if(static_cast<Objects::GenericObject*>(obA->getUserPointer())->isDynamic && static_cast<Objects::GenericObject*>(obB->getUserPointer())->isDynamic)
+						{
+							Physics::Contact(static_cast<Objects::RigidBodyObject*>(obA->getUserPointer()),
+								static_cast<Objects::RigidBodyObject*>(obB->getUserPointer()),
+								Ogre::Vector3(contact.getPositionWorldOnA().getX(), contact.getPositionWorldOnA().getY(), contact.getPositionWorldOnA().getZ()),
+								Ogre::Vector3(contact.m_normalWorldOnB.getX(), contact.m_normalWorldOnB.getY(), contact.m_normalWorldOnB.getZ()));
+						}
 					}
 
 					

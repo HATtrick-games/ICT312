@@ -5,6 +5,7 @@ using namespace Objects;
 
 RigidBodyObject::RigidBodyObject(std::string meshFile)
 {
+	isDynamic = true;
 	setID();
 	m_filename = meshFile;
 	loadMesh();
@@ -50,7 +51,7 @@ void RigidBodyObject::update( float deltaTime )
 
 	m_force = Ogre::Vector3::ZERO;
 
-	if(m_position.y < 0) m_velocity.y *= -0.8; // bouncing
+	if(m_position.y < -470) m_velocity.y *= -0.8; // bouncing
 
 	//rotateByVector(m_angularVelocity, Core::Game::getGraphics()->getDeltaTime());
 	

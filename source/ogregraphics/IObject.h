@@ -43,11 +43,15 @@ namespace Objects
 		void SetInteractable(bool set){Interactable = set;}
 		int GetAffodance(std::string affordance);
 		std::map<std::string,int> Affordances;
+
+		bool isDynamic;
 	protected:
 		void				loadMesh() const;
 		CollisionObject* ColObj;
 		Ogre::Vector3 m_position;
 		Ogre::Quaternion m_rotation;
+
+		
 		
 		std::string m_filename;
 

@@ -8,6 +8,9 @@ void ITBuildingScene::initialise()
 	m_cameraType = CAM_FIRSTPERSON;
 	cameraSpeed = 100.0f;
 
+	m_projectileKeyDown = false;
+	m_numProjectiles = 0;
+
 	Core::Game::getGraphics()->cameraSetPosition( 0, 0, 50 );
 	Core::Game::getGraphics()->cameraSetLookAt( 0, 0, 0 );
 
@@ -25,6 +28,9 @@ void ITBuildingScene::initialise()
 
 	addObject( "Camera", new Objects::GenericObject( Ogre::Vector3(-623.419, -277, -1048.77), 
 		Ogre::Vector3(0, 0, 0), "models/boxmesh.mesh" ) );
+
+	addObject( "Target", new Objects::TargetObject() );
+	getObject("Target")->setPosition( Ogre::Vector3(-623.419, -277, -1048.77) );
 
 	m_sceneLoader = SceneLoader(this);
 	m_sceneLoader.loadScene("../assets/itbuilding.scene");
@@ -60,7 +66,16 @@ void ITBuildingScene::update( float deltaTime )
 		break;
 	}
 
-	//moveObject("Mouse11", deltaTime);
+	if( Core::Game::getKeyboard()->isKeyDown( OIS::KC_SPACE ) && !m_projectileKeyDown )
+	{
+		createProjectile();
+		m_projectileKeyDown = true;
+	}
+
+	if( !Core::Game::getKeyboard()->isKeyDown( OIS::KC_SPACE ))
+	{
+		m_projectileKeyDown = false;
+	}
 
 	IScene::update( deltaTime ); // must always be last
 }
@@ -554,8 +569,8 @@ void ITBuildingScene::freeCamera( float deltaTime )
 
 	Core::Game::getGraphics()->cameraMoveRelative( translate * deltaTime * cameraSpeed );
 
-	float rotX = Core::Game::getMouse()->getMouseState().X.rel * deltaTime * -0.3;
-	float rotY = Core::Game::getMouse()->getMouseState().Y.rel * deltaTime * -0.3;
+	float rotX = Core::Game::getMouse()->getMouseState().X.rel * deltaTime * -0.1;
+	float rotY = Core::Game::getMouse()->getMouseState().Y.rel * deltaTime * -0.1;
 	Core::Game::getGraphics()->cameraYaw( Ogre::Radian( rotX ) );
 	Core::Game::getGraphics()->cameraPitch( Ogre::Radian( rotY ) );
 
@@ -594,8 +609,8 @@ void ITBuildingScene::firstPersonCamera( float deltaTime )
 
 	Core::Game::getGraphics()->cameraMoveRelative( translate * deltaTime * cameraSpeed );
 
-	float rotX = Core::Game::getMouse()->getMouseState().X.rel * deltaTime * -0.3;
-	float rotY = Core::Game::getMouse()->getMouseState().Y.rel * deltaTime * -0.3;
+	float rotX = Core::Game::getMouse()->getMouseState().X.rel * deltaTime * -0.1;
+	float rotY = Core::Game::getMouse()->getMouseState().Y.rel * deltaTime * -0.1;
 	Core::Game::getGraphics()->cameraYaw( Ogre::Radian( rotX ) );
 	Core::Game::getGraphics()->cameraPitch( Ogre::Radian( rotY ) );
 
@@ -629,4 +644,20 @@ void ITBuildingScene::moveObject( std::string objectName, float deltaTime )
 	}
 
 	std::cout << "Position: " << getObject( objectName )->getPosition() << std::endl;
+}
+
+void ITBuildingScene::createProjectile()
+{
+	Objects::ProjectileObject* projectile = new Objects::ProjectileObject(getObject("Camera")->getPosition());
+	//projectile->applyForce(1000 * Core::Game::getGraphics()->cameraDirection() );
+	projectile->setVelocity(100 * Core::Game::getGraphics()->cameraDirection());
+
+	std::ostringstream idString;
+	idString << m_numProjectiles;
+
+	addObject("projectile" + idString.str() , projectile );
+
+	//std::cout << Core::Game::getGraphics()->cameraDirection() << std::endl;
+
+	m_numProjectiles++;
 }

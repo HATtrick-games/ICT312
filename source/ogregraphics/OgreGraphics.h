@@ -3,6 +3,8 @@
 #include "DebugDrawer.h"
 #include "FrameListener.h"
 #include "Vector3.h"
+#include <cmath>
+#include <math.h>
 
 const std::string	WINDOWTITLE = "Ogre Graphics Test";
 

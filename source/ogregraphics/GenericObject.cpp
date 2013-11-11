@@ -5,7 +5,7 @@ using namespace Objects;
 
 GenericObject::GenericObject()
 {
-	
+	isDynamic = false;
 	setID();
 	AI = -1;
 
@@ -13,6 +13,7 @@ GenericObject::GenericObject()
 
 GenericObject::GenericObject(Ogre::Vector3 pos, Ogre::Vector3 rot, std::string meshFile)
 {
+	isDynamic = false;
 	setID();
 	m_position = pos;
 	m_filename = meshFile;
@@ -30,6 +31,7 @@ GenericObject::GenericObject(Ogre::Vector3 pos, Ogre::Vector3 rot, std::string m
 
 GenericObject::GenericObject(Ogre::Vector3 pos, Ogre::Quaternion rot, Ogre::Vector3 scale, std::string meshFile)
 {
+	isDynamic = false;
 	AI = -1;
 	setID();
 	m_position = pos;
