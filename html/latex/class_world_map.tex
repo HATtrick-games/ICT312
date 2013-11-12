@@ -1,0 +1,188 @@
+\hypertarget{class_world_map}{\section{World\-Map Class Reference}
+\label{class_world_map}\index{World\-Map@{World\-Map}}
+}
+
+
+World map a class that implement the grinning lizard A$\ast$.  
+
+
+
+
+{\ttfamily \#include $<$World\-Map.\-h$>$}
+
+Inheritance diagram for World\-Map\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_world_map}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_world_map_ad079799989e80b5469c880b8b40e000e}{World\-Map} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual float \hyperlink{class_world_map_a1303b34f21eed11133f8e9895f30121b}{Least\-Cost\-Estimate} (void $\ast$node\-Start, void $\ast$node\-End)
+\begin{DoxyCompactList}\small\item\em Least cost estimate. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_world_map_ad82627bde4d4e778f819d2ee9c55bd35}{Adjacent\-Cost} (void $\ast$node, std\-::vector$<$ \hyperlink{structmicropather_1_1_state_cost}{micropather\-::\-State\-Cost} $>$ $\ast$neigbors)
+\begin{DoxyCompactList}\small\item\em Adjacent cost. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_world_map_a545c1c031a72cc21ec4c7e9d6103fad7}{Print\-State\-Info} (void $\ast$state)
+\begin{DoxyCompactList}\small\item\em Print state information. \end{DoxyCompactList}\item 
+bool \hyperlink{class_world_map_afb44a7b557fb1e5ba553ac584f4c1cd3}{Find\-Path} (Ogre\-::\-Vector3 currentpos, Ogre\-::\-Vector3 destination)
+\begin{DoxyCompactList}\small\item\em Searches for the best path through the map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_world_map_aea93e909abf8d808f65f8779a49b6b69}{std\-::vector$<$ void $\ast$ $>$ \hyperlink{class_world_map_aea93e909abf8d808f65f8779a49b6b69}{path}}\label{class_world_map_aea93e909abf8d808f65f8779a49b6b69}
+
+\begin{DoxyCompactList}\small\item\em The list of nodes that make up the path. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+World map a class that implement the grinning lizard A$\ast$. 
+
+\begin{DoxyAuthor}{Author}
+Arran Ford 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+09/11/2013 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_world_map_ad079799989e80b5469c880b8b40e000e}{\index{World\-Map@{World\-Map}!World\-Map@{World\-Map}}
+\index{World\-Map@{World\-Map}!WorldMap@{World\-Map}}
+\subsubsection[{World\-Map}]{\setlength{\rightskip}{0pt plus 5cm}World\-Map\-::\-World\-Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_world_map_ad079799989e80b5469c880b8b40e000e}
+
+
+Default constructor. 
+
+\begin{DoxyAuthor}{Author}
+Arran Ford 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+09/11/2013 
+\end{DoxyDate}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_world_map_ad82627bde4d4e778f819d2ee9c55bd35}{\index{World\-Map@{World\-Map}!Adjacent\-Cost@{Adjacent\-Cost}}
+\index{Adjacent\-Cost@{Adjacent\-Cost}!WorldMap@{World\-Map}}
+\subsubsection[{Adjacent\-Cost}]{\setlength{\rightskip}{0pt plus 5cm}void World\-Map\-::\-Adjacent\-Cost (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{node, }
+\item[{std\-::vector$<$ {\bf micropather\-::\-State\-Cost} $>$ $\ast$}]{neigbors}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_world_map_ad82627bde4d4e778f819d2ee9c55bd35}
+
+
+Adjacent cost. 
+
+\begin{DoxyAuthor}{Author}
+Arran Ford 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+09/11/2013
+\end{DoxyDate}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em node} & If non-\/null, the node. \\
+\hline
+\mbox{\tt in,out}  & {\em neigbors} & If non-\/null, the neigbors. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_world_map_afb44a7b557fb1e5ba553ac584f4c1cd3}{\index{World\-Map@{World\-Map}!Find\-Path@{Find\-Path}}
+\index{Find\-Path@{Find\-Path}!WorldMap@{World\-Map}}
+\subsubsection[{Find\-Path}]{\setlength{\rightskip}{0pt plus 5cm}bool World\-Map\-::\-Find\-Path (
+\begin{DoxyParamCaption}
+\item[{Ogre\-::\-Vector3}]{currentpos, }
+\item[{Ogre\-::\-Vector3}]{destination}
+\end{DoxyParamCaption}
+)}}\label{class_world_map_afb44a7b557fb1e5ba553ac584f4c1cd3}
+
+
+Searches for the best path through the map. 
+
+\begin{DoxyAuthor}{Author}
+Arran Ford 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+09/11/2013
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em currentpos} & The currentpos. \\
+\hline
+{\em destination} & Destination for the.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if it succeeds, false if it fails. 
+\end{DoxyReturn}
+\hypertarget{class_world_map_a1303b34f21eed11133f8e9895f30121b}{\index{World\-Map@{World\-Map}!Least\-Cost\-Estimate@{Least\-Cost\-Estimate}}
+\index{Least\-Cost\-Estimate@{Least\-Cost\-Estimate}!WorldMap@{World\-Map}}
+\subsubsection[{Least\-Cost\-Estimate}]{\setlength{\rightskip}{0pt plus 5cm}float World\-Map\-::\-Least\-Cost\-Estimate (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{node\-Start, }
+\item[{void $\ast$}]{node\-End}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_world_map_a1303b34f21eed11133f8e9895f30121b}
+
+
+Least cost estimate. 
+
+\begin{DoxyAuthor}{Author}
+Arran Ford 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+09/11/2013
+\end{DoxyDate}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em node\-Start} & If non-\/null, the node start. \\
+\hline
+\mbox{\tt in,out}  & {\em node\-End} & If non-\/null, the node end.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classmicropather_1_1_graph_a7a284a95607553e15439ecc7a1440abc}{micropather\-::\-Graph}.
+
+\hypertarget{class_world_map_a545c1c031a72cc21ec4c7e9d6103fad7}{\index{World\-Map@{World\-Map}!Print\-State\-Info@{Print\-State\-Info}}
+\index{Print\-State\-Info@{Print\-State\-Info}!WorldMap@{World\-Map}}
+\subsubsection[{Print\-State\-Info}]{\setlength{\rightskip}{0pt plus 5cm}void World\-Map\-::\-Print\-State\-Info (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{state}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_world_map_a545c1c031a72cc21ec4c7e9d6103fad7}
+
+
+Print state information. 
+
+\begin{DoxyAuthor}{Author}
+Arran Ford 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+09/11/2013
+\end{DoxyDate}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em state} & If non-\/null, the state. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classmicropather_1_1_graph_a9ca57ce2dceccece9654545b7dfad6ff}{micropather\-::\-Graph}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+A\-:/\-I\-T/\-Git\-Hub/\-I\-C\-T312/source/ogregraphics/\hyperlink{_world_map_8h}{World\-Map.\-h}\item 
+A\-:/\-I\-T/\-Git\-Hub/\-I\-C\-T312/source/ogregraphics/World\-Map.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,396 @@
+\hypertarget{class_collision_object}{\section{Collision\-Object Class Reference}
+\label{class_collision_object}\index{Collision\-Object@{Collision\-Object}}
+}
+
+
+Collision object.  
+
+
+
+
+{\ttfamily \#include $<$Collision\-Object.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_collision_object_a808493e22b7d12937464f4244ad7966a}{Collision\-Object} ()
+\begin{DoxyCompactList}\small\item\em Default constructer. \end{DoxyCompactList}\item 
+void \hyperlink{class_collision_object_ad556e9d6698b245c7691db5a2205ae6c}{Add\-Mesh\-Shape} (Ogre\-::\-Entity $\ast$Ent)
+\begin{DoxyCompactList}\small\item\em Adds a mesh shape based off the Ogre mesh. \end{DoxyCompactList}\item 
+void \hyperlink{class_collision_object_a11fbb95c3d71c6fe1b8d35cb512ba173}{Add\-Mesh\-Shape\-With\-Offset} (Ogre\-::\-Entity $\ast$Ent, Ogre\-::\-Vector3 Offset)
+\begin{DoxyCompactList}\small\item\em Adds a mesh shape based off the Ogre mesh with an offset to correctly position center of gravity. \end{DoxyCompactList}\item 
+void \hyperlink{class_collision_object_a41ba682403cabbaad6a9c5d33bb2e62c}{Add\-Box\-Shape} (float x\-Length, float y\-Length, float z\-Length)
+\begin{DoxyCompactList}\small\item\em Adds a box shape. \end{DoxyCompactList}\item 
+void \hyperlink{class_collision_object_a0df8a4a05b49e3fde9be693ac2187bd2}{Add\-Sphere\-Shape} (float Radius)
+\begin{DoxyCompactList}\small\item\em Adds a sphere shape. \end{DoxyCompactList}\item 
+void \hyperlink{class_collision_object_a0c9429cee147f5c5d23b36b66151348c}{Set\-Position} (float xpos, float ypos, float zpos)
+\begin{DoxyCompactList}\small\item\em Sets the object position via 3 floats. \end{DoxyCompactList}\item 
+void \hyperlink{class_collision_object_a42b7b3f3af11bcc551cb05600af39ae6}{Set\-Position} (Ogre\-::\-Vector3 vecpos)
+\begin{DoxyCompactList}\small\item\em Sets the object position via an Ogre Vector3. \end{DoxyCompactList}\item 
+\hypertarget{class_collision_object_a6bf3394037d2d5a49aae57bbf98126bf}{void {\bfseries Add\-Sphere\-Shape} (Ogre\-::\-Entity $\ast$Ent)}\label{class_collision_object_a6bf3394037d2d5a49aae57bbf98126bf}
+
+\item 
+void \hyperlink{class_collision_object_a87925eeb7b7453dac768782671db7498}{Move\-Object} (Ogre\-::\-Vector3 vec)
+\begin{DoxyCompactList}\small\item\em Move object. \end{DoxyCompactList}\item 
+void \hyperlink{class_collision_object_aa2aeac308fb44ae4829e4f2a55890c56}{Set\-Object\-Orientation} (float x, float y, float z, float Degrees)
+\begin{DoxyCompactList}\small\item\em Sets the objects orientation. \end{DoxyCompactList}\item 
+void \hyperlink{class_collision_object_aca121d7ab9ae0e0295c6b44de37d2a54}{Set\-Object\-Orientation} (Ogre\-::\-Quaternion quat)
+\begin{DoxyCompactList}\small\item\em Set the object orientation by quaternion. \end{DoxyCompactList}\item 
+void \hyperlink{class_collision_object_a59db2ca5c552ebd20faf2ac4dae19198}{Set\-User\-Pointer} (void $\ast$obj)
+\begin{DoxyCompactList}\small\item\em Set the objects void pointer. \end{DoxyCompactList}\item 
+void \hyperlink{class_collision_object_a3c091aaffc9199127d88a090405f5012}{Set\-Scale} (float xs, float ys, float zs)
+\begin{DoxyCompactList}\small\item\em Sets the scale of the object. \end{DoxyCompactList}\item 
+\hypertarget{class_collision_object_a8271ca0e023aeebb34be4c858e18005a}{bt\-Collision\-Object $\ast$ {\bfseries Get\-Collision\-Object} ()}\label{class_collision_object_a8271ca0e023aeebb34be4c858e18005a}
+
+\item 
+Ogre\-::\-Vector3 \hyperlink{class_collision_object_aee08b61704b439a2e8451e1e777ce99d}{Get\-Object\-Position} ()
+\begin{DoxyCompactList}\small\item\em return the position vector of the object \end{DoxyCompactList}\item 
+\hypertarget{class_collision_object_a9af163a4ca7353814e3da7b1241c8751}{void {\bfseries Add\-Box\-Mesh} (Ogre\-::\-Entity $\ast$Ent)}\label{class_collision_object_a9af163a4ca7353814e3da7b1241c8751}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_collision_object_a463ac6145a03138cdcb60efcff9c756b}{bt\-Convex\-Hull\-Shape $\ast$ \hyperlink{class_collision_object_a463ac6145a03138cdcb60efcff9c756b}{convex\-Shape}}\label{class_collision_object_a463ac6145a03138cdcb60efcff9c756b}
+
+\begin{DoxyCompactList}\small\item\em The convex shape. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Collision object. 
+
+\begin{DoxyAuthor}{Author}
+Arran Ford 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+16/09/2013 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_collision_object_a808493e22b7d12937464f4244ad7966a}{\index{Collision\-Object@{Collision\-Object}!Collision\-Object@{Collision\-Object}}
+\index{Collision\-Object@{Collision\-Object}!CollisionObject@{Collision\-Object}}
+\subsubsection[{Collision\-Object}]{\setlength{\rightskip}{0pt plus 5cm}void Collision\-Object\-::\-Collision\-Object (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_collision_object_a808493e22b7d12937464f4244ad7966a}
+
+
+Default constructer. 
+
+\begin{DoxyAuthor}{Author}
+Arran Ford 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+16/09/2013 
+\end{DoxyDate}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_collision_object_a41ba682403cabbaad6a9c5d33bb2e62c}{\index{Collision\-Object@{Collision\-Object}!Add\-Box\-Shape@{Add\-Box\-Shape}}
+\index{Add\-Box\-Shape@{Add\-Box\-Shape}!CollisionObject@{Collision\-Object}}
+\subsubsection[{Add\-Box\-Shape}]{\setlength{\rightskip}{0pt plus 5cm}void Collision\-Object\-::\-Add\-Box\-Shape (
+\begin{DoxyParamCaption}
+\item[{float}]{x\-Length, }
+\item[{float}]{y\-Length, }
+\item[{float}]{z\-Length}
+\end{DoxyParamCaption}
+)}}\label{class_collision_object_a41ba682403cabbaad6a9c5d33bb2e62c}
+
+
+Adds a box shape. 
+
+\begin{DoxyAuthor}{Author}
+Arran Ford 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+31/10/2013
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em x\-Length} & The length. \\
+\hline
+{\em y\-Length} & The length. \\
+\hline
+{\em z\-Length} & The length. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_collision_object_ad556e9d6698b245c7691db5a2205ae6c}{\index{Collision\-Object@{Collision\-Object}!Add\-Mesh\-Shape@{Add\-Mesh\-Shape}}
+\index{Add\-Mesh\-Shape@{Add\-Mesh\-Shape}!CollisionObject@{Collision\-Object}}
+\subsubsection[{Add\-Mesh\-Shape}]{\setlength{\rightskip}{0pt plus 5cm}void Collision\-Object\-::\-Add\-Mesh\-Shape (
+\begin{DoxyParamCaption}
+\item[{Ogre\-::\-Entity $\ast$}]{Ent}
+\end{DoxyParamCaption}
+)}}\label{class_collision_object_ad556e9d6698b245c7691db5a2205ae6c}
+
+
+Adds a mesh shape based off the Ogre mesh. 
+
+\begin{DoxyAuthor}{Author}
+Arran Ford 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+20/10/2013
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em Radius} & The radius. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_collision_object_a11fbb95c3d71c6fe1b8d35cb512ba173}{\index{Collision\-Object@{Collision\-Object}!Add\-Mesh\-Shape\-With\-Offset@{Add\-Mesh\-Shape\-With\-Offset}}
+\index{Add\-Mesh\-Shape\-With\-Offset@{Add\-Mesh\-Shape\-With\-Offset}!CollisionObject@{Collision\-Object}}
+\subsubsection[{Add\-Mesh\-Shape\-With\-Offset}]{\setlength{\rightskip}{0pt plus 5cm}void Collision\-Object\-::\-Add\-Mesh\-Shape\-With\-Offset (
+\begin{DoxyParamCaption}
+\item[{Ogre\-::\-Entity $\ast$}]{Ent, }
+\item[{Ogre\-::\-Vector3}]{Offset}
+\end{DoxyParamCaption}
+)}}\label{class_collision_object_a11fbb95c3d71c6fe1b8d35cb512ba173}
+
+
+Adds a mesh shape based off the Ogre mesh with an offset to correctly position center of gravity. 
+
+\begin{DoxyAuthor}{Author}
+Arran Ford 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+20/10/2013
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em ent} & the Ogre entity \\
+\hline
+{\em Offset} & the offset vector \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_collision_object_a0df8a4a05b49e3fde9be693ac2187bd2}{\index{Collision\-Object@{Collision\-Object}!Add\-Sphere\-Shape@{Add\-Sphere\-Shape}}
+\index{Add\-Sphere\-Shape@{Add\-Sphere\-Shape}!CollisionObject@{Collision\-Object}}
+\subsubsection[{Add\-Sphere\-Shape}]{\setlength{\rightskip}{0pt plus 5cm}void Collision\-Object\-::\-Add\-Sphere\-Shape (
+\begin{DoxyParamCaption}
+\item[{float}]{Radius}
+\end{DoxyParamCaption}
+)}}\label{class_collision_object_a0df8a4a05b49e3fde9be693ac2187bd2}
+
+
+Adds a sphere shape. 
+
+\begin{DoxyAuthor}{Author}
+Arran Ford 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+16/09/2013
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em Radius} & The radius. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_collision_object_aee08b61704b439a2e8451e1e777ce99d}{\index{Collision\-Object@{Collision\-Object}!Get\-Object\-Position@{Get\-Object\-Position}}
+\index{Get\-Object\-Position@{Get\-Object\-Position}!CollisionObject@{Collision\-Object}}
+\subsubsection[{Get\-Object\-Position}]{\setlength{\rightskip}{0pt plus 5cm}Ogre\-::\-Vector3 Collision\-Object\-::\-Ogre\-::\-Vector3 Collision\-Object\-::\-Get\-Object\-Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_collision_object_aee08b61704b439a2e8451e1e777ce99d}
+
+
+return the position vector of the object 
+
+\begin{DoxyAuthor}{Author}
+Arran Ford 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+31/10/2013 
+\end{DoxyDate}
+\hypertarget{class_collision_object_a87925eeb7b7453dac768782671db7498}{\index{Collision\-Object@{Collision\-Object}!Move\-Object@{Move\-Object}}
+\index{Move\-Object@{Move\-Object}!CollisionObject@{Collision\-Object}}
+\subsubsection[{Move\-Object}]{\setlength{\rightskip}{0pt plus 5cm}void Collision\-Object\-::\-Move\-Object (
+\begin{DoxyParamCaption}
+\item[{Ogre\-::\-Vector3}]{vec}
+\end{DoxyParamCaption}
+)}}\label{class_collision_object_a87925eeb7b7453dac768782671db7498}
+
+
+Move object. 
+
+\begin{DoxyAuthor}{Author}
+Arran Ford 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+16/09/2013
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & The vector.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Arran Ford 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+31/10/2013
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & The vector. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_collision_object_aa2aeac308fb44ae4829e4f2a55890c56}{\index{Collision\-Object@{Collision\-Object}!Set\-Object\-Orientation@{Set\-Object\-Orientation}}
+\index{Set\-Object\-Orientation@{Set\-Object\-Orientation}!CollisionObject@{Collision\-Object}}
+\subsubsection[{Set\-Object\-Orientation}]{\setlength{\rightskip}{0pt plus 5cm}void Collision\-Object\-::\-Set\-Object\-Orientation (
+\begin{DoxyParamCaption}
+\item[{float}]{x, }
+\item[{float}]{y, }
+\item[{float}]{z, }
+\item[{float}]{Degrees}
+\end{DoxyParamCaption}
+)}}\label{class_collision_object_aa2aeac308fb44ae4829e4f2a55890c56}
+
+
+Sets the objects orientation. 
+
+\begin{DoxyAuthor}{Author}
+Arran Ford 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+31/10/2013
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em Degrees} & The amount in degrees to rotate around the defined axis. \\
+\hline
+{\em x} & the x portion of the rotation axis \\
+\hline
+{\em y} & the y portion of the rotation axis \\
+\hline
+{\em z} & the z portion of the rotation axis \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_collision_object_aca121d7ab9ae0e0295c6b44de37d2a54}{\index{Collision\-Object@{Collision\-Object}!Set\-Object\-Orientation@{Set\-Object\-Orientation}}
+\index{Set\-Object\-Orientation@{Set\-Object\-Orientation}!CollisionObject@{Collision\-Object}}
+\subsubsection[{Set\-Object\-Orientation}]{\setlength{\rightskip}{0pt plus 5cm}void Collision\-Object\-::\-Set\-Object\-Orientation (
+\begin{DoxyParamCaption}
+\item[{Ogre\-::\-Quaternion}]{quat}
+\end{DoxyParamCaption}
+)}}\label{class_collision_object_aca121d7ab9ae0e0295c6b44de37d2a54}
+
+
+Set the object orientation by quaternion. 
+
+\begin{DoxyAuthor}{Author}
+Arran Ford 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+31/10/2013
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em quat} & The Quaternion defining the objects new orientation \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_collision_object_a0c9429cee147f5c5d23b36b66151348c}{\index{Collision\-Object@{Collision\-Object}!Set\-Position@{Set\-Position}}
+\index{Set\-Position@{Set\-Position}!CollisionObject@{Collision\-Object}}
+\subsubsection[{Set\-Position}]{\setlength{\rightskip}{0pt plus 5cm}void Collision\-Object\-::\-Set\-Position (
+\begin{DoxyParamCaption}
+\item[{float}]{xpox, }
+\item[{float}]{ypoz, }
+\item[{float}]{zpos}
+\end{DoxyParamCaption}
+)}}\label{class_collision_object_a0c9429cee147f5c5d23b36b66151348c}
+
+
+Sets the object position via 3 floats. 
+
+\begin{DoxyAuthor}{Author}
+Arran Ford 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+16/09/2013
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em xpos} & Position on the x axis. \\
+\hline
+{\em ypos} & Position on the y axis \\
+\hline
+{\em zpos} & Position on the z axis \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_collision_object_a42b7b3f3af11bcc551cb05600af39ae6}{\index{Collision\-Object@{Collision\-Object}!Set\-Position@{Set\-Position}}
+\index{Set\-Position@{Set\-Position}!CollisionObject@{Collision\-Object}}
+\subsubsection[{Set\-Position}]{\setlength{\rightskip}{0pt plus 5cm}void Collision\-Object\-::\-Set\-Position (
+\begin{DoxyParamCaption}
+\item[{Ogre\-::\-Vector3}]{vecpos}
+\end{DoxyParamCaption}
+)}}\label{class_collision_object_a42b7b3f3af11bcc551cb05600af39ae6}
+
+
+Sets the object position via an Ogre Vector3. 
+
+\begin{DoxyAuthor}{Author}
+Arran Ford 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+16/09/2013
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em vecpos} & the Ogre Vector that determines new object location \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_collision_object_a3c091aaffc9199127d88a090405f5012}{\index{Collision\-Object@{Collision\-Object}!Set\-Scale@{Set\-Scale}}
+\index{Set\-Scale@{Set\-Scale}!CollisionObject@{Collision\-Object}}
+\subsubsection[{Set\-Scale}]{\setlength{\rightskip}{0pt plus 5cm}void Collision\-Object\-::\-Set\-Scale (
+\begin{DoxyParamCaption}
+\item[{float}]{xs, }
+\item[{float}]{ys, }
+\item[{float}]{zs}
+\end{DoxyParamCaption}
+)}}\label{class_collision_object_a3c091aaffc9199127d88a090405f5012}
+
+
+Sets the scale of the object. 
+
+\begin{DoxyAuthor}{Author}
+Arran Ford 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+31/10/2013
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em xs} & the scale along x axis \\
+\hline
+{\em ys} & the scale along y axis \\
+\hline
+{\em zs} & the scale along z axis \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_collision_object_a59db2ca5c552ebd20faf2ac4dae19198}{\index{Collision\-Object@{Collision\-Object}!Set\-User\-Pointer@{Set\-User\-Pointer}}
+\index{Set\-User\-Pointer@{Set\-User\-Pointer}!CollisionObject@{Collision\-Object}}
+\subsubsection[{Set\-User\-Pointer}]{\setlength{\rightskip}{0pt plus 5cm}void Collision\-Object\-::\-Set\-User\-Pointer (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{class_collision_object_a59db2ca5c552ebd20faf2ac4dae19198}
+
+
+Set the objects void pointer. 
+
+\begin{DoxyAuthor}{Author}
+Arran Ford 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+31/10/2013
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & The object the void pointer will point to. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+A\-:/\-I\-T/\-Git\-Hub/\-I\-C\-T312/source/ogregraphics/\hyperlink{_collision_object_8h}{Collision\-Object.\-h}\item 
+A\-:/\-I\-T/\-Git\-Hub/\-I\-C\-T312/source/ogregraphics/Collision\-Object.\-cpp\end{DoxyCompactItemize}

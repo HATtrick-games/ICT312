@@ -27,7 +27,7 @@ distribution.
 #define GRINNINGLIZARD_MICROPATHER_INCLUDED
 
 
-/** @mainpage MicroPather
+/** MicroPather
 	
 	MicroPather is a path finder and A* solver (astar or a-star) written in platform independent 
 	C++ that can be easily integrated into existing code. MicroPather focuses on being a path 

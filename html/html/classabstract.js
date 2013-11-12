@@ -1,0 +1,26 @@
+var classabstract =
+[
+    [ "Activate", "classabstract.html#a552be28f2a8f0577d8af51aab7628dfe", null ],
+    [ "CheckForTrigger", "classabstract.html#ac3298d240dbc6a3f630e6bbb06b6ee72", null ],
+    [ "DecayThreshold", "classabstract.html#ac5e4f73645472118e0389af89ef557d6", null ],
+    [ "GetAction", "classabstract.html#aaa22e7e0b383d8d936df67bc2ddfbbee", null ],
+    [ "GetAffordanceName", "classabstract.html#a642d5536052d134e26111f42cbdc48f1", null ],
+    [ "GetGoalModifier", "classabstract.html#a9b6fe4d59bd164a1edbab5403cf0c56a", null ],
+    [ "GetThreshold", "classabstract.html#ab00d7ccece91f404e85db51c3aaa6689", null ],
+    [ "GetThreshold", "classabstract.html#a5a925b041865eb58d7e83db71279796f", null ],
+    [ "GetType", "classabstract.html#a6a684ea689b2d2272e085b562d25e1df", null ],
+    [ "GetType", "classabstract.html#a6a684ea689b2d2272e085b562d25e1df", null ],
+    [ "ModifyNeeds", "classabstract.html#a4d2dc1025b0473a6ca5ae7947cb71fa0", null ],
+    [ "ResetThreshhold", "classabstract.html#a778b0df167d92a449a3b9a4f73508f50", null ],
+    [ "SetEmotionalMultipliers", "classabstract.html#a0d4a292e4371e387c37ed3152f40f970", null ],
+    [ "AffordanceName", "classabstract.html#a693533359baf2fc861de948ba5091cdd", null ],
+    [ "AffordanceThreshold", "classabstract.html#abd1ac71987e1064ec409961e69680778", null ],
+    [ "EmotionalMultipliers", "classabstract.html#a7bdcfaa80c09f089dafce55647285214", null ],
+    [ "GoalAction", "classabstract.html#aa5210c5b94421c34f5c1dc03aa5c2073", null ],
+    [ "GoalModifier", "classabstract.html#a8f3b954f75474eb84bf8f1906530800f", null ],
+    [ "NeedOutcomes", "classabstract.html#afb38289e3dfe396d24eed2529e0120dd", null ],
+    [ "Threshold", "classabstract.html#a6c5131d8009cb69892a439a737e86217", null ],
+    [ "Type", "classabstract.html#afb87fb1118b122841e9158b62247d84c", null ],
+    [ "Type", "classabstract.html#a0d0baf0587f57cbc4b684fc4e85f81f9", null ],
+    [ "Type", "classabstract.html#a759e11dc626cafc1158be274981f54d5", null ]
+];

@@ -1,0 +1,194 @@
+\hypertarget{class_map_node}{\section{Map\-Node Class Reference}
+\label{class_map_node}\index{Map\-Node@{Map\-Node}}
+}
+
+
+This class is a node that can be moved to in the path finding.  
+
+
+
+
+{\ttfamily \#include $<$Map\-Node.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_map_node_a19bb10d68456bbfeff7a34432a20cbe2}{Map\-Node} (int ident, Ogre\-::\-Vector3 location)
+\begin{DoxyCompactList}\small\item\em Constructor that takes in the location and identifier of the node. \end{DoxyCompactList}\item 
+\hyperlink{class_map_node_a3fbf3e9a65ac7ab73bb6fa69c2059462}{Map\-Node} (int ident, Ogre\-::\-Vector3 location, std\-::vector$<$ int $>$ links)
+\begin{DoxyCompactList}\small\item\em Constructor takes in the identifier, position and the partners of this node. \end{DoxyCompactList}\item 
+int \hyperlink{class_map_node_a340b6649ca8e0b90fe93dcbb327fa789}{Get\-Id} ()
+\begin{DoxyCompactList}\small\item\em Gets the identifier. \end{DoxyCompactList}\item 
+Ogre\-::\-Vector3 \hyperlink{class_map_node_a9e492d78a10bb716056c5da0897bd27d}{Get\-Location} ()
+\begin{DoxyCompactList}\small\item\em Gets the location. \end{DoxyCompactList}\item 
+std\-::vector$<$ \hyperlink{class_map_node}{Map\-Node} $\ast$ $>$ $\ast$ \hyperlink{class_map_node_a7b2ba63ca49506414267d972834df68d}{Get\-Partners} ()
+\begin{DoxyCompactList}\small\item\em Gets the partners. \end{DoxyCompactList}\item 
+\hyperlink{class_map_node}{Map\-Node} $\ast$ \hyperlink{class_map_node_a78608dc546f904c65a1aa0da63eeb331}{Get\-Partner\-By\-Id} (int i)
+\begin{DoxyCompactList}\small\item\em Gets partner by identifier. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_map_node_a6dce727d54cd79f4f2352771bd6ff20e}{std\-::vector$<$ \hyperlink{class_map_node}{Map\-Node} $\ast$ $>$ \hyperlink{class_map_node_a6dce727d54cd79f4f2352771bd6ff20e}{Partners}}\label{class_map_node_a6dce727d54cd79f4f2352771bd6ff20e}
+
+\begin{DoxyCompactList}\small\item\em A Vector containing pointers to this nodes partners. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class is a node that can be moved to in the path finding. 
+
+\begin{DoxyAuthor}{Author}
+Arran Ford 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+09/11/2013 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_map_node_a19bb10d68456bbfeff7a34432a20cbe2}{\index{Map\-Node@{Map\-Node}!Map\-Node@{Map\-Node}}
+\index{Map\-Node@{Map\-Node}!MapNode@{Map\-Node}}
+\subsubsection[{Map\-Node}]{\setlength{\rightskip}{0pt plus 5cm}Map\-Node\-::\-Map\-Node (
+\begin{DoxyParamCaption}
+\item[{int}]{ident, }
+\item[{Ogre\-::\-Vector3}]{location}
+\end{DoxyParamCaption}
+)}}\label{class_map_node_a19bb10d68456bbfeff7a34432a20cbe2}
+
+
+Constructor that takes in the location and identifier of the node. 
+
+\begin{DoxyAuthor}{Author}
+Arran Ford 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+09/11/2013
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em ident} & The identifier. \\
+\hline
+{\em location} & The location. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_map_node_a3fbf3e9a65ac7ab73bb6fa69c2059462}{\index{Map\-Node@{Map\-Node}!Map\-Node@{Map\-Node}}
+\index{Map\-Node@{Map\-Node}!MapNode@{Map\-Node}}
+\subsubsection[{Map\-Node}]{\setlength{\rightskip}{0pt plus 5cm}Map\-Node\-::\-Map\-Node (
+\begin{DoxyParamCaption}
+\item[{int}]{ident, }
+\item[{Ogre\-::\-Vector3}]{location, }
+\item[{std\-::vector$<$ int $>$}]{links}
+\end{DoxyParamCaption}
+)}}\label{class_map_node_a3fbf3e9a65ac7ab73bb6fa69c2059462}
+
+
+Constructor takes in the identifier, position and the partners of this node. 
+
+\begin{DoxyAuthor}{Author}
+Arran Ford 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+09/11/2013
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em ident} & The identifier. \\
+\hline
+{\em location} & The location. \\
+\hline
+{\em links} & The links. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_map_node_a340b6649ca8e0b90fe93dcbb327fa789}{\index{Map\-Node@{Map\-Node}!Get\-Id@{Get\-Id}}
+\index{Get\-Id@{Get\-Id}!MapNode@{Map\-Node}}
+\subsubsection[{Get\-Id}]{\setlength{\rightskip}{0pt plus 5cm}int Map\-Node\-::\-Get\-Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_map_node_a340b6649ca8e0b90fe93dcbb327fa789}
+
+
+Gets the identifier. 
+
+\begin{DoxyAuthor}{Author}
+Arran Ford 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+09/11/2013
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+The identifier. 
+\end{DoxyReturn}
+\hypertarget{class_map_node_a9e492d78a10bb716056c5da0897bd27d}{\index{Map\-Node@{Map\-Node}!Get\-Location@{Get\-Location}}
+\index{Get\-Location@{Get\-Location}!MapNode@{Map\-Node}}
+\subsubsection[{Get\-Location}]{\setlength{\rightskip}{0pt plus 5cm}Ogre\-::\-Vector3 Map\-Node\-::\-Get\-Location (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_map_node_a9e492d78a10bb716056c5da0897bd27d}
+
+
+Gets the location. 
+
+\begin{DoxyAuthor}{Author}
+Arran Ford 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+09/11/2013
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+The location. 
+\end{DoxyReturn}
+\hypertarget{class_map_node_a78608dc546f904c65a1aa0da63eeb331}{\index{Map\-Node@{Map\-Node}!Get\-Partner\-By\-Id@{Get\-Partner\-By\-Id}}
+\index{Get\-Partner\-By\-Id@{Get\-Partner\-By\-Id}!MapNode@{Map\-Node}}
+\subsubsection[{Get\-Partner\-By\-Id}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Map\-Node} $\ast$ Map\-Node\-::\-Get\-Partner\-By\-Id (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}}\label{class_map_node_a78608dc546f904c65a1aa0da63eeb331}
+
+
+Gets partner by identifier. 
+
+\begin{DoxyAuthor}{Author}
+Arran Ford 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+09/11/2013
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em i} & Zero-\/based index of the.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+null if it fails, else the partner by identifier. 
+\end{DoxyReturn}
+\hypertarget{class_map_node_a7b2ba63ca49506414267d972834df68d}{\index{Map\-Node@{Map\-Node}!Get\-Partners@{Get\-Partners}}
+\index{Get\-Partners@{Get\-Partners}!MapNode@{Map\-Node}}
+\subsubsection[{Get\-Partners}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$ {\bf Map\-Node} $\ast$ $>$ Map\-Node\-::$\ast$ Map\-Node\-::\-Get\-Partners (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_map_node_a7b2ba63ca49506414267d972834df68d}
+
+
+Gets the partners. 
+
+\begin{DoxyAuthor}{Author}
+Arran Ford 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+09/11/2013
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+null if it fails, else the partners. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+A\-:/\-I\-T/\-Git\-Hub/\-I\-C\-T312/source/ogregraphics/\hyperlink{_map_node_8h}{Map\-Node.\-h}\item 
+A\-:/\-I\-T/\-Git\-Hub/\-I\-C\-T312/source/ogregraphics/Map\-Node.\-cpp\end{DoxyCompactItemize}

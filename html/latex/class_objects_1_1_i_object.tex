@@ -1,0 +1,484 @@
+\hypertarget{class_objects_1_1_i_object}{\section{Objects\-:\-:I\-Object Class Reference}
+\label{class_objects_1_1_i_object}\index{Objects\-::\-I\-Object@{Objects\-::\-I\-Object}}
+}
+
+
+Object.  
+
+
+
+
+{\ttfamily \#include $<$I\-Object.\-h$>$}
+
+Inheritance diagram for Objects\-:\-:I\-Object\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_objects_1_1_i_object}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_objects_1_1_i_object_a932898790e2babe2ba4c95c561f862e8}{virtual void \hyperlink{class_objects_1_1_i_object_a932898790e2babe2ba4c95c561f862e8}{initialise} ()=0}\label{class_objects_1_1_i_object_a932898790e2babe2ba4c95c561f862e8}
+
+\begin{DoxyCompactList}\small\item\em Initialises this object. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_objects_1_1_i_object_a616e6befc5fbdca47155b1b56d0e0fc0}{update} (float delta\-Time)
+\begin{DoxyCompactList}\small\item\em Updates the given delta\-Time. \end{DoxyCompactList}\item 
+void \hyperlink{class_objects_1_1_i_object_abb8bb5097d1600f4e5d0aea2cd148247}{set\-Mesh\-File} (std\-::string filename)
+\begin{DoxyCompactList}\small\item\em Sets mesh file. \end{DoxyCompactList}\item 
+\hypertarget{class_objects_1_1_i_object_a8043777b3c370b2f422319a552373bc0}{void \hyperlink{class_objects_1_1_i_object_a8043777b3c370b2f422319a552373bc0}{Make\-Collision\-Object} ()}\label{class_objects_1_1_i_object_a8043777b3c370b2f422319a552373bc0}
+
+\begin{DoxyCompactList}\small\item\em Makes collision object. \end{DoxyCompactList}\item 
+\hypertarget{class_objects_1_1_i_object_a8e42f185ed7088ed7b4143f9dee1b55a}{void \hyperlink{class_objects_1_1_i_object_a8e42f185ed7088ed7b4143f9dee1b55a}{Make\-Sphere\-Collision\-Object} ()}\label{class_objects_1_1_i_object_a8e42f185ed7088ed7b4143f9dee1b55a}
+
+\begin{DoxyCompactList}\small\item\em Makes sphere collision object. \end{DoxyCompactList}\item 
+\hypertarget{class_objects_1_1_i_object_a8a0f5bc968be8a37a746e8079333b0f9}{void \hyperlink{class_objects_1_1_i_object_a8a0f5bc968be8a37a746e8079333b0f9}{Make\-Box\-Collision\-Object} ()}\label{class_objects_1_1_i_object_a8a0f5bc968be8a37a746e8079333b0f9}
+
+\begin{DoxyCompactList}\small\item\em Makes box collision object. \end{DoxyCompactList}\item 
+Ogre\-::\-Vector3 \hyperlink{class_objects_1_1_i_object_ae395cf4191bf916973860106b0816c66}{get\-Position} ()
+\begin{DoxyCompactList}\small\item\em Gets the position. \end{DoxyCompactList}\item 
+void \hyperlink{class_objects_1_1_i_object_a37e429804be393d3b677f2cff2540073}{set\-Position} (Ogre\-::\-Vector3 pos)
+\begin{DoxyCompactList}\small\item\em Sets a position. \end{DoxyCompactList}\item 
+void \hyperlink{class_objects_1_1_i_object_abf79e6a85faa05adbba1f1cbc83c3564}{change\-Position} (Ogre\-::\-Vector3 pos)
+\begin{DoxyCompactList}\small\item\em Change position. \end{DoxyCompactList}\item 
+Ogre\-::\-Quaternion \hyperlink{class_objects_1_1_i_object_aff14fa622a7155a324dca06b5fb9b22f}{get\-Orientation} () const 
+\begin{DoxyCompactList}\small\item\em Gets the orientation. \end{DoxyCompactList}\item 
+Ogre\-::\-Vector3 \hyperlink{class_objects_1_1_i_object_a0cf4689f31dc6d9bd02b0b94537c8086}{get\-Rotation} () const 
+\begin{DoxyCompactList}\small\item\em Gets the rotation. \end{DoxyCompactList}\item 
+void \hyperlink{class_objects_1_1_i_object_a310aa6d7062af232279b4594c10e415b}{set\-Orientation} (Ogre\-::\-Quaternion rot)
+\begin{DoxyCompactList}\small\item\em Sets an orientation. \end{DoxyCompactList}\item 
+void \hyperlink{class_objects_1_1_i_object_a20c88273ac16887e388b8b1c3a872d48}{rotate\-By\-Vector} (Ogre\-::\-Vector3 \&rot, float scale=1.\-0f)
+\begin{DoxyCompactList}\small\item\em Rotate by vector. \end{DoxyCompactList}\item 
+void \hyperlink{class_objects_1_1_i_object_accebddb15710d11fea7b25f0c77aeab0}{set\-Yaw} (float angle)
+\begin{DoxyCompactList}\small\item\em Sets a yaw. \end{DoxyCompactList}\item 
+void \hyperlink{class_objects_1_1_i_object_a2b67f17e64732f0c7c984414a32d1f64}{set\-Pitch} (float angle)
+\begin{DoxyCompactList}\small\item\em Sets a pitch. \end{DoxyCompactList}\item 
+void \hyperlink{class_objects_1_1_i_object_aba95ce780536135ac15eb6bf87098ea0}{set\-Roll} (float angle)
+\begin{DoxyCompactList}\small\item\em Sets a roll. \end{DoxyCompactList}\item 
+void \hyperlink{class_objects_1_1_i_object_a3f67350d8eb911ce44814f3a109cf273}{set\-Scale} (float x, float y, float z)
+\begin{DoxyCompactList}\small\item\em Sets a scale. \end{DoxyCompactList}\item 
+void \hyperlink{class_objects_1_1_i_object_a688a2ba3aa58342ff006677c4995411b}{set\-Scale} (Ogre\-::\-Vector3 scale)
+\begin{DoxyCompactList}\small\item\em Sets a scale. \end{DoxyCompactList}\item 
+Ogre\-::\-Vector3 \hyperlink{class_objects_1_1_i_object_ae03ab75fddc9cd990a4a9bf5137cb00f}{get\-Scale} ()
+\begin{DoxyCompactList}\small\item\em Gets the scale. \end{DoxyCompactList}\item 
+Ogre\-::\-Quaternion \hyperlink{class_objects_1_1_i_object_a8eafa5d8f1638d50de0cdd34d03e4350}{get\-Orientation} ()
+\begin{DoxyCompactList}\small\item\em Gets the orientation. \end{DoxyCompactList}\item 
+std\-::string \hyperlink{class_objects_1_1_i_object_aea013005572b9493886fc0b4a12d42ba}{get\-Entity\-Name} ()
+\begin{DoxyCompactList}\small\item\em Gets entity name. \end{DoxyCompactList}\item 
+Ogre\-::\-Entity $\ast$ \hyperlink{class_objects_1_1_i_object_a5ce456cbcf26b929e255da515c5b37a9}{get\-Entity} ()
+\begin{DoxyCompactList}\small\item\em Gets the entity. \end{DoxyCompactList}\item 
+std\-::map$<$ std\-::string, int $>$ $\ast$ \hyperlink{class_objects_1_1_i_object_a22b3acfb9b300a09409ac4c986a434a0}{Get\-Map} ()
+\begin{DoxyCompactList}\small\item\em Gets the map. \end{DoxyCompactList}\item 
+bool \hyperlink{class_objects_1_1_i_object_abaa11138d53ef4976630589899c73539}{Is\-Interactable} ()
+\begin{DoxyCompactList}\small\item\em Query if this object is interactable. \end{DoxyCompactList}\item 
+void \hyperlink{class_objects_1_1_i_object_a535d1642eae42de6acba933d142defb1}{Set\-Interactable} (bool set)
+\begin{DoxyCompactList}\small\item\em Sets an interactable. \end{DoxyCompactList}\item 
+int \hyperlink{class_objects_1_1_i_object_aeb573744a2a56f455d85fc06c7b27e37}{Get\-Affodance} (std\-::string affordance)
+\begin{DoxyCompactList}\small\item\em Gets an affodance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_objects_1_1_i_object_ada16f56e05325655d57ad1aaf6cd5bf7}{int {\bfseries A\-I}}\label{class_objects_1_1_i_object_ada16f56e05325655d57ad1aaf6cd5bf7}
+
+\item 
+\hypertarget{class_objects_1_1_i_object_abb60f2a9f1a2babcbd055a355284dc87}{std\-::string \hyperlink{class_objects_1_1_i_object_abb60f2a9f1a2babcbd055a355284dc87}{Type}}\label{class_objects_1_1_i_object_abb60f2a9f1a2babcbd055a355284dc87}
+
+\begin{DoxyCompactList}\small\item\em The type. \end{DoxyCompactList}\item 
+\hypertarget{class_objects_1_1_i_object_a7812cd5cf46e2c3353fca5118e26d8a2}{int \hyperlink{class_objects_1_1_i_object_a7812cd5cf46e2c3353fca5118e26d8a2}{m\-\_\-id}}\label{class_objects_1_1_i_object_a7812cd5cf46e2c3353fca5118e26d8a2}
+
+\begin{DoxyCompactList}\small\item\em The identifier. \end{DoxyCompactList}\item 
+\hypertarget{class_objects_1_1_i_object_a4d222a9eeead55bc074b97372b75d7dd}{std\-::map$<$ std\-::string, int $>$ \hyperlink{class_objects_1_1_i_object_a4d222a9eeead55bc074b97372b75d7dd}{Affordances}}\label{class_objects_1_1_i_object_a4d222a9eeead55bc074b97372b75d7dd}
+
+\begin{DoxyCompactList}\small\item\em The affordances. \end{DoxyCompactList}\item 
+\hypertarget{class_objects_1_1_i_object_a98a45fcbb771b4b7aa9e3e517005c89d}{bool \hyperlink{class_objects_1_1_i_object_a98a45fcbb771b4b7aa9e3e517005c89d}{Generic}}\label{class_objects_1_1_i_object_a98a45fcbb771b4b7aa9e3e517005c89d}
+
+\begin{DoxyCompactList}\small\item\em true to generic. \end{DoxyCompactList}\item 
+\hypertarget{class_objects_1_1_i_object_acacfe9cceb90229b824063b47efa3171}{bool \hyperlink{class_objects_1_1_i_object_acacfe9cceb90229b824063b47efa3171}{is\-Dynamic}}\label{class_objects_1_1_i_object_acacfe9cceb90229b824063b47efa3171}
+
+\begin{DoxyCompactList}\small\item\em true if this object is dynamic. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_objects_1_1_i_object_a0a5cb41bb995dcfb01c3880600ae8340}{void \hyperlink{class_objects_1_1_i_object_a0a5cb41bb995dcfb01c3880600ae8340}{load\-Mesh} () const }\label{class_objects_1_1_i_object_a0a5cb41bb995dcfb01c3880600ae8340}
+
+\begin{DoxyCompactList}\small\item\em Loads the mesh. \end{DoxyCompactList}\item 
+\hypertarget{class_objects_1_1_i_object_a7bd6a849a416450530b991dfb7068715}{void \hyperlink{class_objects_1_1_i_object_a7bd6a849a416450530b991dfb7068715}{set\-I\-D} ()}\label{class_objects_1_1_i_object_a7bd6a849a416450530b991dfb7068715}
+
+\begin{DoxyCompactList}\small\item\em Sets the identifier. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_objects_1_1_i_object_a946df067938f5708a5fc92a6a3b7de3b}{\hyperlink{class_collision_object}{Collision\-Object} $\ast$ \hyperlink{class_objects_1_1_i_object_a946df067938f5708a5fc92a6a3b7de3b}{Col\-Obj}}\label{class_objects_1_1_i_object_a946df067938f5708a5fc92a6a3b7de3b}
+
+\begin{DoxyCompactList}\small\item\em The col object. \end{DoxyCompactList}\item 
+\hypertarget{class_objects_1_1_i_object_a7e8a3b317f3bd294609e7ea2e4915ea2}{Ogre\-::\-Vector3 \hyperlink{class_objects_1_1_i_object_a7e8a3b317f3bd294609e7ea2e4915ea2}{m\-\_\-position}}\label{class_objects_1_1_i_object_a7e8a3b317f3bd294609e7ea2e4915ea2}
+
+\begin{DoxyCompactList}\small\item\em The position. \end{DoxyCompactList}\item 
+\hypertarget{class_objects_1_1_i_object_ac3825691191c3b7d577c945c194a6e8a}{Ogre\-::\-Quaternion \hyperlink{class_objects_1_1_i_object_ac3825691191c3b7d577c945c194a6e8a}{m\-\_\-rotation}}\label{class_objects_1_1_i_object_ac3825691191c3b7d577c945c194a6e8a}
+
+\begin{DoxyCompactList}\small\item\em The rotation. \end{DoxyCompactList}\item 
+\hypertarget{class_objects_1_1_i_object_a98cc8033a8294ef833156cd3cc354657}{std\-::string \hyperlink{class_objects_1_1_i_object_a98cc8033a8294ef833156cd3cc354657}{m\-\_\-filename}}\label{class_objects_1_1_i_object_a98cc8033a8294ef833156cd3cc354657}
+
+\begin{DoxyCompactList}\small\item\em Filename of the file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Object. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_objects_1_1_i_object_abf79e6a85faa05adbba1f1cbc83c3564}{\index{Objects\-::\-I\-Object@{Objects\-::\-I\-Object}!change\-Position@{change\-Position}}
+\index{change\-Position@{change\-Position}!Objects::IObject@{Objects\-::\-I\-Object}}
+\subsubsection[{change\-Position}]{\setlength{\rightskip}{0pt plus 5cm}void Objects\-::\-I\-Object\-::change\-Position (
+\begin{DoxyParamCaption}
+\item[{Ogre\-::\-Vector3}]{pos}
+\end{DoxyParamCaption}
+)}}\label{class_objects_1_1_i_object_abf79e6a85faa05adbba1f1cbc83c3564}
+
+
+Change position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & The position. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_objects_1_1_i_object_aeb573744a2a56f455d85fc06c7b27e37}{\index{Objects\-::\-I\-Object@{Objects\-::\-I\-Object}!Get\-Affodance@{Get\-Affodance}}
+\index{Get\-Affodance@{Get\-Affodance}!Objects::IObject@{Objects\-::\-I\-Object}}
+\subsubsection[{Get\-Affodance}]{\setlength{\rightskip}{0pt plus 5cm}int Objects\-::\-I\-Object\-::\-Get\-Affodance (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{affordance}
+\end{DoxyParamCaption}
+)}}\label{class_objects_1_1_i_object_aeb573744a2a56f455d85fc06c7b27e37}
+
+
+Gets an affodance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em affordance} & The affordance.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The affodance. 
+\end{DoxyReturn}
+\hypertarget{class_objects_1_1_i_object_a5ce456cbcf26b929e255da515c5b37a9}{\index{Objects\-::\-I\-Object@{Objects\-::\-I\-Object}!get\-Entity@{get\-Entity}}
+\index{get\-Entity@{get\-Entity}!Objects::IObject@{Objects\-::\-I\-Object}}
+\subsubsection[{get\-Entity}]{\setlength{\rightskip}{0pt plus 5cm}Ogre\-::\-Entity $\ast$ Objects\-::\-I\-Object\-::get\-Entity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_objects_1_1_i_object_a5ce456cbcf26b929e255da515c5b37a9}
+
+
+Gets the entity. 
+
+\begin{DoxyReturn}{Returns}
+null if it fails, else the entity. 
+\end{DoxyReturn}
+\hypertarget{class_objects_1_1_i_object_aea013005572b9493886fc0b4a12d42ba}{\index{Objects\-::\-I\-Object@{Objects\-::\-I\-Object}!get\-Entity\-Name@{get\-Entity\-Name}}
+\index{get\-Entity\-Name@{get\-Entity\-Name}!Objects::IObject@{Objects\-::\-I\-Object}}
+\subsubsection[{get\-Entity\-Name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Objects\-::\-I\-Object\-::get\-Entity\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_objects_1_1_i_object_aea013005572b9493886fc0b4a12d42ba}
+
+
+Gets entity name. 
+
+\begin{DoxyReturn}{Returns}
+The entity name. 
+\end{DoxyReturn}
+\hypertarget{class_objects_1_1_i_object_a22b3acfb9b300a09409ac4c986a434a0}{\index{Objects\-::\-I\-Object@{Objects\-::\-I\-Object}!Get\-Map@{Get\-Map}}
+\index{Get\-Map@{Get\-Map}!Objects::IObject@{Objects\-::\-I\-Object}}
+\subsubsection[{Get\-Map}]{\setlength{\rightskip}{0pt plus 5cm}std\-::map$<$ std\-::string, int $>$ $\ast$ Objects\-::\-I\-Object\-::\-Get\-Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_objects_1_1_i_object_a22b3acfb9b300a09409ac4c986a434a0}
+
+
+Gets the map. 
+
+\begin{DoxyReturn}{Returns}
+null if it fails, else the map. 
+\end{DoxyReturn}
+\hypertarget{class_objects_1_1_i_object_aff14fa622a7155a324dca06b5fb9b22f}{\index{Objects\-::\-I\-Object@{Objects\-::\-I\-Object}!get\-Orientation@{get\-Orientation}}
+\index{get\-Orientation@{get\-Orientation}!Objects::IObject@{Objects\-::\-I\-Object}}
+\subsubsection[{get\-Orientation}]{\setlength{\rightskip}{0pt plus 5cm}Ogre\-::\-Quaternion Objects\-::\-I\-Object\-::get\-Orientation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_objects_1_1_i_object_aff14fa622a7155a324dca06b5fb9b22f}
+
+
+Gets the orientation. 
+
+\begin{DoxyReturn}{Returns}
+The orientation. 
+\end{DoxyReturn}
+\hypertarget{class_objects_1_1_i_object_a8eafa5d8f1638d50de0cdd34d03e4350}{\index{Objects\-::\-I\-Object@{Objects\-::\-I\-Object}!get\-Orientation@{get\-Orientation}}
+\index{get\-Orientation@{get\-Orientation}!Objects::IObject@{Objects\-::\-I\-Object}}
+\subsubsection[{get\-Orientation}]{\setlength{\rightskip}{0pt plus 5cm}Ogre\-::\-Quaternion Objects\-::\-I\-Object\-::get\-Orientation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_objects_1_1_i_object_a8eafa5d8f1638d50de0cdd34d03e4350}
+
+
+Gets the orientation. 
+
+\begin{DoxyReturn}{Returns}
+The orientation. 
+\end{DoxyReturn}
+\hypertarget{class_objects_1_1_i_object_ae395cf4191bf916973860106b0816c66}{\index{Objects\-::\-I\-Object@{Objects\-::\-I\-Object}!get\-Position@{get\-Position}}
+\index{get\-Position@{get\-Position}!Objects::IObject@{Objects\-::\-I\-Object}}
+\subsubsection[{get\-Position}]{\setlength{\rightskip}{0pt plus 5cm}Ogre\-::\-Vector3 Objects\-::\-I\-Object\-::get\-Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_objects_1_1_i_object_ae395cf4191bf916973860106b0816c66}
+
+
+Gets the position. 
+
+\begin{DoxyReturn}{Returns}
+The position. 
+\end{DoxyReturn}
+\hypertarget{class_objects_1_1_i_object_a0cf4689f31dc6d9bd02b0b94537c8086}{\index{Objects\-::\-I\-Object@{Objects\-::\-I\-Object}!get\-Rotation@{get\-Rotation}}
+\index{get\-Rotation@{get\-Rotation}!Objects::IObject@{Objects\-::\-I\-Object}}
+\subsubsection[{get\-Rotation}]{\setlength{\rightskip}{0pt plus 5cm}Ogre\-::\-Vector3 Objects\-::\-I\-Object\-::get\-Rotation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_objects_1_1_i_object_a0cf4689f31dc6d9bd02b0b94537c8086}
+
+
+Gets the rotation. 
+
+\begin{DoxyReturn}{Returns}
+The rotation. 
+\end{DoxyReturn}
+\hypertarget{class_objects_1_1_i_object_ae03ab75fddc9cd990a4a9bf5137cb00f}{\index{Objects\-::\-I\-Object@{Objects\-::\-I\-Object}!get\-Scale@{get\-Scale}}
+\index{get\-Scale@{get\-Scale}!Objects::IObject@{Objects\-::\-I\-Object}}
+\subsubsection[{get\-Scale}]{\setlength{\rightskip}{0pt plus 5cm}Ogre\-::\-Vector3 Objects\-::\-I\-Object\-::get\-Scale (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_objects_1_1_i_object_ae03ab75fddc9cd990a4a9bf5137cb00f}
+
+
+Gets the scale. 
+
+\begin{DoxyReturn}{Returns}
+The scale. 
+\end{DoxyReturn}
+\hypertarget{class_objects_1_1_i_object_abaa11138d53ef4976630589899c73539}{\index{Objects\-::\-I\-Object@{Objects\-::\-I\-Object}!Is\-Interactable@{Is\-Interactable}}
+\index{Is\-Interactable@{Is\-Interactable}!Objects::IObject@{Objects\-::\-I\-Object}}
+\subsubsection[{Is\-Interactable}]{\setlength{\rightskip}{0pt plus 5cm}bool Objects\-::\-I\-Object\-::\-Is\-Interactable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_objects_1_1_i_object_abaa11138d53ef4976630589899c73539}
+
+
+Query if this object is interactable. 
+
+\begin{DoxyReturn}{Returns}
+true if interactable, false if not. 
+\end{DoxyReturn}
+\hypertarget{class_objects_1_1_i_object_a20c88273ac16887e388b8b1c3a872d48}{\index{Objects\-::\-I\-Object@{Objects\-::\-I\-Object}!rotate\-By\-Vector@{rotate\-By\-Vector}}
+\index{rotate\-By\-Vector@{rotate\-By\-Vector}!Objects::IObject@{Objects\-::\-I\-Object}}
+\subsubsection[{rotate\-By\-Vector}]{\setlength{\rightskip}{0pt plus 5cm}void Objects\-::\-I\-Object\-::rotate\-By\-Vector (
+\begin{DoxyParamCaption}
+\item[{Ogre\-::\-Vector3 \&}]{rot, }
+\item[{float}]{scale = {\ttfamily 1.0f}}
+\end{DoxyParamCaption}
+)}}\label{class_objects_1_1_i_object_a20c88273ac16887e388b8b1c3a872d48}
+
+
+Rotate by vector. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em rot} & The rot. \\
+\hline
+ & {\em scale} & (optional) the scale. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_objects_1_1_i_object_a535d1642eae42de6acba933d142defb1}{\index{Objects\-::\-I\-Object@{Objects\-::\-I\-Object}!Set\-Interactable@{Set\-Interactable}}
+\index{Set\-Interactable@{Set\-Interactable}!Objects::IObject@{Objects\-::\-I\-Object}}
+\subsubsection[{Set\-Interactable}]{\setlength{\rightskip}{0pt plus 5cm}void Objects\-::\-I\-Object\-::\-Set\-Interactable (
+\begin{DoxyParamCaption}
+\item[{bool}]{set}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_objects_1_1_i_object_a535d1642eae42de6acba933d142defb1}
+
+
+Sets an interactable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em set} & true to set. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_objects_1_1_i_object_abb8bb5097d1600f4e5d0aea2cd148247}{\index{Objects\-::\-I\-Object@{Objects\-::\-I\-Object}!set\-Mesh\-File@{set\-Mesh\-File}}
+\index{set\-Mesh\-File@{set\-Mesh\-File}!Objects::IObject@{Objects\-::\-I\-Object}}
+\subsubsection[{set\-Mesh\-File}]{\setlength{\rightskip}{0pt plus 5cm}void Objects\-::\-I\-Object\-::set\-Mesh\-File (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{filename}
+\end{DoxyParamCaption}
+)}}\label{class_objects_1_1_i_object_abb8bb5097d1600f4e5d0aea2cd148247}
+
+
+Sets mesh file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Filename of the file. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_objects_1_1_i_object_a310aa6d7062af232279b4594c10e415b}{\index{Objects\-::\-I\-Object@{Objects\-::\-I\-Object}!set\-Orientation@{set\-Orientation}}
+\index{set\-Orientation@{set\-Orientation}!Objects::IObject@{Objects\-::\-I\-Object}}
+\subsubsection[{set\-Orientation}]{\setlength{\rightskip}{0pt plus 5cm}void Objects\-::\-I\-Object\-::set\-Orientation (
+\begin{DoxyParamCaption}
+\item[{Ogre\-::\-Quaternion}]{rot}
+\end{DoxyParamCaption}
+)}}\label{class_objects_1_1_i_object_a310aa6d7062af232279b4594c10e415b}
+
+
+Sets an orientation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rot} & The rot. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_objects_1_1_i_object_a2b67f17e64732f0c7c984414a32d1f64}{\index{Objects\-::\-I\-Object@{Objects\-::\-I\-Object}!set\-Pitch@{set\-Pitch}}
+\index{set\-Pitch@{set\-Pitch}!Objects::IObject@{Objects\-::\-I\-Object}}
+\subsubsection[{set\-Pitch}]{\setlength{\rightskip}{0pt plus 5cm}void Objects\-::\-I\-Object\-::set\-Pitch (
+\begin{DoxyParamCaption}
+\item[{float}]{angle}
+\end{DoxyParamCaption}
+)}}\label{class_objects_1_1_i_object_a2b67f17e64732f0c7c984414a32d1f64}
+
+
+Sets a pitch. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle} & The angle. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_objects_1_1_i_object_a37e429804be393d3b677f2cff2540073}{\index{Objects\-::\-I\-Object@{Objects\-::\-I\-Object}!set\-Position@{set\-Position}}
+\index{set\-Position@{set\-Position}!Objects::IObject@{Objects\-::\-I\-Object}}
+\subsubsection[{set\-Position}]{\setlength{\rightskip}{0pt plus 5cm}void Objects\-::\-I\-Object\-::set\-Position (
+\begin{DoxyParamCaption}
+\item[{Ogre\-::\-Vector3}]{pos}
+\end{DoxyParamCaption}
+)}}\label{class_objects_1_1_i_object_a37e429804be393d3b677f2cff2540073}
+
+
+Sets a position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & The position. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_objects_1_1_i_object_aba95ce780536135ac15eb6bf87098ea0}{\index{Objects\-::\-I\-Object@{Objects\-::\-I\-Object}!set\-Roll@{set\-Roll}}
+\index{set\-Roll@{set\-Roll}!Objects::IObject@{Objects\-::\-I\-Object}}
+\subsubsection[{set\-Roll}]{\setlength{\rightskip}{0pt plus 5cm}void Objects\-::\-I\-Object\-::set\-Roll (
+\begin{DoxyParamCaption}
+\item[{float}]{angle}
+\end{DoxyParamCaption}
+)}}\label{class_objects_1_1_i_object_aba95ce780536135ac15eb6bf87098ea0}
+
+
+Sets a roll. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle} & The angle. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_objects_1_1_i_object_a3f67350d8eb911ce44814f3a109cf273}{\index{Objects\-::\-I\-Object@{Objects\-::\-I\-Object}!set\-Scale@{set\-Scale}}
+\index{set\-Scale@{set\-Scale}!Objects::IObject@{Objects\-::\-I\-Object}}
+\subsubsection[{set\-Scale}]{\setlength{\rightskip}{0pt plus 5cm}void Objects\-::\-I\-Object\-::set\-Scale (
+\begin{DoxyParamCaption}
+\item[{float}]{x, }
+\item[{float}]{y, }
+\item[{float}]{z}
+\end{DoxyParamCaption}
+)}}\label{class_objects_1_1_i_object_a3f67350d8eb911ce44814f3a109cf273}
+
+
+Sets a scale. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x coordinate. \\
+\hline
+{\em y} & The y coordinate. \\
+\hline
+{\em z} & The z coordinate. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_objects_1_1_i_object_a688a2ba3aa58342ff006677c4995411b}{\index{Objects\-::\-I\-Object@{Objects\-::\-I\-Object}!set\-Scale@{set\-Scale}}
+\index{set\-Scale@{set\-Scale}!Objects::IObject@{Objects\-::\-I\-Object}}
+\subsubsection[{set\-Scale}]{\setlength{\rightskip}{0pt plus 5cm}void Objects\-::\-I\-Object\-::set\-Scale (
+\begin{DoxyParamCaption}
+\item[{Ogre\-::\-Vector3}]{scale}
+\end{DoxyParamCaption}
+)}}\label{class_objects_1_1_i_object_a688a2ba3aa58342ff006677c4995411b}
+
+
+Sets a scale. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scale} & The scale. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_objects_1_1_i_object_accebddb15710d11fea7b25f0c77aeab0}{\index{Objects\-::\-I\-Object@{Objects\-::\-I\-Object}!set\-Yaw@{set\-Yaw}}
+\index{set\-Yaw@{set\-Yaw}!Objects::IObject@{Objects\-::\-I\-Object}}
+\subsubsection[{set\-Yaw}]{\setlength{\rightskip}{0pt plus 5cm}void Objects\-::\-I\-Object\-::set\-Yaw (
+\begin{DoxyParamCaption}
+\item[{float}]{angle}
+\end{DoxyParamCaption}
+)}}\label{class_objects_1_1_i_object_accebddb15710d11fea7b25f0c77aeab0}
+
+
+Sets a yaw. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle} & The angle. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_objects_1_1_i_object_a616e6befc5fbdca47155b1b56d0e0fc0}{\index{Objects\-::\-I\-Object@{Objects\-::\-I\-Object}!update@{update}}
+\index{update@{update}!Objects::IObject@{Objects\-::\-I\-Object}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Objects\-::\-I\-Object\-::update (
+\begin{DoxyParamCaption}
+\item[{float}]{delta\-Time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_objects_1_1_i_object_a616e6befc5fbdca47155b1b56d0e0fc0}
+
+
+Updates the given delta\-Time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\-Time} & Time of the delta. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{class_objects_1_1_generic_object_a57c85bdf2ceb1ffa1b85ec3aa51a631d}{Objects\-::\-Generic\-Object}, \hyperlink{class_objects_1_1_rigid_body_object_a478edcbc5820722a9641fdcd07b402bb}{Objects\-::\-Rigid\-Body\-Object}, \hyperlink{class_objects_1_1_target_object_a46b8163c5921925aa6d95fc0e99ce011}{Objects\-::\-Target\-Object}, \hyperlink{class_objects_1_1_projectile_object_ae8cb3b7f7a9f5b921b043a58e9e355dc}{Objects\-::\-Projectile\-Object}, and \hyperlink{class_objects_1_1_test_object_a5df5df31f7f1233cd991d200ecac7205}{Objects\-::\-Test\-Object}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+A\-:/\-I\-T/\-Git\-Hub/\-I\-C\-T312/source/ogregraphics/\hyperlink{_i_object_8h}{I\-Object.\-h}\item 
+A\-:/\-I\-T/\-Git\-Hub/\-I\-C\-T312/source/ogregraphics/I\-Object.\-cpp\end{DoxyCompactItemize}

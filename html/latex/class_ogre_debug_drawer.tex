@@ -1,0 +1,323 @@
+\hypertarget{class_ogre_debug_drawer}{\section{Ogre\-Debug\-Drawer Class Reference}
+\label{class_ogre_debug_drawer}\index{Ogre\-Debug\-Drawer@{Ogre\-Debug\-Drawer}}
+}
+Inheritance diagram for Ogre\-Debug\-Drawer\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_ogre_debug_drawer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_ogre_debug_drawer_affa9afb5fe47e691f51f9e3f8b6bfc06}{Ogre\-Debug\-Drawer} (Ogre\-::\-Scene\-Manager $\ast$scm)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_ogre_debug_drawer_a7fb8d446130457b47e47c5f5ee6a7a43}{$\sim$\-Ogre\-Debug\-Drawer} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_ogre_debug_drawer_a8086cc1f589d77cb7c8ca40d0238e91d}{draw\-Line} (const bt\-Vector3 \&from, const bt\-Vector3 \&to, const bt\-Vector3 \&color)
+\begin{DoxyCompactList}\small\item\em Draw line. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_ogre_debug_drawer_aec9e358cee25c958f012d44c224af1dc}{draw\-Triangle} (const bt\-Vector3 \&v0, const bt\-Vector3 \&v1, const bt\-Vector3 \&v2, const bt\-Vector3 \&color, bt\-Scalar)
+\begin{DoxyCompactList}\small\item\em Draw triangle. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_ogre_debug_drawer_ad7c599acc8ccd6bef42d4178775ed56b}{draw\-Contact\-Point} (const bt\-Vector3 \&Point\-On\-B, const bt\-Vector3 \&normal\-On\-B, bt\-Scalar distance, int life\-Time, const bt\-Vector3 \&color)
+\begin{DoxyCompactList}\small\item\em Draw contact point. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_ogre_debug_drawer_a8ae828583fcb82103c3ba8525448abff}{report\-Error\-Warning} (const char $\ast$warning\-String)
+\begin{DoxyCompactList}\small\item\em Reports error warning. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_ogre_debug_drawer_aad49212d18a6498510ec7ce685387e30}{draw3d\-Text} (const bt\-Vector3 \&location, const char $\ast$text\-String)
+\begin{DoxyCompactList}\small\item\em Draw 3\-D text. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_ogre_debug_drawer_afadea9d4ff16871d8a07408246dedb6f}{set\-Debug\-Mode} (int debug\-Mode)
+\begin{DoxyCompactList}\small\item\em Sets debug mode. \end{DoxyCompactList}\item 
+virtual int \hyperlink{class_ogre_debug_drawer_add90fea7be402da9507604ca1f3b9cb1}{get\-Debug\-Mode} () const 
+\begin{DoxyCompactList}\small\item\em Gets debug mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_ogre_debug_drawer_a7f72263ebfeac05793ad21a76ac22130}{frame\-Started} (const Ogre\-::\-Frame\-Event \&evt)
+\begin{DoxyCompactList}\small\item\em Frame started. \end{DoxyCompactList}\item 
+bool \hyperlink{class_ogre_debug_drawer_adefa1752a3968fc2f156fa14a4b3fe76}{frame\-Ended} (const Ogre\-::\-Frame\-Event \&evt)
+\begin{DoxyCompactList}\small\item\em Frame ended. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_ogre_debug_drawer_affa9afb5fe47e691f51f9e3f8b6bfc06}{\index{Ogre\-Debug\-Drawer@{Ogre\-Debug\-Drawer}!Ogre\-Debug\-Drawer@{Ogre\-Debug\-Drawer}}
+\index{Ogre\-Debug\-Drawer@{Ogre\-Debug\-Drawer}!OgreDebugDrawer@{Ogre\-Debug\-Drawer}}
+\subsubsection[{Ogre\-Debug\-Drawer}]{\setlength{\rightskip}{0pt plus 5cm}Ogre\-Debug\-Drawer\-::\-Ogre\-Debug\-Drawer (
+\begin{DoxyParamCaption}
+\item[{Ogre\-::\-Scene\-Manager $\ast$}]{scm}
+\end{DoxyParamCaption}
+)}}\label{class_ogre_debug_drawer_affa9afb5fe47e691f51f9e3f8b6bfc06}
+
+
+Constructor. 
+
+\begin{DoxyAuthor}{Author}
+Ogre Wiki 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+31/10/2013
+\end{DoxyDate}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em scm} & If non-\/null, the scm. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_ogre_debug_drawer_a7fb8d446130457b47e47c5f5ee6a7a43}{\index{Ogre\-Debug\-Drawer@{Ogre\-Debug\-Drawer}!$\sim$\-Ogre\-Debug\-Drawer@{$\sim$\-Ogre\-Debug\-Drawer}}
+\index{$\sim$\-Ogre\-Debug\-Drawer@{$\sim$\-Ogre\-Debug\-Drawer}!OgreDebugDrawer@{Ogre\-Debug\-Drawer}}
+\subsubsection[{$\sim$\-Ogre\-Debug\-Drawer}]{\setlength{\rightskip}{0pt plus 5cm}Ogre\-Debug\-Drawer\-::$\sim$\-Ogre\-Debug\-Drawer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_ogre_debug_drawer_a7fb8d446130457b47e47c5f5ee6a7a43}
+
+
+Destructor. 
+
+\begin{DoxyAuthor}{Author}
+Ogre Wiki 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+31/10/2013 
+\end{DoxyDate}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_ogre_debug_drawer_aad49212d18a6498510ec7ce685387e30}{\index{Ogre\-Debug\-Drawer@{Ogre\-Debug\-Drawer}!draw3d\-Text@{draw3d\-Text}}
+\index{draw3d\-Text@{draw3d\-Text}!OgreDebugDrawer@{Ogre\-Debug\-Drawer}}
+\subsubsection[{draw3d\-Text}]{\setlength{\rightskip}{0pt plus 5cm}void Ogre\-Debug\-Drawer\-::draw3d\-Text (
+\begin{DoxyParamCaption}
+\item[{const bt\-Vector3 \&}]{location, }
+\item[{const char $\ast$}]{text\-String}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_ogre_debug_drawer_aad49212d18a6498510ec7ce685387e30}
+
+
+Draw 3\-D text. 
+
+\begin{DoxyAuthor}{Author}
+Ogre Wiki 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+31/10/2013
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em location} & The location. \\
+\hline
+{\em text\-String} & The text string. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_ogre_debug_drawer_ad7c599acc8ccd6bef42d4178775ed56b}{\index{Ogre\-Debug\-Drawer@{Ogre\-Debug\-Drawer}!draw\-Contact\-Point@{draw\-Contact\-Point}}
+\index{draw\-Contact\-Point@{draw\-Contact\-Point}!OgreDebugDrawer@{Ogre\-Debug\-Drawer}}
+\subsubsection[{draw\-Contact\-Point}]{\setlength{\rightskip}{0pt plus 5cm}void Ogre\-Debug\-Drawer\-::draw\-Contact\-Point (
+\begin{DoxyParamCaption}
+\item[{const bt\-Vector3 \&}]{Point\-On\-B, }
+\item[{const bt\-Vector3 \&}]{normal\-On\-B, }
+\item[{bt\-Scalar}]{distance, }
+\item[{int}]{life\-Time, }
+\item[{const bt\-Vector3 \&}]{color}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_ogre_debug_drawer_ad7c599acc8ccd6bef42d4178775ed56b}
+
+
+Draw contact point. 
+
+\begin{DoxyAuthor}{Author}
+Ogre Wiki 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+31/10/2013
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em Point\-On\-B} & The point on b. \\
+\hline
+{\em normal\-On\-B} & The normal on b. \\
+\hline
+{\em distance} & The distance. \\
+\hline
+{\em life\-Time} & Time of the life. \\
+\hline
+{\em color} & The color. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_ogre_debug_drawer_a8086cc1f589d77cb7c8ca40d0238e91d}{\index{Ogre\-Debug\-Drawer@{Ogre\-Debug\-Drawer}!draw\-Line@{draw\-Line}}
+\index{draw\-Line@{draw\-Line}!OgreDebugDrawer@{Ogre\-Debug\-Drawer}}
+\subsubsection[{draw\-Line}]{\setlength{\rightskip}{0pt plus 5cm}void Ogre\-Debug\-Drawer\-::draw\-Line (
+\begin{DoxyParamCaption}
+\item[{const bt\-Vector3 \&}]{from, }
+\item[{const bt\-Vector3 \&}]{to, }
+\item[{const bt\-Vector3 \&}]{color}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_ogre_debug_drawer_a8086cc1f589d77cb7c8ca40d0238e91d}
+
+
+Draw line. 
+
+\begin{DoxyAuthor}{Author}
+Ogre Wiki 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+31/10/2013
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em from} & Source for the. \\
+\hline
+{\em to} & to. \\
+\hline
+{\em color} & The color. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_ogre_debug_drawer_aec9e358cee25c958f012d44c224af1dc}{\index{Ogre\-Debug\-Drawer@{Ogre\-Debug\-Drawer}!draw\-Triangle@{draw\-Triangle}}
+\index{draw\-Triangle@{draw\-Triangle}!OgreDebugDrawer@{Ogre\-Debug\-Drawer}}
+\subsubsection[{draw\-Triangle}]{\setlength{\rightskip}{0pt plus 5cm}void Ogre\-Debug\-Drawer\-::draw\-Triangle (
+\begin{DoxyParamCaption}
+\item[{const bt\-Vector3 \&}]{v0, }
+\item[{const bt\-Vector3 \&}]{v1, }
+\item[{const bt\-Vector3 \&}]{v2, }
+\item[{const bt\-Vector3 \&}]{color, }
+\item[{bt\-Scalar}]{alpha}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_ogre_debug_drawer_aec9e358cee25c958f012d44c224af1dc}
+
+
+Draw triangle. 
+
+\begin{DoxyAuthor}{Author}
+Ogre Wiki 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+31/10/2013
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em v0} & The v 0. \\
+\hline
+{\em v1} & The first bt\-Vector3. \\
+\hline
+{\em v2} & The second bt\-Vector3. \\
+\hline
+{\em color} & The color. \\
+\hline
+{\em parameter5} & The fifth parameter. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_ogre_debug_drawer_adefa1752a3968fc2f156fa14a4b3fe76}{\index{Ogre\-Debug\-Drawer@{Ogre\-Debug\-Drawer}!frame\-Ended@{frame\-Ended}}
+\index{frame\-Ended@{frame\-Ended}!OgreDebugDrawer@{Ogre\-Debug\-Drawer}}
+\subsubsection[{frame\-Ended}]{\setlength{\rightskip}{0pt plus 5cm}bool Ogre\-Debug\-Drawer\-::frame\-Ended (
+\begin{DoxyParamCaption}
+\item[{const Ogre\-::\-Frame\-Event \&}]{evt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_ogre_debug_drawer_adefa1752a3968fc2f156fa14a4b3fe76}
+
+
+Frame ended. 
+
+\begin{DoxyAuthor}{Author}
+Ogre Wiki 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+31/10/2013
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em evt} & The event.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if it succeeds, false if it fails. 
+\end{DoxyReturn}
+\hypertarget{class_ogre_debug_drawer_a7f72263ebfeac05793ad21a76ac22130}{\index{Ogre\-Debug\-Drawer@{Ogre\-Debug\-Drawer}!frame\-Started@{frame\-Started}}
+\index{frame\-Started@{frame\-Started}!OgreDebugDrawer@{Ogre\-Debug\-Drawer}}
+\subsubsection[{frame\-Started}]{\setlength{\rightskip}{0pt plus 5cm}bool Ogre\-Debug\-Drawer\-::frame\-Started (
+\begin{DoxyParamCaption}
+\item[{const Ogre\-::\-Frame\-Event \&}]{evt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_ogre_debug_drawer_a7f72263ebfeac05793ad21a76ac22130}
+
+
+Frame started. 
+
+\begin{DoxyAuthor}{Author}
+Ogre Wiki 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+31/10/2013
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em evt} & The event.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if it succeeds, false if it fails. 
+\end{DoxyReturn}
+\hypertarget{class_ogre_debug_drawer_add90fea7be402da9507604ca1f3b9cb1}{\index{Ogre\-Debug\-Drawer@{Ogre\-Debug\-Drawer}!get\-Debug\-Mode@{get\-Debug\-Mode}}
+\index{get\-Debug\-Mode@{get\-Debug\-Mode}!OgreDebugDrawer@{Ogre\-Debug\-Drawer}}
+\subsubsection[{get\-Debug\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}int Ogre\-Debug\-Drawer\-::get\-Debug\-Mode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_ogre_debug_drawer_add90fea7be402da9507604ca1f3b9cb1}
+
+
+Gets debug mode. 
+
+\begin{DoxyAuthor}{Author}
+Ogre Wiki 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+31/10/2013
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+The debug mode. 
+\end{DoxyReturn}
+\hypertarget{class_ogre_debug_drawer_a8ae828583fcb82103c3ba8525448abff}{\index{Ogre\-Debug\-Drawer@{Ogre\-Debug\-Drawer}!report\-Error\-Warning@{report\-Error\-Warning}}
+\index{report\-Error\-Warning@{report\-Error\-Warning}!OgreDebugDrawer@{Ogre\-Debug\-Drawer}}
+\subsubsection[{report\-Error\-Warning}]{\setlength{\rightskip}{0pt plus 5cm}void Ogre\-Debug\-Drawer\-::report\-Error\-Warning (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{warning\-String}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_ogre_debug_drawer_a8ae828583fcb82103c3ba8525448abff}
+
+
+Reports error warning. 
+
+\begin{DoxyAuthor}{Author}
+Ogre Wiki 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+31/10/2013
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em warning\-String} & The warning string. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_ogre_debug_drawer_afadea9d4ff16871d8a07408246dedb6f}{\index{Ogre\-Debug\-Drawer@{Ogre\-Debug\-Drawer}!set\-Debug\-Mode@{set\-Debug\-Mode}}
+\index{set\-Debug\-Mode@{set\-Debug\-Mode}!OgreDebugDrawer@{Ogre\-Debug\-Drawer}}
+\subsubsection[{set\-Debug\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}void Ogre\-Debug\-Drawer\-::set\-Debug\-Mode (
+\begin{DoxyParamCaption}
+\item[{int}]{debug\-Mode}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_ogre_debug_drawer_afadea9d4ff16871d8a07408246dedb6f}
+
+
+Sets debug mode. 
+
+\begin{DoxyAuthor}{Author}
+Ogre Wiki 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+31/10/2013
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em debug\-Mode} & The debug mode. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+A\-:/\-I\-T/\-Git\-Hub/\-I\-C\-T312/source/ogregraphics/\hyperlink{_debug_drawer_og_8h}{Debug\-Drawer\-Og.\-h}\item 
+A\-:/\-I\-T/\-Git\-Hub/\-I\-C\-T312/source/ogregraphics/Debug\-Drawer\-Og.\-cpp\end{DoxyCompactItemize}

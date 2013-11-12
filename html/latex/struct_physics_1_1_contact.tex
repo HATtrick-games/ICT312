@@ -1,0 +1,150 @@
+\hypertarget{struct_physics_1_1_contact}{\section{Physics\-:\-:Contact Struct Reference}
+\label{struct_physics_1_1_contact}\index{Physics\-::\-Contact@{Physics\-::\-Contact}}
+}
+
+
+\hyperlink{struct_physics_1_1_contact}{Contact}.  
+
+
+
+
+{\ttfamily \#include $<$Contact.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{struct_physics_1_1_contact_aee83d0ea1b8e3a92c2eed928a7167741}{\hyperlink{struct_physics_1_1_contact_aee83d0ea1b8e3a92c2eed928a7167741}{Contact} ()}\label{struct_physics_1_1_contact_aee83d0ea1b8e3a92c2eed928a7167741}
+
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\hyperlink{struct_physics_1_1_contact_afcf8dcb2b09f4c4d378fb1c3c9285cfc}{Contact} (\hyperlink{class_objects_1_1_rigid_body_object}{Objects\-::\-Rigid\-Body\-Object} $\ast$a, \hyperlink{class_objects_1_1_rigid_body_object}{Objects\-::\-Rigid\-Body\-Object} $\ast$b, Ogre\-::\-Vector3 pos, Ogre\-::\-Vector3 norm)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{struct_physics_1_1_contact_a32fe5d698dde1965c95ea280dcd0125a}{void \hyperlink{struct_physics_1_1_contact_a32fe5d698dde1965c95ea280dcd0125a}{Initialise} ()}\label{struct_physics_1_1_contact_a32fe5d698dde1965c95ea280dcd0125a}
+
+\begin{DoxyCompactList}\small\item\em Initialises this object. \end{DoxyCompactList}\item 
+\hypertarget{struct_physics_1_1_contact_a9882ba374b50f2c1865d843520f38f71}{void \hyperlink{struct_physics_1_1_contact_a9882ba374b50f2c1865d843520f38f71}{Calculate\-Basis} ()}\label{struct_physics_1_1_contact_a9882ba374b50f2c1865d843520f38f71}
+
+\begin{DoxyCompactList}\small\item\em Calculates the basis. \end{DoxyCompactList}\item 
+Ogre\-::\-Vector3 \hyperlink{struct_physics_1_1_contact_abfcbcf99965cfb14c0783273425d7146}{Calculate\-Impulse} (Ogre\-::\-Matrix3 $\ast$inverse\-Inertia\-Tensor)
+\begin{DoxyCompactList}\small\item\em Calculates the impulse. \end{DoxyCompactList}\item 
+Ogre\-::\-Vector3 \hyperlink{struct_physics_1_1_contact_a4bd61cf39173cce1c6e8a18f5167e292}{Calculate\-Local\-Velocity} (bool is\-A)
+\begin{DoxyCompactList}\small\item\em Calculates the local velocity. \end{DoxyCompactList}\item 
+\hypertarget{struct_physics_1_1_contact_aaa7af89cab011f241b3a285359bb4f29}{void \hyperlink{struct_physics_1_1_contact_aaa7af89cab011f241b3a285359bb4f29}{Calculate\-Delta\-Velocity} ()}\label{struct_physics_1_1_contact_aaa7af89cab011f241b3a285359bb4f29}
+
+\begin{DoxyCompactList}\small\item\em Calculates the delta velocity. \end{DoxyCompactList}\item 
+\hypertarget{struct_physics_1_1_contact_ae7399c52092639c07e7af1595bd4a093}{void \hyperlink{struct_physics_1_1_contact_ae7399c52092639c07e7af1595bd4a093}{Apply\-Velocity\-Change} ()}\label{struct_physics_1_1_contact_ae7399c52092639c07e7af1595bd4a093}
+
+\begin{DoxyCompactList}\small\item\em Applies the velocity change. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{struct_physics_1_1_contact_a4e1356a728b2b89ae5d95249662cbba9}{Ogre\-::\-Matrix3 \hyperlink{struct_physics_1_1_contact_a4e1356a728b2b89ae5d95249662cbba9}{contact\-To\-World}}\label{struct_physics_1_1_contact_a4e1356a728b2b89ae5d95249662cbba9}
+
+\begin{DoxyCompactList}\small\item\em The contact to world. \end{DoxyCompactList}\item 
+\hypertarget{struct_physics_1_1_contact_ad4da46c6aaa738241a40fda166bbd8bb}{Ogre\-::\-Matrix3 \hyperlink{struct_physics_1_1_contact_ad4da46c6aaa738241a40fda166bbd8bb}{world\-To\-Contact}}\label{struct_physics_1_1_contact_ad4da46c6aaa738241a40fda166bbd8bb}
+
+\begin{DoxyCompactList}\small\item\em The world to contact. \end{DoxyCompactList}\item 
+\hypertarget{struct_physics_1_1_contact_a1731ddb712fd811e1aa0ff2fdb88e4db}{Ogre\-::\-Vector3 \hyperlink{struct_physics_1_1_contact_a1731ddb712fd811e1aa0ff2fdb88e4db}{relative\-Contact\-Position} \mbox{[}2\mbox{]}}\label{struct_physics_1_1_contact_a1731ddb712fd811e1aa0ff2fdb88e4db}
+
+\begin{DoxyCompactList}\small\item\em The relative contact position\mbox{[} 2\mbox{]}. \end{DoxyCompactList}\item 
+\hypertarget{struct_physics_1_1_contact_acdc07dc82330e56b00e7fe4b8793df56}{Ogre\-::\-Vector3 \hyperlink{struct_physics_1_1_contact_acdc07dc82330e56b00e7fe4b8793df56}{local\-Velocity}}\label{struct_physics_1_1_contact_acdc07dc82330e56b00e7fe4b8793df56}
+
+\begin{DoxyCompactList}\small\item\em The local velocity. \end{DoxyCompactList}\item 
+\hypertarget{struct_physics_1_1_contact_a3d4fddee66067fd6418c98d177f5c07a}{float \hyperlink{struct_physics_1_1_contact_a3d4fddee66067fd6418c98d177f5c07a}{desired\-Delta\-Velocity}}\label{struct_physics_1_1_contact_a3d4fddee66067fd6418c98d177f5c07a}
+
+\begin{DoxyCompactList}\small\item\em The desired delta velocity. \end{DoxyCompactList}\item 
+\hypertarget{struct_physics_1_1_contact_a3078e1d2cdceb1056b9f5678bd87a09c}{Ogre\-::\-Vector3 \hyperlink{struct_physics_1_1_contact_a3078e1d2cdceb1056b9f5678bd87a09c}{contact\-Velocity}}\label{struct_physics_1_1_contact_a3078e1d2cdceb1056b9f5678bd87a09c}
+
+\begin{DoxyCompactList}\small\item\em The contact velocity. \end{DoxyCompactList}\item 
+\hypertarget{struct_physics_1_1_contact_a5341185fdc87123bdc19a2148844a4ee}{float \hyperlink{struct_physics_1_1_contact_a5341185fdc87123bdc19a2148844a4ee}{restitution}}\label{struct_physics_1_1_contact_a5341185fdc87123bdc19a2148844a4ee}
+
+\begin{DoxyCompactList}\small\item\em The restitution. \end{DoxyCompactList}\item 
+\hypertarget{struct_physics_1_1_contact_af1fa61df43e98be0e1769d250fcff69b}{\hyperlink{class_objects_1_1_rigid_body_object}{Objects\-::\-Rigid\-Body\-Object} $\ast$ \hyperlink{struct_physics_1_1_contact_af1fa61df43e98be0e1769d250fcff69b}{A}}\label{struct_physics_1_1_contact_af1fa61df43e98be0e1769d250fcff69b}
+
+\begin{DoxyCompactList}\small\item\em The \hyperlink{class_objects_1_1_rigid_body_object}{Objects\-::\-Rigid\-Body\-Object}$\ast$ to process. \end{DoxyCompactList}\item 
+\hypertarget{struct_physics_1_1_contact_aee4fcf3726c0e202a3745c9dadc1857f}{\hyperlink{class_objects_1_1_rigid_body_object}{Objects\-::\-Rigid\-Body\-Object} $\ast$ \hyperlink{struct_physics_1_1_contact_aee4fcf3726c0e202a3745c9dadc1857f}{B}}\label{struct_physics_1_1_contact_aee4fcf3726c0e202a3745c9dadc1857f}
+
+\begin{DoxyCompactList}\small\item\em to process. \end{DoxyCompactList}\item 
+\hypertarget{struct_physics_1_1_contact_a67f7ffcbda4f7ffc92cfa05e5010d2e2}{Ogre\-::\-Vector3 \hyperlink{struct_physics_1_1_contact_a67f7ffcbda4f7ffc92cfa05e5010d2e2}{position}}\label{struct_physics_1_1_contact_a67f7ffcbda4f7ffc92cfa05e5010d2e2}
+
+\begin{DoxyCompactList}\small\item\em The position. \end{DoxyCompactList}\item 
+\hypertarget{struct_physics_1_1_contact_aa2d83639f8db73011e88ef5293557567}{Ogre\-::\-Vector3 \hyperlink{struct_physics_1_1_contact_aa2d83639f8db73011e88ef5293557567}{normal}}\label{struct_physics_1_1_contact_aa2d83639f8db73011e88ef5293557567}
+
+\begin{DoxyCompactList}\small\item\em The normal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{struct_physics_1_1_contact}{Contact}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{struct_physics_1_1_contact_afcf8dcb2b09f4c4d378fb1c3c9285cfc}{\index{Physics\-::\-Contact@{Physics\-::\-Contact}!Contact@{Contact}}
+\index{Contact@{Contact}!Physics::Contact@{Physics\-::\-Contact}}
+\subsubsection[{Contact}]{\setlength{\rightskip}{0pt plus 5cm}Physics\-::\-Contact\-::\-Contact (
+\begin{DoxyParamCaption}
+\item[{{\bf Objects\-::\-Rigid\-Body\-Object} $\ast$}]{a, }
+\item[{{\bf Objects\-::\-Rigid\-Body\-Object} $\ast$}]{b, }
+\item[{Ogre\-::\-Vector3}]{pos, }
+\item[{Ogre\-::\-Vector3}]{norm}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_physics_1_1_contact_afcf8dcb2b09f4c4d378fb1c3c9285cfc}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em a} & If non-\/null, the \hyperlink{class_objects_1_1_rigid_body_object}{Objects\-::\-Rigid\-Body\-Object}$\ast$ to process. \\
+\hline
+\mbox{\tt in,out}  & {\em b} & If non-\/null, the \hyperlink{class_objects_1_1_rigid_body_object}{Objects\-::\-Rigid\-Body\-Object}$\ast$ to process. \\
+\hline
+ & {\em pos} & The position. \\
+\hline
+ & {\em norm} & The normalise. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{struct_physics_1_1_contact_abfcbcf99965cfb14c0783273425d7146}{\index{Physics\-::\-Contact@{Physics\-::\-Contact}!Calculate\-Impulse@{Calculate\-Impulse}}
+\index{Calculate\-Impulse@{Calculate\-Impulse}!Physics::Contact@{Physics\-::\-Contact}}
+\subsubsection[{Calculate\-Impulse}]{\setlength{\rightskip}{0pt plus 5cm}Ogre\-::\-Vector3 Physics\-::\-Contact\-::\-Calculate\-Impulse (
+\begin{DoxyParamCaption}
+\item[{Ogre\-::\-Matrix3 $\ast$}]{inverse\-Inertia\-Tensor}
+\end{DoxyParamCaption}
+)}}\label{struct_physics_1_1_contact_abfcbcf99965cfb14c0783273425d7146}
+
+
+Calculates the impulse. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em inverse\-Inertia\-Tensor} & If non-\/null, the inverse inertia tensor.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The calculated impulse. 
+\end{DoxyReturn}
+\hypertarget{struct_physics_1_1_contact_a4bd61cf39173cce1c6e8a18f5167e292}{\index{Physics\-::\-Contact@{Physics\-::\-Contact}!Calculate\-Local\-Velocity@{Calculate\-Local\-Velocity}}
+\index{Calculate\-Local\-Velocity@{Calculate\-Local\-Velocity}!Physics::Contact@{Physics\-::\-Contact}}
+\subsubsection[{Calculate\-Local\-Velocity}]{\setlength{\rightskip}{0pt plus 5cm}Ogre\-::\-Vector3 Physics\-::\-Contact\-::\-Calculate\-Local\-Velocity (
+\begin{DoxyParamCaption}
+\item[{bool}]{is\-A}
+\end{DoxyParamCaption}
+)}}\label{struct_physics_1_1_contact_a4bd61cf39173cce1c6e8a18f5167e292}
+
+
+Calculates the local velocity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\-A} & true if this object is a.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The calculated local velocity. 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+A\-:/\-I\-T/\-Git\-Hub/\-I\-C\-T312/source/ogregraphics/\hyperlink{_contact_8h}{Contact.\-h}\item 
+A\-:/\-I\-T/\-Git\-Hub/\-I\-C\-T312/source/ogregraphics/Contact.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,136 @@
+\hypertarget{class_graphics_1_1_frame_listener}{\section{Graphics\-:\-:Frame\-Listener Class Reference}
+\label{class_graphics_1_1_frame_listener}\index{Graphics\-::\-Frame\-Listener@{Graphics\-::\-Frame\-Listener}}
+}
+
+
+Frame listener.  
+
+
+
+
+{\ttfamily \#include $<$Frame\-Listener.\-h$>$}
+
+Inheritance diagram for Graphics\-:\-:Frame\-Listener\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_graphics_1_1_frame_listener}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_graphics_1_1_frame_listener_afebcc6a4dc070985a77fb2182119ca98}{Frame\-Listener} (Ogre\-::\-Scene\-Manager $\ast$scene\-Manager)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_graphics_1_1_frame_listener_a84ee3a42ba673ac10825b25abcef248a}{\hyperlink{class_graphics_1_1_frame_listener_a84ee3a42ba673ac10825b25abcef248a}{$\sim$\-Frame\-Listener} ()}\label{class_graphics_1_1_frame_listener_a84ee3a42ba673ac10825b25abcef248a}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_graphics_1_1_frame_listener_aa790d32da6634e931c35b69f779fd42b}{frame\-Started} (const Ogre\-::\-Frame\-Event \&evt)
+\begin{DoxyCompactList}\small\item\em Frame started. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_graphics_1_1_frame_listener_a3aa34e5431cef9ad1d429790914eed60}{frame\-Ended} (const Ogre\-::\-Frame\-Event \&evt)
+\begin{DoxyCompactList}\small\item\em Frame ended. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_graphics_1_1_frame_listener_a1ea51ffd9cfb64758c0bde5d0036a510}{frame\-Rendering\-Queued} (const Ogre\-::\-Frame\-Event \&evt)
+\begin{DoxyCompactList}\small\item\em Frame rendering queued. \end{DoxyCompactList}\item 
+float \hyperlink{class_graphics_1_1_frame_listener_a2f8f5e7b39811078ec7d735233e41d74}{get\-Delta\-Time} () const 
+\begin{DoxyCompactList}\small\item\em Gets delta time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Frame listener. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_graphics_1_1_frame_listener_afebcc6a4dc070985a77fb2182119ca98}{\index{Graphics\-::\-Frame\-Listener@{Graphics\-::\-Frame\-Listener}!Frame\-Listener@{Frame\-Listener}}
+\index{Frame\-Listener@{Frame\-Listener}!Graphics::FrameListener@{Graphics\-::\-Frame\-Listener}}
+\subsubsection[{Frame\-Listener}]{\setlength{\rightskip}{0pt plus 5cm}Graphics\-::\-Frame\-Listener\-::\-Frame\-Listener (
+\begin{DoxyParamCaption}
+\item[{Ogre\-::\-Scene\-Manager $\ast$}]{scene\-Manager}
+\end{DoxyParamCaption}
+)}}\label{class_graphics_1_1_frame_listener_afebcc6a4dc070985a77fb2182119ca98}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em scene\-Manager} & If non-\/null, manager for scene. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_graphics_1_1_frame_listener_a3aa34e5431cef9ad1d429790914eed60}{\index{Graphics\-::\-Frame\-Listener@{Graphics\-::\-Frame\-Listener}!frame\-Ended@{frame\-Ended}}
+\index{frame\-Ended@{frame\-Ended}!Graphics::FrameListener@{Graphics\-::\-Frame\-Listener}}
+\subsubsection[{frame\-Ended}]{\setlength{\rightskip}{0pt plus 5cm}bool Graphics\-::\-Frame\-Listener\-::frame\-Ended (
+\begin{DoxyParamCaption}
+\item[{const Ogre\-::\-Frame\-Event \&}]{evt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_graphics_1_1_frame_listener_a3aa34e5431cef9ad1d429790914eed60}
+
+
+Frame ended. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em evt} & The event.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if it succeeds, false if it fails. 
+\end{DoxyReturn}
+\hypertarget{class_graphics_1_1_frame_listener_a1ea51ffd9cfb64758c0bde5d0036a510}{\index{Graphics\-::\-Frame\-Listener@{Graphics\-::\-Frame\-Listener}!frame\-Rendering\-Queued@{frame\-Rendering\-Queued}}
+\index{frame\-Rendering\-Queued@{frame\-Rendering\-Queued}!Graphics::FrameListener@{Graphics\-::\-Frame\-Listener}}
+\subsubsection[{frame\-Rendering\-Queued}]{\setlength{\rightskip}{0pt plus 5cm}bool Graphics\-::\-Frame\-Listener\-::frame\-Rendering\-Queued (
+\begin{DoxyParamCaption}
+\item[{const Ogre\-::\-Frame\-Event \&}]{evt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_graphics_1_1_frame_listener_a1ea51ffd9cfb64758c0bde5d0036a510}
+
+
+Frame rendering queued. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em evt} & The event.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if it succeeds, false if it fails. 
+\end{DoxyReturn}
+\hypertarget{class_graphics_1_1_frame_listener_aa790d32da6634e931c35b69f779fd42b}{\index{Graphics\-::\-Frame\-Listener@{Graphics\-::\-Frame\-Listener}!frame\-Started@{frame\-Started}}
+\index{frame\-Started@{frame\-Started}!Graphics::FrameListener@{Graphics\-::\-Frame\-Listener}}
+\subsubsection[{frame\-Started}]{\setlength{\rightskip}{0pt plus 5cm}bool Graphics\-::\-Frame\-Listener\-::frame\-Started (
+\begin{DoxyParamCaption}
+\item[{const Ogre\-::\-Frame\-Event \&}]{evt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_graphics_1_1_frame_listener_aa790d32da6634e931c35b69f779fd42b}
+
+
+Frame started. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em evt} & The event.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if it succeeds, false if it fails. 
+\end{DoxyReturn}
+\hypertarget{class_graphics_1_1_frame_listener_a2f8f5e7b39811078ec7d735233e41d74}{\index{Graphics\-::\-Frame\-Listener@{Graphics\-::\-Frame\-Listener}!get\-Delta\-Time@{get\-Delta\-Time}}
+\index{get\-Delta\-Time@{get\-Delta\-Time}!Graphics::FrameListener@{Graphics\-::\-Frame\-Listener}}
+\subsubsection[{get\-Delta\-Time}]{\setlength{\rightskip}{0pt plus 5cm}float Graphics\-::\-Frame\-Listener\-::get\-Delta\-Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graphics_1_1_frame_listener_a2f8f5e7b39811078ec7d735233e41d74}
+
+
+Gets delta time. 
+
+\begin{DoxyReturn}{Returns}
+The delta time. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+A\-:/\-I\-T/\-Git\-Hub/\-I\-C\-T312/source/ogregraphics/\hyperlink{_frame_listener_8h}{Frame\-Listener.\-h}\item 
+A\-:/\-I\-T/\-Git\-Hub/\-I\-C\-T312/source/ogregraphics/Frame\-Listener.\-cpp\end{DoxyCompactItemize}

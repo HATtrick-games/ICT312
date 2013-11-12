@@ -1,0 +1,448 @@
+\hypertarget{class_graphics_1_1_ogre_graphics}{\section{Graphics\-:\-:Ogre\-Graphics Class Reference}
+\label{class_graphics_1_1_ogre_graphics}\index{Graphics\-::\-Ogre\-Graphics@{Graphics\-::\-Ogre\-Graphics}}
+}
+
+
+Facade class for Ogre3\-D graphics engine. Allows for the creation of windows, cameras, lighting, entities and more using Ogre3\-D.  
+
+
+
+
+{\ttfamily \#include $<$Ogre\-Graphics.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_graphics_1_1_ogre_graphics_a37c6b9f85aa0ce9f8c8d04db516a5371}{Ogre\-::\-Vector3 {\bfseries Get\-Position} ()}\label{class_graphics_1_1_ogre_graphics_a37c6b9f85aa0ce9f8c8d04db516a5371}
+
+\item 
+\hyperlink{class_graphics_1_1_ogre_graphics_a007a31a8efc2475971a6c3f432ea640f}{Ogre\-Graphics} (void)
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_graphics_1_1_ogre_graphics_a019747c24e5a65f0a3ccab895c09c6f7}{$\sim$\-Ogre\-Graphics} (void)
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+bool \hyperlink{class_graphics_1_1_ogre_graphics_a90de3a0bb9efe9b94ca1d97d6bae4e48}{initialise} ()
+\begin{DoxyCompactList}\small\item\em Initialises this object. \end{DoxyCompactList}\item 
+void \hyperlink{class_graphics_1_1_ogre_graphics_aa76873367c5bb0f08add8f25ee1a6ee3}{load\-Resources} ()
+\begin{DoxyCompactList}\small\item\em Loads the resources. \end{DoxyCompactList}\item 
+void \hyperlink{class_graphics_1_1_ogre_graphics_a8f681b4e4564949b88e25803d70302ed}{render\-One\-Frame} ()
+\begin{DoxyCompactList}\small\item\em Renders a single frame. \end{DoxyCompactList}\item 
+float \hyperlink{class_graphics_1_1_ogre_graphics_a28e230d27cc293d46e0672cd741050bf}{get\-Delta\-Time} ()
+\begin{DoxyCompactList}\small\item\em Gets delta time. \end{DoxyCompactList}\item 
+void \hyperlink{class_graphics_1_1_ogre_graphics_a45c7525b6fb3599127301d27ffc25999}{camera\-Set\-Position} (float pos\-X, float pos\-Y, float pos\-Z)
+\begin{DoxyCompactList}\small\item\em Sets the position of the camera object. \end{DoxyCompactList}\item 
+void \hyperlink{class_graphics_1_1_ogre_graphics_a167d450f5072b96560f1c56892403243}{camera\-Set\-Look\-At} (float look\-At\-X, float look\-At\-Y, float look\-At\-Z)
+\begin{DoxyCompactList}\small\item\em Sets the point that the camera object looks at. \end{DoxyCompactList}\item 
+void \hyperlink{class_graphics_1_1_ogre_graphics_aae212ac2be0588b2b977d64ba4b33746}{camera\-Set\-Aspect\-Ratio} (float ratio)
+\begin{DoxyCompactList}\small\item\em Sets the aspect ratio from which the camera is viewed. \end{DoxyCompactList}\item 
+void \hyperlink{class_graphics_1_1_ogre_graphics_ac9a3f3eec14d2a5b6d767696f70198ed}{camera\-Move\-Relative} (Ogre\-::\-Vector3 \&movement)
+\begin{DoxyCompactList}\small\item\em Moves the camera object relative to its current position. \end{DoxyCompactList}\item 
+void \hyperlink{class_graphics_1_1_ogre_graphics_a81de9be1c14e6f5b4ea8e7343a0725e0}{camera\-Yaw} (Ogre\-::\-Radian \&angle)
+\begin{DoxyCompactList}\small\item\em Sets the camera yaw angle. \end{DoxyCompactList}\item 
+void \hyperlink{class_graphics_1_1_ogre_graphics_a00ef565a1cf666f72808d327fb0ff533}{camera\-Pitch} (Ogre\-::\-Radian \&angle)
+\begin{DoxyCompactList}\small\item\em Sets the camera pitch angle. \end{DoxyCompactList}\item 
+\hypertarget{class_graphics_1_1_ogre_graphics_a64f51c4ae82086c83f393b4481bbc2e6}{Ogre\-::\-Vector3 {\bfseries camera\-Direction} ()}\label{class_graphics_1_1_ogre_graphics_a64f51c4ae82086c83f393b4481bbc2e6}
+
+\item 
+int \hyperlink{class_graphics_1_1_ogre_graphics_a499281e2495fa88c0608a10e4114e3e9}{get\-Window\-Width} () const 
+\begin{DoxyCompactList}\small\item\em Returns the width of the window. \end{DoxyCompactList}\item 
+int \hyperlink{class_graphics_1_1_ogre_graphics_a4bcd073336c76de1b27129247c52f1da}{get\-Window\-Height} () const 
+\begin{DoxyCompactList}\small\item\em Returns the height of the window. \end{DoxyCompactList}\item 
+Ogre\-::\-Render\-Window $\ast$ \hyperlink{class_graphics_1_1_ogre_graphics_a0bd9f35fabd4e8cf3c505205d35e1168}{get\-Render\-Window} () const 
+\begin{DoxyCompactList}\small\item\em Gets render window. T\-O\-D\-O\-: Remove in favor of outputting the necessary information. \end{DoxyCompactList}\item 
+void \hyperlink{class_graphics_1_1_ogre_graphics_a7f411e7b4427d0f7bb4250383de4863d}{create\-Mesh\-Entity} (std\-::string identifier, std\-::string filename)
+\begin{DoxyCompactList}\small\item\em Creates a mesh entity and attaches it to the root scene node. \end{DoxyCompactList}\item 
+void \hyperlink{class_graphics_1_1_ogre_graphics_a36baf8b52d4d674ebdb07690482f5206}{create\-Plane\-Entity} (std\-::string identifier, std\-::string mesh\-Name, Ogre\-::\-Vector3 normal, float change\-Along\-Normal, float width, float height, int x\-Segments, int y\-Segments, float u\-Tile, float v\-Tile, std\-::string material=N\-U\-L\-L)
+\begin{DoxyCompactList}\small\item\em Creates plane entity and attaches it to the root scene node. \end{DoxyCompactList}\item 
+void \hyperlink{class_graphics_1_1_ogre_graphics_af9e33ddceec43e569f6661e0b97362f2}{create\-Directional\-Light} (std\-::string name, float pos\-X, float pos\-Y, float pos\-Z, float dir\-X, float dir\-Y, float dir\-Z)
+\begin{DoxyCompactList}\small\item\em Creates a directional light at the position specified facing in the input direction. \end{DoxyCompactList}\item 
+\hypertarget{class_graphics_1_1_ogre_graphics_aef364c5496904a81976882440b42ff0f}{void {\bfseries create\-Empty\-Entity} (std\-::string identifier)}\label{class_graphics_1_1_ogre_graphics_aef364c5496904a81976882440b42ff0f}
+
+\item 
+\hypertarget{class_graphics_1_1_ogre_graphics_a9bd41a31f524415fbf24f4afdfa6b849}{void {\bfseries create\-Child\-Entity} (std\-::string parent\-I\-D, std\-::string child\-I\-D)}\label{class_graphics_1_1_ogre_graphics_a9bd41a31f524415fbf24f4afdfa6b849}
+
+\item 
+\hypertarget{class_graphics_1_1_ogre_graphics_a7b47035683126a79b25339b047760c40}{void {\bfseries set\-Entity\-Yaw} (std\-::string identifier, float angle)}\label{class_graphics_1_1_ogre_graphics_a7b47035683126a79b25339b047760c40}
+
+\item 
+\hypertarget{class_graphics_1_1_ogre_graphics_abb152e52376d33197737153111d6a471}{void {\bfseries set\-Entity\-Pitch} (std\-::string identifier, float angle)}\label{class_graphics_1_1_ogre_graphics_abb152e52376d33197737153111d6a471}
+
+\item 
+\hypertarget{class_graphics_1_1_ogre_graphics_abe3417c9678ae99406c1b4fe8f657d23}{void {\bfseries set\-Entity\-Roll} (std\-::string identifier, float angle)}\label{class_graphics_1_1_ogre_graphics_abe3417c9678ae99406c1b4fe8f657d23}
+
+\item 
+\hypertarget{class_graphics_1_1_ogre_graphics_a6b2182aa52386a6acb9c562ed06f2995}{void {\bfseries translate\-Entity} (std\-::string identifier, float x, float y, float z)}\label{class_graphics_1_1_ogre_graphics_a6b2182aa52386a6acb9c562ed06f2995}
+
+\item 
+\hypertarget{class_graphics_1_1_ogre_graphics_a846ccf667116effe488c937fd887aa74}{void {\bfseries translate\-Entity} (std\-::string identifier, Ogre\-::\-Vector3 translate\-Vector)}\label{class_graphics_1_1_ogre_graphics_a846ccf667116effe488c937fd887aa74}
+
+\item 
+\hypertarget{class_graphics_1_1_ogre_graphics_a3a7362473ed9c51c27dabf961153795b}{void {\bfseries set\-Entity\-Position} (std\-::string identifier, float x, float y, float z)}\label{class_graphics_1_1_ogre_graphics_a3a7362473ed9c51c27dabf961153795b}
+
+\item 
+\hypertarget{class_graphics_1_1_ogre_graphics_a16a9ba92da6e659660b31aca768e94ab}{Ogre\-::\-Quaternion {\bfseries get\-Entity\-Orientation} (std\-::string identifier)}\label{class_graphics_1_1_ogre_graphics_a16a9ba92da6e659660b31aca768e94ab}
+
+\item 
+\hypertarget{class_graphics_1_1_ogre_graphics_aaf5e3542879b6ccafdd40facb3cd12d6}{void {\bfseries set\-Entity\-Orientation} (std\-::string identifier, Ogre\-::\-Quaternion quat)}\label{class_graphics_1_1_ogre_graphics_aaf5e3542879b6ccafdd40facb3cd12d6}
+
+\item 
+\hypertarget{class_graphics_1_1_ogre_graphics_a80abd401399f859017ff78f40b11fdd8}{void {\bfseries set\-Entity\-Scale} (std\-::string identifier, Ogre\-::\-Vector3 scale)}\label{class_graphics_1_1_ogre_graphics_a80abd401399f859017ff78f40b11fdd8}
+
+\item 
+\hypertarget{class_graphics_1_1_ogre_graphics_a0bf286f46a9204675ff257104169cc89}{Ogre\-::\-Vector3 {\bfseries get\-Entity\-Scale} (std\-::string identifier)}\label{class_graphics_1_1_ogre_graphics_a0bf286f46a9204675ff257104169cc89}
+
+\item 
+\hypertarget{class_graphics_1_1_ogre_graphics_a7936afa4e8d5078c4f2f1dd2912c639c}{Ogre\-::\-Entity $\ast$ {\bfseries get\-Entity} (std\-::string identifier)}\label{class_graphics_1_1_ogre_graphics_a7936afa4e8d5078c4f2f1dd2912c639c}
+
+\item 
+\hypertarget{class_graphics_1_1_ogre_graphics_abbddf0740d07b37ab2c4d93d2f87758a}{\hyperlink{class_debug_drawer}{Debug\-Drawer} $\ast$ {\bfseries get\-Debug\-Drawer} ()}\label{class_graphics_1_1_ogre_graphics_abbddf0740d07b37ab2c4d93d2f87758a}
+
+\item 
+\hypertarget{class_graphics_1_1_ogre_graphics_a887b5276d28309a584421d1658a67666}{Ogre\-::\-Scene\-Manager $\ast$ {\bfseries Get\-Scene\-Manager} ()}\label{class_graphics_1_1_ogre_graphics_a887b5276d28309a584421d1658a67666}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Facade class for Ogre3\-D graphics engine. Allows for the creation of windows, cameras, lighting, entities and more using Ogre3\-D. 
+
+\begin{DoxyAuthor}{Author}
+Timothy Veletta 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+13/08/2013 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_graphics_1_1_ogre_graphics_a007a31a8efc2475971a6c3f432ea640f}{\index{Graphics\-::\-Ogre\-Graphics@{Graphics\-::\-Ogre\-Graphics}!Ogre\-Graphics@{Ogre\-Graphics}}
+\index{Ogre\-Graphics@{Ogre\-Graphics}!Graphics::OgreGraphics@{Graphics\-::\-Ogre\-Graphics}}
+\subsubsection[{Ogre\-Graphics}]{\setlength{\rightskip}{0pt plus 5cm}Graphics\-::\-Ogre\-Graphics\-::\-Ogre\-Graphics (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{class_graphics_1_1_ogre_graphics_a007a31a8efc2475971a6c3f432ea640f}
+
+
+Default constructor. 
+
+Initialises the member variables of this class. \hypertarget{class_graphics_1_1_ogre_graphics_a019747c24e5a65f0a3ccab895c09c6f7}{\index{Graphics\-::\-Ogre\-Graphics@{Graphics\-::\-Ogre\-Graphics}!$\sim$\-Ogre\-Graphics@{$\sim$\-Ogre\-Graphics}}
+\index{$\sim$\-Ogre\-Graphics@{$\sim$\-Ogre\-Graphics}!Graphics::OgreGraphics@{Graphics\-::\-Ogre\-Graphics}}
+\subsubsection[{$\sim$\-Ogre\-Graphics}]{\setlength{\rightskip}{0pt plus 5cm}Graphics\-::\-Ogre\-Graphics\-::$\sim$\-Ogre\-Graphics (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{class_graphics_1_1_ogre_graphics_a019747c24e5a65f0a3ccab895c09c6f7}
+
+
+Destructor. 
+
+Destroys the Ogre Root object which in turn destroys all other objects that are attached to it. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_graphics_1_1_ogre_graphics_ac9a3f3eec14d2a5b6d767696f70198ed}{\index{Graphics\-::\-Ogre\-Graphics@{Graphics\-::\-Ogre\-Graphics}!camera\-Move\-Relative@{camera\-Move\-Relative}}
+\index{camera\-Move\-Relative@{camera\-Move\-Relative}!Graphics::OgreGraphics@{Graphics\-::\-Ogre\-Graphics}}
+\subsubsection[{camera\-Move\-Relative}]{\setlength{\rightskip}{0pt plus 5cm}void Graphics\-::\-Ogre\-Graphics\-::camera\-Move\-Relative (
+\begin{DoxyParamCaption}
+\item[{Ogre\-::\-Vector3 \&}]{movement}
+\end{DoxyParamCaption}
+)}}\label{class_graphics_1_1_ogre_graphics_ac9a3f3eec14d2a5b6d767696f70198ed}
+
+
+Moves the camera object relative to its current position. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em movement} & The movement. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_graphics_1_1_ogre_graphics_a00ef565a1cf666f72808d327fb0ff533}{\index{Graphics\-::\-Ogre\-Graphics@{Graphics\-::\-Ogre\-Graphics}!camera\-Pitch@{camera\-Pitch}}
+\index{camera\-Pitch@{camera\-Pitch}!Graphics::OgreGraphics@{Graphics\-::\-Ogre\-Graphics}}
+\subsubsection[{camera\-Pitch}]{\setlength{\rightskip}{0pt plus 5cm}void Graphics\-::\-Ogre\-Graphics\-::camera\-Pitch (
+\begin{DoxyParamCaption}
+\item[{Ogre\-::\-Radian \&}]{angle}
+\end{DoxyParamCaption}
+)}}\label{class_graphics_1_1_ogre_graphics_a00ef565a1cf666f72808d327fb0ff533}
+
+
+Sets the camera pitch angle. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em angle} & The angle. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_graphics_1_1_ogre_graphics_aae212ac2be0588b2b977d64ba4b33746}{\index{Graphics\-::\-Ogre\-Graphics@{Graphics\-::\-Ogre\-Graphics}!camera\-Set\-Aspect\-Ratio@{camera\-Set\-Aspect\-Ratio}}
+\index{camera\-Set\-Aspect\-Ratio@{camera\-Set\-Aspect\-Ratio}!Graphics::OgreGraphics@{Graphics\-::\-Ogre\-Graphics}}
+\subsubsection[{camera\-Set\-Aspect\-Ratio}]{\setlength{\rightskip}{0pt plus 5cm}void Graphics\-::\-Ogre\-Graphics\-::camera\-Set\-Aspect\-Ratio (
+\begin{DoxyParamCaption}
+\item[{float}]{ratio}
+\end{DoxyParamCaption}
+)}}\label{class_graphics_1_1_ogre_graphics_aae212ac2be0588b2b977d64ba4b33746}
+
+
+Sets the aspect ratio from which the camera is viewed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ratio} & The ratio. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_graphics_1_1_ogre_graphics_a167d450f5072b96560f1c56892403243}{\index{Graphics\-::\-Ogre\-Graphics@{Graphics\-::\-Ogre\-Graphics}!camera\-Set\-Look\-At@{camera\-Set\-Look\-At}}
+\index{camera\-Set\-Look\-At@{camera\-Set\-Look\-At}!Graphics::OgreGraphics@{Graphics\-::\-Ogre\-Graphics}}
+\subsubsection[{camera\-Set\-Look\-At}]{\setlength{\rightskip}{0pt plus 5cm}void Graphics\-::\-Ogre\-Graphics\-::camera\-Set\-Look\-At (
+\begin{DoxyParamCaption}
+\item[{float}]{look\-At\-X, }
+\item[{float}]{look\-At\-Y, }
+\item[{float}]{look\-At\-Z}
+\end{DoxyParamCaption}
+)}}\label{class_graphics_1_1_ogre_graphics_a167d450f5072b96560f1c56892403243}
+
+
+Sets the point that the camera object looks at. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em look\-At\-X} & The look at x coordinate. \\
+\hline
+{\em look\-At\-Y} & The look at y coordinate. \\
+\hline
+{\em look\-At\-Z} & The look at z coordinate. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_graphics_1_1_ogre_graphics_a45c7525b6fb3599127301d27ffc25999}{\index{Graphics\-::\-Ogre\-Graphics@{Graphics\-::\-Ogre\-Graphics}!camera\-Set\-Position@{camera\-Set\-Position}}
+\index{camera\-Set\-Position@{camera\-Set\-Position}!Graphics::OgreGraphics@{Graphics\-::\-Ogre\-Graphics}}
+\subsubsection[{camera\-Set\-Position}]{\setlength{\rightskip}{0pt plus 5cm}void Graphics\-::\-Ogre\-Graphics\-::camera\-Set\-Position (
+\begin{DoxyParamCaption}
+\item[{float}]{pos\-X, }
+\item[{float}]{pos\-Y, }
+\item[{float}]{pos\-Z}
+\end{DoxyParamCaption}
+)}}\label{class_graphics_1_1_ogre_graphics_a45c7525b6fb3599127301d27ffc25999}
+
+
+Sets the position of the camera object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos\-X} & The position x coordinate. \\
+\hline
+{\em pos\-Y} & The position y coordinate. \\
+\hline
+{\em pos\-Z} & The position z coordinate. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_graphics_1_1_ogre_graphics_a81de9be1c14e6f5b4ea8e7343a0725e0}{\index{Graphics\-::\-Ogre\-Graphics@{Graphics\-::\-Ogre\-Graphics}!camera\-Yaw@{camera\-Yaw}}
+\index{camera\-Yaw@{camera\-Yaw}!Graphics::OgreGraphics@{Graphics\-::\-Ogre\-Graphics}}
+\subsubsection[{camera\-Yaw}]{\setlength{\rightskip}{0pt plus 5cm}void Graphics\-::\-Ogre\-Graphics\-::camera\-Yaw (
+\begin{DoxyParamCaption}
+\item[{Ogre\-::\-Radian \&}]{angle}
+\end{DoxyParamCaption}
+)}}\label{class_graphics_1_1_ogre_graphics_a81de9be1c14e6f5b4ea8e7343a0725e0}
+
+
+Sets the camera yaw angle. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em angle} & The angle. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_graphics_1_1_ogre_graphics_af9e33ddceec43e569f6661e0b97362f2}{\index{Graphics\-::\-Ogre\-Graphics@{Graphics\-::\-Ogre\-Graphics}!create\-Directional\-Light@{create\-Directional\-Light}}
+\index{create\-Directional\-Light@{create\-Directional\-Light}!Graphics::OgreGraphics@{Graphics\-::\-Ogre\-Graphics}}
+\subsubsection[{create\-Directional\-Light}]{\setlength{\rightskip}{0pt plus 5cm}void Graphics\-::\-Ogre\-Graphics\-::create\-Directional\-Light (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{name, }
+\item[{float}]{pos\-X, }
+\item[{float}]{pos\-Y, }
+\item[{float}]{pos\-Z, }
+\item[{float}]{dir\-X, }
+\item[{float}]{dir\-Y, }
+\item[{float}]{dir\-Z}
+\end{DoxyParamCaption}
+)}}\label{class_graphics_1_1_ogre_graphics_af9e33ddceec43e569f6661e0b97362f2}
+
+
+Creates a directional light at the position specified facing in the input direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name. \\
+\hline
+{\em pos\-X} & The position x coordinate. \\
+\hline
+{\em pos\-Y} & The position y coordinate. \\
+\hline
+{\em pos\-Z} & The position z coordinate. \\
+\hline
+{\em dir\-X} & The direction x coordinate. \\
+\hline
+{\em dir\-Y} & The direction y coordinate. \\
+\hline
+{\em dir\-Z} & The direction z coordinate. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_graphics_1_1_ogre_graphics_a7f411e7b4427d0f7bb4250383de4863d}{\index{Graphics\-::\-Ogre\-Graphics@{Graphics\-::\-Ogre\-Graphics}!create\-Mesh\-Entity@{create\-Mesh\-Entity}}
+\index{create\-Mesh\-Entity@{create\-Mesh\-Entity}!Graphics::OgreGraphics@{Graphics\-::\-Ogre\-Graphics}}
+\subsubsection[{create\-Mesh\-Entity}]{\setlength{\rightskip}{0pt plus 5cm}void Graphics\-::\-Ogre\-Graphics\-::create\-Mesh\-Entity (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{identifier, }
+\item[{std\-::string}]{filename}
+\end{DoxyParamCaption}
+)}}\label{class_graphics_1_1_ogre_graphics_a7f411e7b4427d0f7bb4250383de4863d}
+
+
+Creates a mesh entity and attaches it to the root scene node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em identifier} & The entity identifier. \\
+\hline
+{\em filename} & Filename of the mesh file. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_graphics_1_1_ogre_graphics_a36baf8b52d4d674ebdb07690482f5206}{\index{Graphics\-::\-Ogre\-Graphics@{Graphics\-::\-Ogre\-Graphics}!create\-Plane\-Entity@{create\-Plane\-Entity}}
+\index{create\-Plane\-Entity@{create\-Plane\-Entity}!Graphics::OgreGraphics@{Graphics\-::\-Ogre\-Graphics}}
+\subsubsection[{create\-Plane\-Entity}]{\setlength{\rightskip}{0pt plus 5cm}void Graphics\-::\-Ogre\-Graphics\-::create\-Plane\-Entity (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{identifier, }
+\item[{std\-::string}]{mesh\-Name, }
+\item[{Ogre\-::\-Vector3}]{normal, }
+\item[{float}]{change\-Along\-Normal, }
+\item[{float}]{width, }
+\item[{float}]{height, }
+\item[{int}]{x\-Segments, }
+\item[{int}]{y\-Segments, }
+\item[{float}]{u\-Tile, }
+\item[{float}]{v\-Tile, }
+\item[{std\-::string}]{material = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+)}}\label{class_graphics_1_1_ogre_graphics_a36baf8b52d4d674ebdb07690482f5206}
+
+
+Creates plane entity and attaches it to the root scene node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em identifier} & The entity identifier. \\
+\hline
+{\em mesh\-Name} & Name of the mesh. \\
+\hline
+{\em normal} & The normal to the plane. \\
+\hline
+{\em change\-Along\-Normal} & How much to move the plane along the normal. \\
+\hline
+{\em width} & The width of the plane. \\
+\hline
+{\em height} & The height of the plane. \\
+\hline
+{\em x\-Segments} & The number segments in the x coordinate. \\
+\hline
+{\em y\-Segments} & The number segments in the y coordinate. \\
+\hline
+{\em u\-Tile} & The texture tiling in the u direction. \\
+\hline
+{\em v\-Tile} & The texture tiling in the v direction. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_graphics_1_1_ogre_graphics_a28e230d27cc293d46e0672cd741050bf}{\index{Graphics\-::\-Ogre\-Graphics@{Graphics\-::\-Ogre\-Graphics}!get\-Delta\-Time@{get\-Delta\-Time}}
+\index{get\-Delta\-Time@{get\-Delta\-Time}!Graphics::OgreGraphics@{Graphics\-::\-Ogre\-Graphics}}
+\subsubsection[{get\-Delta\-Time}]{\setlength{\rightskip}{0pt plus 5cm}float Graphics\-::\-Ogre\-Graphics\-::get\-Delta\-Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graphics_1_1_ogre_graphics_a28e230d27cc293d46e0672cd741050bf}
+
+
+Gets delta time. 
+
+Gets the change in time from one frame to the next.
+
+\begin{DoxyReturn}{Returns}
+The delta time. 
+\end{DoxyReturn}
+\hypertarget{class_graphics_1_1_ogre_graphics_a0bd9f35fabd4e8cf3c505205d35e1168}{\index{Graphics\-::\-Ogre\-Graphics@{Graphics\-::\-Ogre\-Graphics}!get\-Render\-Window@{get\-Render\-Window}}
+\index{get\-Render\-Window@{get\-Render\-Window}!Graphics::OgreGraphics@{Graphics\-::\-Ogre\-Graphics}}
+\subsubsection[{get\-Render\-Window}]{\setlength{\rightskip}{0pt plus 5cm}Ogre\-::\-Render\-Window $\ast$ Graphics\-::\-Ogre\-Graphics\-::get\-Render\-Window (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graphics_1_1_ogre_graphics_a0bd9f35fabd4e8cf3c505205d35e1168}
+
+
+Gets render window. T\-O\-D\-O\-: Remove in favor of outputting the necessary information. 
+
+\begin{DoxyReturn}{Returns}
+null if it fails, else the render window. 
+\end{DoxyReturn}
+\hypertarget{class_graphics_1_1_ogre_graphics_a4bcd073336c76de1b27129247c52f1da}{\index{Graphics\-::\-Ogre\-Graphics@{Graphics\-::\-Ogre\-Graphics}!get\-Window\-Height@{get\-Window\-Height}}
+\index{get\-Window\-Height@{get\-Window\-Height}!Graphics::OgreGraphics@{Graphics\-::\-Ogre\-Graphics}}
+\subsubsection[{get\-Window\-Height}]{\setlength{\rightskip}{0pt plus 5cm}int Graphics\-::\-Ogre\-Graphics\-::get\-Window\-Height (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graphics_1_1_ogre_graphics_a4bcd073336c76de1b27129247c52f1da}
+
+
+Returns the height of the window. 
+
+\begin{DoxyReturn}{Returns}
+The window height. 
+\end{DoxyReturn}
+\hypertarget{class_graphics_1_1_ogre_graphics_a499281e2495fa88c0608a10e4114e3e9}{\index{Graphics\-::\-Ogre\-Graphics@{Graphics\-::\-Ogre\-Graphics}!get\-Window\-Width@{get\-Window\-Width}}
+\index{get\-Window\-Width@{get\-Window\-Width}!Graphics::OgreGraphics@{Graphics\-::\-Ogre\-Graphics}}
+\subsubsection[{get\-Window\-Width}]{\setlength{\rightskip}{0pt plus 5cm}int Graphics\-::\-Ogre\-Graphics\-::get\-Window\-Width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_graphics_1_1_ogre_graphics_a499281e2495fa88c0608a10e4114e3e9}
+
+
+Returns the width of the window. 
+
+\begin{DoxyReturn}{Returns}
+The window width. 
+\end{DoxyReturn}
+\hypertarget{class_graphics_1_1_ogre_graphics_a90de3a0bb9efe9b94ca1d97d6bae4e48}{\index{Graphics\-::\-Ogre\-Graphics@{Graphics\-::\-Ogre\-Graphics}!initialise@{initialise}}
+\index{initialise@{initialise}!Graphics::OgreGraphics@{Graphics\-::\-Ogre\-Graphics}}
+\subsubsection[{initialise}]{\setlength{\rightskip}{0pt plus 5cm}bool Graphics\-::\-Ogre\-Graphics\-::initialise (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_graphics_1_1_ogre_graphics_a90de3a0bb9efe9b94ca1d97d6bae4e48}
+
+
+Initialises this object. 
+
+Sets up the Ogre root, window, scene manager, camera, viewport and frame listener before loading resources.
+
+\begin{DoxyReturn}{Returns}
+true if it succeeds, false if it fails. 
+\end{DoxyReturn}
+\hypertarget{class_graphics_1_1_ogre_graphics_aa76873367c5bb0f08add8f25ee1a6ee3}{\index{Graphics\-::\-Ogre\-Graphics@{Graphics\-::\-Ogre\-Graphics}!load\-Resources@{load\-Resources}}
+\index{load\-Resources@{load\-Resources}!Graphics::OgreGraphics@{Graphics\-::\-Ogre\-Graphics}}
+\subsubsection[{load\-Resources}]{\setlength{\rightskip}{0pt plus 5cm}void Graphics\-::\-Ogre\-Graphics\-::load\-Resources (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_graphics_1_1_ogre_graphics_aa76873367c5bb0f08add8f25ee1a6ee3}
+
+
+Loads the resources. 
+
+Loads the 'resources.\-cfg' file which contains information about the resources used by this program. \hypertarget{class_graphics_1_1_ogre_graphics_a8f681b4e4564949b88e25803d70302ed}{\index{Graphics\-::\-Ogre\-Graphics@{Graphics\-::\-Ogre\-Graphics}!render\-One\-Frame@{render\-One\-Frame}}
+\index{render\-One\-Frame@{render\-One\-Frame}!Graphics::OgreGraphics@{Graphics\-::\-Ogre\-Graphics}}
+\subsubsection[{render\-One\-Frame}]{\setlength{\rightskip}{0pt plus 5cm}void Graphics\-::\-Ogre\-Graphics\-::render\-One\-Frame (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_graphics_1_1_ogre_graphics_a8f681b4e4564949b88e25803d70302ed}
+
+
+Renders a single frame. 
+
+Renders a single frame to screen using the main camera object as the viewpoint. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+A\-:/\-I\-T/\-Git\-Hub/\-I\-C\-T312/source/ogregraphics/Ogre\-Graphics.\-h\item 
+A\-:/\-I\-T/\-Git\-Hub/\-I\-C\-T312/source/ogregraphics/Ogre\-Graphics.\-cpp\end{DoxyCompactItemize}

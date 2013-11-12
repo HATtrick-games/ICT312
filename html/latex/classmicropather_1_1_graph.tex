@@ -1,0 +1,72 @@
+\hypertarget{classmicropather_1_1_graph}{\section{micropather\-:\-:Graph Class Reference}
+\label{classmicropather_1_1_graph}\index{micropather\-::\-Graph@{micropather\-::\-Graph}}
+}
+
+
+{\ttfamily \#include $<$micropather.\-h$>$}
+
+Inheritance diagram for micropather\-:\-:Graph\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmicropather_1_1_graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual float \hyperlink{classmicropather_1_1_graph_a7a284a95607553e15439ecc7a1440abc}{Least\-Cost\-Estimate} (void $\ast$state\-Start, void $\ast$state\-End)=0
+\item 
+virtual void \hyperlink{classmicropather_1_1_graph_acc601fe0c8f0774e37208c9e15eba00a}{Adjacent\-Cost} (void $\ast$state, std\-::vector$<$ \hyperlink{structmicropather_1_1_state_cost}{micropather\-::\-State\-Cost} $>$ $\ast$adjacent)=0
+\item 
+virtual void \hyperlink{classmicropather_1_1_graph_a9ca57ce2dceccece9654545b7dfad6ff}{Print\-State\-Info} (void $\ast$state)=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A pure abstract class used to define a set of callbacks. The client application inherits from this class, and the methods will be called when \hyperlink{classmicropather_1_1_micro_pather_af81b5dad8f89610026b8f0762d981730}{Micro\-Pather\-::\-Solve()} is invoked.
+
+The notion of a \char`\"{}state\char`\"{} is very important. It must have the following properties\-:
+\begin{DoxyItemize}
+\item Unique
+\item Unchanging (unless \hyperlink{classmicropather_1_1_micro_pather_aa830a9fa99403c14c6791f513a8e2342}{Micro\-Pather\-::\-Reset()} is called)
+\end{DoxyItemize}
+
+If the client application represents states as objects, then the state is usually just the object cast to a void$\ast$. If the client application sees states as numerical values, (x,y) for example, then state is an encoding of these values. \hyperlink{classmicropather_1_1_micro_pather}{Micro\-Pather} never interprets or modifies the value of state. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classmicropather_1_1_graph_acc601fe0c8f0774e37208c9e15eba00a}{\index{micropather\-::\-Graph@{micropather\-::\-Graph}!Adjacent\-Cost@{Adjacent\-Cost}}
+\index{Adjacent\-Cost@{Adjacent\-Cost}!micropather::Graph@{micropather\-::\-Graph}}
+\subsubsection[{Adjacent\-Cost}]{\setlength{\rightskip}{0pt plus 5cm}virtual void micropather\-::\-Graph\-::\-Adjacent\-Cost (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{state, }
+\item[{std\-::vector$<$ {\bf micropather\-::\-State\-Cost} $>$ $\ast$}]{adjacent}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classmicropather_1_1_graph_acc601fe0c8f0774e37208c9e15eba00a}
+Return the exact cost from the given state to all its neighboring states. This may be called multiple times, or cached by the solver. It {\itshape must} return the same exact values for every call to \hyperlink{classmicropather_1_1_micro_pather_af81b5dad8f89610026b8f0762d981730}{Micro\-Pather\-::\-Solve()}. It should generally be a simple, fast function with no callbacks into the pather. \hypertarget{classmicropather_1_1_graph_a7a284a95607553e15439ecc7a1440abc}{\index{micropather\-::\-Graph@{micropather\-::\-Graph}!Least\-Cost\-Estimate@{Least\-Cost\-Estimate}}
+\index{Least\-Cost\-Estimate@{Least\-Cost\-Estimate}!micropather::Graph@{micropather\-::\-Graph}}
+\subsubsection[{Least\-Cost\-Estimate}]{\setlength{\rightskip}{0pt plus 5cm}virtual float micropather\-::\-Graph\-::\-Least\-Cost\-Estimate (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{state\-Start, }
+\item[{void $\ast$}]{state\-End}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classmicropather_1_1_graph_a7a284a95607553e15439ecc7a1440abc}
+Return the least possible cost between 2 states. For example, if your pathfinding is based on distance, this is simply the straight distance between 2 points on the map. If you pathfinding is based on minimum time, it is the minimal travel time between 2 points given the best possible terrain. 
+
+Implemented in \hyperlink{class_world_map_a1303b34f21eed11133f8e9895f30121b}{World\-Map}.
+
+\hypertarget{classmicropather_1_1_graph_a9ca57ce2dceccece9654545b7dfad6ff}{\index{micropather\-::\-Graph@{micropather\-::\-Graph}!Print\-State\-Info@{Print\-State\-Info}}
+\index{Print\-State\-Info@{Print\-State\-Info}!micropather::Graph@{micropather\-::\-Graph}}
+\subsubsection[{Print\-State\-Info}]{\setlength{\rightskip}{0pt plus 5cm}virtual void micropather\-::\-Graph\-::\-Print\-State\-Info (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{state}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classmicropather_1_1_graph_a9ca57ce2dceccece9654545b7dfad6ff}
+This function is only used in D\-E\-B\-U\-G mode -\/ it dumps output to stdout. Since void$\ast$ aren't really human readable, normally you print out some concise info (like \char`\"{}(1,2)\char`\"{}) without an ending newline. 
+
+Implemented in \hyperlink{class_world_map_a545c1c031a72cc21ec4c7e9d6103fad7}{World\-Map}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+A\-:/\-I\-T/\-Git\-Hub/\-I\-C\-T312/source/ogregraphics/micropather.\-h\end{DoxyCompactItemize}

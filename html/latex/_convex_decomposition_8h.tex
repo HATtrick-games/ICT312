@@ -1,0 +1,65 @@
+\hypertarget{_convex_decomposition_8h}{\section{A\-:/\-I\-T/\-Git\-Hub/\-I\-C\-T312/source/ogregraphics/\-Convex\-Decomposition.h File Reference}
+\label{_convex_decomposition_8h}\index{A\-:/\-I\-T/\-Git\-Hub/\-I\-C\-T312/source/ogregraphics/\-Convex\-Decomposition.\-h@{A\-:/\-I\-T/\-Git\-Hub/\-I\-C\-T312/source/ogregraphics/\-Convex\-Decomposition.\-h}}
+}
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}Linear\-Math/bt\-Aligned\-Object\-Array.\-h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_convex_decomposition_1_1_convex_result}{Convex\-Decomposition\-::\-Convex\-Result}
+\item 
+class \hyperlink{class_convex_decomposition_1_1_convex_decomp_interface}{Convex\-Decomposition\-::\-Convex\-Decomp\-Interface}
+\item 
+class \hyperlink{class_convex_decomposition_1_1_decomp_desc}{Convex\-Decomposition\-::\-Decomp\-Desc}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespace_convex_decomposition}{Convex\-Decomposition}
+\end{DoxyCompactItemize}
+\subsection*{Constant Groups}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespace_convex_decomposition}{Convex\-Decomposition}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef bt\-Aligned\-Object\-Array\\*
+$<$ unsigned int $>$ \hyperlink{_convex_decomposition_8h_a3e58a8b741364b7842c3d4c8a69ef943}{Uint\-Vector}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{namespace_convex_decomposition_a33efdd41ddb49c0e93d0844d9593df4b}{Convex\-Decomposition\-::perform\-Convex\-Decomposition} (const Decomp\-Desc \&desc)
+\item 
+void \hyperlink{namespace_convex_decomposition_acbcecc410480fa25a690bf2dcbf977c0}{Convex\-Decomposition\-::calc\-Convex\-Decomposition} (unsigned int vcount, const float $\ast$vertices, unsigned int tcount, const unsigned int $\ast$indices, Convex\-Decomp\-Interface $\ast$callback, float master\-Volume, unsigned int depth)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{_convex_decomposition_8h_a59a2efc41cf83896c3190de55287d855}{M\-A\-X\-D\-E\-P\-T\-H}
+\item 
+float \hyperlink{_convex_decomposition_8h_a403edcac933e2b3efaee3d95cb4b516a}{C\-O\-N\-C\-A\-V\-E\-\_\-\-P\-E\-R\-C\-E\-N\-T}
+\item 
+float \hyperlink{_convex_decomposition_8h_a3b657da953aebb07f1125333ac5bbc7c}{M\-E\-R\-G\-E\-\_\-\-P\-E\-R\-C\-E\-N\-T}
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{_convex_decomposition_8h_a3e58a8b741364b7842c3d4c8a69ef943}{\index{Convex\-Decomposition.\-h@{Convex\-Decomposition.\-h}!Uint\-Vector@{Uint\-Vector}}
+\index{Uint\-Vector@{Uint\-Vector}!ConvexDecomposition.h@{Convex\-Decomposition.\-h}}
+\subsubsection[{Uint\-Vector}]{\setlength{\rightskip}{0pt plus 5cm}typedef bt\-Aligned\-Object\-Array$<$ unsigned int $>$ {\bf Uint\-Vector}}}\label{_convex_decomposition_8h_a3e58a8b741364b7842c3d4c8a69ef943}
+
+
+\subsection{Variable Documentation}
+\hypertarget{_convex_decomposition_8h_a403edcac933e2b3efaee3d95cb4b516a}{\index{Convex\-Decomposition.\-h@{Convex\-Decomposition.\-h}!C\-O\-N\-C\-A\-V\-E\-\_\-\-P\-E\-R\-C\-E\-N\-T@{C\-O\-N\-C\-A\-V\-E\-\_\-\-P\-E\-R\-C\-E\-N\-T}}
+\index{C\-O\-N\-C\-A\-V\-E\-\_\-\-P\-E\-R\-C\-E\-N\-T@{C\-O\-N\-C\-A\-V\-E\-\_\-\-P\-E\-R\-C\-E\-N\-T}!ConvexDecomposition.h@{Convex\-Decomposition.\-h}}
+\subsubsection[{C\-O\-N\-C\-A\-V\-E\-\_\-\-P\-E\-R\-C\-E\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}float C\-O\-N\-C\-A\-V\-E\-\_\-\-P\-E\-R\-C\-E\-N\-T}}\label{_convex_decomposition_8h_a403edcac933e2b3efaee3d95cb4b516a}
+\hypertarget{_convex_decomposition_8h_a59a2efc41cf83896c3190de55287d855}{\index{Convex\-Decomposition.\-h@{Convex\-Decomposition.\-h}!M\-A\-X\-D\-E\-P\-T\-H@{M\-A\-X\-D\-E\-P\-T\-H}}
+\index{M\-A\-X\-D\-E\-P\-T\-H@{M\-A\-X\-D\-E\-P\-T\-H}!ConvexDecomposition.h@{Convex\-Decomposition.\-h}}
+\subsubsection[{M\-A\-X\-D\-E\-P\-T\-H}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int M\-A\-X\-D\-E\-P\-T\-H}}\label{_convex_decomposition_8h_a59a2efc41cf83896c3190de55287d855}
+\hypertarget{_convex_decomposition_8h_a3b657da953aebb07f1125333ac5bbc7c}{\index{Convex\-Decomposition.\-h@{Convex\-Decomposition.\-h}!M\-E\-R\-G\-E\-\_\-\-P\-E\-R\-C\-E\-N\-T@{M\-E\-R\-G\-E\-\_\-\-P\-E\-R\-C\-E\-N\-T}}
+\index{M\-E\-R\-G\-E\-\_\-\-P\-E\-R\-C\-E\-N\-T@{M\-E\-R\-G\-E\-\_\-\-P\-E\-R\-C\-E\-N\-T}!ConvexDecomposition.h@{Convex\-Decomposition.\-h}}
+\subsubsection[{M\-E\-R\-G\-E\-\_\-\-P\-E\-R\-C\-E\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}float M\-E\-R\-G\-E\-\_\-\-P\-E\-R\-C\-E\-N\-T}}\label{_convex_decomposition_8h_a3b657da953aebb07f1125333ac5bbc7c}

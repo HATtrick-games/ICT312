@@ -1,0 +1,518 @@
+\hypertarget{class_objects_1_1_rigid_body_object}{\section{Objects\-:\-:Rigid\-Body\-Object Class Reference}
+\label{class_objects_1_1_rigid_body_object}\index{Objects\-::\-Rigid\-Body\-Object@{Objects\-::\-Rigid\-Body\-Object}}
+}
+
+
+Rigid body object.  
+
+
+
+
+{\ttfamily \#include $<$Rigid\-Body\-Object.\-h$>$}
+
+Inheritance diagram for Objects\-:\-:Rigid\-Body\-Object\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_objects_1_1_rigid_body_object}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_objects_1_1_rigid_body_object_a1ed19d8ed67672ed4a7b1c824c95f592}{Rigid\-Body\-Object} (std\-::string mesh\-File)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_objects_1_1_rigid_body_object_aaa91269d5e4e1c25d8f2f4dd1edc1dee}{Rigid\-Body\-Object} (Ogre\-::\-Vector3 pos, Ogre\-::\-Quaternion rot, Ogre\-::\-Vector3 scale, std\-::string mesh\-File)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_objects_1_1_rigid_body_object_abd8cfa1d049fcdffd725118f29e8d4d0}{\hyperlink{class_objects_1_1_rigid_body_object_abd8cfa1d049fcdffd725118f29e8d4d0}{$\sim$\-Rigid\-Body\-Object} (void)}\label{class_objects_1_1_rigid_body_object_abd8cfa1d049fcdffd725118f29e8d4d0}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\hypertarget{class_objects_1_1_rigid_body_object_a08f19a117e240c6234350b0f9404fbc9}{virtual void \hyperlink{class_objects_1_1_rigid_body_object_a08f19a117e240c6234350b0f9404fbc9}{initialise} ()}\label{class_objects_1_1_rigid_body_object_a08f19a117e240c6234350b0f9404fbc9}
+
+\begin{DoxyCompactList}\small\item\em Initialises this object. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_objects_1_1_rigid_body_object_a478edcbc5820722a9641fdcd07b402bb}{update} (float delta\-Time)
+\begin{DoxyCompactList}\small\item\em Updates the given delta\-Time. \end{DoxyCompactList}\item 
+void \hyperlink{class_objects_1_1_rigid_body_object_a4962caad85c4a7c19039ca937079daa1}{set\-Angular\-Velocity} (Ogre\-::\-Vector3 axis, float angle)
+\begin{DoxyCompactList}\small\item\em Sets angular velocity. \end{DoxyCompactList}\item 
+void \hyperlink{class_objects_1_1_rigid_body_object_a721c1dc9a881fab6db36f60edb715fbd}{apply\-Force} (Ogre\-::\-Vector3 force)
+\begin{DoxyCompactList}\small\item\em Applies the force described by force. \end{DoxyCompactList}\item 
+void \hyperlink{class_objects_1_1_rigid_body_object_afae0c2363af38e3c691d37204a489505}{set\-Velocity} (Ogre\-::\-Vector3 vel)
+\begin{DoxyCompactList}\small\item\em void apply\-Force(\-Physics\-::\-Force force); \end{DoxyCompactList}\item 
+Ogre\-::\-Vector3 \hyperlink{class_objects_1_1_rigid_body_object_a722575b42384d8d7be5f123ae8ecc21c}{get\-Velocity} ()
+\begin{DoxyCompactList}\small\item\em Gets the velocity. \end{DoxyCompactList}\item 
+Ogre\-::\-Vector3 \hyperlink{class_objects_1_1_rigid_body_object_ac6056bc9cf0fa789e46c66bbc3c465c3}{get\-Last\-Acceleration} ()
+\begin{DoxyCompactList}\small\item\em Gets the last acceleration. \end{DoxyCompactList}\item 
+float \hyperlink{class_objects_1_1_rigid_body_object_a9195f7e6e5854c894e1b0e4643f39340}{get\-Mass} ()
+\begin{DoxyCompactList}\small\item\em Gets the mass. \end{DoxyCompactList}\item 
+void \hyperlink{class_objects_1_1_rigid_body_object_a05acd53aaf329569d1454eb12ad7e282}{set\-Mass} (float mass)
+\begin{DoxyCompactList}\small\item\em Sets the mass. \end{DoxyCompactList}\item 
+float \hyperlink{class_objects_1_1_rigid_body_object_a1b037499bc2350cb6f453c22cfb6866a}{get\-Inverse\-Mass} ()
+\begin{DoxyCompactList}\small\item\em Gets inverse mass. \end{DoxyCompactList}\item 
+void \hyperlink{class_objects_1_1_rigid_body_object_a07cbd5667c70936f0384fd29bd87f6cc}{add\-Velocity} (Ogre\-::\-Vector3 \&velocity)
+\begin{DoxyCompactList}\small\item\em Adds a velocity. \end{DoxyCompactList}\item 
+void \hyperlink{class_objects_1_1_rigid_body_object_aae35d039b1fc774135427918ac97b85b}{add\-Rotation} (Ogre\-::\-Vector3 \&rotation)
+\begin{DoxyCompactList}\small\item\em Adds a rotation. \end{DoxyCompactList}\item 
+Ogre\-::\-Matrix3 \hyperlink{class_objects_1_1_rigid_body_object_aa9834cc73862604017850623250fb66a}{get\-Inverse\-Inertia\-Tensor\-World} ()
+\begin{DoxyCompactList}\small\item\em Gets inverse inertia tensor world. \end{DoxyCompactList}\item 
+void \hyperlink{class_objects_1_1_rigid_body_object_a4b0ffccc0f8a9915f16baaf92c39bf25}{set\-Inertia\-Tensor} (Ogre\-::\-Matrix3 tensor)
+\begin{DoxyCompactList}\small\item\em Sets inertia tensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Ogre\-::\-Matrix3 \hyperlink{class_objects_1_1_rigid_body_object_aa2d2a29fce3f2f6e893bf16cd965cc45}{Inertia\-Tensor\-Solid\-Sphere} (float radius, float mass)
+\begin{DoxyCompactList}\small\item\em Inertia tensor solid sphere. \end{DoxyCompactList}\item 
+static Ogre\-::\-Matrix3 \hyperlink{class_objects_1_1_rigid_body_object_a5b7c2c8986ef85a532c149b6a2364c83}{Inertia\-Tensor\-Sphere\-Shell} (float radius, float mass)
+\begin{DoxyCompactList}\small\item\em Inertia tensor sphere shell. \end{DoxyCompactList}\item 
+static Ogre\-::\-Matrix3 \hyperlink{class_objects_1_1_rigid_body_object_ad18e3a54eb181c68c17699969580bef1}{Inertia\-Tensor\-Cuboid} (float width, float height, float depth, float mass)
+\begin{DoxyCompactList}\small\item\em width in x, height in y, depth in z. \end{DoxyCompactList}\item 
+static Ogre\-::\-Matrix3 \hyperlink{class_objects_1_1_rigid_body_object_a94345e8ddfed29826c8b53d4aff2ee7a}{Inertia\-Tensor\-Solid\-Cylinder} (float radius, float height, float mass)
+\begin{DoxyCompactList}\small\item\em Inertia tensor solid cylinder. \end{DoxyCompactList}\item 
+static void \hyperlink{class_objects_1_1_rigid_body_object_af2cc1454d37839b75ad66afd8a70b926}{calculate\-Transform\-Matrix} (Ogre\-::\-Matrix4 \&transform, const Ogre\-::\-Vector3 \&pos, const Ogre\-::\-Quaternion \&orientation)
+\begin{DoxyCompactList}\small\item\em Calculates the transform matrix. \end{DoxyCompactList}\item 
+static void \hyperlink{class_objects_1_1_rigid_body_object_ac64b21afafd915bb3c8bfc6311920b67}{transform\-Inertia\-Tensor} (Ogre\-::\-Matrix3 \&iit\-World, const Ogre\-::\-Quaternion \&quat, const Ogre\-::\-Matrix3 \&iit\-Body, const Ogre\-::\-Matrix4 \&trans\-Mat)
+\begin{DoxyCompactList}\small\item\em Transform inertia tensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_objects_1_1_rigid_body_object_a957bd48ab183589d92a4994086fde8da}{Ogre\-::\-Vector3 \hyperlink{class_objects_1_1_rigid_body_object_a957bd48ab183589d92a4994086fde8da}{m\-\_\-force}}\label{class_objects_1_1_rigid_body_object_a957bd48ab183589d92a4994086fde8da}
+
+\begin{DoxyCompactList}\small\item\em The force. \end{DoxyCompactList}\item 
+\hypertarget{class_objects_1_1_rigid_body_object_a7cbfd216782247323829a9f88874fcc8}{float \hyperlink{class_objects_1_1_rigid_body_object_a7cbfd216782247323829a9f88874fcc8}{m\-\_\-mass}}\label{class_objects_1_1_rigid_body_object_a7cbfd216782247323829a9f88874fcc8}
+
+\begin{DoxyCompactList}\small\item\em The mass. \end{DoxyCompactList}\item 
+\hypertarget{class_objects_1_1_rigid_body_object_ab66659e28108e20af4f1d5c5b660a69e}{float \hyperlink{class_objects_1_1_rigid_body_object_ab66659e28108e20af4f1d5c5b660a69e}{m\-\_\-inv\-Mass}}\label{class_objects_1_1_rigid_body_object_ab66659e28108e20af4f1d5c5b660a69e}
+
+\begin{DoxyCompactList}\small\item\em The inverse mass. \end{DoxyCompactList}\item 
+\hypertarget{class_objects_1_1_rigid_body_object_abb70e651df485861e6f021733b5d6170}{Ogre\-::\-Matrix3 \hyperlink{class_objects_1_1_rigid_body_object_abb70e651df485861e6f021733b5d6170}{m\-\_\-inertia\-Tensor}}\label{class_objects_1_1_rigid_body_object_abb70e651df485861e6f021733b5d6170}
+
+\begin{DoxyCompactList}\small\item\em The inertia tensor. \end{DoxyCompactList}\item 
+\hypertarget{class_objects_1_1_rigid_body_object_a4b159406f8cfda0f828fd3c71f94d3b4}{Ogre\-::\-Matrix3 \hyperlink{class_objects_1_1_rigid_body_object_a4b159406f8cfda0f828fd3c71f94d3b4}{m\-\_\-inv\-Inertia\-Tensor}}\label{class_objects_1_1_rigid_body_object_a4b159406f8cfda0f828fd3c71f94d3b4}
+
+\begin{DoxyCompactList}\small\item\em The inverse inertia tensor. \end{DoxyCompactList}\item 
+\hypertarget{class_objects_1_1_rigid_body_object_aee45c14355de99ed03029cdd7ba22afb}{Ogre\-::\-Matrix3 \hyperlink{class_objects_1_1_rigid_body_object_aee45c14355de99ed03029cdd7ba22afb}{m\-\_\-inv\-Inertia\-Tensor\-World}}\label{class_objects_1_1_rigid_body_object_aee45c14355de99ed03029cdd7ba22afb}
+
+\begin{DoxyCompactList}\small\item\em The inverse inertia tensor world. \end{DoxyCompactList}\item 
+\hypertarget{class_objects_1_1_rigid_body_object_a9c0000fd5877b44539edd45b8a5429f8}{Ogre\-::\-Matrix4 \hyperlink{class_objects_1_1_rigid_body_object_a9c0000fd5877b44539edd45b8a5429f8}{m\-\_\-transform\-Matrix}}\label{class_objects_1_1_rigid_body_object_a9c0000fd5877b44539edd45b8a5429f8}
+
+\begin{DoxyCompactList}\small\item\em The transform matrix. \end{DoxyCompactList}\item 
+\hypertarget{class_objects_1_1_rigid_body_object_a79df3f4621fd7ce78ae866a4ee426d2b}{Ogre\-::\-Vector3 \hyperlink{class_objects_1_1_rigid_body_object_a79df3f4621fd7ce78ae866a4ee426d2b}{m\-\_\-angular\-Velocity}}\label{class_objects_1_1_rigid_body_object_a79df3f4621fd7ce78ae866a4ee426d2b}
+
+\begin{DoxyCompactList}\small\item\em The angular velocity. \end{DoxyCompactList}\item 
+\hypertarget{class_objects_1_1_rigid_body_object_aa5ee455d9e5ae6a879795ecb89c61bf8}{Ogre\-::\-Vector3 \hyperlink{class_objects_1_1_rigid_body_object_aa5ee455d9e5ae6a879795ecb89c61bf8}{m\-\_\-acceleration}}\label{class_objects_1_1_rigid_body_object_aa5ee455d9e5ae6a879795ecb89c61bf8}
+
+\begin{DoxyCompactList}\small\item\em The acceleration. \end{DoxyCompactList}\item 
+\hypertarget{class_objects_1_1_rigid_body_object_a33d8217f62d2e76558f5c22c4c33391e}{Ogre\-::\-Vector3 \hyperlink{class_objects_1_1_rigid_body_object_a33d8217f62d2e76558f5c22c4c33391e}{m\-\_\-velocity}}\label{class_objects_1_1_rigid_body_object_a33d8217f62d2e76558f5c22c4c33391e}
+
+\begin{DoxyCompactList}\small\item\em The velocity. \end{DoxyCompactList}\item 
+\hypertarget{class_objects_1_1_rigid_body_object_ae8a1fdc0cb614d6fb71dcfffd3e8741a}{Ogre\-::\-Vector3 \hyperlink{class_objects_1_1_rigid_body_object_ae8a1fdc0cb614d6fb71dcfffd3e8741a}{m\-\_\-last\-Acceleration}}\label{class_objects_1_1_rigid_body_object_ae8a1fdc0cb614d6fb71dcfffd3e8741a}
+
+\begin{DoxyCompactList}\small\item\em The last acceleration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Rigid body object. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_objects_1_1_rigid_body_object_a1ed19d8ed67672ed4a7b1c824c95f592}{\index{Objects\-::\-Rigid\-Body\-Object@{Objects\-::\-Rigid\-Body\-Object}!Rigid\-Body\-Object@{Rigid\-Body\-Object}}
+\index{Rigid\-Body\-Object@{Rigid\-Body\-Object}!Objects::RigidBodyObject@{Objects\-::\-Rigid\-Body\-Object}}
+\subsubsection[{Rigid\-Body\-Object}]{\setlength{\rightskip}{0pt plus 5cm}Objects\-::\-Rigid\-Body\-Object\-::\-Rigid\-Body\-Object (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{mesh\-File}
+\end{DoxyParamCaption}
+)}}\label{class_objects_1_1_rigid_body_object_a1ed19d8ed67672ed4a7b1c824c95f592}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mesh\-File} & The mesh file. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_objects_1_1_rigid_body_object_aaa91269d5e4e1c25d8f2f4dd1edc1dee}{\index{Objects\-::\-Rigid\-Body\-Object@{Objects\-::\-Rigid\-Body\-Object}!Rigid\-Body\-Object@{Rigid\-Body\-Object}}
+\index{Rigid\-Body\-Object@{Rigid\-Body\-Object}!Objects::RigidBodyObject@{Objects\-::\-Rigid\-Body\-Object}}
+\subsubsection[{Rigid\-Body\-Object}]{\setlength{\rightskip}{0pt plus 5cm}Objects\-::\-Rigid\-Body\-Object\-::\-Rigid\-Body\-Object (
+\begin{DoxyParamCaption}
+\item[{Ogre\-::\-Vector3}]{pos, }
+\item[{Ogre\-::\-Quaternion}]{rot, }
+\item[{Ogre\-::\-Vector3}]{scale, }
+\item[{std\-::string}]{mesh\-File}
+\end{DoxyParamCaption}
+)}}\label{class_objects_1_1_rigid_body_object_aaa91269d5e4e1c25d8f2f4dd1edc1dee}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & The position. \\
+\hline
+{\em rot} & The rot. \\
+\hline
+{\em scale} & The scale. \\
+\hline
+{\em mesh\-File} & The mesh file. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_objects_1_1_rigid_body_object_aae35d039b1fc774135427918ac97b85b}{\index{Objects\-::\-Rigid\-Body\-Object@{Objects\-::\-Rigid\-Body\-Object}!add\-Rotation@{add\-Rotation}}
+\index{add\-Rotation@{add\-Rotation}!Objects::RigidBodyObject@{Objects\-::\-Rigid\-Body\-Object}}
+\subsubsection[{add\-Rotation}]{\setlength{\rightskip}{0pt plus 5cm}void Objects\-::\-Rigid\-Body\-Object\-::add\-Rotation (
+\begin{DoxyParamCaption}
+\item[{Ogre\-::\-Vector3 \&}]{rotation}
+\end{DoxyParamCaption}
+)}}\label{class_objects_1_1_rigid_body_object_aae35d039b1fc774135427918ac97b85b}
+
+
+Adds a rotation. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em rotation} & The rotation. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_objects_1_1_rigid_body_object_a07cbd5667c70936f0384fd29bd87f6cc}{\index{Objects\-::\-Rigid\-Body\-Object@{Objects\-::\-Rigid\-Body\-Object}!add\-Velocity@{add\-Velocity}}
+\index{add\-Velocity@{add\-Velocity}!Objects::RigidBodyObject@{Objects\-::\-Rigid\-Body\-Object}}
+\subsubsection[{add\-Velocity}]{\setlength{\rightskip}{0pt plus 5cm}void Objects\-::\-Rigid\-Body\-Object\-::add\-Velocity (
+\begin{DoxyParamCaption}
+\item[{Ogre\-::\-Vector3 \&}]{velocity}
+\end{DoxyParamCaption}
+)}}\label{class_objects_1_1_rigid_body_object_a07cbd5667c70936f0384fd29bd87f6cc}
+
+
+Adds a velocity. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em velocity} & The velocity. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_objects_1_1_rigid_body_object_a721c1dc9a881fab6db36f60edb715fbd}{\index{Objects\-::\-Rigid\-Body\-Object@{Objects\-::\-Rigid\-Body\-Object}!apply\-Force@{apply\-Force}}
+\index{apply\-Force@{apply\-Force}!Objects::RigidBodyObject@{Objects\-::\-Rigid\-Body\-Object}}
+\subsubsection[{apply\-Force}]{\setlength{\rightskip}{0pt plus 5cm}void Objects\-::\-Rigid\-Body\-Object\-::apply\-Force (
+\begin{DoxyParamCaption}
+\item[{Ogre\-::\-Vector3}]{force}
+\end{DoxyParamCaption}
+)}}\label{class_objects_1_1_rigid_body_object_a721c1dc9a881fab6db36f60edb715fbd}
+
+
+Applies the force described by force. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em force} & The force. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_objects_1_1_rigid_body_object_af2cc1454d37839b75ad66afd8a70b926}{\index{Objects\-::\-Rigid\-Body\-Object@{Objects\-::\-Rigid\-Body\-Object}!calculate\-Transform\-Matrix@{calculate\-Transform\-Matrix}}
+\index{calculate\-Transform\-Matrix@{calculate\-Transform\-Matrix}!Objects::RigidBodyObject@{Objects\-::\-Rigid\-Body\-Object}}
+\subsubsection[{calculate\-Transform\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}static void Objects\-::\-Rigid\-Body\-Object\-::calculate\-Transform\-Matrix (
+\begin{DoxyParamCaption}
+\item[{Ogre\-::\-Matrix4 \&}]{transform, }
+\item[{const Ogre\-::\-Vector3 \&}]{pos, }
+\item[{const Ogre\-::\-Quaternion \&}]{orientation}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_objects_1_1_rigid_body_object_af2cc1454d37839b75ad66afd8a70b926}
+
+
+Calculates the transform matrix. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em transform} & The transform. \\
+\hline
+ & {\em pos} & The position. \\
+\hline
+ & {\em orientation} & The orientation. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_objects_1_1_rigid_body_object_aa9834cc73862604017850623250fb66a}{\index{Objects\-::\-Rigid\-Body\-Object@{Objects\-::\-Rigid\-Body\-Object}!get\-Inverse\-Inertia\-Tensor\-World@{get\-Inverse\-Inertia\-Tensor\-World}}
+\index{get\-Inverse\-Inertia\-Tensor\-World@{get\-Inverse\-Inertia\-Tensor\-World}!Objects::RigidBodyObject@{Objects\-::\-Rigid\-Body\-Object}}
+\subsubsection[{get\-Inverse\-Inertia\-Tensor\-World}]{\setlength{\rightskip}{0pt plus 5cm}Ogre\-::\-Matrix3 Objects\-::\-Rigid\-Body\-Object\-::get\-Inverse\-Inertia\-Tensor\-World (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_objects_1_1_rigid_body_object_aa9834cc73862604017850623250fb66a}
+
+
+Gets inverse inertia tensor world. 
+
+\begin{DoxyReturn}{Returns}
+The inverse inertia tensor world. 
+\end{DoxyReturn}
+\hypertarget{class_objects_1_1_rigid_body_object_a1b037499bc2350cb6f453c22cfb6866a}{\index{Objects\-::\-Rigid\-Body\-Object@{Objects\-::\-Rigid\-Body\-Object}!get\-Inverse\-Mass@{get\-Inverse\-Mass}}
+\index{get\-Inverse\-Mass@{get\-Inverse\-Mass}!Objects::RigidBodyObject@{Objects\-::\-Rigid\-Body\-Object}}
+\subsubsection[{get\-Inverse\-Mass}]{\setlength{\rightskip}{0pt plus 5cm}float Objects\-::\-Rigid\-Body\-Object\-::get\-Inverse\-Mass (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_objects_1_1_rigid_body_object_a1b037499bc2350cb6f453c22cfb6866a}
+
+
+Gets inverse mass. 
+
+\begin{DoxyReturn}{Returns}
+The inverse mass. 
+\end{DoxyReturn}
+\hypertarget{class_objects_1_1_rigid_body_object_ac6056bc9cf0fa789e46c66bbc3c465c3}{\index{Objects\-::\-Rigid\-Body\-Object@{Objects\-::\-Rigid\-Body\-Object}!get\-Last\-Acceleration@{get\-Last\-Acceleration}}
+\index{get\-Last\-Acceleration@{get\-Last\-Acceleration}!Objects::RigidBodyObject@{Objects\-::\-Rigid\-Body\-Object}}
+\subsubsection[{get\-Last\-Acceleration}]{\setlength{\rightskip}{0pt plus 5cm}Ogre\-::\-Vector3 Objects\-::\-Rigid\-Body\-Object\-::get\-Last\-Acceleration (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_objects_1_1_rigid_body_object_ac6056bc9cf0fa789e46c66bbc3c465c3}
+
+
+Gets the last acceleration. 
+
+\begin{DoxyReturn}{Returns}
+The last acceleration. 
+\end{DoxyReturn}
+\hypertarget{class_objects_1_1_rigid_body_object_a9195f7e6e5854c894e1b0e4643f39340}{\index{Objects\-::\-Rigid\-Body\-Object@{Objects\-::\-Rigid\-Body\-Object}!get\-Mass@{get\-Mass}}
+\index{get\-Mass@{get\-Mass}!Objects::RigidBodyObject@{Objects\-::\-Rigid\-Body\-Object}}
+\subsubsection[{get\-Mass}]{\setlength{\rightskip}{0pt plus 5cm}float Objects\-::\-Rigid\-Body\-Object\-::get\-Mass (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_objects_1_1_rigid_body_object_a9195f7e6e5854c894e1b0e4643f39340}
+
+
+Gets the mass. 
+
+\begin{DoxyReturn}{Returns}
+The mass. 
+\end{DoxyReturn}
+\hypertarget{class_objects_1_1_rigid_body_object_a722575b42384d8d7be5f123ae8ecc21c}{\index{Objects\-::\-Rigid\-Body\-Object@{Objects\-::\-Rigid\-Body\-Object}!get\-Velocity@{get\-Velocity}}
+\index{get\-Velocity@{get\-Velocity}!Objects::RigidBodyObject@{Objects\-::\-Rigid\-Body\-Object}}
+\subsubsection[{get\-Velocity}]{\setlength{\rightskip}{0pt plus 5cm}Ogre\-::\-Vector3 Objects\-::\-Rigid\-Body\-Object\-::get\-Velocity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_objects_1_1_rigid_body_object_a722575b42384d8d7be5f123ae8ecc21c}
+
+
+Gets the velocity. 
+
+\begin{DoxyReturn}{Returns}
+The velocity. 
+\end{DoxyReturn}
+\hypertarget{class_objects_1_1_rigid_body_object_ad18e3a54eb181c68c17699969580bef1}{\index{Objects\-::\-Rigid\-Body\-Object@{Objects\-::\-Rigid\-Body\-Object}!Inertia\-Tensor\-Cuboid@{Inertia\-Tensor\-Cuboid}}
+\index{Inertia\-Tensor\-Cuboid@{Inertia\-Tensor\-Cuboid}!Objects::RigidBodyObject@{Objects\-::\-Rigid\-Body\-Object}}
+\subsubsection[{Inertia\-Tensor\-Cuboid}]{\setlength{\rightskip}{0pt plus 5cm}static Ogre\-::\-Matrix3 Objects\-::\-Rigid\-Body\-Object\-::\-Inertia\-Tensor\-Cuboid (
+\begin{DoxyParamCaption}
+\item[{float}]{width, }
+\item[{float}]{height, }
+\item[{float}]{depth, }
+\item[{float}]{mass}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_objects_1_1_rigid_body_object_ad18e3a54eb181c68c17699969580bef1}
+
+
+width in x, height in y, depth in z. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & The width. \\
+\hline
+{\em height} & The height. \\
+\hline
+{\em depth} & The depth. \\
+\hline
+{\em mass} & The mass.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+. 
+\end{DoxyReturn}
+\hypertarget{class_objects_1_1_rigid_body_object_a94345e8ddfed29826c8b53d4aff2ee7a}{\index{Objects\-::\-Rigid\-Body\-Object@{Objects\-::\-Rigid\-Body\-Object}!Inertia\-Tensor\-Solid\-Cylinder@{Inertia\-Tensor\-Solid\-Cylinder}}
+\index{Inertia\-Tensor\-Solid\-Cylinder@{Inertia\-Tensor\-Solid\-Cylinder}!Objects::RigidBodyObject@{Objects\-::\-Rigid\-Body\-Object}}
+\subsubsection[{Inertia\-Tensor\-Solid\-Cylinder}]{\setlength{\rightskip}{0pt plus 5cm}static Ogre\-::\-Matrix3 Objects\-::\-Rigid\-Body\-Object\-::\-Inertia\-Tensor\-Solid\-Cylinder (
+\begin{DoxyParamCaption}
+\item[{float}]{radius, }
+\item[{float}]{height, }
+\item[{float}]{mass}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_objects_1_1_rigid_body_object_a94345e8ddfed29826c8b53d4aff2ee7a}
+
+
+Inertia tensor solid cylinder. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radius} & The radius. \\
+\hline
+{\em height} & The height. \\
+\hline
+{\em mass} & The mass.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+. 
+\end{DoxyReturn}
+\hypertarget{class_objects_1_1_rigid_body_object_aa2d2a29fce3f2f6e893bf16cd965cc45}{\index{Objects\-::\-Rigid\-Body\-Object@{Objects\-::\-Rigid\-Body\-Object}!Inertia\-Tensor\-Solid\-Sphere@{Inertia\-Tensor\-Solid\-Sphere}}
+\index{Inertia\-Tensor\-Solid\-Sphere@{Inertia\-Tensor\-Solid\-Sphere}!Objects::RigidBodyObject@{Objects\-::\-Rigid\-Body\-Object}}
+\subsubsection[{Inertia\-Tensor\-Solid\-Sphere}]{\setlength{\rightskip}{0pt plus 5cm}static Ogre\-::\-Matrix3 Objects\-::\-Rigid\-Body\-Object\-::\-Inertia\-Tensor\-Solid\-Sphere (
+\begin{DoxyParamCaption}
+\item[{float}]{radius, }
+\item[{float}]{mass}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_objects_1_1_rigid_body_object_aa2d2a29fce3f2f6e893bf16cd965cc45}
+
+
+Inertia tensor solid sphere. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radius} & The radius. \\
+\hline
+{\em mass} & The mass.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+. 
+\end{DoxyReturn}
+\hypertarget{class_objects_1_1_rigid_body_object_a5b7c2c8986ef85a532c149b6a2364c83}{\index{Objects\-::\-Rigid\-Body\-Object@{Objects\-::\-Rigid\-Body\-Object}!Inertia\-Tensor\-Sphere\-Shell@{Inertia\-Tensor\-Sphere\-Shell}}
+\index{Inertia\-Tensor\-Sphere\-Shell@{Inertia\-Tensor\-Sphere\-Shell}!Objects::RigidBodyObject@{Objects\-::\-Rigid\-Body\-Object}}
+\subsubsection[{Inertia\-Tensor\-Sphere\-Shell}]{\setlength{\rightskip}{0pt plus 5cm}static Ogre\-::\-Matrix3 Objects\-::\-Rigid\-Body\-Object\-::\-Inertia\-Tensor\-Sphere\-Shell (
+\begin{DoxyParamCaption}
+\item[{float}]{radius, }
+\item[{float}]{mass}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_objects_1_1_rigid_body_object_a5b7c2c8986ef85a532c149b6a2364c83}
+
+
+Inertia tensor sphere shell. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radius} & The radius. \\
+\hline
+{\em mass} & The mass.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+. 
+\end{DoxyReturn}
+\hypertarget{class_objects_1_1_rigid_body_object_a4962caad85c4a7c19039ca937079daa1}{\index{Objects\-::\-Rigid\-Body\-Object@{Objects\-::\-Rigid\-Body\-Object}!set\-Angular\-Velocity@{set\-Angular\-Velocity}}
+\index{set\-Angular\-Velocity@{set\-Angular\-Velocity}!Objects::RigidBodyObject@{Objects\-::\-Rigid\-Body\-Object}}
+\subsubsection[{set\-Angular\-Velocity}]{\setlength{\rightskip}{0pt plus 5cm}void Objects\-::\-Rigid\-Body\-Object\-::set\-Angular\-Velocity (
+\begin{DoxyParamCaption}
+\item[{Ogre\-::\-Vector3}]{axis, }
+\item[{float}]{angle}
+\end{DoxyParamCaption}
+)}}\label{class_objects_1_1_rigid_body_object_a4962caad85c4a7c19039ca937079daa1}
+
+
+Sets angular velocity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em axis} & The axis. \\
+\hline
+{\em angle} & The angle. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_objects_1_1_rigid_body_object_a4b0ffccc0f8a9915f16baaf92c39bf25}{\index{Objects\-::\-Rigid\-Body\-Object@{Objects\-::\-Rigid\-Body\-Object}!set\-Inertia\-Tensor@{set\-Inertia\-Tensor}}
+\index{set\-Inertia\-Tensor@{set\-Inertia\-Tensor}!Objects::RigidBodyObject@{Objects\-::\-Rigid\-Body\-Object}}
+\subsubsection[{set\-Inertia\-Tensor}]{\setlength{\rightskip}{0pt plus 5cm}void Objects\-::\-Rigid\-Body\-Object\-::set\-Inertia\-Tensor (
+\begin{DoxyParamCaption}
+\item[{Ogre\-::\-Matrix3}]{tensor}
+\end{DoxyParamCaption}
+)}}\label{class_objects_1_1_rigid_body_object_a4b0ffccc0f8a9915f16baaf92c39bf25}
+
+
+Sets inertia tensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tensor} & The tensor. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_objects_1_1_rigid_body_object_a05acd53aaf329569d1454eb12ad7e282}{\index{Objects\-::\-Rigid\-Body\-Object@{Objects\-::\-Rigid\-Body\-Object}!set\-Mass@{set\-Mass}}
+\index{set\-Mass@{set\-Mass}!Objects::RigidBodyObject@{Objects\-::\-Rigid\-Body\-Object}}
+\subsubsection[{set\-Mass}]{\setlength{\rightskip}{0pt plus 5cm}void Objects\-::\-Rigid\-Body\-Object\-::set\-Mass (
+\begin{DoxyParamCaption}
+\item[{float}]{mass}
+\end{DoxyParamCaption}
+)}}\label{class_objects_1_1_rigid_body_object_a05acd53aaf329569d1454eb12ad7e282}
+
+
+Sets the mass. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mass} & The mass. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_objects_1_1_rigid_body_object_afae0c2363af38e3c691d37204a489505}{\index{Objects\-::\-Rigid\-Body\-Object@{Objects\-::\-Rigid\-Body\-Object}!set\-Velocity@{set\-Velocity}}
+\index{set\-Velocity@{set\-Velocity}!Objects::RigidBodyObject@{Objects\-::\-Rigid\-Body\-Object}}
+\subsubsection[{set\-Velocity}]{\setlength{\rightskip}{0pt plus 5cm}void Objects\-::\-Rigid\-Body\-Object\-::set\-Velocity (
+\begin{DoxyParamCaption}
+\item[{Ogre\-::\-Vector3}]{vel}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_objects_1_1_rigid_body_object_afae0c2363af38e3c691d37204a489505}
+
+
+void apply\-Force(\-Physics\-::\-Force force); 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vel} & The velocity. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_objects_1_1_rigid_body_object_ac64b21afafd915bb3c8bfc6311920b67}{\index{Objects\-::\-Rigid\-Body\-Object@{Objects\-::\-Rigid\-Body\-Object}!transform\-Inertia\-Tensor@{transform\-Inertia\-Tensor}}
+\index{transform\-Inertia\-Tensor@{transform\-Inertia\-Tensor}!Objects::RigidBodyObject@{Objects\-::\-Rigid\-Body\-Object}}
+\subsubsection[{transform\-Inertia\-Tensor}]{\setlength{\rightskip}{0pt plus 5cm}static void Objects\-::\-Rigid\-Body\-Object\-::transform\-Inertia\-Tensor (
+\begin{DoxyParamCaption}
+\item[{Ogre\-::\-Matrix3 \&}]{iit\-World, }
+\item[{const Ogre\-::\-Quaternion \&}]{quat, }
+\item[{const Ogre\-::\-Matrix3 \&}]{iit\-Body, }
+\item[{const Ogre\-::\-Matrix4 \&}]{trans\-Mat}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_objects_1_1_rigid_body_object_ac64b21afafd915bb3c8bfc6311920b67}
+
+
+Transform inertia tensor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em iit\-World} & The iit world. \\
+\hline
+ & {\em quat} & The quaternion. \\
+\hline
+ & {\em iit\-Body} & The iit body. \\
+\hline
+ & {\em trans\-Mat} & The trans matrix. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_objects_1_1_rigid_body_object_a478edcbc5820722a9641fdcd07b402bb}{\index{Objects\-::\-Rigid\-Body\-Object@{Objects\-::\-Rigid\-Body\-Object}!update@{update}}
+\index{update@{update}!Objects::RigidBodyObject@{Objects\-::\-Rigid\-Body\-Object}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Objects\-::\-Rigid\-Body\-Object\-::update (
+\begin{DoxyParamCaption}
+\item[{float}]{delta\-Time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_objects_1_1_rigid_body_object_a478edcbc5820722a9641fdcd07b402bb}
+
+
+Updates the given delta\-Time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\-Time} & Time of the delta. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_objects_1_1_generic_object_a57c85bdf2ceb1ffa1b85ec3aa51a631d}{Objects\-::\-Generic\-Object}.
+
+
+
+Reimplemented in \hyperlink{class_objects_1_1_target_object_a46b8163c5921925aa6d95fc0e99ce011}{Objects\-::\-Target\-Object}, and \hyperlink{class_objects_1_1_projectile_object_ae8cb3b7f7a9f5b921b043a58e9e355dc}{Objects\-::\-Projectile\-Object}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+A\-:/\-I\-T/\-Git\-Hub/\-I\-C\-T312/source/ogregraphics/\hyperlink{_rigid_body_object_8h}{Rigid\-Body\-Object.\-h}\item 
+A\-:/\-I\-T/\-Git\-Hub/\-I\-C\-T312/source/ogregraphics/Rigid\-Body\-Object.\-cpp\end{DoxyCompactItemize}

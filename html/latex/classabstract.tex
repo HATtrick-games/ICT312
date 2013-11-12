@@ -1,0 +1,325 @@
+\hypertarget{classabstract}{\section{abstract Class Reference}
+\label{classabstract}\index{abstract@{abstract}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Enum\-Space\-::\-Action\-Types \hyperlink{classabstract_a6a684ea689b2d2272e085b562d25e1df}{Get\-Type} ()
+\begin{DoxyCompactList}\small\item\em Gets the type. \end{DoxyCompactList}\item 
+int \hyperlink{classabstract_ab00d7ccece91f404e85db51c3aaa6689}{Get\-Threshold} ()
+\begin{DoxyCompactList}\small\item\em Gets the threshold. \end{DoxyCompactList}\item 
+std\-::string \hyperlink{classabstract_a642d5536052d134e26111f42cbdc48f1}{Get\-Affordance\-Name} ()
+\begin{DoxyCompactList}\small\item\em Gets affordance name. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classabstract_a552be28f2a8f0577d8af51aab7628dfe}{Activate} ()=0
+\begin{DoxyCompactList}\small\item\em Activates this object. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classabstract_ac3298d240dbc6a3f630e6bbb06b6ee72}{Check\-For\-Trigger} (std\-::map$<$ Enum\-Space\-::\-Need\-Types, int $>$)=0
+\begin{DoxyCompactList}\small\item\em Check for trigger. \end{DoxyCompactList}\item 
+\hyperlink{class_action}{Action} $\ast$ \hyperlink{classabstract_aaa22e7e0b383d8d936df67bc2ddfbbee}{Get\-Action} ()
+\begin{DoxyCompactList}\small\item\em Gets the action. \end{DoxyCompactList}\item 
+\hypertarget{classabstract_a5a925b041865eb58d7e83db71279796f}{virtual int {\bfseries Get\-Threshold} ()}\label{classabstract_a5a925b041865eb58d7e83db71279796f}
+
+\item 
+virtual std\-::map\\*
+$<$ Enum\-Space\-::\-Need\-Types, int $>$ $\ast$ \hyperlink{classabstract_a4d2dc1025b0473a6ca5ae7947cb71fa0}{Modify\-Needs} ()=0
+\begin{DoxyCompactList}\small\item\em Gets the modify needs. \end{DoxyCompactList}\item 
+void \hyperlink{classabstract_ac5e4f73645472118e0389af89ef557d6}{Decay\-Threshold} ()
+\begin{DoxyCompactList}\small\item\em Decay threshold. \end{DoxyCompactList}\item 
+void \hyperlink{classabstract_a778b0df167d92a449a3b9a4f73508f50}{Reset\-Threshhold} ()
+\begin{DoxyCompactList}\small\item\em Resets the threshhold. \end{DoxyCompactList}\item 
+\hypertarget{classabstract_a6a684ea689b2d2272e085b562d25e1df}{Enum\-Space\-::\-Mood\-Types {\bfseries Get\-Type} ()}\label{classabstract_a6a684ea689b2d2272e085b562d25e1df}
+
+\item 
+std\-::map$<$ Enum\-Space\-::\-Need\-Types, \\*
+int $>$ \hyperlink{classabstract_a9b6fe4d59bd164a1edbab5403cf0c56a}{Get\-Goal\-Modifier} ()
+\begin{DoxyCompactList}\small\item\em Gets goal modifier. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classabstract_a0d4a292e4371e387c37ed3152f40f970}{Set\-Emotional\-Multipliers} (int $\ast$Multiplier\-Array)
+\begin{DoxyCompactList}\small\item\em Sets emotional multipliers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classabstract_a7bdcfaa80c09f089dafce55647285214}{int $\ast$ \hyperlink{classabstract_a7bdcfaa80c09f089dafce55647285214}{Emotional\-Multipliers}}\label{classabstract_a7bdcfaa80c09f089dafce55647285214}
+
+\begin{DoxyCompactList}\small\item\em The emotional multipliers. \end{DoxyCompactList}\item 
+\hypertarget{classabstract_a693533359baf2fc861de948ba5091cdd}{std\-::string \hyperlink{classabstract_a693533359baf2fc861de948ba5091cdd}{Affordance\-Name}}\label{classabstract_a693533359baf2fc861de948ba5091cdd}
+
+\begin{DoxyCompactList}\small\item\em Name of the affordance. \end{DoxyCompactList}\item 
+\hypertarget{classabstract_a6c5131d8009cb69892a439a737e86217}{int \hyperlink{classabstract_a6c5131d8009cb69892a439a737e86217}{Threshold}}\label{classabstract_a6c5131d8009cb69892a439a737e86217}
+
+\begin{DoxyCompactList}\small\item\em The threshold. \end{DoxyCompactList}\item 
+\hypertarget{classabstract_a759e11dc626cafc1158be274981f54d5}{Enum\-Space\-::\-Action\-Types \hyperlink{classabstract_a759e11dc626cafc1158be274981f54d5}{Type}}\label{classabstract_a759e11dc626cafc1158be274981f54d5}
+
+\begin{DoxyCompactList}\small\item\em The type. \end{DoxyCompactList}\item 
+\hypertarget{classabstract_afb87fb1118b122841e9158b62247d84c}{Enum\-Space\-::\-Emotion\-Types \hyperlink{classabstract_afb87fb1118b122841e9158b62247d84c}{Type}}\label{classabstract_afb87fb1118b122841e9158b62247d84c}
+
+\begin{DoxyCompactList}\small\item\em The type. \end{DoxyCompactList}\item 
+\hypertarget{classabstract_abd1ac71987e1064ec409961e69680778}{int \hyperlink{classabstract_abd1ac71987e1064ec409961e69680778}{Affordance\-Threshold}}\label{classabstract_abd1ac71987e1064ec409961e69680778}
+
+\begin{DoxyCompactList}\small\item\em The affordance threshold. \end{DoxyCompactList}\item 
+\hypertarget{classabstract_afb38289e3dfe396d24eed2529e0120dd}{std\-::map$<$ Enum\-Space\-::\-Need\-Types, \\*
+int $>$ \hyperlink{classabstract_afb38289e3dfe396d24eed2529e0120dd}{Need\-Outcomes}}\label{classabstract_afb38289e3dfe396d24eed2529e0120dd}
+
+\begin{DoxyCompactList}\small\item\em The need outcomes. \end{DoxyCompactList}\item 
+\hypertarget{classabstract_aa5210c5b94421c34f5c1dc03aa5c2073}{\hyperlink{class_action}{Action} $\ast$ \hyperlink{classabstract_aa5210c5b94421c34f5c1dc03aa5c2073}{Goal\-Action}}\label{classabstract_aa5210c5b94421c34f5c1dc03aa5c2073}
+
+\begin{DoxyCompactList}\small\item\em The goal action. \end{DoxyCompactList}\item 
+\hypertarget{classabstract_a0d0baf0587f57cbc4b684fc4e85f81f9}{Enum\-Space\-::\-Mood\-Types \hyperlink{classabstract_a0d0baf0587f57cbc4b684fc4e85f81f9}{Type}}\label{classabstract_a0d0baf0587f57cbc4b684fc4e85f81f9}
+
+\begin{DoxyCompactList}\small\item\em The type. \end{DoxyCompactList}\item 
+\hypertarget{classabstract_a8f3b954f75474eb84bf8f1906530800f}{std\-::map$<$ Enum\-Space\-::\-Need\-Types, \\*
+int $>$ \hyperlink{classabstract_a8f3b954f75474eb84bf8f1906530800f}{Goal\-Modifier}}\label{classabstract_a8f3b954f75474eb84bf8f1906530800f}
+
+\begin{DoxyCompactList}\small\item\em The goal modifier. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classabstract_a552be28f2a8f0577d8af51aab7628dfe}{\index{abstract@{abstract}!Activate@{Activate}}
+\index{Activate@{Activate}!abstract@{abstract}}
+\subsubsection[{Activate}]{\setlength{\rightskip}{0pt plus 5cm}bool abstract\-::\-Activate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classabstract_a552be28f2a8f0577d8af51aab7628dfe}
+
+
+Activates this object. 
+
+\begin{DoxyAuthor}{Author}
+Chaokel 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2013
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+true if it succeeds, false if it fails. 
+\end{DoxyReturn}
+\hypertarget{classabstract_ac3298d240dbc6a3f630e6bbb06b6ee72}{\index{abstract@{abstract}!Check\-For\-Trigger@{Check\-For\-Trigger}}
+\index{Check\-For\-Trigger@{Check\-For\-Trigger}!abstract@{abstract}}
+\subsubsection[{Check\-For\-Trigger}]{\setlength{\rightskip}{0pt plus 5cm}bool abstract\-::\-Check\-For\-Trigger (
+\begin{DoxyParamCaption}
+\item[{std\-::map$<$ Enum\-Space\-::\-Need\-Types, int $>$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classabstract_ac3298d240dbc6a3f630e6bbb06b6ee72}
+
+
+Check for trigger. 
+
+\begin{DoxyAuthor}{Author}
+Hamish Carrier 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2013
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em parameter1} & The first parameter.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if it succeeds, false if it fails. 
+\end{DoxyReturn}
+\hypertarget{classabstract_ac5e4f73645472118e0389af89ef557d6}{\index{abstract@{abstract}!Decay\-Threshold@{Decay\-Threshold}}
+\index{Decay\-Threshold@{Decay\-Threshold}!abstract@{abstract}}
+\subsubsection[{Decay\-Threshold}]{\setlength{\rightskip}{0pt plus 5cm}void abstract\-::\-Decay\-Threshold (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classabstract_ac5e4f73645472118e0389af89ef557d6}
+
+
+Decay threshold. 
+
+\begin{DoxyAuthor}{Author}
+Hamish Carrier 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2013 
+\end{DoxyDate}
+\hypertarget{classabstract_aaa22e7e0b383d8d936df67bc2ddfbbee}{\index{abstract@{abstract}!Get\-Action@{Get\-Action}}
+\index{Get\-Action@{Get\-Action}!abstract@{abstract}}
+\subsubsection[{Get\-Action}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Action} $\ast$ abstract\-::\-Get\-Action (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classabstract_aaa22e7e0b383d8d936df67bc2ddfbbee}
+
+
+Gets the action. 
+
+\begin{DoxyAuthor}{Author}
+Hamish Carrier 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2013
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+null if it fails, else the action. 
+\end{DoxyReturn}
+\hypertarget{classabstract_a642d5536052d134e26111f42cbdc48f1}{\index{abstract@{abstract}!Get\-Affordance\-Name@{Get\-Affordance\-Name}}
+\index{Get\-Affordance\-Name@{Get\-Affordance\-Name}!abstract@{abstract}}
+\subsubsection[{Get\-Affordance\-Name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string abstract\-::\-Get\-Affordance\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classabstract_a642d5536052d134e26111f42cbdc48f1}
+
+
+Gets affordance name. 
+
+\begin{DoxyAuthor}{Author}
+Chaokel 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2013
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+The affordance name. 
+\end{DoxyReturn}
+\hypertarget{classabstract_a9b6fe4d59bd164a1edbab5403cf0c56a}{\index{abstract@{abstract}!Get\-Goal\-Modifier@{Get\-Goal\-Modifier}}
+\index{Get\-Goal\-Modifier@{Get\-Goal\-Modifier}!abstract@{abstract}}
+\subsubsection[{Get\-Goal\-Modifier}]{\setlength{\rightskip}{0pt plus 5cm}std\-::map$<$ Enum\-Space\-::\-Need\-Types, int $>$ abstract\-::\-Get\-Goal\-Modifier (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classabstract_a9b6fe4d59bd164a1edbab5403cf0c56a}
+
+
+Gets goal modifier. 
+
+\begin{DoxyAuthor}{Author}
+Hamish Carrier 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2013
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+The goal modifier. 
+\end{DoxyReturn}
+\hypertarget{classabstract_ab00d7ccece91f404e85db51c3aaa6689}{\index{abstract@{abstract}!Get\-Threshold@{Get\-Threshold}}
+\index{Get\-Threshold@{Get\-Threshold}!abstract@{abstract}}
+\subsubsection[{Get\-Threshold}]{\setlength{\rightskip}{0pt plus 5cm}int abstract\-::\-Get\-Threshold (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classabstract_ab00d7ccece91f404e85db51c3aaa6689}
+
+
+Gets the threshold. 
+
+\begin{DoxyAuthor}{Author}
+Chaokel 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2013
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+The threshold.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Hamish Carrier 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2013
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+The threshold. 
+\end{DoxyReturn}
+\hypertarget{classabstract_a6a684ea689b2d2272e085b562d25e1df}{\index{abstract@{abstract}!Get\-Type@{Get\-Type}}
+\index{Get\-Type@{Get\-Type}!abstract@{abstract}}
+\subsubsection[{Get\-Type}]{\setlength{\rightskip}{0pt plus 5cm}Enum\-Space\-::\-Mood\-Types abstract\-::\-Get\-Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classabstract_a6a684ea689b2d2272e085b562d25e1df}
+
+
+Gets the type. 
+
+\begin{DoxyAuthor}{Author}
+Chaokel 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2013
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+The type.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Hamish Carrier 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2013
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+The type. 
+\end{DoxyReturn}
+\hypertarget{classabstract_a4d2dc1025b0473a6ca5ae7947cb71fa0}{\index{abstract@{abstract}!Modify\-Needs@{Modify\-Needs}}
+\index{Modify\-Needs@{Modify\-Needs}!abstract@{abstract}}
+\subsubsection[{Modify\-Needs}]{\setlength{\rightskip}{0pt plus 5cm}std\-::map$<$ Enum\-Space\-::\-Need\-Types, int $>$ $\ast$ abstract\-::\-Modify\-Needs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classabstract_a4d2dc1025b0473a6ca5ae7947cb71fa0}
+
+
+Gets the modify needs. 
+
+\begin{DoxyAuthor}{Author}
+Hamish Carrier 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2013
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+null if it fails, else. 
+\end{DoxyReturn}
+\hypertarget{classabstract_a778b0df167d92a449a3b9a4f73508f50}{\index{abstract@{abstract}!Reset\-Threshhold@{Reset\-Threshhold}}
+\index{Reset\-Threshhold@{Reset\-Threshhold}!abstract@{abstract}}
+\subsubsection[{Reset\-Threshhold}]{\setlength{\rightskip}{0pt plus 5cm}void abstract\-::\-Reset\-Threshhold (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classabstract_a778b0df167d92a449a3b9a4f73508f50}
+
+
+Resets the threshhold. 
+
+\begin{DoxyAuthor}{Author}
+Hamish Carrier 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2013 
+\end{DoxyDate}
+\hypertarget{classabstract_a0d4a292e4371e387c37ed3152f40f970}{\index{abstract@{abstract}!Set\-Emotional\-Multipliers@{Set\-Emotional\-Multipliers}}
+\index{Set\-Emotional\-Multipliers@{Set\-Emotional\-Multipliers}!abstract@{abstract}}
+\subsubsection[{Set\-Emotional\-Multipliers}]{\setlength{\rightskip}{0pt plus 5cm}void abstract\-::\-Set\-Emotional\-Multipliers (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{Multiplier\-Array}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classabstract_a0d4a292e4371e387c37ed3152f40f970}
+
+
+Sets emotional multipliers. 
+
+\begin{DoxyAuthor}{Author}
+Chaokel 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2013
+\end{DoxyDate}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em Multiplier\-Array} & If non-\/null, array of multipliers. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+A\-:/\-I\-T/\-Git\-Hub/\-I\-C\-T312/source/ogregraphics/Action.\-h\item 
+A\-:/\-I\-T/\-Git\-Hub/\-I\-C\-T312/source/ogregraphics/\hyperlink{_emotion_8h}{Emotion.\-h}\item 
+A\-:/\-I\-T/\-Git\-Hub/\-I\-C\-T312/source/ogregraphics/\hyperlink{_goal_8h}{Goal.\-h}\item 
+A\-:/\-I\-T/\-Git\-Hub/\-I\-C\-T312/source/ogregraphics/\hyperlink{_mood_8h}{Mood.\-h}\item 
+A\-:/\-I\-T/\-Git\-Hub/\-I\-C\-T312/source/ogregraphics/\hyperlink{_trait_8h}{Trait.\-h}\end{DoxyCompactItemize}

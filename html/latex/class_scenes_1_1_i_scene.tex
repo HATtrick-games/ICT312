@@ -1,0 +1,78 @@
+\hypertarget{class_scenes_1_1_i_scene}{\section{Scenes\-:\-:I\-Scene Class Reference}
+\label{class_scenes_1_1_i_scene}\index{Scenes\-::\-I\-Scene@{Scenes\-::\-I\-Scene}}
+}
+
+
+Scene interface including scene initialisation, updating and actions when the scene is exited.  
+
+
+
+
+{\ttfamily \#include $<$I\-Scene.\-h$>$}
+
+Inheritance diagram for Scenes\-:\-:I\-Scene\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_scenes_1_1_i_scene}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_scenes_1_1_i_scene_a4f3faceff8b6ce9209f8268975efe752}{virtual void \hyperlink{class_scenes_1_1_i_scene_a4f3faceff8b6ce9209f8268975efe752}{initialise} ()=0}\label{class_scenes_1_1_i_scene_a4f3faceff8b6ce9209f8268975efe752}
+
+\begin{DoxyCompactList}\small\item\em Initialises the scene. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_scenes_1_1_i_scene_acb97c42a9a93ce1b3d0b800bda680935}{update} (float delta\-Time)
+\begin{DoxyCompactList}\small\item\em Updates the scene given the change in time from one frame to another. \end{DoxyCompactList}\item 
+\hypertarget{class_scenes_1_1_i_scene_a3abd220af7da336ec3b1c75444254fbc}{virtual void \hyperlink{class_scenes_1_1_i_scene_a3abd220af7da336ec3b1c75444254fbc}{on\-Exit} ()=0}\label{class_scenes_1_1_i_scene_a3abd220af7da336ec3b1c75444254fbc}
+
+\begin{DoxyCompactList}\small\item\em Called upon the scene being closed. \end{DoxyCompactList}\item 
+\hypertarget{class_scenes_1_1_i_scene_ac04de08bb2b1af96e8fde0e1b86255ad}{void {\bfseries add\-Object} (std\-::string identifier, \hyperlink{class_objects_1_1_i_object}{Objects\-::\-I\-Object} $\ast$object)}\label{class_scenes_1_1_i_scene_ac04de08bb2b1af96e8fde0e1b86255ad}
+
+\item 
+\hypertarget{class_scenes_1_1_i_scene_af8f4f0a6918286c669fc309fe8c6208d}{void {\bfseries remove\-Object} (std\-::string identifier)}\label{class_scenes_1_1_i_scene_af8f4f0a6918286c669fc309fe8c6208d}
+
+\item 
+\hypertarget{class_scenes_1_1_i_scene_a7028f9be6feec9aeedc677a8b321bf42}{\hyperlink{class_objects_1_1_i_object}{Objects\-::\-I\-Object} $\ast$ {\bfseries get\-Object} (std\-::string identifier)}\label{class_scenes_1_1_i_scene_a7028f9be6feec9aeedc677a8b321bf42}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Scene interface including scene initialisation, updating and actions when the scene is exited. 
+
+\begin{DoxyAuthor}{Author}
+Timothy Veletta 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+15/08/13 
+\end{DoxyDate}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_scenes_1_1_i_scene_acb97c42a9a93ce1b3d0b800bda680935}{\index{Scenes\-::\-I\-Scene@{Scenes\-::\-I\-Scene}!update@{update}}
+\index{update@{update}!Scenes::IScene@{Scenes\-::\-I\-Scene}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Scenes\-::\-I\-Scene\-::update (
+\begin{DoxyParamCaption}
+\item[{float}]{delta\-Time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_scenes_1_1_i_scene_acb97c42a9a93ce1b3d0b800bda680935}
+
+
+Updates the scene given the change in time from one frame to another. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\-Time} & The change in time from one frame to another. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{class_test_scene_ad42240fabf5883d481191871cc91c5c3}{Test\-Scene}, \hyperlink{class_scenes_1_1_i_t_building_scene_acc67b30b6a5f3d47b55c1d7366f2668c}{Scenes\-::\-I\-T\-Building\-Scene}, and \hyperlink{class_scenes_1_1_exit_scene_ab252f553afc98976f67a0e2c330caed4}{Scenes\-::\-Exit\-Scene}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+A\-:/\-I\-T/\-Git\-Hub/\-I\-C\-T312/source/ogregraphics/I\-Scene.\-h\item 
+A\-:/\-I\-T/\-Git\-Hub/\-I\-C\-T312/source/ogregraphics/I\-Scene.\-cpp\end{DoxyCompactItemize}

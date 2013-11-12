@@ -1,0 +1,161 @@
+\hypertarget{class_mood_manager}{\section{Mood\-Manager Class Reference}
+\label{class_mood_manager}\index{Mood\-Manager@{Mood\-Manager}}
+}
+
+
+Manager for moods.  
+
+
+
+
+{\ttfamily \#include $<$Mood\-Manager.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_mood}{Mood} $\ast$ \hyperlink{class_mood_manager_a6124f65e1bd75b7025f1475e4e9a6577}{Fetch\-Mood} (Enum\-Space\-::\-Mood\-Types Desired\-Mood)
+\begin{DoxyCompactList}\small\item\em Fetches a mood. \end{DoxyCompactList}\item 
+void \hyperlink{class_mood_manager_a76b0af2237a77cc73a108ccd283de0ae}{Initialise\-Mood} (Enum\-Space\-::\-Mood\-Types Mood\-Type, int $\ast$Multipliers)
+\begin{DoxyCompactList}\small\item\em Initialises the mood. \end{DoxyCompactList}\item 
+std\-::map\\*
+$<$ Enum\-Space\-::\-Emotion\-Types, int $>$ \hyperlink{class_mood_manager_a6e5c7fd531f190049e5c2be208f62dce}{Get\-Emotion\-Multipliers} (Enum\-Space\-::\-Mood\-Types Mood\-Type)
+\begin{DoxyCompactList}\small\item\em Gets emotion multipliers. \end{DoxyCompactList}\item 
+void \hyperlink{class_mood_manager_a401c3008ed0fe50c3766963ced3c5a21}{Init} (void)
+\begin{DoxyCompactList}\small\item\em Initialises this object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_mood_manager}{Mood\-Manager} $\ast$ \hyperlink{class_mood_manager_a66be018d05402aaeb081411cbe6fc27b}{Get\-Instance} ()
+\begin{DoxyCompactList}\small\item\em Gets the instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Manager for moods. 
+
+\begin{DoxyAuthor}{Author}
+Hamish Carrier 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2013 
+\end{DoxyDate}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_mood_manager_a6124f65e1bd75b7025f1475e4e9a6577}{\index{Mood\-Manager@{Mood\-Manager}!Fetch\-Mood@{Fetch\-Mood}}
+\index{Fetch\-Mood@{Fetch\-Mood}!MoodManager@{Mood\-Manager}}
+\subsubsection[{Fetch\-Mood}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Mood} $\ast$ Mood\-Manager\-::\-Fetch\-Mood (
+\begin{DoxyParamCaption}
+\item[{Enum\-Space\-::\-Mood\-Types}]{Desired\-Mood}
+\end{DoxyParamCaption}
+)}}\label{class_mood_manager_a6124f65e1bd75b7025f1475e4e9a6577}
+
+
+Fetches a mood. 
+
+\begin{DoxyAuthor}{Author}
+Hamish Carrier 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2013
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em Desired\-Mood} & The desired mood.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+null if it fails, else the mood. 
+\end{DoxyReturn}
+\hypertarget{class_mood_manager_a6e5c7fd531f190049e5c2be208f62dce}{\index{Mood\-Manager@{Mood\-Manager}!Get\-Emotion\-Multipliers@{Get\-Emotion\-Multipliers}}
+\index{Get\-Emotion\-Multipliers@{Get\-Emotion\-Multipliers}!MoodManager@{Mood\-Manager}}
+\subsubsection[{Get\-Emotion\-Multipliers}]{\setlength{\rightskip}{0pt plus 5cm}std\-::map$<$ Enum\-Space\-::\-Emotion\-Types, int $>$ Mood\-Manager\-::\-Get\-Emotion\-Multipliers (
+\begin{DoxyParamCaption}
+\item[{Enum\-Space\-::\-Mood\-Types}]{Mood\-Type}
+\end{DoxyParamCaption}
+)}}\label{class_mood_manager_a6e5c7fd531f190049e5c2be208f62dce}
+
+
+Gets emotion multipliers. 
+
+\begin{DoxyAuthor}{Author}
+Hamish Carrier 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2013
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em Mood\-Type} & Type of the mood.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The emotion multipliers. 
+\end{DoxyReturn}
+\hypertarget{class_mood_manager_a66be018d05402aaeb081411cbe6fc27b}{\index{Mood\-Manager@{Mood\-Manager}!Get\-Instance@{Get\-Instance}}
+\index{Get\-Instance@{Get\-Instance}!MoodManager@{Mood\-Manager}}
+\subsubsection[{Get\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Mood\-Manager} $\ast$ Mood\-Manager\-::\-Get\-Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_mood_manager_a66be018d05402aaeb081411cbe6fc27b}
+
+
+Gets the instance. 
+
+\begin{DoxyAuthor}{Author}
+Hamish Carrier 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2013
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+null if it fails, else the instance. 
+\end{DoxyReturn}
+\hypertarget{class_mood_manager_a401c3008ed0fe50c3766963ced3c5a21}{\index{Mood\-Manager@{Mood\-Manager}!Init@{Init}}
+\index{Init@{Init}!MoodManager@{Mood\-Manager}}
+\subsubsection[{Init}]{\setlength{\rightskip}{0pt plus 5cm}void Mood\-Manager\-::\-Init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{class_mood_manager_a401c3008ed0fe50c3766963ced3c5a21}
+
+
+Initialises this object. 
+
+\begin{DoxyAuthor}{Author}
+Hamish Carrier 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2013 
+\end{DoxyDate}
+\hypertarget{class_mood_manager_a76b0af2237a77cc73a108ccd283de0ae}{\index{Mood\-Manager@{Mood\-Manager}!Initialise\-Mood@{Initialise\-Mood}}
+\index{Initialise\-Mood@{Initialise\-Mood}!MoodManager@{Mood\-Manager}}
+\subsubsection[{Initialise\-Mood}]{\setlength{\rightskip}{0pt plus 5cm}void Mood\-Manager\-::\-Initialise\-Mood (
+\begin{DoxyParamCaption}
+\item[{Enum\-Space\-::\-Mood\-Types}]{Mood\-Type, }
+\item[{int $\ast$}]{Multipliers}
+\end{DoxyParamCaption}
+)}}\label{class_mood_manager_a76b0af2237a77cc73a108ccd283de0ae}
+
+
+Initialises the mood. 
+
+\begin{DoxyAuthor}{Author}
+Hamish Carrier 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2013
+\end{DoxyDate}
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em Mood\-Type} & Type of the mood. \\
+\hline
+\mbox{\tt in,out}  & {\em Multipliers} & If non-\/null, the multipliers. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+A\-:/\-I\-T/\-Git\-Hub/\-I\-C\-T312/source/ogregraphics/\hyperlink{_mood_manager_8h}{Mood\-Manager.\-h}\item 
+A\-:/\-I\-T/\-Git\-Hub/\-I\-C\-T312/source/ogregraphics/Mood\-Manager.\-cpp\end{DoxyCompactItemize}

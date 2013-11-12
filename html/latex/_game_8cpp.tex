@@ -1,0 +1,55 @@
+\hypertarget{_game_8cpp}{\section{A\-:/\-I\-T/\-Git\-Hub/\-I\-C\-T312/source/ogregraphics/\-Game.cpp File Reference}
+\label{_game_8cpp}\index{A\-:/\-I\-T/\-Git\-Hub/\-I\-C\-T312/source/ogregraphics/\-Game.\-cpp@{A\-:/\-I\-T/\-Git\-Hub/\-I\-C\-T312/source/ogregraphics/\-Game.\-cpp}}
+}
+{\ttfamily \#include \char`\"{}Std\-Afx.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Game.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Collision\-Object.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Collision\-World\-Singleton.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Temporary\-Player\-Object.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Node\-Container\-Singleton.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Map\-Node.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}World\-Map.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}I\-Object.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$time.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}Item\-Store.\-h\char`\"{}}\\*
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+time\-\_\-t \hyperlink{_game_8cpp_ae2281da6157495d69406c35f69a61f9f}{timer}
+\item 
+time\-\_\-t \hyperlink{_game_8cpp_ab417ceb6988c4ba6eed8ab3f5d0f787d}{timer2}
+\item 
+\hyperlink{class_collision_object}{Collision\-Object} $\ast$ \hyperlink{_game_8cpp_ade2a75d047846e4ebeaa5b8151a47675}{Player\-Sphere}
+\item 
+\hyperlink{class_temporary_player_object}{Temporary\-Player\-Object} $\ast$ \hyperlink{_game_8cpp_ad89ebfd084c092d6346f7e79f79cb48f}{Player}
+\item 
+\hyperlink{class_world_map}{World\-Map} $\ast$ \hyperlink{_game_8cpp_a62172ddbe8392d8bb92e0856882cbdd1}{mapper}
+\item 
+\hyperlink{class_a_i_manager}{A\-I\-Manager} $\ast$ \hyperlink{_game_8cpp_acccbcab15c7b21925f9001cfb65adcd7}{Controller}
+\item 
+Ogre\-::\-Ray\-Scene\-Query $\ast$ \hyperlink{_game_8cpp_a088a680c5404ec66dfc709286188733d}{m\-Ray\-Scene\-Query}
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\hypertarget{_game_8cpp_acccbcab15c7b21925f9001cfb65adcd7}{\index{Game.\-cpp@{Game.\-cpp}!Controller@{Controller}}
+\index{Controller@{Controller}!Game.cpp@{Game.\-cpp}}
+\subsubsection[{Controller}]{\setlength{\rightskip}{0pt plus 5cm}{\bf A\-I\-Manager}$\ast$ Controller}}\label{_game_8cpp_acccbcab15c7b21925f9001cfb65adcd7}
+\hypertarget{_game_8cpp_a62172ddbe8392d8bb92e0856882cbdd1}{\index{Game.\-cpp@{Game.\-cpp}!mapper@{mapper}}
+\index{mapper@{mapper}!Game.cpp@{Game.\-cpp}}
+\subsubsection[{mapper}]{\setlength{\rightskip}{0pt plus 5cm}{\bf World\-Map}$\ast$ mapper}}\label{_game_8cpp_a62172ddbe8392d8bb92e0856882cbdd1}
+\hypertarget{_game_8cpp_a088a680c5404ec66dfc709286188733d}{\index{Game.\-cpp@{Game.\-cpp}!m\-Ray\-Scene\-Query@{m\-Ray\-Scene\-Query}}
+\index{m\-Ray\-Scene\-Query@{m\-Ray\-Scene\-Query}!Game.cpp@{Game.\-cpp}}
+\subsubsection[{m\-Ray\-Scene\-Query}]{\setlength{\rightskip}{0pt plus 5cm}Ogre\-::\-Ray\-Scene\-Query$\ast$ m\-Ray\-Scene\-Query}}\label{_game_8cpp_a088a680c5404ec66dfc709286188733d}
+\hypertarget{_game_8cpp_ad89ebfd084c092d6346f7e79f79cb48f}{\index{Game.\-cpp@{Game.\-cpp}!Player@{Player}}
+\index{Player@{Player}!Game.cpp@{Game.\-cpp}}
+\subsubsection[{Player}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Temporary\-Player\-Object}$\ast$ Player}}\label{_game_8cpp_ad89ebfd084c092d6346f7e79f79cb48f}
+\hypertarget{_game_8cpp_ade2a75d047846e4ebeaa5b8151a47675}{\index{Game.\-cpp@{Game.\-cpp}!Player\-Sphere@{Player\-Sphere}}
+\index{Player\-Sphere@{Player\-Sphere}!Game.cpp@{Game.\-cpp}}
+\subsubsection[{Player\-Sphere}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Collision\-Object}$\ast$ Player\-Sphere}}\label{_game_8cpp_ade2a75d047846e4ebeaa5b8151a47675}
+\hypertarget{_game_8cpp_ae2281da6157495d69406c35f69a61f9f}{\index{Game.\-cpp@{Game.\-cpp}!timer@{timer}}
+\index{timer@{timer}!Game.cpp@{Game.\-cpp}}
+\subsubsection[{timer}]{\setlength{\rightskip}{0pt plus 5cm}time\-\_\-t timer}}\label{_game_8cpp_ae2281da6157495d69406c35f69a61f9f}
+\hypertarget{_game_8cpp_ab417ceb6988c4ba6eed8ab3f5d0f787d}{\index{Game.\-cpp@{Game.\-cpp}!timer2@{timer2}}
+\index{timer2@{timer2}!Game.cpp@{Game.\-cpp}}
+\subsubsection[{timer2}]{\setlength{\rightskip}{0pt plus 5cm}time\-\_\-t timer2}}\label{_game_8cpp_ab417ceb6988c4ba6eed8ab3f5d0f787d}

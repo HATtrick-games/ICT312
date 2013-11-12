@@ -1,0 +1,140 @@
+\hypertarget{classmicropather_1_1_micro_pather}{\section{micropather\-:\-:Micro\-Pather Class Reference}
+\label{classmicropather_1_1_micro_pather}\index{micropather\-::\-Micro\-Pather@{micropather\-::\-Micro\-Pather}}
+}
+
+
+{\ttfamily \#include $<$micropather.\-h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ {\bfseries S\-O\-L\-V\-E\-D}, 
+{\bfseries N\-O\-\_\-\-S\-O\-L\-U\-T\-I\-O\-N}, 
+{\bfseries S\-T\-A\-R\-T\-\_\-\-E\-N\-D\-\_\-\-S\-A\-M\-E}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmicropather_1_1_micro_pather_a560b850638770e89ee998335d8b4c162}{Micro\-Pather} (\hyperlink{classmicropather_1_1_graph}{Graph} $\ast$graph, unsigned allocate=250, unsigned typical\-Adjacent=6)
+\item 
+int \hyperlink{classmicropather_1_1_micro_pather_af81b5dad8f89610026b8f0762d981730}{Solve} (void $\ast$start\-State, void $\ast$end\-State, std\-::vector$<$ void $\ast$ $>$ $\ast$path, float $\ast$total\-Cost)
+\item 
+int \hyperlink{classmicropather_1_1_micro_pather_ae91b62a7e416e34e6e23dd5db257cdbd}{Solve\-For\-Near\-States} (void $\ast$start\-State, std\-::vector$<$ \hyperlink{structmicropather_1_1_state_cost}{State\-Cost} $>$ $\ast$nearbye, float max\-Cost)
+\item 
+void \hyperlink{classmicropather_1_1_micro_pather_aa830a9fa99403c14c6791f513a8e2342}{Reset} ()
+\item 
+M\-P\-\_\-\-U\-P\-T\-R \hyperlink{classmicropather_1_1_micro_pather_a7b6bc881e8c720c45785b4046ed18c04}{Checksum} ()
+\item 
+\hypertarget{classmicropather_1_1_micro_pather_a29e293c8313984561813014220243619}{void {\bfseries States\-In\-Pool} (std\-::vector$<$ void $\ast$ $>$ $\ast$state\-Vec)}\label{classmicropather_1_1_micro_pather_a29e293c8313984561813014220243619}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classmicropather_1_1_micro_pather_a6758fcf0e2e95b928357175bece60c03}{class {\bfseries micropather\-::\-Path\-Node}}\label{classmicropather_1_1_micro_pather_a6758fcf0e2e95b928357175bece60c03}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Create a \hyperlink{classmicropather_1_1_micro_pather}{Micro\-Pather} object to solve for a best path. Detailed usage notes are on the main page. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classmicropather_1_1_micro_pather_a560b850638770e89ee998335d8b4c162}{\index{micropather\-::\-Micro\-Pather@{micropather\-::\-Micro\-Pather}!Micro\-Pather@{Micro\-Pather}}
+\index{Micro\-Pather@{Micro\-Pather}!micropather::MicroPather@{micropather\-::\-Micro\-Pather}}
+\subsubsection[{Micro\-Pather}]{\setlength{\rightskip}{0pt plus 5cm}Micro\-Pather\-::\-Micro\-Pather (
+\begin{DoxyParamCaption}
+\item[{{\bf Graph} $\ast$}]{graph, }
+\item[{unsigned}]{allocate = {\ttfamily 250}, }
+\item[{unsigned}]{typical\-Adjacent = {\ttfamily 6}}
+\end{DoxyParamCaption}
+)}}\label{classmicropather_1_1_micro_pather_a560b850638770e89ee998335d8b4c162}
+Construct the pather, passing a pointer to the object that implements the \hyperlink{classmicropather_1_1_graph}{Graph} callbacks.
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph} & The \char`\"{}map\char`\"{} that implements the \hyperlink{classmicropather_1_1_graph}{Graph} callbacks. \\
+\hline
+{\em allocate} & How many states should be internally allocated at a time. This can be hard to get correct. The higher the value, the more memory \hyperlink{classmicropather_1_1_micro_pather}{Micro\-Pather} will use.
+\begin{DoxyItemize}
+\item If you have a small map (a few thousand states?) it may make sense to pass in the maximum value. This will cache everything, and \hyperlink{classmicropather_1_1_micro_pather}{Micro\-Pather} will only need one main memory allocation. For a chess board, allocate would be set to 8x8 (64)
+\item If your map is large, something like 1/4 the number of possible states is good. For example, Lilith3\-D normally has about 16,000 states, so 'allocate' should be about 4000.
+\item If your state space is huge, use a multiple (5-\/10x) of the normal path. \char`\"{}\-Occasionally\char`\"{} call \hyperlink{classmicropather_1_1_micro_pather_aa830a9fa99403c14c6791f513a8e2342}{Reset()} to free unused memory. 
+\end{DoxyItemize}\\
+\hline
+{\em typical\-Adjacent} & Used to determine cache size. The typical number of adjacent states to a given state. (On a chessboard, 8.) Higher values use a little more memory. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classmicropather_1_1_micro_pather_a7b6bc881e8c720c45785b4046ed18c04}{\index{micropather\-::\-Micro\-Pather@{micropather\-::\-Micro\-Pather}!Checksum@{Checksum}}
+\index{Checksum@{Checksum}!micropather::MicroPather@{micropather\-::\-Micro\-Pather}}
+\subsubsection[{Checksum}]{\setlength{\rightskip}{0pt plus 5cm}M\-P\-\_\-\-U\-P\-T\-R micropather\-::\-Micro\-Pather\-::\-Checksum (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classmicropather_1_1_micro_pather_a7b6bc881e8c720c45785b4046ed18c04}
+Return the \char`\"{}checksum\char`\"{} of the last path returned by \hyperlink{classmicropather_1_1_micro_pather_af81b5dad8f89610026b8f0762d981730}{Solve()}. Useful for debugging, and a quick way to see if 2 paths are the same. \hypertarget{classmicropather_1_1_micro_pather_aa830a9fa99403c14c6791f513a8e2342}{\index{micropather\-::\-Micro\-Pather@{micropather\-::\-Micro\-Pather}!Reset@{Reset}}
+\index{Reset@{Reset}!micropather::MicroPather@{micropather\-::\-Micro\-Pather}}
+\subsubsection[{Reset}]{\setlength{\rightskip}{0pt plus 5cm}void Micro\-Pather\-::\-Reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classmicropather_1_1_micro_pather_aa830a9fa99403c14c6791f513a8e2342}
+Should be called whenever the cost between states or the connection between states changes. Also frees overhead memory used by \hyperlink{classmicropather_1_1_micro_pather}{Micro\-Pather}, and calling will free excess memory. \hypertarget{classmicropather_1_1_micro_pather_af81b5dad8f89610026b8f0762d981730}{\index{micropather\-::\-Micro\-Pather@{micropather\-::\-Micro\-Pather}!Solve@{Solve}}
+\index{Solve@{Solve}!micropather::MicroPather@{micropather\-::\-Micro\-Pather}}
+\subsubsection[{Solve}]{\setlength{\rightskip}{0pt plus 5cm}int Micro\-Pather\-::\-Solve (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{start\-State, }
+\item[{void $\ast$}]{end\-State, }
+\item[{std\-::vector$<$ void $\ast$ $>$ $\ast$}]{path, }
+\item[{float $\ast$}]{total\-Cost}
+\end{DoxyParamCaption}
+)}}\label{classmicropather_1_1_micro_pather_af81b5dad8f89610026b8f0762d981730}
+Solve for the path from start to end.
+
+
+\begin{DoxyParams}{Parameters}
+{\em start\-State} & Input, the starting state for the path. \\
+\hline
+{\em end\-State} & Input, the ending state for the path. \\
+\hline
+{\em path} & Output, a vector of states that define the path. Empty if not found. \\
+\hline
+{\em total\-Cost} & Output, the cost of the path, if found. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success or failure, expressed as S\-O\-L\-V\-E\-D, N\-O\-\_\-\-S\-O\-L\-U\-T\-I\-O\-N, or S\-T\-A\-R\-T\-\_\-\-E\-N\-D\-\_\-\-S\-A\-M\-E. 
+\end{DoxyReturn}
+\hypertarget{classmicropather_1_1_micro_pather_ae91b62a7e416e34e6e23dd5db257cdbd}{\index{micropather\-::\-Micro\-Pather@{micropather\-::\-Micro\-Pather}!Solve\-For\-Near\-States@{Solve\-For\-Near\-States}}
+\index{Solve\-For\-Near\-States@{Solve\-For\-Near\-States}!micropather::MicroPather@{micropather\-::\-Micro\-Pather}}
+\subsubsection[{Solve\-For\-Near\-States}]{\setlength{\rightskip}{0pt plus 5cm}int Micro\-Pather\-::\-Solve\-For\-Near\-States (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{start\-State, }
+\item[{std\-::vector$<$ {\bf State\-Cost} $>$ $\ast$}]{nearbye, }
+\item[{float}]{max\-Cost}
+\end{DoxyParamCaption}
+)}}\label{classmicropather_1_1_micro_pather_ae91b62a7e416e34e6e23dd5db257cdbd}
+Find all the states within a given cost from start\-State.
+
+
+\begin{DoxyParams}{Parameters}
+{\em start\-State} & Input, the starting state for the path. \\
+\hline
+{\em nearbye} & All the states within 'max\-Cost' of 'start\-State', and cost to that state. \\
+\hline
+{\em max\-Cost} & Input, the maximum cost that will be returned. (Higher values return larger 'nearbye' sets and take more time to compute.) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success or failure, expressed as S\-O\-L\-V\-E\-D or N\-O\-\_\-\-S\-O\-L\-U\-T\-I\-O\-N. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+A\-:/\-I\-T/\-Git\-Hub/\-I\-C\-T312/source/ogregraphics/micropather.\-h\item 
+A\-:/\-I\-T/\-Git\-Hub/\-I\-C\-T312/source/ogregraphics/micropather.\-cpp\end{DoxyCompactItemize}

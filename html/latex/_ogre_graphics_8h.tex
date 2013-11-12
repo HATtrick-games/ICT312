@@ -1,0 +1,68 @@
+\hypertarget{_ogre_graphics_8h}{\section{A\-:/\-I\-T/\-Git\-Hub/\-I\-C\-T312/source/ogregraphics/\-Ogre\-Graphics.h File Reference}
+\label{_ogre_graphics_8h}\index{A\-:/\-I\-T/\-Git\-Hub/\-I\-C\-T312/source/ogregraphics/\-Ogre\-Graphics.\-h@{A\-:/\-I\-T/\-Git\-Hub/\-I\-C\-T312/source/ogregraphics/\-Ogre\-Graphics.\-h}}
+}
+{\ttfamily \#include \char`\"{}Debug\-Drawer.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Frame\-Listener.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Vector3.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$cmath$>$}\\*
+{\ttfamily \#include $<$math.\-h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_graphics_1_1_ogre_graphics}{Graphics\-::\-Ogre\-Graphics}
+\begin{DoxyCompactList}\small\item\em Facade class for Ogre3\-D graphics engine. Allows for the creation of windows, cameras, lighting, entities and more using Ogre3\-D. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespace_graphics}{Graphics}
+\end{DoxyCompactItemize}
+\subsection*{Constant Groups}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespace_graphics}{Graphics}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\-::map$<$ std\-::string, \\*
+Ogre\-::\-Scene\-Node $\ast$ $>$ \hyperlink{_ogre_graphics_8h_a46f51320097a1641c22dbe7dacb2bae8}{Map\-Scene\-Node}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_ogre_graphics_8h_adb13085deadc56b2b94868701a5ba8d1}{Relative\-To} \{ \hyperlink{_ogre_graphics_8h_adb13085deadc56b2b94868701a5ba8d1af6a55494fff5123a4260b9c2065316d2}{R\-T\-\_\-\-W\-O\-R\-L\-D}, 
+\hyperlink{_ogre_graphics_8h_adb13085deadc56b2b94868701a5ba8d1a7df2eb8d332bbe8179bdd993eb1e29fa}{R\-T\-\_\-\-L\-O\-C\-A\-L}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const std\-::string \hyperlink{_ogre_graphics_8h_aa4adb1bbee5f19b4b19cdd30e381b1b4}{W\-I\-N\-D\-O\-W\-T\-I\-T\-L\-E} = \char`\"{}Ogre Graphics Test\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{_ogre_graphics_8h_a46f51320097a1641c22dbe7dacb2bae8}{\index{Ogre\-Graphics.\-h@{Ogre\-Graphics.\-h}!Map\-Scene\-Node@{Map\-Scene\-Node}}
+\index{Map\-Scene\-Node@{Map\-Scene\-Node}!OgreGraphics.h@{Ogre\-Graphics.\-h}}
+\subsubsection[{Map\-Scene\-Node}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::map$<$ std\-::string, Ogre\-::\-Scene\-Node$\ast$ $>$ {\bf Map\-Scene\-Node}}}\label{_ogre_graphics_8h_a46f51320097a1641c22dbe7dacb2bae8}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{_ogre_graphics_8h_adb13085deadc56b2b94868701a5ba8d1}{\index{Ogre\-Graphics.\-h@{Ogre\-Graphics.\-h}!Relative\-To@{Relative\-To}}
+\index{Relative\-To@{Relative\-To}!OgreGraphics.h@{Ogre\-Graphics.\-h}}
+\subsubsection[{Relative\-To}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Relative\-To}}}\label{_ogre_graphics_8h_adb13085deadc56b2b94868701a5ba8d1}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{R\-T\-\_\-\-W\-O\-R\-L\-D@{R\-T\-\_\-\-W\-O\-R\-L\-D}!Ogre\-Graphics.\-h@{Ogre\-Graphics.\-h}}\index{Ogre\-Graphics.\-h@{Ogre\-Graphics.\-h}!R\-T\-\_\-\-W\-O\-R\-L\-D@{R\-T\-\_\-\-W\-O\-R\-L\-D}}\item[{\em 
+\hypertarget{_ogre_graphics_8h_adb13085deadc56b2b94868701a5ba8d1af6a55494fff5123a4260b9c2065316d2}{R\-T\-\_\-\-W\-O\-R\-L\-D}\label{_ogre_graphics_8h_adb13085deadc56b2b94868701a5ba8d1af6a55494fff5123a4260b9c2065316d2}
+}]\index{R\-T\-\_\-\-L\-O\-C\-A\-L@{R\-T\-\_\-\-L\-O\-C\-A\-L}!Ogre\-Graphics.\-h@{Ogre\-Graphics.\-h}}\index{Ogre\-Graphics.\-h@{Ogre\-Graphics.\-h}!R\-T\-\_\-\-L\-O\-C\-A\-L@{R\-T\-\_\-\-L\-O\-C\-A\-L}}\item[{\em 
+\hypertarget{_ogre_graphics_8h_adb13085deadc56b2b94868701a5ba8d1a7df2eb8d332bbe8179bdd993eb1e29fa}{R\-T\-\_\-\-L\-O\-C\-A\-L}\label{_ogre_graphics_8h_adb13085deadc56b2b94868701a5ba8d1a7df2eb8d332bbe8179bdd993eb1e29fa}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Variable Documentation}
+\hypertarget{_ogre_graphics_8h_aa4adb1bbee5f19b4b19cdd30e381b1b4}{\index{Ogre\-Graphics.\-h@{Ogre\-Graphics.\-h}!W\-I\-N\-D\-O\-W\-T\-I\-T\-L\-E@{W\-I\-N\-D\-O\-W\-T\-I\-T\-L\-E}}
+\index{W\-I\-N\-D\-O\-W\-T\-I\-T\-L\-E@{W\-I\-N\-D\-O\-W\-T\-I\-T\-L\-E}!OgreGraphics.h@{Ogre\-Graphics.\-h}}
+\subsubsection[{W\-I\-N\-D\-O\-W\-T\-I\-T\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string W\-I\-N\-D\-O\-W\-T\-I\-T\-L\-E = \char`\"{}Ogre Graphics Test\char`\"{}}}\label{_ogre_graphics_8h_aa4adb1bbee5f19b4b19cdd30e381b1b4}

@@ -1,0 +1,161 @@
+\hypertarget{class_action_manager}{\section{Action\-Manager Class Reference}
+\label{class_action_manager}\index{Action\-Manager@{Action\-Manager}}
+}
+
+
+Manager for actions.  
+
+
+
+
+{\ttfamily \#include $<$Action\-Manager.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_action}{Action} $\ast$ \hyperlink{class_action_manager_ac0522de689b6f41724ebd2aca646646d}{Fetch\-Action} (Enum\-Space\-::\-Action\-Types Desired\-Action)
+\begin{DoxyCompactList}\small\item\em Fetches an action. \end{DoxyCompactList}\item 
+void \hyperlink{class_action_manager_a6ab448b8fb4a0df2dd9ee0887c5dfcef}{Initialise\-Action} (Enum\-Space\-::\-Action\-Types Action\-Type, int $\ast$Multipliers)
+\begin{DoxyCompactList}\small\item\em Initialises the action. \end{DoxyCompactList}\item 
+std\-::map\\*
+$<$ Enum\-Space\-::\-Emotion\-Types, int $>$ \hyperlink{class_action_manager_a8e9097726d1dbeb537a1d64edd24fce8}{Get\-Emotion\-Multipliers} (Enum\-Space\-::\-Action\-Types Action\-Type)
+\begin{DoxyCompactList}\small\item\em Gets emotion multipliers. \end{DoxyCompactList}\item 
+void \hyperlink{class_action_manager_a75f119f905f44a55f7ca3bf2ccd00467}{Init} (void)
+\begin{DoxyCompactList}\small\item\em Initialises this object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_action_manager}{Action\-Manager} $\ast$ \hyperlink{class_action_manager_a91970883f9197898ed801f9a80b59595}{Get\-Instance} ()
+\begin{DoxyCompactList}\small\item\em Gets the instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Manager for actions. 
+
+\begin{DoxyAuthor}{Author}
+Hamish Carrier 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2013 
+\end{DoxyDate}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_action_manager_ac0522de689b6f41724ebd2aca646646d}{\index{Action\-Manager@{Action\-Manager}!Fetch\-Action@{Fetch\-Action}}
+\index{Fetch\-Action@{Fetch\-Action}!ActionManager@{Action\-Manager}}
+\subsubsection[{Fetch\-Action}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Action} $\ast$ Action\-Manager\-::\-Fetch\-Action (
+\begin{DoxyParamCaption}
+\item[{Enum\-Space\-::\-Action\-Types}]{Desired\-Action}
+\end{DoxyParamCaption}
+)}}\label{class_action_manager_ac0522de689b6f41724ebd2aca646646d}
+
+
+Fetches an action. 
+
+\begin{DoxyAuthor}{Author}
+Hamish Carrier 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2013
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em Desired\-Action} & The desired action.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+null if it fails, else the action. 
+\end{DoxyReturn}
+\hypertarget{class_action_manager_a8e9097726d1dbeb537a1d64edd24fce8}{\index{Action\-Manager@{Action\-Manager}!Get\-Emotion\-Multipliers@{Get\-Emotion\-Multipliers}}
+\index{Get\-Emotion\-Multipliers@{Get\-Emotion\-Multipliers}!ActionManager@{Action\-Manager}}
+\subsubsection[{Get\-Emotion\-Multipliers}]{\setlength{\rightskip}{0pt plus 5cm}std\-::map$<$ Enum\-Space\-::\-Emotion\-Types, int $>$ Action\-Manager\-::\-Get\-Emotion\-Multipliers (
+\begin{DoxyParamCaption}
+\item[{Enum\-Space\-::\-Action\-Types}]{Action\-Type}
+\end{DoxyParamCaption}
+)}}\label{class_action_manager_a8e9097726d1dbeb537a1d64edd24fce8}
+
+
+Gets emotion multipliers. 
+
+\begin{DoxyAuthor}{Author}
+Hamish Carrier 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2013
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em Action\-Type} & Type of the action.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The emotion multipliers. 
+\end{DoxyReturn}
+\hypertarget{class_action_manager_a91970883f9197898ed801f9a80b59595}{\index{Action\-Manager@{Action\-Manager}!Get\-Instance@{Get\-Instance}}
+\index{Get\-Instance@{Get\-Instance}!ActionManager@{Action\-Manager}}
+\subsubsection[{Get\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Action\-Manager} $\ast$ Action\-Manager\-::\-Get\-Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_action_manager_a91970883f9197898ed801f9a80b59595}
+
+
+Gets the instance. 
+
+\begin{DoxyAuthor}{Author}
+Hamish Carrier 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2013
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+null if it fails, else the instance. 
+\end{DoxyReturn}
+\hypertarget{class_action_manager_a75f119f905f44a55f7ca3bf2ccd00467}{\index{Action\-Manager@{Action\-Manager}!Init@{Init}}
+\index{Init@{Init}!ActionManager@{Action\-Manager}}
+\subsubsection[{Init}]{\setlength{\rightskip}{0pt plus 5cm}void Action\-Manager\-::\-Init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{class_action_manager_a75f119f905f44a55f7ca3bf2ccd00467}
+
+
+Initialises this object. 
+
+\begin{DoxyAuthor}{Author}
+Hamish Carrier 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2013 
+\end{DoxyDate}
+\hypertarget{class_action_manager_a6ab448b8fb4a0df2dd9ee0887c5dfcef}{\index{Action\-Manager@{Action\-Manager}!Initialise\-Action@{Initialise\-Action}}
+\index{Initialise\-Action@{Initialise\-Action}!ActionManager@{Action\-Manager}}
+\subsubsection[{Initialise\-Action}]{\setlength{\rightskip}{0pt plus 5cm}void Action\-Manager\-::\-Initialise\-Action (
+\begin{DoxyParamCaption}
+\item[{Enum\-Space\-::\-Action\-Types}]{Action\-Type, }
+\item[{int $\ast$}]{Multipliers}
+\end{DoxyParamCaption}
+)}}\label{class_action_manager_a6ab448b8fb4a0df2dd9ee0887c5dfcef}
+
+
+Initialises the action. 
+
+\begin{DoxyAuthor}{Author}
+Hamish Carrier 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2013
+\end{DoxyDate}
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em Action\-Type} & Type of the action. \\
+\hline
+\mbox{\tt in,out}  & {\em Multipliers} & If non-\/null, the multipliers. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+A\-:/\-I\-T/\-Git\-Hub/\-I\-C\-T312/source/ogregraphics/\hyperlink{_action_manager_8h}{Action\-Manager.\-h}\item 
+A\-:/\-I\-T/\-Git\-Hub/\-I\-C\-T312/source/ogregraphics/Action\-Manager.\-cpp\end{DoxyCompactItemize}

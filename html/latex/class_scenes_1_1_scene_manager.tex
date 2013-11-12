@@ -1,0 +1,104 @@
+\hypertarget{class_scenes_1_1_scene_manager}{\section{Scenes\-:\-:Scene\-Manager Class Reference}
+\label{class_scenes_1_1_scene_manager}\index{Scenes\-::\-Scene\-Manager@{Scenes\-::\-Scene\-Manager}}
+}
+
+
+Manages the scenes used within the game allowing for changing between scenes, updating scenes and even reverting to the previous scene.  
+
+
+
+
+{\ttfamily \#include $<$Scene\-Manager.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_scenes_1_1_scene_manager_a430af5cbeec7a547224ae15a2d21ac89}{\hyperlink{class_scenes_1_1_scene_manager_a430af5cbeec7a547224ae15a2d21ac89}{Scene\-Manager} (void)}\label{class_scenes_1_1_scene_manager_a430af5cbeec7a547224ae15a2d21ac89}
+
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_scenes_1_1_scene_manager_a003add21b26892729975432b99601af0}{Scene\-Manager} (\hyperlink{class_scenes_1_1_i_scene}{I\-Scene} $\ast$scene)
+\begin{DoxyCompactList}\small\item\em Constructor also sets the current scene and initialises it. \end{DoxyCompactList}\item 
+\hypertarget{class_scenes_1_1_scene_manager_a710c032c05756e4abe360d6384a4d658}{\hyperlink{class_scenes_1_1_scene_manager_a710c032c05756e4abe360d6384a4d658}{$\sim$\-Scene\-Manager} (void)}\label{class_scenes_1_1_scene_manager_a710c032c05756e4abe360d6384a4d658}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_scenes_1_1_scene_manager_aaadb1378ac23b3c26c44e6f20626c704}{change\-Scene} (\hyperlink{class_scenes_1_1_i_scene}{I\-Scene} $\ast$scene)
+\begin{DoxyCompactList}\small\item\em Changes the current scene to the input scene, exits the previous scene and initialises the new scene. \end{DoxyCompactList}\item 
+\hypertarget{class_scenes_1_1_scene_manager_a3e488084d46e3e0805d3fd2852a0cac7}{void \hyperlink{class_scenes_1_1_scene_manager_a3e488084d46e3e0805d3fd2852a0cac7}{revert\-To\-Previous\-Scene} ()}\label{class_scenes_1_1_scene_manager_a3e488084d46e3e0805d3fd2852a0cac7}
+
+\begin{DoxyCompactList}\small\item\em Revert to previous scene. \end{DoxyCompactList}\item 
+void \hyperlink{class_scenes_1_1_scene_manager_af9eafb95ed2b49fa867c5b9b45416382}{update\-Scene} (float delta\-Time)
+\begin{DoxyCompactList}\small\item\em Updates the current scene passing in the time between frames. \end{DoxyCompactList}\item 
+\hypertarget{class_scenes_1_1_scene_manager_a19458b9c99068f3607fb58368f650c2b}{\hyperlink{class_scenes_1_1_i_scene}{Scenes\-::\-I\-Scene} $\ast$ {\bfseries Get\-Scene} ()}\label{class_scenes_1_1_scene_manager_a19458b9c99068f3607fb58368f650c2b}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Manages the scenes used within the game allowing for changing between scenes, updating scenes and even reverting to the previous scene. 
+
+\begin{DoxyAuthor}{Author}
+Timothy Veletta 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+15/08/13 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_scenes_1_1_scene_manager_a003add21b26892729975432b99601af0}{\index{Scenes\-::\-Scene\-Manager@{Scenes\-::\-Scene\-Manager}!Scene\-Manager@{Scene\-Manager}}
+\index{Scene\-Manager@{Scene\-Manager}!Scenes::SceneManager@{Scenes\-::\-Scene\-Manager}}
+\subsubsection[{Scene\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}Scenes\-::\-Scene\-Manager\-::\-Scene\-Manager (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-Scene} $\ast$}]{scene}
+\end{DoxyParamCaption}
+)}}\label{class_scenes_1_1_scene_manager_a003add21b26892729975432b99601af0}
+
+
+Constructor also sets the current scene and initialises it. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em scene} & If non-\/null, the scene to be set as current. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_scenes_1_1_scene_manager_aaadb1378ac23b3c26c44e6f20626c704}{\index{Scenes\-::\-Scene\-Manager@{Scenes\-::\-Scene\-Manager}!change\-Scene@{change\-Scene}}
+\index{change\-Scene@{change\-Scene}!Scenes::SceneManager@{Scenes\-::\-Scene\-Manager}}
+\subsubsection[{change\-Scene}]{\setlength{\rightskip}{0pt plus 5cm}void Scenes\-::\-Scene\-Manager\-::change\-Scene (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-Scene} $\ast$}]{scene}
+\end{DoxyParamCaption}
+)}}\label{class_scenes_1_1_scene_manager_aaadb1378ac23b3c26c44e6f20626c704}
+
+
+Changes the current scene to the input scene, exits the previous scene and initialises the new scene. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em scene} & If non-\/null, the scene to be set as current. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_scenes_1_1_scene_manager_af9eafb95ed2b49fa867c5b9b45416382}{\index{Scenes\-::\-Scene\-Manager@{Scenes\-::\-Scene\-Manager}!update\-Scene@{update\-Scene}}
+\index{update\-Scene@{update\-Scene}!Scenes::SceneManager@{Scenes\-::\-Scene\-Manager}}
+\subsubsection[{update\-Scene}]{\setlength{\rightskip}{0pt plus 5cm}void Scenes\-::\-Scene\-Manager\-::update\-Scene (
+\begin{DoxyParamCaption}
+\item[{float}]{delta\-Time}
+\end{DoxyParamCaption}
+)}}\label{class_scenes_1_1_scene_manager_af9eafb95ed2b49fa867c5b9b45416382}
+
+
+Updates the current scene passing in the time between frames. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\-Time} & Time between frames. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+A\-:/\-I\-T/\-Git\-Hub/\-I\-C\-T312/source/ogregraphics/Scene\-Manager.\-h\item 
+A\-:/\-I\-T/\-Git\-Hub/\-I\-C\-T312/source/ogregraphics/Scene\-Manager.\-cpp\end{DoxyCompactItemize}
