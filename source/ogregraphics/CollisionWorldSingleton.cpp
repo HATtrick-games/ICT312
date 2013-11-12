@@ -65,7 +65,7 @@ void CollisionWorldSingleton::CheckCollision()
 							}
 							else
 							{
-							std::cout << "Collision" << std::endl;
+							//std::cout << "Collision" << std::endl;
 
 							Physics::Contact(A,	B,
 								Ogre::Vector3(contact.getPositionWorldOnA().getX(), contact.getPositionWorldOnA().getY(), contact.getPositionWorldOnA().getZ()),

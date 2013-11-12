@@ -54,6 +54,7 @@ Objects::IObject* ItemStore::GetObject(Ogre::Vector3 pos, std::string affordance
 	Objects::IObject* temp;
 	temp = NULL;
 	//return temp;
+	// Ideally these if statements would contain boundaries pertaining to each of the main room areas.
 	if(1)
 	{
 		if((temp = CheckVector(Hallway, pos, affordance, min)) ==  NULL)
@@ -135,7 +136,7 @@ Objects::IObject* ItemStore::GetObject(Ogre::Vector3 pos, std::string affordance
 
 void ItemStore::AddObject(Objects::IObject* obj)
 {
-	
+	//Ideally these ifs world be boundaries pertaining to each of the main room areas
 	if(1)
 	{
 		cout<<"Object added to hallway \n";
