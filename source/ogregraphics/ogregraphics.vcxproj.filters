@@ -64,7 +64,6 @@
     <ClInclude Include="Emotion.h" />
     <ClInclude Include="EmotionManager.h" />
     <ClInclude Include="EnumSpace.h" />
-    <ClInclude Include="Force.h" />
     <ClInclude Include="FrameListener.h" />
     <ClInclude Include="FunLoving.h" />
     <ClInclude Include="Game.h" />
