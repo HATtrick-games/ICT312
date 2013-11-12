@@ -75,6 +75,7 @@ GenericObject::~GenericObject(void)
 
 void GenericObject::initialise()
 {
+	Generic = true;
 	Affordances["UseComputer"] = 0;
 	Affordances["Sit"] = 0;
 }

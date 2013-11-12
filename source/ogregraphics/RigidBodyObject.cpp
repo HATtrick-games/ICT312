@@ -43,19 +43,19 @@ RigidBodyObject::RigidBodyObject(Ogre::Vector3 pos, Ogre::Quaternion rot, Ogre::
 	{
 	std::cout<<meshFile;
 		Sleep(1000);
-	MakeCollisionObject();
+	MakeBoxCollisionObject();
 	}
 	if(meshFile == "CornerTable.mesh")
 	{
 	std::cout<<meshFile;
 		Sleep(1000);
-	MakeCollisionObject();
+	MakeBoxCollisionObject();
 	}
 	if(meshFile == "CornerTable_1.mesh")
 	{
 	std::cout<<meshFile;
 		Sleep(1000);
-	MakeCollisionObject();
+	MakeBoxCollisionObject();
 	}*/
 	//	std::cout<<"TABLE IS MADE HERE \n\n\n\n";
 		
@@ -65,7 +65,7 @@ RigidBodyObject::RigidBodyObject(Ogre::Vector3 pos, Ogre::Quaternion rot, Ogre::
 	
 
 	m_force = Ogre::Vector3(0.0f, 0.0f, 0.0f);
-	m_mass = 1.0f;
+	m_mass = 0.000001f;
 
 	m_acceleration = Ogre::Vector3(0.0f, 0.0f, 0.0f);
 	m_velocity = Ogre::Vector3(0.0f, 0.0f, 0.0f);
@@ -83,7 +83,9 @@ RigidBodyObject::~RigidBodyObject(void)
 
 void RigidBodyObject::initialise()
 {
-	
+	Generic = false;
+	Affordances["UseComputer"] = 0;
+	Affordances["Sit"] = 0;
 }
 
 void RigidBodyObject::update( float deltaTime )

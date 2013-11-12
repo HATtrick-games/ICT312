@@ -135,6 +135,7 @@ void IObject::MakeBoxCollisionObject()
 	//ColObj = new CollisionObject();
 	//ColObj->AddBoxShape(boundingBox.x, boundingBox.y, boundingBox.z);
 	ColObj->SetUserPointer(this);
+	ColObj->SetPosition(getPosition());
 	ColObj->SetScale(0.5,0.5,0.5);
 }
 

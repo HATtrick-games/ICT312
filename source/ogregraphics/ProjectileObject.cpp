@@ -18,6 +18,7 @@ ProjectileObject::~ProjectileObject(void)
 
 void ProjectileObject::initialise()
 {
+	Generic = false;
 	m_mass = 0.1f;
 	m_force = Ogre::Vector3(0.0f, 0.0f, 0.0f);
 	setInertiaTensor(InertiaTensorSolidSphere(3.0f, 0.1f));

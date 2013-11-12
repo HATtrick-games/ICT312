@@ -57,13 +57,20 @@ void CollisionWorldSingleton::CheckCollision()
 					{
 						btManifoldPoint contact = contactManifold->getContactPoint(0);
 
-						if(A->isDynamic && B->isDynamic)
+						if((A->isDynamic && B->isDynamic)||(A->isDynamic && !B->isDynamic)||(!A->isDynamic && B->isDynamic))
 						{
+							if(A->Generic || B->Generic)
+							{
+							//std::cout << "Collision Generic" << std::endl;
+							}
+							else
+							{
 							std::cout << "Collision" << std::endl;
 
 							Physics::Contact(A,	B,
 								Ogre::Vector3(contact.getPositionWorldOnA().getX(), contact.getPositionWorldOnA().getY(), contact.getPositionWorldOnA().getZ()),
 								Ogre::Vector3(contact.m_normalWorldOnB.getX(), contact.m_normalWorldOnB.getY(), contact.m_normalWorldOnB.getZ()));
+							}
 						}
 					}
 
