@@ -146,13 +146,19 @@ void Contact::ApplyVelocityChange()
 	rotationChange[0] = inverseInertiaTensor[0] * impulsiveTorque;
 	velocityChange[0] = impulse * A->getInverseMass();
 
-	A->addVelocity(velocityChange[0]);
-	A->addRotation(rotationChange[0]);
+	if(A->isDynamic)
+	{
+		A->addVelocity(velocityChange[0]);
+		A->addRotation(rotationChange[0]);
+	}
 	
 	impulsiveTorque = relativeContactPosition[1].crossProduct(impulse);
 	rotationChange[1] = inverseInertiaTensor[1] * impulsiveTorque;
 	velocityChange[1] = impulse * -1 * B->getInverseMass();
 
-	B->addVelocity(velocityChange[1]);
-	B->addRotation(rotationChange[1]);
+	if(B->isDynamic)
+	{
+		B->addVelocity(velocityChange[1]);
+		B->addRotation(rotationChange[1]);
+	}
 }

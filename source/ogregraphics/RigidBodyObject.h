@@ -15,6 +15,7 @@ namespace Objects
 	{
 	public:
 		RigidBodyObject(std::string meshFile);
+		RigidBodyObject(Ogre::Vector3 pos, Ogre::Quaternion rot, Ogre::Vector3 scale, std::string meshFile);
 		~RigidBodyObject(void);
 
 		virtual void		initialise();

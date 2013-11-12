@@ -134,7 +134,7 @@ void SceneLoader::processEntity(rapidxml::xml_node<>* XMLnode, std::string entit
 	{
 		try
 		{
-			m_scene->addObject(entityName, new Objects::GenericObject(pos, rot, scale, meshFile));
+			m_scene->addObject(entityName, new Objects::RigidBodyObject(pos, rot, scale, meshFile));
 		}
 		catch (Ogre::Exception &)
 		{
