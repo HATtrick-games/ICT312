@@ -95,6 +95,7 @@
     <ClInclude Include="Emotion.h" />
     <ClInclude Include="EmotionManager.h" />
     <ClInclude Include="EnumSpace.h" />
+    <ClInclude Include="ExitScene.h" />
     <ClInclude Include="Force.h" />
     <ClInclude Include="FrameListener.h" />
     <ClInclude Include="FunLoving.h" />
@@ -152,6 +153,7 @@
     <ClCompile Include="DebugDrawerOg.cpp" />
     <ClCompile Include="EasyGoing.cpp" />
     <ClCompile Include="EmotionManager.cpp" />
+    <ClCompile Include="ExitScene.cpp" />
     <ClCompile Include="FrameListener.cpp" />
     <ClCompile Include="FunLoving.cpp" />
     <ClCompile Include="Game.cpp" />

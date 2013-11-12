@@ -83,7 +83,7 @@ RigidBodyObject::~RigidBodyObject(void)
 
 void RigidBodyObject::initialise()
 {
-	Generic = false;
+	//Generic = false;
 	Affordances["UseComputer"] = 0;
 	Affordances["Sit"] = 0;
 }

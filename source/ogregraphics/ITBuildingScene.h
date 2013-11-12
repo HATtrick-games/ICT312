@@ -1,6 +1,7 @@
 #pragma once
 
 #include "IScene.h"
+#include "ExitScene.h"
 #include "SceneLoader.h"
 #include "TargetObject.h"
 #include "ProjectileObject.h"
