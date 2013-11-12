@@ -50,16 +50,27 @@ void CollisionWorldSingleton::CheckCollision()
 
 		if((obB->getUserPointer())&&(obA->getUserPointer()))
 				{
+					Objects::RigidBodyObject* A = static_cast<Objects::RigidBodyObject*>(obA->getUserPointer());
+					Objects::RigidBodyObject* B = static_cast<Objects::RigidBodyObject*>(obB->getUserPointer());
+
 					if(contactManifold->getNumContacts() > 0)
 					{
 						btManifoldPoint contact = contactManifold->getContactPoint(0);
 
-						if(static_cast<Objects::GenericObject*>(obA->getUserPointer())->isDynamic && static_cast<Objects::GenericObject*>(obB->getUserPointer())->isDynamic)
+						if((A->isDynamic && B->isDynamic)||(A->isDynamic && !B->isDynamic)||(!A->isDynamic && B->isDynamic))
 						{
-							Physics::Contact(static_cast<Objects::RigidBodyObject*>(obA->getUserPointer()),
-								static_cast<Objects::RigidBodyObject*>(obB->getUserPointer()),
+							if(A->Generic || B->Generic)
+							{
+							//std::cout << "Collision Generic" << std::endl;
+							}
+							else
+							{
+							std::cout << "Collision" << std::endl;
+
+							Physics::Contact(A,	B,
 								Ogre::Vector3(contact.getPositionWorldOnA().getX(), contact.getPositionWorldOnA().getY(), contact.getPositionWorldOnA().getZ()),
 								Ogre::Vector3(contact.m_normalWorldOnB.getX(), contact.m_normalWorldOnB.getY(), contact.m_normalWorldOnB.getZ()));
+							}
 						}
 					}
 

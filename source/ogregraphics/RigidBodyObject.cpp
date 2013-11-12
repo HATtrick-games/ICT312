@@ -26,6 +26,56 @@ RigidBodyObject::RigidBodyObject(std::string meshFile)
 	m_angularVelocity = Ogre::Vector3(0.0f, 0.0f, 0.0f);
 }
 
+RigidBodyObject::RigidBodyObject(Ogre::Vector3 pos, Ogre::Quaternion rot, Ogre::Vector3 scale, std::string meshFile)
+{
+	isDynamic = false;
+	AI = -1;
+	setID();
+	m_position = pos;
+	m_filename = meshFile;
+
+	loadMesh();
+
+	setOrientation(rot);
+	setScale(scale);
+	MakeCollisionObject();
+	/*if(meshFile == "SofaGreen.mesh")
+	{
+	std::cout<<meshFile;
+		Sleep(1000);
+	MakeBoxCollisionObject();
+	}
+	if(meshFile == "CornerTable.mesh")
+	{
+	std::cout<<meshFile;
+		Sleep(1000);
+	MakeBoxCollisionObject();
+	}
+	if(meshFile == "CornerTable_1.mesh")
+	{
+	std::cout<<meshFile;
+		Sleep(1000);
+	MakeBoxCollisionObject();
+	}*/
+	//	std::cout<<"TABLE IS MADE HERE \n\n\n\n";
+		
+	Type = "RigidBodyObject";
+	getEntity()->setQueryFlags(Targetable);
+	getEntity()->setUserAny((Ogre::Any)(GenericObject*)this);
+	
+
+	m_force = Ogre::Vector3(0.0f, 0.0f, 0.0f);
+	m_mass = 0.000001f;
+
+	m_acceleration = Ogre::Vector3(0.0f, 0.0f, 0.0f);
+	m_velocity = Ogre::Vector3(0.0f, 0.0f, 0.0f);
+
+	m_inertiaTensor = Ogre::Matrix3::ZERO;
+	m_invInertiaTensor = Ogre::Matrix3::ZERO;
+
+	m_angularVelocity = Ogre::Vector3(0.0f, 0.0f, 0.0f);
+}
+
 
 RigidBodyObject::~RigidBodyObject(void)
 {
@@ -33,7 +83,9 @@ RigidBodyObject::~RigidBodyObject(void)
 
 void RigidBodyObject::initialise()
 {
-	
+	Generic = false;
+	Affordances["UseComputer"] = 0;
+	Affordances["Sit"] = 0;
 }
 
 void RigidBodyObject::update( float deltaTime )
@@ -45,7 +97,7 @@ void RigidBodyObject::update( float deltaTime )
 	if( m_mass > 0.0f )
 		m_acceleration = m_force / m_mass;
 	
-	Ogre::Vector3 avgAcceleration = (( m_lastAcceleration - m_acceleration ) / 2.0f) + Physics::PhysicsEngine::GRAVITY;
+	Ogre::Vector3 avgAcceleration = (( m_lastAcceleration - m_acceleration ) / 2.0f); //+ Physics::PhysicsEngine::GRAVITY;
 
 	m_velocity += avgAcceleration * deltaTime;
 

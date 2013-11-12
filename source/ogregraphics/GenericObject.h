@@ -17,7 +17,7 @@ namespace Objects
 		GenericObject(Ogre::Vector3 pos, Ogre::Vector3 rot, std::string meshFile);
 		GenericObject(Ogre::Vector3 pos, Ogre::Quaternion rot, Ogre::Vector3 scale, std::string meshFile);
 		~GenericObject(void);
-		
+		//bool Generic;
 		virtual void initialise();
 		virtual void update( float deltaTime );
 	};

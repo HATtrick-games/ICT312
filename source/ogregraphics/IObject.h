@@ -43,7 +43,7 @@ namespace Objects
 		void SetInteractable(bool set){Interactable = set;}
 		int GetAffodance(std::string affordance);
 		std::map<std::string,int> Affordances;
-
+		bool Generic;
 		bool isDynamic;
 	protected:
 		void				loadMesh() const;
