@@ -12,4 +12,5 @@ What Works:
 	Projectiles bouncing when they hit the floor
 	
 What Does Not Work:
-	Projectile collision with all objects in the scene
+	Projectile collision with all objects in the scene 
+	since interpenetration does not resolve correctly
